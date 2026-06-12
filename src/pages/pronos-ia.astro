@@ -4,6 +4,8 @@ import MatchCard from '../components/MatchCard.astro';
 import { getCollection } from 'astro:content';
 import { ghostTotal } from '../../scripts/lib/scoring.mjs';
 import { getLatest } from '../data';
+import Bracket from '../components/Bracket.astro';
+const bracket = []; // rempli plus tard (phases finales)
 
 const entries = (await getCollection('pronos')).sort((a, b) => a.data.order - b.data.order);
 const allMatches = entries.flatMap((e) => e.data.matches.map((m) => ({ ...m, stage: e.data.stage })));
@@ -26,4 +28,11 @@ const ghostRank = 1 + human.filter((p) => p > ghost).length;
       {e.data.matches.map((m) => <MatchCard m={m} stage={e.data.stage} />)}
     </section>
   ))}
+
+  {bracket.length > 0 && (
+    <section style="margin-top:26px">
+      <p class="kicker">Bracket prédictif</p>
+      <Bracket rounds={bracket} />
+    </section>
+  )}
 </Base>

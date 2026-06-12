@@ -69,4 +69,18 @@ const expertsBest = hasExperts ? Math.max(...latest.experts) : null;
       if (choice && names.includes(choice)) { localStorage.setItem(KEY, choice); highlight(choice); }
     });
   </script>
+  <script>
+    const LKEY = 'marvelous-leader';
+    const leader = document.querySelector('.row')?.dataset.key;
+    const prev = localStorage.getItem(LKEY);
+    if (leader && prev && prev !== leader) {
+      const c = document.createElement('div');
+      c.textContent = '🎉';
+      c.style.cssText = 'position:fixed;inset:0;display:flex;align-items:center;justify-content:center;font-size:80px;pointer-events:none;animation:pop 1.2s ease forwards;z-index:50';
+      document.body.appendChild(c);
+      setTimeout(() => c.remove(), 1300);
+    }
+    if (leader) localStorage.setItem(LKEY, leader);
+  </script>
+  <style>@keyframes pop{0%{transform:scale(.3);opacity:0}40%{transform:scale(1.2);opacity:1}100%{transform:scale(1);opacity:0}}</style>
 </Base>

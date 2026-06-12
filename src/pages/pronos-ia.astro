@@ -22,6 +22,10 @@ const ghostRank = 1 + human.filter((p) => p > ghost).length;
   <h1 class="h1">Les Pronos de <em>l'IA</em></h1>
   <p class="dim" style="font-size:13px">Ce ne sont <strong>pas</strong> les pronos des membres : ce sont les analyses de l'IA. Si l'IA jouait, elle serait <strong style="color:var(--gold)">{ghostRank}e</strong> avec <strong>{ghost}</strong> pts.</p>
 
+  <p class="pill" style="font-size:12px;padding:10px 14px;margin-top:12px;color:var(--text-dim);border:1px solid var(--line);background:transparent">
+    ⚖️ <strong>Transparence</strong> — les pronos des 2 matchs d'ouverture (11 juin) ont été ajoutés <em>après</em> le coup d'envoi, le site ayant été lancé en cours de tournoi. Ils ont été faits de bonne foi (logique d'avant-match : favoris, classement, forme), sans recopier les scores. Tous les pronos suivants sont publiés <strong>avant</strong> les matchs.
+  </p>
+
   {entries.map((e) => (
     <section style="margin-top:22px">
       <p class="kicker">{e.data.round}</p>

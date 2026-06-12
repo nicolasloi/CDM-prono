@@ -1,0 +1,26 @@
+---
+const { members = [] } = Astro.props;
+const data = JSON.stringify(members);
+---
+<div class="pill" style="padding:16px">
+  <p class="kicker" style="margin-bottom:10px">Duel</p>
+  <div style="display:flex;gap:8px;flex-wrap:wrap">
+    <select id="h2h-a" class="pill" style="padding:8px;background:var(--bg-soft);color:var(--text);border:1px solid var(--line)"></select>
+    <span style="align-self:center;color:var(--gold);font-weight:800">VS</span>
+    <select id="h2h-b" class="pill" style="padding:8px;background:var(--bg-soft);color:var(--text);border:1px solid var(--line)"></select>
+  </div>
+  <p id="h2h-out" style="margin-top:12px;font-weight:700"></p>
+  <script set:html={`window.__H2H=${data}`}></script>
+  <script>
+    const M = window.__H2H || [];
+    const a = document.getElementById('h2h-a'), b = document.getElementById('h2h-b'), out = document.getElementById('h2h-out');
+    M.forEach((m, i) => { [a, b].forEach((sel, j) => { const o = document.createElement('option'); o.value = i; o.textContent = m.name; if ((j===0&&i===0)||(j===1&&i===1)) o.selected = true; sel.appendChild(o.cloneNode(true)); }); });
+    function render() {
+      const x = M[a.value], y = M[b.value]; if (!x || !y) return;
+      const diff = x.totalPoints - y.totalPoints;
+      out.textContent = diff === 0 ? `Égalité, ${x.totalPoints} partout !`
+        : `${(diff>0?x:y).name} mène de ${Math.abs(diff)} pt(s).`;
+    }
+    a.addEventListener('change', render); b.addEventListener('change', render); render();
+  </script>
+</div>

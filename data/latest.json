@@ -1,0 +1,96 @@
+{
+  "takenAt": "2026-06-12T14:08:33.051Z",
+  "members": [
+    {
+      "id": "9Nz1",
+      "name": "Vitor Pinto",
+      "rank": 1,
+      "totalPoints": 18,
+      "isAdmin": false,
+      "pointsDelta": 0,
+      "rankDelta": 0
+    },
+    {
+      "id": "O52a",
+      "name": "Joao M",
+      "rank": 2,
+      "totalPoints": 14,
+      "isAdmin": false,
+      "pointsDelta": 0,
+      "rankDelta": 0
+    },
+    {
+      "id": "7GjW",
+      "name": "Mehdi M",
+      "rank": 3,
+      "totalPoints": 11,
+      "isAdmin": true,
+      "pointsDelta": 0,
+      "rankDelta": 0
+    },
+    {
+      "id": "wmd3",
+      "name": "Nicolas L",
+      "rank": 3,
+      "totalPoints": 11,
+      "isAdmin": false,
+      "pointsDelta": 0,
+      "rankDelta": 0
+    },
+    {
+      "id": "8Yak",
+      "name": "Cayan F",
+      "rank": 3,
+      "totalPoints": 11,
+      "isAdmin": false,
+      "pointsDelta": 0,
+      "rankDelta": 0
+    },
+    {
+      "id": "G3EG",
+      "name": "Thomas M",
+      "rank": 6,
+      "totalPoints": 7,
+      "isAdmin": false,
+      "pointsDelta": 0,
+      "rankDelta": 0
+    },
+    {
+      "id": "2xN6",
+      "name": "Mica P",
+      "rank": 7,
+      "totalPoints": 6,
+      "isAdmin": false,
+      "pointsDelta": 0,
+      "rankDelta": 0
+    }
+  ],
+  "otherGroups": [
+    {
+      "rank": 1,
+      "name": "Sebulba Lalas",
+      "points": 19
+    },
+    {
+      "rank": 1,
+      "name": "9vp1",
+      "points": 19
+    },
+    {
+      "rank": 1,
+      "name": "Family Team",
+      "points": 19
+    },
+    {
+      "rank": 1,
+      "name": "Jeunesse Bramoisienne 👹",
+      "points": 19
+    },
+    {
+      "rank": 5,
+      "name": "Batraciens",
+      "points": 18
+    }
+  ],
+  "experts": []
+}

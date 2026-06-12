@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE } from '../config';
 const { title } = Astro.props;
+const ogImage = new URL((`${import.meta.env.BASE_URL}/og.png`).replace(/\/{2,}/g, '/'), Astro.site);
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -12,6 +13,11 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title ? `${title} · ${SITE.title}` : SITE.title}</title>
     <meta name="description" content={SITE.tagline} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={SITE.title} />
+    <meta property="og:description" content={SITE.tagline} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <Header />

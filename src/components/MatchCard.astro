@@ -1,0 +1,21 @@
+---
+import { scorePrediction } from '../../scripts/lib/scoring.mjs';
+const { m, stage = 'group' } = Astro.props;
+const played = m.actualHome !== null && m.actualAway !== null;
+const pts = played ? scorePrediction({ home: m.predHome, away: m.predAway }, { home: m.actualHome, away: m.actualAway }, stage) : null;
+const ok = pts !== null && pts > 0;
+const ko = new Date(m.kickoff).toLocaleString('fr-CH', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+---
+<div class="pill" style="padding:14px 16px;margin:8px 0">
+  <div style="display:flex;align-items:center;gap:8px">
+    <span style="flex:1;text-align:right;font-weight:700">{m.homeFlag} {m.home}</span>
+    <span class="pill" style="padding:4px 10px;font-weight:900;color:var(--gold);background:var(--bg-soft)">{m.predHome}–{m.predAway}</span>
+    <span style="flex:1;font-weight:700">{m.away} {m.awayFlag}</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
+    <span class="dim" style="font-size:11px">{ko}</span>
+    <span style="color:var(--gold);font-size:11px">{'●'.repeat(m.confidence)}<span class="dim">{'●'.repeat(5 - m.confidence)}</span></span>
+    {played && <span style={`margin-left:auto;font-weight:800;color:${ok ? 'var(--green)' : 'var(--red)'}`}>{ok ? `✓ +${pts}` : '✗ 0'} · réel {m.actualHome}–{m.actualAway}</span>}
+  </div>
+  <p class="dim" style="font-size:12px;margin:8px 0 0">{m.analysis}</p>
+</div>

@@ -1,0 +1,10 @@
+---
+// Bandeau de rubans tricolores animés. `height` en px.
+const { height = 120 } = Astro.props;
+---
+<svg class="streak-anim" viewBox="0 0 400 120" preserveAspectRatio="none"
+     style={`position:absolute;inset:0;width:100%;height:${height}px;opacity:.9;z-index:0;pointer-events:none`}>
+  <path d="M-20 95 C90 60 150 120 420 70" stroke="var(--red)" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M-20 108 C120 80 160 130 420 88" stroke="var(--green)" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M-20 120 C100 100 200 140 420 104" stroke="var(--blue)" stroke-width="7" fill="none" stroke-linecap="round"/>
+</svg>

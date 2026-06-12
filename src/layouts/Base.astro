@@ -1,0 +1,21 @@
+---
+import '../styles/tokens.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE } from '../config';
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title ? `${title} · ${SITE.title}` : SITE.title}</title>
+    <meta name="description" content={SITE.tagline} />
+  </head>
+  <body>
+    <Header />
+    <main class="container" style="padding:24px 0 0"><slot /></main>
+    <Footer />
+  </body>
+</html>

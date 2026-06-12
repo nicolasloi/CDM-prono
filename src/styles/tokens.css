@@ -1,0 +1,34 @@
+:root {
+  --bg: #0a0e1a;
+  --bg-soft: #11162a;
+  --surface: rgba(255,255,255,.04);
+  --surface-hi: rgba(255,255,255,.07);
+  --line: #1a2138;
+  --gold: #e8c66a;
+  --gold-soft: rgba(232,198,106,.16);
+  --text: #eef1f8;
+  --text-dim: #8b93ab;
+  --red: #e3342f;     /* Canada  */
+  --green: #00a85a;   /* Mexique */
+  --blue: #2b6fff;    /* USA     */
+  --radius: 40px;
+  --radius-card: 22px;
+  --font: 'Helvetica Neue', -apple-system, system-ui, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg); color: var(--text); font-family: var(--font);
+  -webkit-font-smoothing: antialiased; line-height: 1.4;
+}
+a { color: inherit; }
+.container { width: min(720px, 92vw); margin: 0 auto; }
+.kicker { font: 800 10px/1 var(--font); letter-spacing: .26em; color: var(--gold); text-transform: uppercase; }
+.h1 { font-size: clamp(28px, 7vw, 40px); font-weight: 900; letter-spacing: -.02em; line-height: .92; margin: 8px 0; }
+.h1 em { color: var(--gold); font-style: italic; }
+.dim { color: var(--text-dim); }
+.pill { background: var(--surface); border-radius: var(--radius); }
+@media (prefers-reduced-motion: no-preference) {
+  .streak-anim { animation: drift 9s ease-in-out infinite alternate; }
+}
+@keyframes drift { from { transform: translateX(-2%); } to { transform: translateX(2%); } }

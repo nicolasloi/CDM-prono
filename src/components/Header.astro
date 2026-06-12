@@ -1,0 +1,25 @@
+---
+import { SITE } from '../config';
+const base = import.meta.env.BASE_URL;
+const path = (p) => `${base}${p}`.replace(/\/{2,}/g, '/');
+const nav = [
+  { href: path('/'), label: 'Classement' },
+  { href: path('/le-mag'), label: 'Le Mag' },
+  { href: path('/pronos-ia'), label: 'Pronos IA' },
+  { href: path('/matchs'), label: 'Matchs' },
+];
+---
+<header style="position:relative;overflow:hidden;border-bottom:1px solid var(--line)">
+  <div class="container" style="position:relative;z-index:1;padding:14px 0;display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+    <a href={nav[0].href} style="text-decoration:none;font-weight:900;letter-spacing:-.02em">
+      CDM <span style="color:var(--gold)">Prono</span>
+    </a>
+    <nav style="display:flex;gap:14px;flex-wrap:wrap;font-size:13px;font-weight:600">
+      {nav.map((n) => <a href={n.href} style="text-decoration:none;color:var(--text-dim)">{n.label}</a>)}
+    </nav>
+    <a href={SITE.rtsCommunityUrl} target="_blank" rel="noopener"
+       style="margin-left:auto;font-size:12px;font-weight:700;color:var(--gold);text-decoration:none;border:1px solid var(--gold-soft);padding:6px 10px;border-radius:30px">
+      Tableau officiel RTS ↗
+    </a>
+  </div>
+</header>

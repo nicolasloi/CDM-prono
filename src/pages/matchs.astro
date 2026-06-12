@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import MatchCard from '../components/MatchCard.astro';
+import { getCollection } from 'astro:content';
+
+const entries = await getCollection('pronos');
+const matches = entries
+  .flatMap((e) => e.data.matches.map((m) => ({ ...m, stage: e.data.stage })))
+  .sort((a, b) => a.kickoff.localeCompare(b.kickoff));
+const now = new Date().toISOString();
+const upcoming = matches.filter((m) => m.kickoff >= now);
+const past = matches.filter((m) => m.kickoff < now);
+---
+<Base title="Matchs">
+  <p class="kicker">★ Calendrier</p>
+  <h1 class="h1">Les <em>Matchs</em></h1>
+  {upcoming.length > 0 && <section style="margin-top:16px"><p class="kicker">À venir</p>{upcoming.map((m) => <MatchCard m={m} stage={m.stage} />)}</section>}
+  {past.length > 0 && <section style="margin-top:20px"><p class="kicker">Joués</p>{past.map((m) => <MatchCard m={m} stage={m.stage} />)}</section>}
+  {matches.length === 0 && <p class="dim" style="margin-top:16px">Le calendrier se remplit au fil des journées.</p>}
+  <p class="dim" style="font-size:12px;margin-top:20px">Bonus à venir : ce que chaque membre a pronostiqué, une fois le match commencé.</p>
+</Base>

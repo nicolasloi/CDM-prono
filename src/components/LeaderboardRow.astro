@@ -1,0 +1,15 @@
+---
+import Sparkline from './Sparkline.astro';
+import MovementArrow from './MovementArrow.astro';
+import { accentFor } from '../../scripts/lib/members.mjs';
+const { m, index, spark = [], me = false } = Astro.props;
+---
+<div class={`pill row${me ? ' me' : ''}`} data-key={m.id || m.name}
+     style={`display:flex;align-items:center;gap:11px;padding:11px 16px;margin:6px 0;${me ? 'box-shadow:inset 0 0 0 1px var(--gold-soft);background:var(--gold-soft)' : ''}`}>
+  <span style="width:20px;text-align:center;font-weight:800;color:var(--gold)">{m.rank}</span>
+  <span style={`width:8px;height:8px;border-radius:50%;background:${accentFor(index)}`}></span>
+  <span style="flex:1;font-weight:600">{m.name}{m.isAdmin && <span class="dim" style="font-size:10px"> · admin</span>}</span>
+  <Sparkline points={spark} />
+  <MovementArrow delta={m.rankDelta} />
+  <span style="font-weight:800;min-width:28px;text-align:right">{m.totalPoints}</span>
+</div>

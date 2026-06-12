@@ -1,0 +1,19 @@
+---
+import Trophy from './Trophy.astro';
+const { top = [] } = Astro.props;
+const order = [1, 0, 2];
+const heights = { 0: 96, 1: 72, 2: 56 };
+const medals = ['var(--gold)', '#c9cdd6', '#cd7f4d'];
+---
+<div style="display:flex;align-items:flex-end;justify-content:center;gap:10px;margin:8px 0 20px">
+  {order.filter((i) => top[i]).map((i) => (
+    <div style="flex:1;max-width:140px;text-align:center">
+      {i === 0 && <div style="margin-bottom:4px"><Trophy size={30} /></div>}
+      <div style="font-weight:700;font-size:13px">{top[i].name}</div>
+      <div style="font-weight:900;color:var(--gold);font-size:20px">{top[i].totalPoints}</div>
+      <div class="pill" style={`height:${heights[i]}px;border-top:3px solid ${medals[i]};border-radius:14px 14px 0 0;display:flex;align-items:flex-start;justify-content:center;padding-top:6px;font-weight:900;color:${medals[i]}`}>
+        {top[i].rank}
+      </div>
+    </div>
+  ))}
+</div>

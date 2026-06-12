@@ -1,0 +1,13 @@
+---
+import { linePath } from '../../scripts/lib/svg.mjs';
+const { points = [], color = 'var(--gold)', w = 64, h = 20 } = Astro.props;
+const vals = points.map((p) => p.totalPoints);
+const min = Math.min(...vals, 0);
+const max = Math.max(...vals, 1);
+const d = linePath(vals, { width: w, height: h, min, max });
+---
+{vals.length > 1 ? (
+  <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} aria-hidden="true">
+    <path d={d} fill="none" stroke={color} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+) : <span class="dim" style="font-size:11px">—</span>}

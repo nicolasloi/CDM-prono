@@ -1,9 +1,21 @@
 {
-  "generatedAt": "2026-06-15T19:22:17.145Z",
+  "generatedAt": "2026-06-15T21:04:48.055Z",
   "byId": {
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "15 juin | 19:00",
+          "stadium": "Stade de Seattle",
+          "home": "Belgique",
+          "predHome": 2,
+          "away": "Egypte",
+          "predAway": 0,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 0,
+          "played": true
+        },
         {
           "date": "15 juin | 16:00",
           "stadium": "Stade d'Atlanta",
@@ -166,6 +178,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "15 juin | 19:00",
+          "stadium": "Stade de Seattle",
+          "home": "Belgique",
+          "predHome": 2,
+          "away": "Egypte",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
+        {
           "date": "15 juin | 16:00",
           "stadium": "Stade d'Atlanta",
           "home": "Espagne",
@@ -326,6 +350,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "15 juin | 19:00",
+          "stadium": "Stade de Seattle",
+          "home": "Belgique",
+          "predHome": 2,
+          "away": "Egypte",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
         {
           "date": "15 juin | 16:00",
           "stadium": "Stade d'Atlanta",
@@ -488,6 +524,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "15 juin | 19:00",
+          "stadium": "Stade de Seattle",
+          "home": "Belgique",
+          "predHome": 2,
+          "away": "Egypte",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
+        {
           "date": "15 juin | 16:00",
           "stadium": "Stade d'Atlanta",
           "home": "Espagne",
@@ -649,6 +697,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "15 juin | 19:00",
+          "stadium": "Stade de Seattle",
+          "home": "Belgique",
+          "predHome": 3,
+          "away": "Egypte",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
+        {
           "date": "15 juin | 16:00",
           "stadium": "Stade d'Atlanta",
           "home": "Espagne",
@@ -809,6 +869,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "15 juin | 19:00",
+          "stadium": "Stade de Seattle",
+          "home": "Belgique",
+          "predHome": 2,
+          "away": "Egypte",
+          "predAway": 0,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 0,
+          "played": true
+        },
         {
           "date": "15 juin | 16:00",
           "stadium": "Stade d'Atlanta",

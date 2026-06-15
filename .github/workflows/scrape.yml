@@ -26,8 +26,8 @@ jobs:
       - run: node scripts/scrape-predictions.mjs
       - id: commit
         run: |
-          git config user.name "marvelous-bot"
-          git config user.email "bot@users.noreply.github.com"
+          git config user.name "cdm-bot"
+          git config user.email "cdm-bot@users.noreply.github.com"
           git add data/
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"

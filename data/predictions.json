@@ -1,9 +1,21 @@
 {
-  "generatedAt": "2026-06-15T17:41:04.858Z",
+  "generatedAt": "2026-06-15T19:22:17.145Z",
   "byId": {
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "15 juin | 16:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Espagne",
+          "predHome": 4,
+          "away": "Cap Vert",
+          "predAway": 0,
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
+        },
         {
           "date": "15 juin | 02:00",
           "stadium": "Stade de Monterrey",
@@ -154,6 +166,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "15 juin | 16:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Espagne",
+          "predHome": 2,
+          "away": "Cap Vert",
+          "predAway": 0,
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
+        },
+        {
           "date": "15 juin | 02:00",
           "stadium": "Stade de Monterrey",
           "home": "Suède",
@@ -302,6 +326,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "15 juin | 16:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Espagne",
+          "predHome": 4,
+          "away": "Cap Vert",
+          "predAway": 1,
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 0,
+          "played": true
+        },
         {
           "date": "15 juin | 02:00",
           "stadium": "Stade de Monterrey",
@@ -452,6 +488,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "15 juin | 16:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Espagne",
+          "predHome": 4,
+          "away": "Cap Vert",
+          "predAway": 0,
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
+        },
+        {
           "date": "15 juin | 02:00",
           "stadium": "Stade de Monterrey",
           "home": "Suède",
@@ -601,6 +649,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "15 juin | 16:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Espagne",
+          "predHome": 4,
+          "away": "Cap Vert",
+          "predAway": 0,
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
+        },
+        {
           "date": "15 juin | 02:00",
           "stadium": "Stade de Monterrey",
           "home": "Suède",
@@ -749,6 +809,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "15 juin | 16:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Espagne",
+          "predHome": 3,
+          "away": "Cap Vert",
+          "predAway": 0,
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
+        },
         {
           "date": "15 juin | 02:00",
           "stadium": "Stade de Monterrey",

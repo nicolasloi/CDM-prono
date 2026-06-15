@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync, readFileSync, readdirSync, existsSync } from 'node:fs';
 import { parseCommunity } from './lib/parse.mjs';
 import { buildLatest, buildTimeseries } from './lib/aggregate.mjs';
+import { TOURNAMENT_OVER } from './lib/season.mjs';
 
 const COMMUNITY_URL = 'https://pronostics.rts.ch/communities/484';
 const DATA = new URL('../data/', import.meta.url);
@@ -20,6 +21,7 @@ function readSnapshots() {
 }
 
 async function main() {
+  if (TOURNAMENT_OVER()) { console.log('Tournoi terminé — scraper en pause.'); return; }
   mkdirSync(SNAPS, { recursive: true });
   const html = await fetchHtml(COMMUNITY_URL);
   const parsed = parseCommunity(html);

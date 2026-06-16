@@ -1,9 +1,21 @@
 {
-  "generatedAt": "2026-06-15T23:35:28.865Z",
+  "generatedAt": "2026-06-16T00:55:02.738Z",
   "byId": {
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "15 juin | 22:00",
+          "stadium": "Stade de Miami",
+          "home": "Arabie saoudite",
+          "predHome": 0,
+          "away": "Uruguay",
+          "predAway": 2,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 0,
+          "played": true
+        },
         {
           "date": "15 juin | 19:00",
           "stadium": "Stade de Seattle",
@@ -178,6 +190,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "15 juin | 22:00",
+          "stadium": "Stade de Miami",
+          "home": "Arabie saoudite",
+          "predHome": 0,
+          "away": "Uruguay",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
+        {
           "date": "15 juin | 19:00",
           "stadium": "Stade de Seattle",
           "home": "Belgique",
@@ -350,6 +374,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "15 juin | 22:00",
+          "stadium": "Stade de Miami",
+          "home": "Arabie saoudite",
+          "predHome": 1,
+          "away": "Uruguay",
+          "predAway": 2,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
         {
           "date": "15 juin | 19:00",
           "stadium": "Stade de Seattle",
@@ -524,6 +560,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "15 juin | 22:00",
+          "stadium": "Stade de Miami",
+          "home": "Arabie saoudite",
+          "predHome": 0,
+          "away": "Uruguay",
+          "predAway": 2,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 0,
+          "played": true
+        },
+        {
           "date": "15 juin | 19:00",
           "stadium": "Stade de Seattle",
           "home": "Belgique",
@@ -697,6 +745,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "15 juin | 22:00",
+          "stadium": "Stade de Miami",
+          "home": "Arabie saoudite",
+          "predHome": 1,
+          "away": "Uruguay",
+          "predAway": 2,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
+        {
           "date": "15 juin | 19:00",
           "stadium": "Stade de Seattle",
           "home": "Belgique",
@@ -869,6 +929,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "15 juin | 22:00",
+          "stadium": "Stade de Miami",
+          "home": "Arabie saoudite",
+          "predHome": 0,
+          "away": "Uruguay",
+          "predAway": 2,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 0,
+          "played": true
+        },
         {
           "date": "15 juin | 19:00",
           "stadium": "Stade de Seattle",

@@ -1,9 +1,21 @@
 {
-  "generatedAt": "2026-06-17T21:40:41.038Z",
+  "generatedAt": "2026-06-17T22:35:54.840Z",
   "byId": {
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "17 juin | 20:00",
+          "stadium": "Stade de Dallas",
+          "home": "Angleterre",
+          "predHome": 2,
+          "away": "Croatie",
+          "predAway": 0,
+          "actualHome": 4,
+          "actualAway": 2,
+          "points": 8,
+          "played": true
+        },
         {
           "date": "17 juin | 17:00",
           "stadium": "Stade de Houston",
@@ -262,6 +274,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "17 juin | 20:00",
+          "stadium": "Stade de Dallas",
+          "home": "Angleterre",
+          "predHome": 2,
+          "away": "Croatie",
+          "predAway": 0,
+          "actualHome": 4,
+          "actualAway": 2,
+          "points": 8,
+          "played": true
+        },
+        {
           "date": "17 juin | 17:00",
           "stadium": "Stade de Houston",
           "home": "Portugal",
@@ -518,6 +542,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "17 juin | 20:00",
+          "stadium": "Stade de Dallas",
+          "home": "Angleterre",
+          "predHome": 2,
+          "away": "Croatie",
+          "predAway": 1,
+          "actualHome": 4,
+          "actualAway": 2,
+          "points": 5,
+          "played": true
+        },
         {
           "date": "17 juin | 17:00",
           "stadium": "Stade de Houston",
@@ -776,6 +812,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "17 juin | 20:00",
+          "stadium": "Stade de Dallas",
+          "home": "Angleterre",
+          "predHome": 2,
+          "away": "Croatie",
+          "predAway": 1,
+          "actualHome": 4,
+          "actualAway": 2,
+          "points": 5,
+          "played": true
+        },
+        {
           "date": "17 juin | 17:00",
           "stadium": "Stade de Houston",
           "home": "Portugal",
@@ -1033,6 +1081,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "17 juin | 20:00",
+          "stadium": "Stade de Dallas",
+          "home": "Angleterre",
+          "predHome": 2,
+          "away": "Croatie",
+          "predAway": 1,
+          "actualHome": 4,
+          "actualAway": 2,
+          "points": 5,
+          "played": true
+        },
+        {
           "date": "17 juin | 17:00",
           "stadium": "Stade de Houston",
           "home": "Portugal",
@@ -1289,6 +1349,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "17 juin | 20:00",
+          "stadium": "Stade de Dallas",
+          "home": "Angleterre",
+          "predHome": 1,
+          "away": "Croatie",
+          "predAway": 1,
+          "actualHome": 4,
+          "actualAway": 2,
+          "points": 0,
+          "played": true
+        },
         {
           "date": "17 juin | 17:00",
           "stadium": "Stade de Houston",

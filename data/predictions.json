@@ -1,9 +1,21 @@
 {
-  "generatedAt": "2026-06-16T23:33:12.503Z",
+  "generatedAt": "2026-06-17T00:49:32.606Z",
   "byId": {
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "16 juin | 22:00",
+          "stadium": "Stade de Boston",
+          "home": "Irak",
+          "predHome": 0,
+          "away": "Norvège",
+          "predAway": 3,
+          "actualHome": 1,
+          "actualAway": 4,
+          "points": 8,
+          "played": true
+        },
         {
           "date": "16 juin | 19:00",
           "stadium": "Stade de New York New Jersey",
@@ -214,6 +226,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "16 juin | 22:00",
+          "stadium": "Stade de Boston",
+          "home": "Irak",
+          "predHome": 0,
+          "away": "Norvège",
+          "predAway": 3,
+          "actualHome": 1,
+          "actualAway": 4,
+          "points": 8,
+          "played": true
+        },
+        {
           "date": "16 juin | 19:00",
           "stadium": "Stade de New York New Jersey",
           "home": "France",
@@ -422,6 +446,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "16 juin | 22:00",
+          "stadium": "Stade de Boston",
+          "home": "Irak",
+          "predHome": 0,
+          "away": "Norvège",
+          "predAway": 3,
+          "actualHome": 1,
+          "actualAway": 4,
+          "points": 8,
+          "played": true
+        },
         {
           "date": "16 juin | 19:00",
           "stadium": "Stade de New York New Jersey",
@@ -632,6 +668,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "16 juin | 22:00",
+          "stadium": "Stade de Boston",
+          "home": "Irak",
+          "predHome": 0,
+          "away": "Norvège",
+          "predAway": 2,
+          "actualHome": 1,
+          "actualAway": 4,
+          "points": 5,
+          "played": true
+        },
+        {
           "date": "16 juin | 19:00",
           "stadium": "Stade de New York New Jersey",
           "home": "France",
@@ -841,6 +889,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "16 juin | 22:00",
+          "stadium": "Stade de Boston",
+          "home": "Irak",
+          "predHome": 0,
+          "away": "Norvège",
+          "predAway": 3,
+          "actualHome": 1,
+          "actualAway": 4,
+          "points": 8,
+          "played": true
+        },
+        {
           "date": "16 juin | 19:00",
           "stadium": "Stade de New York New Jersey",
           "home": "France",
@@ -1049,6 +1109,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "16 juin | 22:00",
+          "stadium": "Stade de Boston",
+          "home": "Irak",
+          "predHome": 0,
+          "away": "Norvège",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 4,
+          "points": 5,
+          "played": true
+        },
         {
           "date": "16 juin | 19:00",
           "stadium": "Stade de New York New Jersey",

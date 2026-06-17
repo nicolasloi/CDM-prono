@@ -1,9 +1,21 @@
 {
-  "generatedAt": "2026-06-17T18:51:41.426Z",
+  "generatedAt": "2026-06-17T19:43:55.172Z",
   "byId": {
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "17 juin | 17:00",
+          "stadium": "Stade de Houston",
+          "home": "Portugal",
+          "predHome": 3,
+          "away": "RD Congo",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
         {
           "date": "17 juin | 04:00",
           "stadium": "Stade de la baie de San Francisco",
@@ -250,6 +262,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "17 juin | 17:00",
+          "stadium": "Stade de Houston",
+          "home": "Portugal",
+          "predHome": 2,
+          "away": "RD Congo",
+          "predAway": 0,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 0,
+          "played": true
+        },
+        {
           "date": "17 juin | 04:00",
           "stadium": "Stade de la baie de San Francisco",
           "home": "Autriche",
@@ -494,6 +518,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "17 juin | 17:00",
+          "stadium": "Stade de Houston",
+          "home": "Portugal",
+          "predHome": 2,
+          "away": "RD Congo",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
         {
           "date": "17 juin | 04:00",
           "stadium": "Stade de la baie de San Francisco",
@@ -740,6 +776,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "17 juin | 17:00",
+          "stadium": "Stade de Houston",
+          "home": "Portugal",
+          "predHome": 3,
+          "away": "RD Congo",
+          "predAway": 0,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 0,
+          "played": true
+        },
+        {
           "date": "17 juin | 04:00",
           "stadium": "Stade de la baie de San Francisco",
           "home": "Autriche",
@@ -985,6 +1033,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "17 juin | 17:00",
+          "stadium": "Stade de Houston",
+          "home": "Portugal",
+          "predHome": 3,
+          "away": "RD Congo",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
+        {
           "date": "17 juin | 04:00",
           "stadium": "Stade de la baie de San Francisco",
           "home": "Autriche",
@@ -1229,6 +1289,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "17 juin | 17:00",
+          "stadium": "Stade de Houston",
+          "home": "Portugal",
+          "predHome": 0,
+          "away": "RD Congo",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
         {
           "date": "17 juin | 04:00",
           "stadium": "Stade de la baie de San Francisco",

@@ -1,9 +1,21 @@
 {
-  "generatedAt": "2026-06-18T20:57:10.582Z",
+  "generatedAt": "2026-06-18T21:43:18.068Z",
   "byId": {
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "18 juin | 19:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Suisse",
+          "predHome": 2,
+          "away": "Bosnie-Herzégovine",
+          "predAway": 1,
+          "actualHome": 4,
+          "actualAway": 1,
+          "points": 6,
+          "played": true
+        },
         {
           "date": "18 juin | 16:00",
           "stadium": "Stade d'Atlanta",
@@ -22,6 +34,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "18 juin | 19:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Suisse",
+          "predHome": 2,
+          "away": "Bosnie-Herzégovine",
+          "predAway": 1,
+          "actualHome": 4,
+          "actualAway": 1,
+          "points": 6,
+          "played": true
+        },
+        {
           "date": "18 juin | 16:00",
           "stadium": "Stade d'Atlanta",
           "home": "Tchéquie",
@@ -39,6 +63,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "18 juin | 19:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Suisse",
+          "predHome": 2,
+          "away": "Bosnie-Herzégovine",
+          "predAway": 1,
+          "actualHome": 4,
+          "actualAway": 1,
+          "points": 6,
+          "played": true
+        },
+        {
           "date": "18 juin | 16:00",
           "stadium": "Stade d'Atlanta",
           "home": "Tchéquie",
@@ -52,26 +88,21 @@
         }
       ]
     },
-    "7GjW": {
-      "name": "Mehdi M",
-      "matches": [
-        {
-          "date": "18 juin | 16:00",
-          "stadium": "Stade d'Atlanta",
-          "home": "Tchéquie",
-          "predHome": 1,
-          "away": "Afrique du Sud",
-          "predAway": 0,
-          "actualHome": 1,
-          "actualAway": 1,
-          "points": 1,
-          "played": true
-        }
-      ]
-    },
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "18 juin | 19:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Suisse",
+          "predHome": 2,
+          "away": "Bosnie-Herzégovine",
+          "predAway": 1,
+          "actualHome": 4,
+          "actualAway": 1,
+          "points": 6,
+          "played": true
+        },
         {
           "date": "18 juin | 16:00",
           "stadium": "Stade d'Atlanta",
@@ -86,9 +117,50 @@
         }
       ]
     },
+    "7GjW": {
+      "name": "Mehdi M",
+      "matches": [
+        {
+          "date": "18 juin | 19:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Suisse",
+          "predHome": 1,
+          "away": "Bosnie-Herzégovine",
+          "predAway": 1,
+          "actualHome": 4,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
+        {
+          "date": "18 juin | 16:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Tchéquie",
+          "predHome": 1,
+          "away": "Afrique du Sud",
+          "predAway": 0,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        }
+      ]
+    },
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "18 juin | 19:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Suisse",
+          "predHome": 1,
+          "away": "Bosnie-Herzégovine",
+          "predAway": 1,
+          "actualHome": 4,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
         {
           "date": "18 juin | 16:00",
           "stadium": "Stade d'Atlanta",

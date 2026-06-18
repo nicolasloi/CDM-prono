@@ -1,9 +1,21 @@
 {
-  "generatedAt": "2026-06-18T00:49:56.420Z",
+  "generatedAt": "2026-06-18T01:53:28.040Z",
   "byId": {
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "17 juin | 23:00",
+          "stadium": "Stade de Toronto",
+          "home": "Ghana",
+          "predHome": 2,
+          "away": "Panama",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 8,
+          "played": true
+        },
         {
           "date": "17 juin | 20:00",
           "stadium": "Stade de Dallas",
@@ -274,6 +286,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "17 juin | 23:00",
+          "stadium": "Stade de Toronto",
+          "home": "Ghana",
+          "predHome": 2,
+          "away": "Panama",
+          "predAway": 2,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 0,
+          "played": true
+        },
+        {
           "date": "17 juin | 20:00",
           "stadium": "Stade de Dallas",
           "home": "Angleterre",
@@ -539,9 +563,302 @@
         }
       ]
     },
+    "7GjW": {
+      "name": "Mehdi M",
+      "matches": [
+        {
+          "date": "17 juin | 23:00",
+          "stadium": "Stade de Toronto",
+          "home": "Ghana",
+          "predHome": 2,
+          "away": "Panama",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 8,
+          "played": true
+        },
+        {
+          "date": "17 juin | 20:00",
+          "stadium": "Stade de Dallas",
+          "home": "Angleterre",
+          "predHome": 2,
+          "away": "Croatie",
+          "predAway": 1,
+          "actualHome": 4,
+          "actualAway": 2,
+          "points": 5,
+          "played": true
+        },
+        {
+          "date": "17 juin | 17:00",
+          "stadium": "Stade de Houston",
+          "home": "Portugal",
+          "predHome": 3,
+          "away": "RD Congo",
+          "predAway": 0,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 0,
+          "played": true
+        },
+        {
+          "date": "17 juin | 04:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Autriche",
+          "predHome": 1,
+          "away": "Jordanie",
+          "predAway": 0,
+          "actualHome": 3,
+          "actualAway": 1,
+          "points": 5,
+          "played": true
+        },
+        {
+          "date": "17 juin | 01:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Argentine",
+          "predHome": 2,
+          "away": "Algérie",
+          "predAway": 1,
+          "actualHome": 3,
+          "actualAway": 0,
+          "points": 5,
+          "played": true
+        },
+        {
+          "date": "16 juin | 22:00",
+          "stadium": "Stade de Boston",
+          "home": "Irak",
+          "predHome": 0,
+          "away": "Norvège",
+          "predAway": 2,
+          "actualHome": 1,
+          "actualAway": 4,
+          "points": 5,
+          "played": true
+        },
+        {
+          "date": "16 juin | 19:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "France",
+          "predHome": 2,
+          "away": "Sénégal",
+          "predAway": 1,
+          "actualHome": 3,
+          "actualAway": 1,
+          "points": 6,
+          "played": true
+        },
+        {
+          "date": "16 juin | 01:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Iran",
+          "predHome": 1,
+          "away": "Nouvelle-Zélande",
+          "predAway": 1,
+          "actualHome": 2,
+          "actualAway": 2,
+          "points": 8,
+          "played": true
+        },
+        {
+          "date": "15 juin | 22:00",
+          "stadium": "Stade de Miami",
+          "home": "Arabie saoudite",
+          "predHome": 0,
+          "away": "Uruguay",
+          "predAway": 2,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 0,
+          "played": true
+        },
+        {
+          "date": "15 juin | 19:00",
+          "stadium": "Stade de Seattle",
+          "home": "Belgique",
+          "predHome": 2,
+          "away": "Egypte",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
+        {
+          "date": "15 juin | 16:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Espagne",
+          "predHome": 4,
+          "away": "Cap Vert",
+          "predAway": 0,
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
+        },
+        {
+          "date": "15 juin | 02:00",
+          "stadium": "Stade de Monterrey",
+          "home": "Suède",
+          "predHome": 1,
+          "away": "Tunisie",
+          "predAway": 1,
+          "actualHome": 5,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
+        {
+          "date": "14 juin | 23:00",
+          "stadium": "Stade de Philadelphie",
+          "home": "Côte d'Ivoire",
+          "predHome": 2,
+          "away": "Equateur",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 8,
+          "played": true
+        },
+        {
+          "date": "14 juin | 20:00",
+          "stadium": "Stade de Dallas",
+          "home": "Pays-Bas",
+          "predHome": 2,
+          "away": "Japon",
+          "predAway": 1,
+          "actualHome": 2,
+          "actualAway": 2,
+          "points": 1,
+          "played": true
+        },
+        {
+          "date": "14 juin | 17:00",
+          "stadium": "Stade de Houston",
+          "home": "Allemagne",
+          "predHome": 3,
+          "away": "Curacao",
+          "predAway": 0,
+          "actualHome": 7,
+          "actualAway": 1,
+          "points": 5,
+          "played": true
+        },
+        {
+          "date": "14 juin | 04:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Australie",
+          "predHome": 1,
+          "away": "Turquie",
+          "predAway": 2,
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 0,
+          "played": true
+        },
+        {
+          "date": "14 juin | 01:00",
+          "stadium": "Stade de Boston",
+          "home": "Haïti",
+          "predHome": 0,
+          "away": "Écosse",
+          "predAway": 2,
+          "actualHome": 0,
+          "actualAway": 1,
+          "points": 6,
+          "played": true
+        },
+        {
+          "date": "13 juin | 22:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Brésil",
+          "predHome": 2,
+          "away": "Maroc",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
+        {
+          "date": "13 juin | 19:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Qatar",
+          "predHome": 0,
+          "away": "Suisse",
+          "predAway": 2,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 0,
+          "played": true
+        },
+        {
+          "date": "13 juin | 01:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "USA",
+          "predHome": 2,
+          "away": "Paraguay",
+          "predAway": 1,
+          "actualHome": 4,
+          "actualAway": 1,
+          "points": 6,
+          "played": true
+        },
+        {
+          "date": "12 juin | 19:00",
+          "stadium": "Stade de Toronto",
+          "home": "Canada",
+          "predHome": 1,
+          "away": "Bosnie-Herzégovine",
+          "predAway": 0,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
+        {
+          "date": "12 juin | 02:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Corée du Sud",
+          "predHome": 1,
+          "away": "Tchéquie",
+          "predAway": 1,
+          "actualHome": 2,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        },
+        {
+          "date": "11 juin | 19:00",
+          "stadium": "Stade de Mexico",
+          "home": "Mexique",
+          "predHome": 2,
+          "away": "Afrique du Sud",
+          "predAway": 0,
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 10,
+          "played": true
+        }
+      ]
+    },
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "17 juin | 23:00",
+          "stadium": "Stade de Toronto",
+          "home": "Ghana",
+          "predHome": 1,
+          "away": "Panama",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
+        },
         {
           "date": "17 juin | 20:00",
           "stadium": "Stade de Dallas",
@@ -808,278 +1125,21 @@
         }
       ]
     },
-    "7GjW": {
-      "name": "Mehdi M",
-      "matches": [
-        {
-          "date": "17 juin | 20:00",
-          "stadium": "Stade de Dallas",
-          "home": "Angleterre",
-          "predHome": 2,
-          "away": "Croatie",
-          "predAway": 1,
-          "actualHome": 4,
-          "actualAway": 2,
-          "points": 5,
-          "played": true
-        },
-        {
-          "date": "17 juin | 17:00",
-          "stadium": "Stade de Houston",
-          "home": "Portugal",
-          "predHome": 3,
-          "away": "RD Congo",
-          "predAway": 0,
-          "actualHome": 1,
-          "actualAway": 1,
-          "points": 0,
-          "played": true
-        },
-        {
-          "date": "17 juin | 04:00",
-          "stadium": "Stade de la baie de San Francisco",
-          "home": "Autriche",
-          "predHome": 1,
-          "away": "Jordanie",
-          "predAway": 0,
-          "actualHome": 3,
-          "actualAway": 1,
-          "points": 5,
-          "played": true
-        },
-        {
-          "date": "17 juin | 01:00",
-          "stadium": "Stade de Kansas City",
-          "home": "Argentine",
-          "predHome": 2,
-          "away": "Algérie",
-          "predAway": 1,
-          "actualHome": 3,
-          "actualAway": 0,
-          "points": 5,
-          "played": true
-        },
-        {
-          "date": "16 juin | 22:00",
-          "stadium": "Stade de Boston",
-          "home": "Irak",
-          "predHome": 0,
-          "away": "Norvège",
-          "predAway": 2,
-          "actualHome": 1,
-          "actualAway": 4,
-          "points": 5,
-          "played": true
-        },
-        {
-          "date": "16 juin | 19:00",
-          "stadium": "Stade de New York New Jersey",
-          "home": "France",
-          "predHome": 2,
-          "away": "Sénégal",
-          "predAway": 1,
-          "actualHome": 3,
-          "actualAway": 1,
-          "points": 6,
-          "played": true
-        },
-        {
-          "date": "16 juin | 01:00",
-          "stadium": "Stade de Los Angeles",
-          "home": "Iran",
-          "predHome": 1,
-          "away": "Nouvelle-Zélande",
-          "predAway": 1,
-          "actualHome": 2,
-          "actualAway": 2,
-          "points": 8,
-          "played": true
-        },
-        {
-          "date": "15 juin | 22:00",
-          "stadium": "Stade de Miami",
-          "home": "Arabie saoudite",
-          "predHome": 0,
-          "away": "Uruguay",
-          "predAway": 2,
-          "actualHome": 1,
-          "actualAway": 1,
-          "points": 0,
-          "played": true
-        },
-        {
-          "date": "15 juin | 19:00",
-          "stadium": "Stade de Seattle",
-          "home": "Belgique",
-          "predHome": 2,
-          "away": "Egypte",
-          "predAway": 1,
-          "actualHome": 1,
-          "actualAway": 1,
-          "points": 1,
-          "played": true
-        },
-        {
-          "date": "15 juin | 16:00",
-          "stadium": "Stade d'Atlanta",
-          "home": "Espagne",
-          "predHome": 4,
-          "away": "Cap Vert",
-          "predAway": 0,
-          "actualHome": 0,
-          "actualAway": 0,
-          "points": 1,
-          "played": true
-        },
-        {
-          "date": "15 juin | 02:00",
-          "stadium": "Stade de Monterrey",
-          "home": "Suède",
-          "predHome": 1,
-          "away": "Tunisie",
-          "predAway": 1,
-          "actualHome": 5,
-          "actualAway": 1,
-          "points": 1,
-          "played": true
-        },
-        {
-          "date": "14 juin | 23:00",
-          "stadium": "Stade de Philadelphie",
-          "home": "Côte d'Ivoire",
-          "predHome": 2,
-          "away": "Equateur",
-          "predAway": 1,
-          "actualHome": 1,
-          "actualAway": 0,
-          "points": 8,
-          "played": true
-        },
-        {
-          "date": "14 juin | 20:00",
-          "stadium": "Stade de Dallas",
-          "home": "Pays-Bas",
-          "predHome": 2,
-          "away": "Japon",
-          "predAway": 1,
-          "actualHome": 2,
-          "actualAway": 2,
-          "points": 1,
-          "played": true
-        },
-        {
-          "date": "14 juin | 17:00",
-          "stadium": "Stade de Houston",
-          "home": "Allemagne",
-          "predHome": 3,
-          "away": "Curacao",
-          "predAway": 0,
-          "actualHome": 7,
-          "actualAway": 1,
-          "points": 5,
-          "played": true
-        },
-        {
-          "date": "14 juin | 04:00",
-          "stadium": "BC Place de Vancouver",
-          "home": "Australie",
-          "predHome": 1,
-          "away": "Turquie",
-          "predAway": 2,
-          "actualHome": 2,
-          "actualAway": 0,
-          "points": 0,
-          "played": true
-        },
-        {
-          "date": "14 juin | 01:00",
-          "stadium": "Stade de Boston",
-          "home": "Haïti",
-          "predHome": 0,
-          "away": "Écosse",
-          "predAway": 2,
-          "actualHome": 0,
-          "actualAway": 1,
-          "points": 6,
-          "played": true
-        },
-        {
-          "date": "13 juin | 22:00",
-          "stadium": "Stade de New York New Jersey",
-          "home": "Brésil",
-          "predHome": 2,
-          "away": "Maroc",
-          "predAway": 1,
-          "actualHome": 1,
-          "actualAway": 1,
-          "points": 1,
-          "played": true
-        },
-        {
-          "date": "13 juin | 19:00",
-          "stadium": "Stade de la baie de San Francisco",
-          "home": "Qatar",
-          "predHome": 0,
-          "away": "Suisse",
-          "predAway": 2,
-          "actualHome": 1,
-          "actualAway": 1,
-          "points": 0,
-          "played": true
-        },
-        {
-          "date": "13 juin | 01:00",
-          "stadium": "Stade de Los Angeles",
-          "home": "USA",
-          "predHome": 2,
-          "away": "Paraguay",
-          "predAway": 1,
-          "actualHome": 4,
-          "actualAway": 1,
-          "points": 6,
-          "played": true
-        },
-        {
-          "date": "12 juin | 19:00",
-          "stadium": "Stade de Toronto",
-          "home": "Canada",
-          "predHome": 1,
-          "away": "Bosnie-Herzégovine",
-          "predAway": 0,
-          "actualHome": 1,
-          "actualAway": 1,
-          "points": 1,
-          "played": true
-        },
-        {
-          "date": "12 juin | 02:00",
-          "stadium": "Stade de Guadalajara",
-          "home": "Corée du Sud",
-          "predHome": 1,
-          "away": "Tchéquie",
-          "predAway": 1,
-          "actualHome": 2,
-          "actualAway": 1,
-          "points": 1,
-          "played": true
-        },
-        {
-          "date": "11 juin | 19:00",
-          "stadium": "Stade de Mexico",
-          "home": "Mexique",
-          "predHome": 2,
-          "away": "Afrique du Sud",
-          "predAway": 0,
-          "actualHome": 2,
-          "actualAway": 0,
-          "points": 10,
-          "played": true
-        }
-      ]
-    },
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "17 juin | 23:00",
+          "stadium": "Stade de Toronto",
+          "home": "Ghana",
+          "predHome": 2,
+          "away": "Panama",
+          "predAway": 0,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
+        },
         {
           "date": "17 juin | 20:00",
           "stadium": "Stade de Dallas",
@@ -1349,6 +1409,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "17 juin | 23:00",
+          "stadium": "Stade de Toronto",
+          "home": "Ghana",
+          "predHome": 2,
+          "away": "Panama",
+          "predAway": 0,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
+        },
         {
           "date": "17 juin | 20:00",
           "stadium": "Stade de Dallas",

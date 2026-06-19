@@ -15,7 +15,7 @@ export function buildLatest(snapshots) {
       rankDelta: p ? p.rank - m.rank : 0,
     };
   });
-  return { takenAt: curr.takenAt, members, otherGroups: curr.otherGroups, experts: curr.experts };
+  return { takenAt: curr.takenAt, members, experts: curr.experts };
 }
 
 export function buildTimeseries(snapshots) {

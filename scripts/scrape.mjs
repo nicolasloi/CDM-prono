@@ -42,20 +42,26 @@ async function main() {
     process.exit(1);
   }
 
-  const fresh = await scrapePredictions(parsed.members.filter((m) => m.id));
-  const freshCount = Object.values(fresh).reduce((s, p) => s + p.matches.length, 0);
-  if (freshCount === 0) {
-    console.error('Aucun prono récupéré — abandon sans écrire (rendu JS probablement cassé).');
-    process.exit(1);
-  }
-
-  // Détection de changement (vs fichiers existants), en ignorant les horodatages.
   const prevLatest = readJSON(fileUrl('latest.json'));
   const prevPreds = readJSON(fileUrl('predictions.json'));
-  // Accumule l'historique (le profil RTS ne montre qu'une fenêtre glissante).
-  const byId = mergePredictions(prevPreds?.byId, fresh);
-  const totalPreds = Object.values(byId).reduce((s, p) => s + p.matches.length, 0);
+
+  // Le classement (points/rang) est la donnée FIABLE, toujours présente dans le HTML public :
+  // il doit se mettre à jour quoi qu'il arrive.
   const membersChanged = membersFingerprint(parsed.members) !== membersFingerprint(prevLatest?.members);
+
+  // Les pronos (Playwright, rendus JS) sont un BONUS best-effort : un échec ne doit JAMAIS
+  // bloquer la mise à jour du classement (cf. principe « le site ne dépend jamais du bonus »).
+  let fresh = {};
+  try {
+    fresh = await scrapePredictions(parsed.members.filter((m) => m.id));
+  } catch (e) {
+    console.error(`Scrape des pronos échoué (bonus ignoré) : ${e.message}`);
+  }
+  const freshCount = Object.values(fresh).reduce((s, p) => s + p.matches.length, 0);
+  if (freshCount === 0) console.error('Aucun prono frais — on conserve l\'historique existant.');
+  // Accumule l'historique (le profil RTS ne montre qu'une fenêtre glissante) ; sans frais, on garde l'existant.
+  const byId = freshCount ? mergePredictions(prevPreds?.byId, fresh) : (prevPreds?.byId || {});
+  const totalPreds = Object.values(byId).reduce((s, p) => s + p.matches.length, 0);
   const predsChanged = JSON.stringify(byId) !== JSON.stringify(prevPreds?.byId);
 
   if (!membersChanged && !predsChanged) {

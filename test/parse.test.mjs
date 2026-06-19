@@ -19,7 +19,6 @@ test('gère les rangs ex æquo', () => {
   assert.equal(r.members[3].rank, 3);
 });
 
-test('parse les autres groupes et les experts', () => {
-  assert.deepEqual(r.otherGroups[0], { rank: 1, name: 'Sebulba Lalas', points: 19 });
+test('parse les experts', () => {
   assert.deepEqual(r.experts, [12, 16, 18]);
 });

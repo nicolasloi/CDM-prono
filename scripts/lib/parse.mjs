@@ -44,20 +44,6 @@ export function parseCommunity(html) {
     }
   }
 
-  // --- Autres groupes : #rang / nom / "N Pkt" ---
-  const otherGroups = [];
-  const gb = sectionBounds(lines, 'Classement des groupes', ['Experts', 'Afficher']);
-  if (gb) {
-    const g = lines.slice(gb.start, gb.end);
-    for (let i = 0; i < g.length; i++) {
-      const rm = /^#(\d+)$/.exec(g[i]);
-      const km = /^(\d+)\s*Pkt$/.exec(g[i + 2] || '');
-      if (rm && km && g[i + 1] && !/Pkt|Pts/.test(g[i + 1])) {
-        otherGroups.push({ rank: Number(rm[1]), name: g[i + 1], points: Number(km[1]) });
-      }
-    }
-  }
-
   // --- Experts : 3 valeurs "N Pts" après "Experts" ---
   const experts = [];
   const ei = lines.findIndex((l) => l === 'Experts');
@@ -68,5 +54,5 @@ export function parseCommunity(html) {
     }
   }
 
-  return { members, otherGroups, experts };
+  return { members, experts };
 }

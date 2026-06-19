@@ -2,12 +2,13 @@ name: Scrape RTS
 
 on:
   schedule:
-    # Fenêtre de match 17h50–07h45 CEST (= 15:50–05:45 UTC) → toutes les 15 min
-    - cron: '50 15 * * *'
-    - cron: '*/15 16-23 * * *'
-    - cron: '*/15 0-5 * * *'
-    # Reste de la journée 08h–17h CEST (= 06–15 UTC) → toutes les heures
-    - cron: '0 6-15 * * *'
+    # Les matchs commencent à l'heure pile → on scrape à HH:05/:20/:35/:50,
+    # soit ~5 min après le coup d'envoi (le temps que RTS publie pronos + score).
+    # Fenêtre de match 18h–08h CEST (= 16h–06h UTC) → toutes les 15 min, calées à +5
+    - cron: '5,20,35,50 16-23 * * *'
+    - cron: '5,20,35,50 0-5 * * *'
+    # Reste de la journée 08h–18h CEST (= 06–16 UTC) → toutes les heures à :05
+    - cron: '5 6-15 * * *'
   workflow_dispatch:
 
 permissions:

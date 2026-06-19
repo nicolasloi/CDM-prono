@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "20 juin | 00:00",
+          "stadium": "Stade de Boston",
+          "home": "Écosse",
+          "predHome": 1,
+          "away": "Maroc",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "19 juin | 21:00",
           "stadium": "Stade de Seattle",
           "home": "USA",
@@ -344,6 +356,18 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "20 juin | 00:00",
+          "stadium": "Stade de Boston",
+          "home": "Écosse",
+          "predHome": 0,
+          "away": "Maroc",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "19 juin | 21:00",
           "stadium": "Stade de Seattle",
@@ -686,6 +710,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "20 juin | 00:00",
+          "stadium": "Stade de Boston",
+          "home": "Écosse",
+          "predHome": 1,
+          "away": "Maroc",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "19 juin | 21:00",
           "stadium": "Stade de Seattle",
           "home": "USA",
@@ -1026,6 +1062,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "20 juin | 00:00",
+          "stadium": "Stade de Boston",
+          "home": "Écosse",
+          "predHome": 0,
+          "away": "Maroc",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "19 juin | 21:00",
           "stadium": "Stade de Seattle",
@@ -1368,6 +1416,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "20 juin | 00:00",
+          "stadium": "Stade de Boston",
+          "home": "Écosse",
+          "predHome": 1,
+          "away": "Maroc",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "19 juin | 21:00",
           "stadium": "Stade de Seattle",
           "home": "USA",
@@ -1708,6 +1768,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "20 juin | 00:00",
+          "stadium": "Stade de Boston",
+          "home": "Écosse",
+          "predHome": 1,
+          "away": "Maroc",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "19 juin | 21:00",
           "stadium": "Stade de Seattle",

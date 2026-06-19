@@ -1,50 +1,21 @@
 {
-  "generatedAt": "2026-06-19T01:58:55.957Z",
+  "generatedAt": "2026-06-19T03:24:42.635Z",
   "byId": {
-    "8Yak": {
-      "name": "Cayan F",
-      "matches": [
-        {
-          "date": "18 juin | 22:00",
-          "stadium": "BC Place de Vancouver",
-          "home": "Canada",
-          "predHome": 3,
-          "away": "Qatar",
-          "predAway": 1,
-          "actualHome": 6,
-          "actualAway": 0,
-          "points": 5,
-          "played": true
-        },
-        {
-          "date": "18 juin | 19:00",
-          "stadium": "Stade de Los Angeles",
-          "home": "Suisse",
-          "predHome": 2,
-          "away": "Bosnie-Herzégovine",
-          "predAway": 1,
-          "actualHome": 4,
-          "actualAway": 1,
-          "points": 6,
-          "played": true
-        },
-        {
-          "date": "18 juin | 16:00",
-          "stadium": "Stade d'Atlanta",
-          "home": "Tchéquie",
-          "predHome": 2,
-          "away": "Afrique du Sud",
-          "predAway": 1,
-          "actualHome": 1,
-          "actualAway": 1,
-          "points": 1,
-          "played": true
-        }
-      ]
-    },
     "O52a": {
       "name": "Joao M",
       "matches": [
+        {
+          "date": "19 juin | 01:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Mexique",
+          "predHome": 3,
+          "away": "Corée du Sud",
+          "predAway": 2,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 8,
+          "played": true
+        },
         {
           "date": "18 juin | 22:00",
           "stadium": "BC Place de Vancouver",
@@ -83,9 +54,74 @@
         }
       ]
     },
+    "8Yak": {
+      "name": "Cayan F",
+      "matches": [
+        {
+          "date": "19 juin | 01:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Mexique",
+          "predHome": 1,
+          "away": "Corée du Sud",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
+        },
+        {
+          "date": "18 juin | 22:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Canada",
+          "predHome": 3,
+          "away": "Qatar",
+          "predAway": 1,
+          "actualHome": 6,
+          "actualAway": 0,
+          "points": 5,
+          "played": true
+        },
+        {
+          "date": "18 juin | 19:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Suisse",
+          "predHome": 2,
+          "away": "Bosnie-Herzégovine",
+          "predAway": 1,
+          "actualHome": 4,
+          "actualAway": 1,
+          "points": 6,
+          "played": true
+        },
+        {
+          "date": "18 juin | 16:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Tchéquie",
+          "predHome": 2,
+          "away": "Afrique du Sud",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
+        }
+      ]
+    },
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "19 juin | 01:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Mexique",
+          "predHome": 1,
+          "away": "Corée du Sud",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
+        },
         {
           "date": "18 juin | 22:00",
           "stadium": "BC Place de Vancouver",
@@ -128,6 +164,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "19 juin | 01:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Mexique",
+          "predHome": 2,
+          "away": "Corée du Sud",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 8,
+          "played": true
+        },
+        {
           "date": "18 juin | 22:00",
           "stadium": "BC Place de Vancouver",
           "home": "Canada",
@@ -169,6 +217,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "19 juin | 01:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Mexique",
+          "predHome": 3,
+          "away": "Corée du Sud",
+          "predAway": 1,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 5,
+          "played": true
+        },
+        {
           "date": "18 juin | 22:00",
           "stadium": "BC Place de Vancouver",
           "home": "Canada",
@@ -209,6 +269,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "19 juin | 01:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Mexique",
+          "predHome": 1,
+          "away": "Corée du Sud",
+          "predAway": 0,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 10,
+          "played": true
+        },
         {
           "date": "18 juin | 22:00",
           "stadium": "BC Place de Vancouver",

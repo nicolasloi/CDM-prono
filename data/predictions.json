@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "19 juin | 21:00",
+          "stadium": "Stade de Seattle",
+          "home": "USA",
+          "predHome": 0,
+          "away": "Australie",
+          "predAway": 1,
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 0,
+          "played": true
+        },
+        {
           "date": "19 juin | 03:00",
           "stadium": "Stade de Guadalajara",
           "home": "Mexique",
@@ -332,6 +344,18 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "19 juin | 21:00",
+          "stadium": "Stade de Seattle",
+          "home": "USA",
+          "predHome": 2,
+          "away": "Australie",
+          "predAway": 0,
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 10,
+          "played": true
+        },
         {
           "date": "19 juin | 03:00",
           "stadium": "Stade de Guadalajara",
@@ -662,6 +686,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "19 juin | 21:00",
+          "stadium": "Stade de Seattle",
+          "home": "USA",
+          "predHome": 2,
+          "away": "Australie",
+          "predAway": 1,
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
+        },
+        {
           "date": "19 juin | 03:00",
           "stadium": "Stade de Guadalajara",
           "home": "Mexique",
@@ -990,6 +1026,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "19 juin | 21:00",
+          "stadium": "Stade de Seattle",
+          "home": "USA",
+          "predHome": 2,
+          "away": "Australie",
+          "predAway": 2,
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
+        },
         {
           "date": "19 juin | 03:00",
           "stadium": "Stade de Guadalajara",
@@ -1320,6 +1368,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "19 juin | 21:00",
+          "stadium": "Stade de Seattle",
+          "home": "USA",
+          "predHome": 2,
+          "away": "Australie",
+          "predAway": 1,
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
+        },
+        {
           "date": "19 juin | 03:00",
           "stadium": "Stade de Guadalajara",
           "home": "Mexique",
@@ -1648,6 +1708,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "19 juin | 21:00",
+          "stadium": "Stade de Seattle",
+          "home": "USA",
+          "predHome": 2,
+          "away": "Australie",
+          "predAway": 0,
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 10,
+          "played": true
+        },
         {
           "date": "19 juin | 03:00",
           "stadium": "Stade de Guadalajara",

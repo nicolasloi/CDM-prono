@@ -1,6 +1,61 @@
 {
   "matches": [
     {
+      "date": "19 juin | 21:00",
+      "kickoff": "2026-06-19T21:00:00+02:00",
+      "home": "USA",
+      "away": "Australie",
+      "homeFlag": "🇺🇸",
+      "awayFlag": "🇦🇺",
+      "stadium": "Stade de Seattle",
+      "actualHome": 2,
+      "actualAway": 0,
+      "picks": [
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 10
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 10
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 2,
+          "points": 1
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 0,
+          "predAway": 1,
+          "points": 0
+        }
+      ]
+    },
+    {
       "date": "19 juin | 03:00",
       "kickoff": "2026-06-19T03:00:00+02:00",
       "home": "Mexique",

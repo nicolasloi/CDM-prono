@@ -8,7 +8,6 @@ export type Member = {
 };
 export type Latest = {
   takenAt: string; members: Member[];
-  otherGroups: { rank: number; name: string; points: number }[];
   experts: number[];
 };
 export type TsPoint = { takenAt: string; totalPoints: number; rank: number; name: string };

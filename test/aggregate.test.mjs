@@ -6,11 +6,11 @@ const snaps = [
   { takenAt: '2026-06-11T20:00:00Z', members: [
     { id: 'a', name: 'A', rank: 1, totalPoints: 10, isAdmin: false },
     { id: 'b', name: 'B', rank: 2, totalPoints: 8, isAdmin: false },
-  ], otherGroups: [], experts: [12,16,18] },
+  ], experts: [12,16,18] },
   { takenAt: '2026-06-12T20:00:00Z', members: [
     { id: 'b', name: 'B', rank: 1, totalPoints: 14, isAdmin: false },
     { id: 'a', name: 'A', rank: 2, totalPoints: 11, isAdmin: false },
-  ], otherGroups: [], experts: [12,16,18] },
+  ], experts: [12,16,18] },
 ];
 
 test('buildLatest ajoute deltas points & rang depuis le snapshot précédent', () => {

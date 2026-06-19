@@ -2,13 +2,21 @@ name: Scrape RTS
 
 on:
   schedule:
-    - cron: '0 16-23 * * *'
-    - cron: '0 0-4 * * *'
-    - cron: '0 7,10,13 * * *'
+    # Fenêtre de match 17h50–07h45 CEST (= 15:50–05:45 UTC) → toutes les 15 min
+    - cron: '50 15 * * *'
+    - cron: '*/15 16-23 * * *'
+    - cron: '*/15 0-5 * * *'
+    # Reste de la journée 08h–17h CEST (= 06–15 UTC) → toutes les heures
+    - cron: '0 6-15 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
+
+# Évite que deux passages se chevauchent
+concurrency:
+  group: scrape
+  cancel-in-progress: false
 
 jobs:
   scrape:
@@ -21,9 +29,13 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: pnpm }
       - run: pnpm install --frozen-lockfile
+      - name: Cache Playwright browser
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('pnpm-lock.yaml') }}
       - run: pnpm exec playwright install --with-deps chromium
       - run: node scripts/scrape.mjs
-      - run: node scripts/scrape-predictions.mjs
       - id: commit
         run: |
           git config user.name "cdm-bot"
@@ -32,7 +44,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
-            git commit -m "data: snapshot $(date -u +%FT%TZ)"
+            git commit -m "data: maj $(date -u +%FT%TZ)"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi

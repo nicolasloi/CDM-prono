@@ -2,6 +2,7 @@
 import { SITE } from '../config';
 const base = import.meta.env.BASE_URL;
 const home = `${base}/`.replace(/\/{2,}/g, '/');
+const matchsHref = `${home}matchs`.replace(/\/{2,}/g, '/');
 ---
 <header style="position:relative;z-index:2;border-bottom:1px solid var(--line);backdrop-filter:blur(8px)">
   <div class="container" style="display:flex;gap:16px;align-items:center;padding:16px 0">
@@ -9,6 +10,10 @@ const home = `${base}/`.replace(/\/{2,}/g, '/');
       <span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:linear-gradient(135deg,var(--red),var(--green) 50%,var(--blue))"></span>
       CDM <span style="color:var(--gold)">Prono</span>
     </a>
+    <nav style="display:flex;gap:16px;font-size:14px;font-weight:700">
+      <a href={home} style="text-decoration:none;color:var(--text-dim)">Classement</a>
+      <a href={matchsHref} style="text-decoration:none;color:var(--text-dim)">Matchs</a>
+    </nav>
     <a href={SITE.rtsCommunityUrl} target="_blank" rel="noopener"
        style="margin-left:auto;font-size:12px;font-weight:700;color:var(--gold);text-decoration:none;border:1px solid var(--gold-soft);padding:7px 12px;border-radius:30px">
       Tableau officiel RTS ↗

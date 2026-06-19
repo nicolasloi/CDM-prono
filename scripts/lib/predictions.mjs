@@ -1,19 +1,6 @@
-// Scrape les pronostics par match de chaque membre via Playwright (les pronos sont rendus en JS).
-// Produit data/predictions.json : { generatedAt, byId: { <id>: { name, matches: [...] } } }.
-// Les pronos ne sont publics qu'après le coup d'envoi (matchs à venir masqués) → on ne garde que les matchs joués.
+// Scrape les pronostics par match de chaque membre via Playwright (rendus en JS, publics après coup d'envoi).
 import { chromium } from 'playwright';
-import { readFileSync, writeFileSync } from 'node:fs';
-import { TOURNAMENT_OVER } from './lib/season.mjs';
-
-const LATEST = new URL('../data/latest.json', import.meta.url);
-const OUT = new URL('../data/predictions.json', import.meta.url);
-
-const MONTHS = { janvier: 0, février: 1, mars: 2, avril: 3, mai: 4, juin: 5, juillet: 6, août: 7, septembre: 8, octobre: 9, novembre: 10, décembre: 11 };
-function sortKey(dateStr) {
-  const m = /^(\d{1,2}) (\S+) \| (\d{1,2}):(\d{2})$/.exec(dateStr || '');
-  if (!m) return 0;
-  return (MONTHS[m[2]] ?? 0) * 1e6 + Number(m[1]) * 1e4 + Number(m[3]) * 100 + Number(m[4]);
-}
+import { sortKey } from './datetime.mjs';
 
 // Exécuté DANS la page : renvoie un tableau de matchs structurés.
 function extractInPage() {
@@ -43,15 +30,29 @@ function extractInPage() {
   });
 }
 
-async function main() {
-  if (TOURNAMENT_OVER()) { console.log('Tournoi terminé — scraper en pause.'); return; }
+// Clé indépendante du fuseau horaire (le profil RTS affiche l'heure dans le fuseau du navigateur).
+const matchKey = (m) => `${m.home}|${m.away}`;
 
-  const latest = JSON.parse(readFileSync(LATEST, 'utf8'));
-  const members = latest.members.filter((m) => m.id);
+// Fusionne l'historique stocké avec le scrape courant (le profil RTS ne montre qu'une fenêtre glissante).
+// Les matchs frais écrasent les anciens (mise à jour des scores/points en direct), les anciens hors-fenêtre sont conservés.
+export function mergePredictions(prevById = {}, freshById = {}) {
+  const out = {};
+  const ids = new Set([...Object.keys(prevById), ...Object.keys(freshById)]);
+  for (const id of ids) {
+    const map = new Map();
+    for (const m of prevById[id]?.matches || []) map.set(matchKey(m), m);
+    for (const m of freshById[id]?.matches || []) map.set(matchKey(m), m);
+    const matches = [...map.values()].sort((a, b) => sortKey(b.date) - sortKey(a.date));
+    out[id] = { name: freshById[id]?.name || prevById[id]?.name, matches };
+  }
+  return out;
+}
+
+// members: [{ id, name }] → { byId: { <id>: { name, matches:[...] } } } (matchs joués, plus récent d'abord)
+export async function scrapePredictions(members) {
   const browser = await chromium.launch();
-  const ctx = await browser.newContext({ userAgent: 'Mozilla/5.0 MarvelousBot' });
+  const ctx = await browser.newContext({ userAgent: 'Mozilla/5.0 MarvelousBot', timezoneId: 'Europe/Zurich', locale: 'fr-CH' });
   const byId = {};
-
   for (const mem of members) {
     const page = await ctx.newPage();
     try {
@@ -69,14 +70,5 @@ async function main() {
     await page.close();
   }
   await browser.close();
-
-  const total = Object.values(byId).reduce((s, p) => s + p.matches.length, 0);
-  if (total === 0) {
-    console.error('Aucun prono récupéré — abandon sans écrire (rendu JS probablement cassé).');
-    process.exit(1);
-  }
-  writeFileSync(OUT, JSON.stringify({ generatedAt: new Date().toISOString(), byId }, null, 2));
-  console.log(`Pronos : ${members.length} joueurs, ${total} pronos révélés.`);
+  return byId;
 }
-
-main().catch((e) => { console.error(e); process.exit(1); });

@@ -1,0 +1,1496 @@
+{
+  "matches": [
+    {
+      "date": "19 juin | 03:00",
+      "kickoff": "2026-06-19T03:00:00+02:00",
+      "home": "Mexique",
+      "away": "Corée du Sud",
+      "homeFlag": "🇲🇽",
+      "awayFlag": "🇰🇷",
+      "stadium": "Stade de Guadalajara",
+      "actualHome": 1,
+      "actualAway": 0,
+      "picks": [
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 1,
+          "predAway": 0,
+          "points": 10
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 3,
+          "predAway": 2,
+          "points": 8
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 8
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 3,
+          "predAway": 1,
+          "points": 5
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "date": "19 juin | 00:00",
+      "kickoff": "2026-06-19T00:00:00+02:00",
+      "home": "Canada",
+      "away": "Qatar",
+      "homeFlag": "🇨🇦",
+      "awayFlag": "🇶🇦",
+      "stadium": "BC Place de Vancouver",
+      "actualHome": 6,
+      "actualAway": 0,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 6
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 1,
+          "predAway": 0,
+          "points": 6
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 6
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 6
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 6
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 3,
+          "predAway": 1,
+          "points": 5
+        }
+      ]
+    },
+    {
+      "date": "18 juin | 21:00",
+      "kickoff": "2026-06-18T21:00:00+02:00",
+      "home": "Suisse",
+      "away": "Bosnie-Herzégovine",
+      "homeFlag": "🇨🇭",
+      "awayFlag": "🇧🇦",
+      "stadium": "Stade de Los Angeles",
+      "actualHome": 4,
+      "actualAway": 1,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "date": "18 juin | 18:00",
+      "kickoff": "2026-06-18T18:00:00+02:00",
+      "home": "Tchéquie",
+      "away": "Afrique du Sud",
+      "homeFlag": "🇨🇿",
+      "awayFlag": "🇿🇦",
+      "stadium": "Stade d'Atlanta",
+      "actualHome": 1,
+      "actualAway": 1,
+      "picks": [
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 10
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 0,
+          "predAway": 0,
+          "points": 8
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 1,
+          "predAway": 0,
+          "points": 1
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 1,
+          "predAway": 0,
+          "points": 1
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "date": "17 juin | 23:00",
+      "kickoff": "2026-06-17T23:00:00+02:00",
+      "home": "Ghana",
+      "away": "Panama",
+      "homeFlag": "🇬🇭",
+      "awayFlag": "🇵🇦",
+      "stadium": "Stade de Toronto",
+      "actualHome": 1,
+      "actualAway": 0,
+      "picks": [
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 8
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 8
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 6
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 6
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 2,
+          "predAway": 2,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "date": "17 juin | 20:00",
+      "kickoff": "2026-06-17T20:00:00+02:00",
+      "home": "Angleterre",
+      "away": "Croatie",
+      "homeFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "awayFlag": "🇭🇷",
+      "stadium": "Stade de Dallas",
+      "actualHome": 4,
+      "actualAway": 2,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 8
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 8
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 5
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 5
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 5
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "date": "17 juin | 17:00",
+      "kickoff": "2026-06-17T17:00:00+02:00",
+      "home": "Portugal",
+      "away": "RD Congo",
+      "homeFlag": "🇵🇹",
+      "awayFlag": "🇨🇩",
+      "stadium": "Stade de Houston",
+      "actualHome": 1,
+      "actualAway": 1,
+      "picks": [
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 3,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 3,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 0,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 0
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 3,
+          "predAway": 0,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "date": "17 juin | 04:00",
+      "kickoff": "2026-06-17T04:00:00+02:00",
+      "home": "Autriche",
+      "away": "Jordanie",
+      "homeFlag": "🇦🇹",
+      "awayFlag": "🇯🇴",
+      "stadium": "Stade de la baie de San Francisco",
+      "actualHome": 3,
+      "actualAway": 1,
+      "picks": [
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 8
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 3,
+          "predAway": 0,
+          "points": 6
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 3,
+          "predAway": 0,
+          "points": 6
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 1,
+          "predAway": 0,
+          "points": 5
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 1,
+          "predAway": 0,
+          "points": 5
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 1,
+          "predAway": 0,
+          "points": 5
+        }
+      ]
+    },
+    {
+      "date": "17 juin | 01:00",
+      "kickoff": "2026-06-17T01:00:00+02:00",
+      "home": "Argentine",
+      "away": "Algérie",
+      "homeFlag": "🇦🇷",
+      "awayFlag": "🇩🇿",
+      "stadium": "Stade de Kansas City",
+      "actualHome": 3,
+      "actualAway": 0,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 3,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 6
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 3,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 6
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 5
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 5
+        }
+      ]
+    },
+    {
+      "date": "16 juin | 22:00",
+      "kickoff": "2026-06-16T22:00:00+02:00",
+      "home": "Irak",
+      "away": "Norvège",
+      "homeFlag": "🇮🇶",
+      "awayFlag": "🇳🇴",
+      "stadium": "Stade de Boston",
+      "actualHome": 1,
+      "actualAway": 4,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 0,
+          "predAway": 3,
+          "points": 8
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 0,
+          "predAway": 3,
+          "points": 8
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 0,
+          "predAway": 3,
+          "points": 8
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 0,
+          "predAway": 3,
+          "points": 8
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 0,
+          "predAway": 2,
+          "points": 5
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 0,
+          "predAway": 1,
+          "points": 5
+        }
+      ]
+    },
+    {
+      "date": "16 juin | 19:00",
+      "kickoff": "2026-06-16T19:00:00+02:00",
+      "home": "France",
+      "away": "Sénégal",
+      "homeFlag": "🇫🇷",
+      "awayFlag": "🇸🇳",
+      "stadium": "Stade de New York New Jersey",
+      "actualHome": 3,
+      "actualAway": 1,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 3,
+          "predAway": 1,
+          "points": 10
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 8
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 6
+        }
+      ]
+    },
+    {
+      "date": "16 juin | 01:00",
+      "kickoff": "2026-06-16T01:00:00+02:00",
+      "home": "Iran",
+      "away": "Nouvelle-Zélande",
+      "homeFlag": "🇮🇷",
+      "awayFlag": "🇳🇿",
+      "stadium": "Stade de Los Angeles",
+      "actualHome": 2,
+      "actualAway": 2,
+      "picks": [
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 8
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 8
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 1,
+          "predAway": 2,
+          "points": 1
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 0,
+          "predAway": 3,
+          "points": 0
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 1,
+          "predAway": 0,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "date": "15 juin | 22:00",
+      "kickoff": "2026-06-15T22:00:00+02:00",
+      "home": "Arabie saoudite",
+      "away": "Uruguay",
+      "homeFlag": "🇸🇦",
+      "awayFlag": "🇺🇾",
+      "stadium": "Stade de Miami",
+      "actualHome": 1,
+      "actualAway": 1,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 0,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 1,
+          "predAway": 2,
+          "points": 1
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 1,
+          "predAway": 2,
+          "points": 1
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 0,
+          "predAway": 2,
+          "points": 0
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 0,
+          "predAway": 2,
+          "points": 0
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 0,
+          "predAway": 2,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "date": "15 juin | 19:00",
+      "kickoff": "2026-06-15T19:00:00+02:00",
+      "home": "Belgique",
+      "away": "Egypte",
+      "homeFlag": "🇧🇪",
+      "awayFlag": "🇪🇬",
+      "stadium": "Stade de Seattle",
+      "actualHome": 1,
+      "actualAway": 1,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 3,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 0
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "date": "15 juin | 16:00",
+      "kickoff": "2026-06-15T16:00:00+02:00",
+      "home": "Espagne",
+      "away": "Cap Vert",
+      "homeFlag": "🇪🇸",
+      "awayFlag": "🇨🇻",
+      "stadium": "Stade d'Atlanta",
+      "actualHome": 0,
+      "actualAway": 0,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 1
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 4,
+          "predAway": 0,
+          "points": 1
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 4,
+          "predAway": 0,
+          "points": 1
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 4,
+          "predAway": 0,
+          "points": 1
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 3,
+          "predAway": 0,
+          "points": 1
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 4,
+          "predAway": 1,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "date": "15 juin | 04:00",
+      "kickoff": "2026-06-15T04:00:00+02:00",
+      "home": "Suède",
+      "away": "Tunisie",
+      "homeFlag": "🇸🇪",
+      "awayFlag": "🇹🇳",
+      "stadium": "Stade de Monterrey",
+      "actualHome": 5,
+      "actualAway": 1,
+      "picks": [
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 5
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 5
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 5
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "date": "15 juin | 01:00",
+      "kickoff": "2026-06-15T01:00:00+02:00",
+      "home": "Côte d'Ivoire",
+      "away": "Equateur",
+      "homeFlag": "🇨🇮",
+      "awayFlag": "🇪🇨",
+      "stadium": "Stade de Philadelphie",
+      "actualHome": 1,
+      "actualAway": 0,
+      "picks": [
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 8
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 8
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "date": "14 juin | 22:00",
+      "kickoff": "2026-06-14T22:00:00+02:00",
+      "home": "Pays-Bas",
+      "away": "Japon",
+      "homeFlag": "🇳🇱",
+      "awayFlag": "🇯🇵",
+      "stadium": "Stade de Dallas",
+      "actualHome": 2,
+      "actualAway": 2,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 2,
+          "predAway": 2,
+          "points": 10
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 2,
+          "points": 10
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 1,
+          "predAway": 2,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "date": "14 juin | 19:00",
+      "kickoff": "2026-06-14T19:00:00+02:00",
+      "home": "Allemagne",
+      "away": "Curacao",
+      "homeFlag": "🇩🇪",
+      "awayFlag": "🇨🇼",
+      "stadium": "Stade de Houston",
+      "actualHome": 7,
+      "actualAway": 1,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 5,
+          "predAway": 0,
+          "points": 5
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 5,
+          "predAway": 0,
+          "points": 5
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 4,
+          "predAway": 0,
+          "points": 5
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 3,
+          "predAway": 0,
+          "points": 5
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 3,
+          "predAway": 0,
+          "points": 5
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 5,
+          "predAway": 0,
+          "points": 5
+        }
+      ]
+    },
+    {
+      "date": "14 juin | 06:00",
+      "kickoff": "2026-06-14T06:00:00+02:00",
+      "home": "Australie",
+      "away": "Turquie",
+      "homeFlag": "🇦🇺",
+      "awayFlag": "🇹🇷",
+      "stadium": "BC Place de Vancouver",
+      "actualHome": 2,
+      "actualAway": 0,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 0,
+          "predAway": 2,
+          "points": 0
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 1,
+          "predAway": 2,
+          "points": 0
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 1,
+          "predAway": 2,
+          "points": 0
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 1,
+          "predAway": 2,
+          "points": 0
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 1,
+          "predAway": 2,
+          "points": 0
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "date": "14 juin | 03:00",
+      "kickoff": "2026-06-14T03:00:00+02:00",
+      "home": "Haïti",
+      "away": "Écosse",
+      "homeFlag": "🇭🇹",
+      "awayFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+      "stadium": "Stade de Boston",
+      "actualHome": 0,
+      "actualAway": 1,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 0,
+          "predAway": 3,
+          "points": 6
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 0,
+          "predAway": 2,
+          "points": 6
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 0,
+          "predAway": 2,
+          "points": 6
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 0,
+          "predAway": 2,
+          "points": 6
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 0,
+          "predAway": 2,
+          "points": 6
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 0,
+          "predAway": 2,
+          "points": 6
+        }
+      ]
+    },
+    {
+      "date": "14 juin | 00:00",
+      "kickoff": "2026-06-14T00:00:00+02:00",
+      "home": "Brésil",
+      "away": "Maroc",
+      "homeFlag": "🇧🇷",
+      "awayFlag": "🇲🇦",
+      "stadium": "Stade de New York New Jersey",
+      "actualHome": 1,
+      "actualAway": 1,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 3,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 3,
+          "predAway": 1,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "date": "13 juin | 21:00",
+      "kickoff": "2026-06-13T21:00:00+02:00",
+      "home": "Qatar",
+      "away": "Suisse",
+      "homeFlag": "🇶🇦",
+      "awayFlag": "🇨🇭",
+      "stadium": "Stade de la baie de San Francisco",
+      "actualHome": 1,
+      "actualAway": 1,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 1,
+          "predAway": 4,
+          "points": 1
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 0,
+          "predAway": 3,
+          "points": 0
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 0,
+          "predAway": 2,
+          "points": 0
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 0,
+          "predAway": 2,
+          "points": 0
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 0,
+          "predAway": 2,
+          "points": 0
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 0,
+          "predAway": 3,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "date": "13 juin | 03:00",
+      "kickoff": "2026-06-13T03:00:00+02:00",
+      "home": "USA",
+      "away": "Paraguay",
+      "homeFlag": "🇺🇸",
+      "awayFlag": "🇵🇾",
+      "stadium": "Stade de Los Angeles",
+      "actualHome": 4,
+      "actualAway": 1,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 3,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 1,
+          "predAway": 0,
+          "points": 5
+        }
+      ]
+    },
+    {
+      "date": "12 juin | 21:00",
+      "kickoff": "2026-06-12T21:00:00+02:00",
+      "home": "Canada",
+      "away": "Bosnie-Herzégovine",
+      "homeFlag": "🇨🇦",
+      "awayFlag": "🇧🇦",
+      "stadium": "Stade de Toronto",
+      "actualHome": 1,
+      "actualAway": 1,
+      "picks": [
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 1,
+          "predAway": 0,
+          "points": 1
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 1,
+          "predAway": 0,
+          "points": 1
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 0
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 0
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 0
+        }
+      ]
+    },
+    {
+      "date": "12 juin | 04:00",
+      "kickoff": "2026-06-12T04:00:00+02:00",
+      "home": "Corée du Sud",
+      "away": "Tchéquie",
+      "homeFlag": "🇰🇷",
+      "awayFlag": "🇨🇿",
+      "stadium": "Stade de Guadalajara",
+      "actualHome": 2,
+      "actualAway": 1,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 1,
+          "predAway": 0,
+          "points": 8
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 1,
+          "predAway": 0,
+          "points": 8
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 1
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 1
+        }
+      ]
+    },
+    {
+      "date": "11 juin | 21:00",
+      "kickoff": "2026-06-11T21:00:00+02:00",
+      "home": "Mexique",
+      "away": "Afrique du Sud",
+      "homeFlag": "🇲🇽",
+      "awayFlag": "🇿🇦",
+      "stadium": "Stade de Mexico",
+      "actualHome": 2,
+      "actualAway": 0,
+      "picks": [
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 10
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 10
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 10
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 10
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 3,
+          "predAway": 0,
+          "points": 6
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "2xN6",
+          "name": "Mica P",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 6
+        }
+      ]
+    }
+  ]
+}

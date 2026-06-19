@@ -12,7 +12,7 @@ const latest = getLatest();
 const ts = getTimeseries();
 const members = latest.members;
 const top3 = members.slice(0, 3);
-const updated = new Date(latest.takenAt).toLocaleString('fr-CH', { dateStyle: 'long', timeStyle: 'short' });
+const updated = new Date(latest.takenAt).toLocaleString('fr-CH', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Zurich' });
 
 // Enrichit les pronos avec les drapeaux (au build) pour le drawer.
 const preds: Record<string, any> = {};

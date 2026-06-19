@@ -50,7 +50,7 @@ let gi = 0;
       {g.matches.map((m) => {
         const exactOf = (p: any) => p.predHome === m.actualHome && p.predAway === m.actualAway;
         const homeWin = m.actualHome > m.actualAway, awayWin = m.actualAway > m.actualHome;
-        const best = m.picks[0] && m.picks[0].points > 0 ? m.picks[0] : null;
+        const maxPts = Math.max(0, ...m.picks.map((p: any) => p.points || 0));
         const d = (gi++ % 6) * 45;
         return (
           <article class="mx" data-kickoff={m.kickoff} data-state="done" style={`--d:${d}ms`}>
@@ -67,7 +67,7 @@ let gi = 0;
             <div class="mx-picks">
               {m.picks.map((p: any) => {
                 const ok = p.points > 0;
-                const isBest = best && p.id === best.id;
+                const isBest = maxPts > 0 && p.points === maxPts;
                 return (
                   <div class={`px${ok ? '' : ' z'}${isBest ? ' best' : ''}${exactOf(p) ? ' exact' : ''}`}>
                     {isBest && <span class="crown">👑</span>}

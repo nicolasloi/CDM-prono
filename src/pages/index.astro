@@ -93,20 +93,21 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
     const esc = (s: any) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c] as string));
 
     function matchRow(m: any) {
+      const hasScore = m.actualHome != null && m.actualAway != null;
       const ok = m.points > 0;
-      const exact = m.predHome === m.actualHome && m.predAway === m.actualAway;
+      const exact = hasScore && m.predHome === m.actualHome && m.predAway === m.actualAway;
       return `
         <div class="m">
           <div class="m-top">
             <span class="m-date">${esc(m.date)}</span>
-            <span class="m-pts ${ok ? 'ok' : 'no'}">${ok ? '+' + m.points : '0'} pts${exact ? ' · exact' : ''}</span>
+            <span class="m-pts ${ok ? 'ok' : 'no'}">${hasScore ? (ok ? '+' + m.points : '0') + ' pts' + (exact ? ' · exact' : '') : 'en cours'}</span>
           </div>
           <div class="m-mid">
             <span class="m-team"><span class="fl">${esc(m.homeFlag)}</span>${esc(m.home)}</span>
             <span class="m-pred">${m.predHome}<i>–</i>${m.predAway}</span>
             <span class="m-team r">${esc(m.away)}<span class="fl">${esc(m.awayFlag)}</span></span>
           </div>
-          <div class="m-bot"><span class="m-real">Résultat <b>${m.actualHome}–${m.actualAway}</b></span><span class="m-stad">${esc(m.stadium)}</span></div>
+          <div class="m-bot"><span class="m-real">${hasScore ? `Résultat <b>${m.actualHome}–${m.actualAway}</b>` : '<b>En cours</b>'}</span><span class="m-stad">${esc(m.stadium)}</span></div>
         </div>`;
     }
 

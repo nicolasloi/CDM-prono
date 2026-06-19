@@ -58,8 +58,10 @@ export async function scrapePredictions(members) {
     try {
       await page.goto(`https://pronostics.rts.ch/users/${mem.id}`, { waitUntil: 'domcontentloaded', timeout: 30000 });
       await page.waitForFunction(() => /\d{1,2} \S+ \| \d{1,2}:\d{2}/.test(document.body.innerText), { timeout: 15000 }).catch(() => {});
+      // On garde un match dès que les pronos sont visibles (RTS ne les révèle qu'au coup d'envoi)
+      // — donc un match « en cours » apparaît tout de suite, sans attendre le score final.
       const matches = (await page.evaluate(extractInPage))
-        .filter((x) => x.played && x.predHome !== null && x.predAway !== null)
+        .filter((x) => x.predHome !== null && x.predAway !== null)
         .sort((a, b) => sortKey(b.date) - sortKey(a.date));
       byId[mem.id] = { name: mem.name, matches };
       console.log(`  ${mem.name} : ${matches.length} pronos`);

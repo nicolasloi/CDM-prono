@@ -45,8 +45,15 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "data: maj $(date -u +%FT%TZ)"
-            git push
-            echo "changed=true" >> "$GITHUB_OUTPUT"
+            # Intègre d'éventuels commits concurrents avant de pousser, avec retries
+            # (évite les rejets « fetch first » qui sautaient le déploiement).
+            changed=false
+            for i in 1 2 3 4 5; do
+              if git pull --rebase --autostash origin main && git push; then changed=true; break; fi
+              echo "push rejeté, nouvelle tentative $i…"; sleep $((i * 3))
+            done
+            echo "changed=$changed" >> "$GITHUB_OUTPUT"
+            [ "$changed" = true ] || { echo "push impossible après 5 tentatives"; exit 1; }
           fi
 
   deploy:

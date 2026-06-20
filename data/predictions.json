@@ -10,10 +10,10 @@
           "predHome": 3,
           "away": "Côte d'Ivoire",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 1,
+          "points": 6,
+          "played": true
         },
         {
           "date": "20 juin | 19:00",
@@ -411,10 +411,10 @@
           "predHome": 2,
           "away": "Côte d'Ivoire",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 1,
+          "points": 10,
+          "played": true
         },
         {
           "date": "20 juin | 19:00",
@@ -812,10 +812,10 @@
           "predHome": 2,
           "away": "Côte d'Ivoire",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 1,
+          "points": 10,
+          "played": true
         },
         {
           "date": "20 juin | 19:00",
@@ -1213,10 +1213,10 @@
           "predHome": 4,
           "away": "Côte d'Ivoire",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 1,
+          "points": 6,
+          "played": true
         },
         {
           "date": "20 juin | 19:00",
@@ -1614,10 +1614,10 @@
           "predHome": 3,
           "away": "Côte d'Ivoire",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 1,
+          "points": 6,
+          "played": true
         },
         {
           "date": "20 juin | 19:00",
@@ -2015,10 +2015,10 @@
           "predHome": 2,
           "away": "Côte d'Ivoire",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 1,
+          "points": 6,
+          "played": true
         },
         {
           "date": "20 juin | 19:00",

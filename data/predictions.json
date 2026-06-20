@@ -4,16 +4,28 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "20 juin | 02:30",
+          "stadium": "Stade de Philadelphie",
+          "home": "Brésil",
+          "predHome": 6,
+          "away": "Haïti",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 00:00",
           "stadium": "Stade de Boston",
           "home": "Écosse",
           "predHome": 1,
           "away": "Maroc",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 1,
+          "points": 8,
+          "played": true
         },
         {
           "date": "19 juin | 21:00",
@@ -357,16 +369,28 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "20 juin | 02:30",
+          "stadium": "Stade de Philadelphie",
+          "home": "Brésil",
+          "predHome": 4,
+          "away": "Haïti",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 00:00",
           "stadium": "Stade de Boston",
           "home": "Écosse",
           "predHome": 0,
           "away": "Maroc",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 1,
+          "points": 6,
+          "played": true
         },
         {
           "date": "19 juin | 21:00",
@@ -710,16 +734,28 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "20 juin | 02:30",
+          "stadium": "Stade de Philadelphie",
+          "home": "Brésil",
+          "predHome": 2,
+          "away": "Haïti",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 00:00",
           "stadium": "Stade de Boston",
           "home": "Écosse",
           "predHome": 1,
           "away": "Maroc",
           "predAway": 3,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 1,
+          "points": 5,
+          "played": true
         },
         {
           "date": "19 juin | 21:00",
@@ -1063,16 +1099,28 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "20 juin | 02:30",
+          "stadium": "Stade de Philadelphie",
+          "home": "Brésil",
+          "predHome": 1,
+          "away": "Haïti",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 00:00",
           "stadium": "Stade de Boston",
           "home": "Écosse",
           "predHome": 0,
           "away": "Maroc",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 1,
+          "points": 6,
+          "played": true
         },
         {
           "date": "19 juin | 21:00",
@@ -1416,16 +1464,28 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "20 juin | 02:30",
+          "stadium": "Stade de Philadelphie",
+          "home": "Brésil",
+          "predHome": 3,
+          "away": "Haïti",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 00:00",
           "stadium": "Stade de Boston",
           "home": "Écosse",
           "predHome": 1,
           "away": "Maroc",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 1,
+          "points": 8,
+          "played": true
         },
         {
           "date": "19 juin | 21:00",
@@ -1769,16 +1829,28 @@
       "name": "Thomas M",
       "matches": [
         {
+          "date": "20 juin | 02:30",
+          "stadium": "Stade de Philadelphie",
+          "home": "Brésil",
+          "predHome": 4,
+          "away": "Haïti",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 00:00",
           "stadium": "Stade de Boston",
           "home": "Écosse",
           "predHome": 1,
           "away": "Maroc",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 1,
+          "points": 8,
+          "played": true
         },
         {
           "date": "19 juin | 21:00",

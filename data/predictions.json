@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "20 juin | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Pays-Bas",
+          "predHome": 1,
+          "away": "Suède",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 05:00",
           "stadium": "Stade de la baie de San Francisco",
           "home": "Turquie",
@@ -380,6 +392,18 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "20 juin | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Pays-Bas",
+          "predHome": 3,
+          "away": "Suède",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "20 juin | 05:00",
           "stadium": "Stade de la baie de San Francisco",
@@ -758,6 +782,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "20 juin | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Pays-Bas",
+          "predHome": 2,
+          "away": "Suède",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 05:00",
           "stadium": "Stade de la baie de San Francisco",
           "home": "Turquie",
@@ -1134,6 +1170,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "20 juin | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Pays-Bas",
+          "predHome": 1,
+          "away": "Suède",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "20 juin | 05:00",
           "stadium": "Stade de la baie de San Francisco",
@@ -1512,6 +1560,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "20 juin | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Pays-Bas",
+          "predHome": 2,
+          "away": "Suède",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 05:00",
           "stadium": "Stade de la baie de San Francisco",
           "home": "Turquie",
@@ -1888,6 +1948,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "20 juin | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Pays-Bas",
+          "predHome": 2,
+          "away": "Suède",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "20 juin | 05:00",
           "stadium": "Stade de la baie de San Francisco",

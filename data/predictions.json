@@ -4,16 +4,28 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "20 juin | 05:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Turquie",
+          "predHome": 1,
+          "away": "Paraguay",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 02:30",
           "stadium": "Stade de Philadelphie",
           "home": "Brésil",
           "predHome": 6,
           "away": "Haïti",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 0,
+          "points": 5,
+          "played": true
         },
         {
           "date": "20 juin | 00:00",
@@ -369,16 +381,28 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "20 juin | 05:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Turquie",
+          "predHome": 1,
+          "away": "Paraguay",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 02:30",
           "stadium": "Stade de Philadelphie",
           "home": "Brésil",
           "predHome": 4,
           "away": "Haïti",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
         },
         {
           "date": "20 juin | 00:00",
@@ -734,16 +758,28 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "20 juin | 05:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Turquie",
+          "predHome": 2,
+          "away": "Paraguay",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 02:30",
           "stadium": "Stade de Philadelphie",
           "home": "Brésil",
           "predHome": 2,
           "away": "Haïti",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
         },
         {
           "date": "20 juin | 00:00",
@@ -1099,16 +1135,28 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "20 juin | 05:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Turquie",
+          "predHome": 2,
+          "away": "Paraguay",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 02:30",
           "stadium": "Stade de Philadelphie",
           "home": "Brésil",
           "predHome": 1,
           "away": "Haïti",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
         },
         {
           "date": "20 juin | 00:00",
@@ -1464,16 +1512,28 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "20 juin | 05:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Turquie",
+          "predHome": 2,
+          "away": "Paraguay",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 02:30",
           "stadium": "Stade de Philadelphie",
           "home": "Brésil",
           "predHome": 3,
           "away": "Haïti",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
         },
         {
           "date": "20 juin | 00:00",
@@ -1829,16 +1889,28 @@
       "name": "Thomas M",
       "matches": [
         {
+          "date": "20 juin | 05:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Turquie",
+          "predHome": 2,
+          "away": "Paraguay",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 02:30",
           "stadium": "Stade de Philadelphie",
           "home": "Brésil",
           "predHome": 4,
           "away": "Haïti",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
         },
         {
           "date": "20 juin | 00:00",

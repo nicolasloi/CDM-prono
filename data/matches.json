@@ -1,28 +1,28 @@
 {
   "matches": [
     {
-      "date": "20 juin | 02:30",
-      "kickoff": "2026-06-20T02:30:00+02:00",
-      "home": "Brésil",
-      "away": "Haïti",
-      "homeFlag": "🇧🇷",
-      "awayFlag": "🇭🇹",
-      "stadium": "Stade de Philadelphie",
+      "date": "20 juin | 05:00",
+      "kickoff": "2026-06-20T05:00:00+02:00",
+      "home": "Turquie",
+      "away": "Paraguay",
+      "homeFlag": "🇹🇷",
+      "awayFlag": "🇵🇾",
+      "stadium": "Stade de la baie de San Francisco",
       "actualHome": null,
       "actualAway": null,
       "picks": [
         {
           "id": "O52a",
           "name": "Joao M",
-          "predHome": 6,
+          "predHome": 1,
           "predAway": 1,
           "points": null
         },
         {
           "id": "8Yak",
           "name": "Cayan F",
-          "predHome": 4,
-          "predAway": 0,
+          "predHome": 1,
+          "predAway": 1,
           "points": null
         },
         {
@@ -35,23 +35,78 @@
         {
           "id": "9Nz1",
           "name": "Vitor Pinto",
-          "predHome": 1,
+          "predHome": 2,
           "predAway": 0,
           "points": null
         },
         {
           "id": "7GjW",
           "name": "Mehdi M",
-          "predHome": 3,
+          "predHome": 2,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 2,
           "predAway": 1,
           "points": null
+        }
+      ]
+    },
+    {
+      "date": "20 juin | 02:30",
+      "kickoff": "2026-06-20T02:30:00+02:00",
+      "home": "Brésil",
+      "away": "Haïti",
+      "homeFlag": "🇧🇷",
+      "awayFlag": "🇭🇹",
+      "stadium": "Stade de Philadelphie",
+      "actualHome": 3,
+      "actualAway": 0,
+      "picks": [
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 4,
+          "predAway": 0,
+          "points": 6
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 0,
+          "points": 6
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 1,
+          "predAway": 0,
+          "points": 6
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 3,
+          "predAway": 1,
+          "points": 6
         },
         {
           "id": "G3EG",
           "name": "Thomas M",
           "predHome": 4,
           "predAway": 0,
-          "points": null
+          "points": 6
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 6,
+          "predAway": 1,
+          "points": 5
         }
       ]
     },

@@ -54,13 +54,15 @@ let gi = 0;
         const maxPts = Math.max(0, ...m.picks.map((p: any) => p.points || 0));
         const d = (gi++ % 6) * 45;
         return (
-          <article class="mx" data-kickoff={m.kickoff} data-state="done" style={`--d:${d}ms`}>
+          <article class={`mx${hasScore ? '' : ' islive'}`} data-kickoff={m.kickoff} data-state={hasScore ? 'done' : 'live'} style={`--d:${d}ms`}>
             <div class="mx-glow" aria-hidden="true"></div>
             <header class="mx-top">
               <div class={`mx-team${homeWin ? ' win' : ''}`}><span class="fl">{m.homeFlag}</span><span class="tn">{m.home}</span></div>
               <div class="mx-score">
                 <b>{hasScore ? m.actualHome : '–'}</b><span class="sep">:</span><b>{hasScore ? m.actualAway : '–'}</b>
-                <span class="mx-status"><span class="st-time">{hour(m)}</span></span>
+                <span class="mx-status">{hasScore
+                  ? <span class="st-time">{hour(m)}</span>
+                  : <span class="st-live"><span class="dot"></span>EN COURS</span>}</span>
               </div>
               <div class={`mx-team r${awayWin ? ' win' : ''}`}><span class="tn">{m.away}</span><span class="fl">{m.awayFlag}</span></div>
             </header>
@@ -88,21 +90,10 @@ let gi = 0;
   {all.length === 0 && <p class="dim">Les matchs s'afficheront ici dès les premiers coups d'envoi.</p>}
 
   <script>
-    const DUR = 2.25 * 3600 * 1000; // ~2h15
-    const now = Date.now();
+    // « En cours » = match révélé sans résultat final (data-state calculé au build).
+    // Dès que le score est connu, le match passe « terminé » — pas de minuteur.
     const cards = Array.from(document.querySelectorAll('.mx'));
-    let live = 0;
-
-    cards.forEach((el) => {
-      const ko = Date.parse(el.dataset.kickoff || '');
-      const st = el.querySelector('.mx-status');
-      if (!Number.isNaN(ko) && now >= ko && now <= ko + DUR) {
-        el.dataset.state = 'live';
-        el.classList.add('islive');
-        live++;
-        if (st) st.innerHTML = '<span class="st-live"><span class="dot"></span>EN COURS</span>';
-      }
-    });
+    const live = cards.filter((c) => c.dataset.state === 'live').length;
     const cl = document.getElementById('cnt-live');
     if (cl) cl.textContent = String(live);
 

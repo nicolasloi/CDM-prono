@@ -10,10 +10,10 @@
           "predHome": 4,
           "away": "Curacao",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
         },
         {
           "date": "20 juin | 22:00",
@@ -423,10 +423,10 @@
           "predHome": 2,
           "away": "Curacao",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
         },
         {
           "date": "20 juin | 22:00",
@@ -836,10 +836,10 @@
           "predHome": 3,
           "away": "Curacao",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
         },
         {
           "date": "20 juin | 22:00",
@@ -1249,10 +1249,10 @@
           "predHome": 2,
           "away": "Curacao",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 0,
+          "played": true
         },
         {
           "date": "20 juin | 22:00",
@@ -1662,10 +1662,10 @@
           "predHome": 2,
           "away": "Curacao",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
         },
         {
           "date": "20 juin | 22:00",
@@ -2075,10 +2075,10 @@
           "predHome": 3,
           "away": "Curacao",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
         },
         {
           "date": "20 juin | 22:00",

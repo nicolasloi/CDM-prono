@@ -10,10 +10,10 @@
           "predHome": 5,
           "away": "Arabie saoudite",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 4,
+          "actualAway": 0,
+          "points": 8,
+          "played": true
         },
         {
           "date": "21 juin | 06:00",
@@ -447,10 +447,10 @@
           "predHome": 3,
           "away": "Arabie saoudite",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 4,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
         },
         {
           "date": "21 juin | 06:00",
@@ -884,10 +884,10 @@
           "predHome": 2,
           "away": "Arabie saoudite",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 4,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
         },
         {
           "date": "21 juin | 06:00",
@@ -1321,10 +1321,10 @@
           "predHome": 3,
           "away": "Arabie saoudite",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 4,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
         },
         {
           "date": "21 juin | 06:00",
@@ -1758,10 +1758,10 @@
           "predHome": 2,
           "away": "Arabie saoudite",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 4,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
         },
         {
           "date": "21 juin | 06:00",
@@ -2195,10 +2195,10 @@
           "predHome": 3,
           "away": "Arabie saoudite",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 4,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
         },
         {
           "date": "21 juin | 06:00",

@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "21 juin | 02:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Equateur",
+          "predHome": 4,
+          "away": "Curacao",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 22:00",
           "stadium": "Stade de Toronto",
           "home": "Allemagne",
@@ -404,6 +416,18 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "21 juin | 02:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Equateur",
+          "predHome": 2,
+          "away": "Curacao",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "20 juin | 22:00",
           "stadium": "Stade de Toronto",
@@ -806,6 +830,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "21 juin | 02:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Equateur",
+          "predHome": 3,
+          "away": "Curacao",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 22:00",
           "stadium": "Stade de Toronto",
           "home": "Allemagne",
@@ -1206,6 +1242,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "21 juin | 02:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Equateur",
+          "predHome": 2,
+          "away": "Curacao",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "20 juin | 22:00",
           "stadium": "Stade de Toronto",
@@ -1608,6 +1656,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "21 juin | 02:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Equateur",
+          "predHome": 2,
+          "away": "Curacao",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "20 juin | 22:00",
           "stadium": "Stade de Toronto",
           "home": "Allemagne",
@@ -2008,6 +2068,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "21 juin | 02:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Equateur",
+          "predHome": 3,
+          "away": "Curacao",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "20 juin | 22:00",
           "stadium": "Stade de Toronto",

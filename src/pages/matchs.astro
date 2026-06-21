@@ -54,7 +54,7 @@ let gi = 0;
         const maxPts = Math.max(0, ...m.picks.map((p: any) => p.points || 0));
         const d = (gi++ % 6) * 45;
         return (
-          <article class={`mx${hasScore ? '' : ' islive'}`} data-kickoff={m.kickoff} data-state={hasScore ? 'done' : 'live'} style={`--d:${d}ms`}>
+          <article class={`mx${hasScore ? '' : ' islive'}`} data-kickoff={m.kickoff} data-hour={hour(m)} data-state={hasScore ? 'done' : 'live'} style={`--d:${d}ms`}>
             <div class="mx-glow" aria-hidden="true"></div>
             <header class="mx-top">
               <div class={`mx-team${homeWin ? ' win' : ''}`}><span class="fl">{m.homeFlag}</span><span class="tn">{m.home}</span></div>
@@ -92,8 +92,25 @@ let gi = 0;
   <script>
     // « En cours » = match révélé sans résultat final (data-state calculé au build).
     // Dès que le score est connu, le match passe « terminé » — pas de minuteur.
+    // « En cours » = match révélé sans résultat final. Garde-fou : passé ~2h30
+    // après le coup d'envoi, le match est forcément terminé (même si le score
+    // n'a pas encore été re-capté) → on enlève le badge « en cours ».
+    const MAXLIVE = 2.5 * 3600 * 1000;
+    const now = Date.now();
     const cards = Array.from(document.querySelectorAll('.mx'));
-    const live = cards.filter((c) => c.dataset.state === 'live').length;
+    let live = 0;
+    cards.forEach((c) => {
+      if (c.dataset.state !== 'live') return;
+      const ko = Date.parse(c.dataset.kickoff || '');
+      if (!Number.isNaN(ko) && now > ko + MAXLIVE) {
+        c.dataset.state = 'done';
+        c.classList.remove('islive');
+        const st = c.querySelector('.mx-status');
+        if (st) st.innerHTML = '<span class="st-time">' + (c.dataset.hour || '') + '</span>';
+      } else {
+        live++;
+      }
+    });
     const cl = document.getElementById('cnt-live');
     if (cl) cl.textContent = String(live);
 

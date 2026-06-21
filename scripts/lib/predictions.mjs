@@ -41,7 +41,12 @@ export function mergePredictions(prevById = {}, freshById = {}) {
   for (const id of ids) {
     const map = new Map();
     for (const m of prevById[id]?.matches || []) map.set(matchKey(m), m);
-    for (const m of freshById[id]?.matches || []) map.set(matchKey(m), m);
+    for (const m of freshById[id]?.matches || []) {
+      const prev = map.get(matchKey(m));
+      // Ne jamais régresser un résultat déjà connu vers un « live » sans score.
+      if (prev && prev.actualHome != null && m.actualHome == null) continue;
+      map.set(matchKey(m), m);
+    }
     const matches = [...map.values()].sort((a, b) => sortKey(b.date) - sortKey(a.date));
     out[id] = { name: freshById[id]?.name || prevById[id]?.name, matches };
   }

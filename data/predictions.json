@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "22 juin | 00:00",
+          "stadium": "Stade de Miami",
+          "home": "Uruguay",
+          "predHome": 2,
+          "away": "Cap Vert",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "21 juin | 21:00",
           "stadium": "Stade de Los Angeles",
           "home": "Belgique",
@@ -452,6 +464,18 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "22 juin | 00:00",
+          "stadium": "Stade de Miami",
+          "home": "Uruguay",
+          "predHome": 2,
+          "away": "Cap Vert",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "21 juin | 21:00",
           "stadium": "Stade de Los Angeles",
@@ -902,6 +926,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "22 juin | 00:00",
+          "stadium": "Stade de Miami",
+          "home": "Uruguay",
+          "predHome": 1,
+          "away": "Cap Vert",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "21 juin | 21:00",
           "stadium": "Stade de Los Angeles",
           "home": "Belgique",
@@ -1350,6 +1386,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "22 juin | 00:00",
+          "stadium": "Stade de Miami",
+          "home": "Uruguay",
+          "predHome": 1,
+          "away": "Cap Vert",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "21 juin | 21:00",
           "stadium": "Stade de Los Angeles",
@@ -1800,6 +1848,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "22 juin | 00:00",
+          "stadium": "Stade de Miami",
+          "home": "Uruguay",
+          "predHome": 2,
+          "away": "Cap Vert",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "21 juin | 21:00",
           "stadium": "Stade de Los Angeles",
           "home": "Belgique",
@@ -2248,6 +2308,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "22 juin | 00:00",
+          "stadium": "Stade de Miami",
+          "home": "Uruguay",
+          "predHome": 2,
+          "away": "Cap Vert",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "21 juin | 21:00",
           "stadium": "Stade de Los Angeles",

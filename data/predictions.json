@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "21 juin | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Espagne",
+          "predHome": 5,
+          "away": "Arabie saoudite",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "21 juin | 06:00",
           "stadium": "Stade de Monterrey",
           "home": "Tunisie",
@@ -428,6 +440,18 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "21 juin | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Espagne",
+          "predHome": 3,
+          "away": "Arabie saoudite",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "21 juin | 06:00",
           "stadium": "Stade de Monterrey",
@@ -854,6 +878,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "21 juin | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Espagne",
+          "predHome": 2,
+          "away": "Arabie saoudite",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "21 juin | 06:00",
           "stadium": "Stade de Monterrey",
           "home": "Tunisie",
@@ -1278,6 +1314,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "21 juin | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Espagne",
+          "predHome": 3,
+          "away": "Arabie saoudite",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "21 juin | 06:00",
           "stadium": "Stade de Monterrey",
@@ -1704,6 +1752,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "21 juin | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Espagne",
+          "predHome": 2,
+          "away": "Arabie saoudite",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "21 juin | 06:00",
           "stadium": "Stade de Monterrey",
           "home": "Tunisie",
@@ -2128,6 +2188,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "21 juin | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Espagne",
+          "predHome": 3,
+          "away": "Arabie saoudite",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "21 juin | 06:00",
           "stadium": "Stade de Monterrey",

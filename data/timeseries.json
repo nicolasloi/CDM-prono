@@ -611,6 +611,12 @@
       "totalPoints": 141,
       "rank": 5,
       "name": "Vitor Pinto"
+    },
+    {
+      "takenAt": "2026-06-21T21:39:21.299Z",
+      "totalPoints": 142,
+      "rank": 5,
+      "name": "Vitor Pinto"
     }
   ],
   "O52a": [
@@ -1223,6 +1229,12 @@
     {
       "takenAt": "2026-06-21T18:09:04.889Z",
       "totalPoints": 159,
+      "rank": 2,
+      "name": "Joao M"
+    },
+    {
+      "takenAt": "2026-06-21T21:39:21.299Z",
+      "totalPoints": 160,
       "rank": 2,
       "name": "Joao M"
     }
@@ -1839,6 +1851,12 @@
       "totalPoints": 143,
       "rank": 4,
       "name": "Mehdi M"
+    },
+    {
+      "takenAt": "2026-06-21T21:39:21.299Z",
+      "totalPoints": 144,
+      "rank": 4,
+      "name": "Mehdi M"
     }
   ],
   "wmd3": [
@@ -2453,6 +2471,12 @@
       "totalPoints": 151,
       "rank": 3,
       "name": "Nicolas L"
+    },
+    {
+      "takenAt": "2026-06-21T21:39:21.299Z",
+      "totalPoints": 152,
+      "rank": 3,
+      "name": "Nicolas L"
     }
   ],
   "8Yak": [
@@ -3064,6 +3088,12 @@
     },
     {
       "takenAt": "2026-06-21T18:09:04.889Z",
+      "totalPoints": 174,
+      "rank": 1,
+      "name": "Cayan F"
+    },
+    {
+      "takenAt": "2026-06-21T21:39:21.299Z",
       "totalPoints": 174,
       "rank": 1,
       "name": "Cayan F"
@@ -3681,6 +3711,12 @@
       "totalPoints": 132,
       "rank": 6,
       "name": "Thomas M"
+    },
+    {
+      "takenAt": "2026-06-21T21:39:21.299Z",
+      "totalPoints": 132,
+      "rank": 6,
+      "name": "Thomas M"
     }
   ],
   "2xN6": [
@@ -4292,6 +4328,12 @@
     },
     {
       "takenAt": "2026-06-21T18:09:04.889Z",
+      "totalPoints": 6,
+      "rank": 7,
+      "name": "Mica P"
+    },
+    {
+      "takenAt": "2026-06-21T21:39:21.299Z",
       "totalPoints": 6,
       "rank": 7,
       "name": "Mica P"

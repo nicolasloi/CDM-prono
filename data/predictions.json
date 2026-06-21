@@ -10,10 +10,10 @@
           "predHome": 3,
           "away": "Iran",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
         },
         {
           "date": "21 juin | 18:00",
@@ -459,10 +459,10 @@
           "predHome": 3,
           "away": "Iran",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 0,
+          "played": true
         },
         {
           "date": "21 juin | 18:00",
@@ -908,10 +908,10 @@
           "predHome": 2,
           "away": "Iran",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
         },
         {
           "date": "21 juin | 18:00",
@@ -1357,10 +1357,10 @@
           "predHome": 2,
           "away": "Iran",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
         },
         {
           "date": "21 juin | 18:00",
@@ -1806,10 +1806,10 @@
           "predHome": 1,
           "away": "Iran",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
         },
         {
           "date": "21 juin | 18:00",
@@ -2255,10 +2255,10 @@
           "predHome": 2,
           "away": "Iran",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 0,
+          "played": true
         },
         {
           "date": "21 juin | 18:00",

@@ -22,7 +22,12 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
+      # Toujours construire le dernier état de main : quand ce workflow est
+      # appelé par le scrape, le SHA déclencheur est antérieur au commit de
+      # données fraîchement poussé — sans ce ref, on déploierait l'ancien état.
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: pnpm }

@@ -58,17 +58,27 @@ export async function scrapePredictions(members) {
   const browser = await chromium.launch();
   const ctx = await browser.newContext({ userAgent: 'Mozilla/5.0 MarvelousBot', timezoneId: 'Europe/Zurich', locale: 'fr-CH' });
   const byId = {};
+  const fixMap = new Map(); // matchs à venir (pronos encore masqués) = calendrier
   for (const mem of members) {
     const page = await ctx.newPage();
     try {
       await page.goto(`https://pronostics.rts.ch/users/${mem.id}`, { waitUntil: 'domcontentloaded', timeout: 30000 });
       await page.waitForFunction(() => /\d{1,2} \S+ \| \d{1,2}:\d{2}/.test(document.body.innerText), { timeout: 15000 }).catch(() => {});
+      const raw = await page.evaluate(extractInPage);
       // On garde un match dès que les pronos sont visibles (RTS ne les révèle qu'au coup d'envoi)
       // — donc un match « en cours » apparaît tout de suite, sans attendre le score final.
-      const matches = (await page.evaluate(extractInPage))
+      const matches = raw
         .filter((x) => x.predHome !== null && x.predAway !== null)
         .sort((a, b) => sortKey(b.date) - sortKey(a.date));
       byId[mem.id] = { name: mem.name, matches };
+      // Matchs à venir : aucun résultat encore (coup d'envoi pas passé). Commun à tous → on déduplique.
+      // NB : on ne se fie pas au prono masqué (un membre peut juste ne pas avoir pronostiqué un match déjà joué).
+      for (const x of raw) {
+        if (!x.played && x.home && x.away) {
+          const k = `${x.home}|${x.away}`;
+          if (!fixMap.has(k)) fixMap.set(k, { home: x.home, away: x.away, stadium: x.stadium, date: x.date });
+        }
+      }
       console.log(`  ${mem.name} : ${matches.length} pronos`);
     } catch (e) {
       console.error(`  ${mem.name} (${mem.id}) échec : ${e.message}`);
@@ -77,5 +87,5 @@ export async function scrapePredictions(members) {
     await page.close();
   }
   await browser.close();
-  return byId;
+  return { byId, fixtures: [...fixMap.values()] };
 }

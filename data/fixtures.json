@@ -1,0 +1,68 @@
+{
+  "upcoming": [
+    {
+      "home": "Argentine",
+      "away": "Autriche",
+      "homeFlag": "🇦🇷",
+      "awayFlag": "🇦🇹",
+      "stadium": "Stade de Dallas",
+      "kickoff": "2026-06-22T19:00:00+02:00"
+    },
+    {
+      "home": "France",
+      "away": "Irak",
+      "homeFlag": "🇫🇷",
+      "awayFlag": "🇮🇶",
+      "stadium": "Stade de Philadelphie",
+      "kickoff": "2026-06-22T23:00:00+02:00"
+    },
+    {
+      "home": "Norvège",
+      "away": "Sénégal",
+      "homeFlag": "🇳🇴",
+      "awayFlag": "🇸🇳",
+      "stadium": "Stade de New York New Jersey",
+      "kickoff": "2026-06-23T02:00:00+02:00"
+    },
+    {
+      "home": "Jordanie",
+      "away": "Algérie",
+      "homeFlag": "🇯🇴",
+      "awayFlag": "🇩🇿",
+      "stadium": "Stade de la baie de San Francisco",
+      "kickoff": "2026-06-23T05:00:00+02:00"
+    },
+    {
+      "home": "Portugal",
+      "away": "Ouzbékistan",
+      "homeFlag": "🇵🇹",
+      "awayFlag": "🇺🇿",
+      "stadium": "Stade de Houston",
+      "kickoff": "2026-06-23T19:00:00+02:00"
+    },
+    {
+      "home": "Angleterre",
+      "away": "Ghana",
+      "homeFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "awayFlag": "🇬🇭",
+      "stadium": "Stade de Boston",
+      "kickoff": "2026-06-23T22:00:00+02:00"
+    },
+    {
+      "home": "Panama",
+      "away": "Croatie",
+      "homeFlag": "🇵🇦",
+      "awayFlag": "🇭🇷",
+      "stadium": "Stade de Toronto",
+      "kickoff": "2026-06-24T01:00:00+02:00"
+    },
+    {
+      "home": "Colombie",
+      "away": "RD Congo",
+      "homeFlag": "🇨🇴",
+      "awayFlag": "🇨🇩",
+      "stadium": "Stade de Guadalajara",
+      "kickoff": "2026-06-24T04:00:00+02:00"
+    }
+  ]
+}

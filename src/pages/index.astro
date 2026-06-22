@@ -7,8 +7,10 @@ import RankChart from '../components/RankChart.astro';
 import { getLatest, getTimeseries, keyOf } from '../data';
 import { buildColorMap } from '../../scripts/lib/members.mjs';
 import { buildRankByDay } from '../../scripts/lib/bump.mjs';
+import { topMover } from '../../scripts/lib/form.mjs';
 import { flagFor } from '../../scripts/lib/flags.mjs';
 import predictionsData from '../../data/predictions.json';
+import fixturesData from '../../data/fixtures.json';
 
 const latest = getLatest();
 const ts = getTimeseries();
@@ -16,6 +18,9 @@ const members = latest.members;
 const top3 = members.slice(0, 3);
 const colorMap = buildColorMap(members.map((m) => keyOf(m)));
 const bump = buildRankByDay(ts);
+const mover = topMover(ts);
+const upcoming = (fixturesData.upcoming || []) as any[];
+const nextMatch = upcoming[0] || null; // défaut au build ; le client choisit le bon « prochain »
 const updated = new Date(latest.takenAt).toLocaleString('fr-CH', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Zurich' });
 
 // Enrichit les pronos avec les drapeaux (au build) pour le drawer.
@@ -45,6 +50,26 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
     <h1 class="h1">Le <em>Classement</em></h1>
     <p class="dim updated">Dernière mise à jour : {updated}</p>
   </section>
+
+  <!-- BANDEAU LIVE : prochain match + en forme -->
+  {(nextMatch || mover) && (
+    <section class="strip">
+      {nextMatch && (
+        <div class="strip-card next" id="next-card">
+          <span class="strip-k"><span class="tick">⏱</span> Prochain match</span>
+          <span class="strip-main" id="next-main">{nextMatch.homeFlag} {nextMatch.home} <i>–</i> {nextMatch.away} {nextMatch.awayFlag}</span>
+          <span class="strip-val" id="next-cd">—</span>
+        </div>
+      )}
+      {mover && (
+        <div class="strip-card form">
+          <span class="strip-k">🔥 En forme</span>
+          <span class="strip-main">{mover.name}</span>
+          <span class="strip-val">+{mover.gain} <small>pts / 24h</small></span>
+        </div>
+      )}
+    </section>
+  )}
 
   <!-- PODIUM -->
   <section class="podium">
@@ -143,6 +168,10 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
       if (!p) return;
       const total = p.matches.reduce((s: number, m: any) => s + (m.points || 0), 0);
       const best = p.matches.reduce((b: any, m: any) => (m.points > (b?.points ?? -1) ? m : b), null);
+      const done = p.matches.filter((m: any) => m.actualHome != null && m.actualAway != null);
+      const exact = done.filter((m: any) => m.predHome === m.actualHome && m.predAway === m.actualAway).length;
+      const hit = done.filter((m: any) => m.points > 0).length;
+      const acc = done.length ? Math.round((hit / done.length) * 100) : 0;
       body.innerHTML = `
         <div class="d-head">
           <p class="kicker">Parcours</p>
@@ -150,9 +179,12 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
           <div class="d-stats">
             <span><b>${p.matches.length}</b> pronos</span>
             <span><b>${total}</b> pts cumulés</span>
+            <span><b>${exact}</b> exacts</span>
+            <span><b>${acc}%</b> réussis</span>
             ${best ? `<span>meilleur&nbsp;: <b>+${best.points}</b></span>` : ''}
           </div>
-        </div>
+        </div>`;
+      body.innerHTML += `
         ${p.matches.length ? `<div class="d-list">${p.matches.map(matchRow).join('')}</div>` : '<p class="dim" style="padding:18px">Aucun prono révélé pour l’instant.</p>'}`;
       drawer.classList.add('open');
       backdrop.classList.add('show');
@@ -210,8 +242,52 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
     }
   </script>
 
+  <script is:inline define:vars={{ upcoming }}>
+    window.__UP = upcoming;
+  </script>
+  <script>
+    // Prochain match + compte à rebours (recalculé côté client → toujours juste).
+    const UP = window.__UP || [];
+    const nCard = document.getElementById('next-card');
+    const nMain = document.getElementById('next-main');
+    const nCd = document.getElementById('next-cd');
+    function fmtCd(ms) {
+      if (ms <= 0) return 'maintenant';
+      const s = Math.floor(ms / 1000), d = Math.floor(s / 86400), h = Math.floor((s % 86400) / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+      if (d > 0) return 'dans ' + d + 'j ' + h + 'h';
+      if (h > 0) return 'dans ' + h + 'h ' + String(m).padStart(2, '0') + 'm';
+      return 'dans ' + m + 'm ' + String(sec).padStart(2, '0') + 's';
+    }
+    function nEsc(s) { return String(s == null ? '' : s); }
+    function tickNext() {
+      if (!nCard) return;
+      const now = Date.now();
+      const next = UP.find((f) => Date.parse(f.kickoff) > now);
+      if (!next) { nCard.style.display = 'none'; return; }
+      nCard.style.display = '';
+      if (nMain) nMain.innerHTML = nEsc(next.homeFlag) + ' ' + nEsc(next.home) + ' <i>–</i> ' + nEsc(next.away) + ' ' + nEsc(next.awayFlag);
+      if (nCd) nCd.textContent = fmtCd(Date.parse(next.kickoff) - now);
+    }
+    if (nCard) { tickNext(); setInterval(tickNext, 1000); }
+  </script>
+
   <style is:global>
     main { padding-top: 8px !important; }
+
+    /* BANDEAU LIVE */
+    .strip { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 14px 0 6px; }
+    @media (max-width: 560px) { .strip { grid-template-columns: 1fr; } }
+    .strip-card { display: flex; flex-direction: column; gap: 4px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 13px 16px; min-width: 0; }
+    .strip-card.next { border-color: var(--gold-soft); }
+    .strip-k { font: 800 10px/1 var(--font); letter-spacing: .16em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 6px; }
+    .strip-card.form .strip-k { color: #ff7a3d; }
+    .strip .tick { animation: tickp 2s ease-in-out infinite; }
+    @keyframes tickp { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+    .strip-main { font-weight: 800; font-size: clamp(15px, 2.2vw, 18px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .strip-main i { color: var(--text-dim); font-style: normal; margin: 0 5px; }
+    .strip-val { font-weight: 800; font-size: 13px; color: var(--text-dim); }
+    .strip-card.next .strip-val { color: var(--gold); }
+    .strip-val small { color: var(--text-dim); font-weight: 600; }
 
     /* HERO */
     .hero { position: relative; padding: 18px 0 8px; }

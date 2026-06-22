@@ -6,6 +6,8 @@ import { parseCommunity } from './lib/parse.mjs';
 import { buildLatest, buildTimeseries } from './lib/aggregate.mjs';
 import { scrapePredictions, mergePredictions } from './lib/predictions.mjs';
 import { buildMatches } from './lib/matches.mjs';
+import { flagFor } from './lib/flags.mjs';
+import { toISO } from './lib/datetime.mjs';
 import { TOURNAMENT_OVER } from './lib/season.mjs';
 
 const COMMUNITY_URL = 'https://pronostics.rts.ch/communities/484';
@@ -51,12 +53,13 @@ async function main() {
 
   // Les pronos (Playwright, rendus JS) sont un BONUS best-effort : un échec ne doit JAMAIS
   // bloquer la mise à jour du classement (cf. principe « le site ne dépend jamais du bonus »).
-  let fresh = {};
+  let scraped = { byId: {}, fixtures: [] };
   try {
-    fresh = await scrapePredictions(parsed.members.filter((m) => m.id));
+    scraped = await scrapePredictions(parsed.members.filter((m) => m.id));
   } catch (e) {
     console.error(`Scrape des pronos échoué (bonus ignoré) : ${e.message}`);
   }
+  const fresh = scraped.byId || {};
   const freshCount = Object.values(fresh).reduce((s, p) => s + p.matches.length, 0);
   if (freshCount === 0) console.error('Aucun prono frais — on conserve l\'historique existant.');
   // Accumule l'historique (le profil RTS ne montre qu'une fenêtre glissante) ; sans frais, on garde l'existant.
@@ -64,7 +67,16 @@ async function main() {
   const totalPreds = Object.values(byId).reduce((s, p) => s + p.matches.length, 0);
   const predsChanged = JSON.stringify(byId) !== JSON.stringify(prevPreds?.byId);
 
-  if (!membersChanged && !predsChanged) {
+  // Calendrier des matchs à venir (pour le bandeau « prochain match »). Si le scrape échoue, on garde l'existant.
+  const prevFix = readJSON(fileUrl('fixtures.json'));
+  const upcoming = (scraped.fixtures && scraped.fixtures.length)
+    ? scraped.fixtures
+        .map((f) => ({ home: f.home, away: f.away, homeFlag: flagFor(f.home), awayFlag: flagFor(f.away), stadium: f.stadium, kickoff: toISO(f.date) }))
+        .sort((a, b) => String(a.kickoff).localeCompare(String(b.kickoff)))
+    : (prevFix?.upcoming || []);
+  const fixChanged = JSON.stringify(upcoming) !== JSON.stringify(prevFix?.upcoming);
+
+  if (!membersChanged && !predsChanged && !fixChanged) {
     console.log('Rien de neuf — aucun fichier réécrit.');
     return;
   }
@@ -83,6 +95,7 @@ async function main() {
   write('timeseries.json', buildTimeseries(all));
   write('predictions.json', { byId });
   write('matches.json', { matches: buildMatches(byId) });
+  write('fixtures.json', { upcoming });
 
   console.log(`MAJ : ${parsed.members.length} membres, ${totalPreds} pronos${membersChanged ? ' (points changés)' : ''}.`);
 }

@@ -734,6 +734,13 @@
       "rank": 3,
       "pos": 4,
       "name": "Vitor Pinto"
+    },
+    {
+      "takenAt": "2026-06-22T19:50:40.726Z",
+      "totalPoints": 164,
+      "rank": 4,
+      "pos": 4,
+      "name": "Vitor Pinto"
     }
   ],
   "O52a": [
@@ -1468,6 +1475,13 @@
     {
       "takenAt": "2026-06-22T03:52:51.483Z",
       "totalPoints": 167,
+      "rank": 2,
+      "pos": 2,
+      "name": "Joao M"
+    },
+    {
+      "takenAt": "2026-06-22T19:50:40.726Z",
+      "totalPoints": 177,
       "rank": 2,
       "pos": 2,
       "name": "Joao M"
@@ -2208,6 +2222,13 @@
       "rank": 5,
       "pos": 5,
       "name": "Mehdi M"
+    },
+    {
+      "takenAt": "2026-06-22T19:50:40.726Z",
+      "totalPoints": 159,
+      "rank": 5,
+      "pos": 5,
+      "name": "Mehdi M"
     }
   ],
   "wmd3": [
@@ -2942,6 +2963,13 @@
     {
       "takenAt": "2026-06-22T03:52:51.483Z",
       "totalPoints": 158,
+      "rank": 3,
+      "pos": 3,
+      "name": "Nicolas L"
+    },
+    {
+      "takenAt": "2026-06-22T19:50:40.726Z",
+      "totalPoints": 166,
       "rank": 3,
       "pos": 3,
       "name": "Nicolas L"
@@ -3682,6 +3710,13 @@
       "rank": 1,
       "pos": 1,
       "name": "Cayan F"
+    },
+    {
+      "takenAt": "2026-06-22T19:50:40.726Z",
+      "totalPoints": 189,
+      "rank": 1,
+      "pos": 1,
+      "name": "Cayan F"
     }
   ],
   "G3EG": [
@@ -4419,6 +4454,13 @@
       "rank": 6,
       "pos": 6,
       "name": "Thomas M"
+    },
+    {
+      "takenAt": "2026-06-22T19:50:40.726Z",
+      "totalPoints": 149,
+      "rank": 6,
+      "pos": 6,
+      "name": "Thomas M"
     }
   ],
   "2xN6": [
@@ -5152,6 +5194,13 @@
     },
     {
       "takenAt": "2026-06-22T03:52:51.483Z",
+      "totalPoints": 6,
+      "rank": 7,
+      "pos": 7,
+      "name": "Mica P"
+    },
+    {
+      "takenAt": "2026-06-22T19:50:40.726Z",
       "totalPoints": 6,
       "rank": 7,
       "pos": 7,

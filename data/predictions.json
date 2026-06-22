@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "22 juin | 19:00",
+          "stadium": "Stade de Dallas",
+          "home": "Argentine",
+          "predHome": 2,
+          "away": "Autriche",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "22 juin | 03:00",
           "stadium": "BC Place de Vancouver",
           "home": "Nouvelle-Zélande",
@@ -476,6 +488,18 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "22 juin | 19:00",
+          "stadium": "Stade de Dallas",
+          "home": "Argentine",
+          "predHome": 2,
+          "away": "Autriche",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "22 juin | 03:00",
           "stadium": "BC Place de Vancouver",
@@ -950,6 +974,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "22 juin | 19:00",
+          "stadium": "Stade de Dallas",
+          "home": "Argentine",
+          "predHome": 3,
+          "away": "Autriche",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "22 juin | 03:00",
           "stadium": "BC Place de Vancouver",
           "home": "Nouvelle-Zélande",
@@ -1422,6 +1458,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "22 juin | 19:00",
+          "stadium": "Stade de Dallas",
+          "home": "Argentine",
+          "predHome": 3,
+          "away": "Autriche",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "22 juin | 03:00",
           "stadium": "BC Place de Vancouver",
@@ -1896,6 +1944,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "22 juin | 19:00",
+          "stadium": "Stade de Dallas",
+          "home": "Argentine",
+          "predHome": 3,
+          "away": "Autriche",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "22 juin | 03:00",
           "stadium": "BC Place de Vancouver",
           "home": "Nouvelle-Zélande",
@@ -2368,6 +2428,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "22 juin | 19:00",
+          "stadium": "Stade de Dallas",
+          "home": "Argentine",
+          "predHome": 2,
+          "away": "Autriche",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "22 juin | 03:00",
           "stadium": "BC Place de Vancouver",

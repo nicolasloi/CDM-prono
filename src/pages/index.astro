@@ -60,6 +60,20 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
     ))}
   </section>
 
+  <!-- C'EST MOI -->
+  <div class="me-bar">
+    <button id="me-btn" class="me-btn" aria-haspopup="true"><span class="me-ico">👤</span><span id="me-label">Tu joues ? Marque-toi</span><span class="me-car">▾</span></button>
+    <div id="me-pop" class="me-pop" hidden>
+      <p class="me-pop-h">Qui es-tu&nbsp;?</p>
+      <div class="me-grid">
+        {members.map((m) => (
+          <button class="me-opt" data-id={m.id} data-name={m.name}><span class="cdot" style={`background:${colorMap[keyOf(m)]}`}></span>{m.name}</button>
+        ))}
+      </div>
+      <button class="me-opt me-clear" data-id="" data-name="">Effacer</button>
+    </div>
+  </div>
+
   <!-- LISTE -->
   <section class="board">
     {members.map((m, idx) => (
@@ -151,12 +165,49 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
       drawer.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
     }
-    document.querySelectorAll('[data-id]').forEach((el) => {
+    document.querySelectorAll('.lbrow[data-id], .ped[data-id]').forEach((el) => {
       el.addEventListener('click', () => { const id = el.getAttribute('data-id'); if (id) open(id); });
     });
     backdrop.addEventListener('click', close);
     document.getElementById('drawer-close')!.addEventListener('click', close);
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  </script>
+
+  <script>
+    // « C'est moi » : marque ton nom (mémorisé sur ton appareil) → ligne + courbe mises en avant.
+    const MEKEY = 'cdm-me';
+    const meBtn = document.getElementById('me-btn');
+    const mePop = document.getElementById('me-pop');
+    const meLabel = document.getElementById('me-label');
+    function applyMe(id, name) {
+      document.querySelectorAll('.lbrow.me').forEach((r) => { r.classList.remove('me'); r.querySelector('.metag')?.remove(); });
+      document.querySelectorAll('.ln.me').forEach((l) => l.classList.remove('me'));
+      if (id) {
+        const row = document.querySelector('.lbrow[data-id="' + id + '"]');
+        if (row) {
+          row.classList.add('me');
+          const nm = row.querySelector('.nm');
+          if (nm && !nm.querySelector('.metag')) { const t = document.createElement('span'); t.className = 'metag'; t.textContent = 'TOI'; nm.appendChild(t); }
+        }
+        const ln = document.querySelector('.ln[data-key="' + id + '"]');
+        if (ln) ln.classList.add('me');
+        if (meLabel) meLabel.textContent = 'Toi : ' + (name || '') + ' · changer';
+      } else if (meLabel) {
+        meLabel.textContent = 'Tu joues ? Marque-toi';
+      }
+    }
+    if (meBtn && mePop && meLabel) {
+      const saved = localStorage.getItem(MEKEY);
+      if (saved) { const o = mePop.querySelector('.me-opt[data-id="' + saved + '"]'); applyMe(saved, o && o.dataset.name); }
+      meBtn.addEventListener('click', (e) => { e.stopPropagation(); mePop.hidden = !mePop.hidden; });
+      mePop.querySelectorAll('.me-opt').forEach((o) => o.addEventListener('click', () => {
+        const id = o.dataset.id;
+        if (id) localStorage.setItem(MEKEY, id); else localStorage.removeItem(MEKEY);
+        applyMe(id, o.dataset.name);
+        mePop.hidden = true;
+      }));
+      document.addEventListener('click', (e) => { if (!e.target.closest('.me-bar')) mePop.hidden = true; });
+    }
   </script>
 
   <style is:global>
@@ -216,6 +267,23 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
       .lbrow { grid-template-columns: 34px 8px 1fr 58px; padding: 13px 14px; gap: 10px; }
       .lbrow .spark, .lbrow .mv { display: none; }
     }
+    /* C'EST MOI */
+    .me-bar { position: relative; display: flex; justify-content: flex-end; margin: 4px 0 12px; }
+    .me-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--line); color: var(--text-dim); font: 700 12.5px var(--font); padding: 8px 14px; border-radius: 30px; cursor: pointer; transition: border-color .15s, color .15s; }
+    .me-btn:hover { border-color: var(--gold-soft); color: var(--text); }
+    .me-ico { font-size: 14px; } .me-car { font-size: 10px; opacity: .7; }
+    .me-pop { position: absolute; top: calc(100% + 6px); right: 0; z-index: 30; width: min(264px, 86vw); background: var(--bg-soft); border: 1px solid var(--line); border-radius: 16px; padding: 12px; box-shadow: 0 22px 55px -22px #000; }
+    .me-pop-h { font: 800 10px/1 var(--font); letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin: 2px 2px 10px; }
+    .me-grid { display: flex; flex-direction: column; gap: 1px; }
+    .me-opt { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; background: none; border: 0; color: var(--text); font: 600 14.5px var(--font); padding: 9px 10px; border-radius: 10px; cursor: pointer; }
+    .me-opt:hover { background: var(--surface); }
+    .me-opt .cdot { width: 11px; height: 11px; border-radius: 50%; flex: none; }
+    .me-clear { margin-top: 6px; color: var(--text-dim); font-size: 12.5px; border-top: 1px solid var(--line); border-radius: 0; padding-top: 11px; }
+    .lbrow.me { box-shadow: inset 0 0 0 1.6px var(--gold); }
+    .metag { font-style: normal; font-size: 9px; letter-spacing: .1em; background: var(--gold); color: #1a1407; padding: 2px 6px; border-radius: 20px; font-weight: 800; }
+    .ln.me path { stroke-width: 5; }
+    .ln.me .lbl { font-weight: 900; }
+
     .evo { margin-top: 36px; }
     .evo-h { font-size: clamp(24px, 5vw, 38px); font-weight: 900; letter-spacing: -.02em; line-height: .95; margin: 6px 0 16px; }
     .evo-h em { color: var(--gold); font-style: italic; }

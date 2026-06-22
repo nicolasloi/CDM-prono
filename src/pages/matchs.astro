@@ -114,6 +114,19 @@ let gi = 0;
     const cl = document.getElementById('cnt-live');
     if (cl) cl.textContent = String(live);
 
+    // Auto-MAJ tant qu'un match est en cours : l'app/onglet au premier plan se
+    // recharge seul (SW network-first → données fraîches), sans gêner si tu
+    // scrolles ou reviens juste d'interagir.
+    if (live > 0) {
+      let lastTouch = Date.now();
+      ['scroll', 'pointerdown', 'keydown'].forEach((ev) =>
+        addEventListener(ev, () => { lastTouch = Date.now(); }, { passive: true }));
+      const idle = () => Date.now() - lastTouch > 20000;
+      const refresh = () => { if (document.visibilityState === 'visible' && idle()) location.reload(); };
+      setInterval(refresh, 60000);
+      document.addEventListener('visibilitychange', refresh); // au retour sur l'app (réveil iOS)
+    }
+
     // Révélation au scroll (stagger via --d)
     if (matchMedia('(prefers-reduced-motion: no-preference)').matches) {
       const io = new IntersectionObserver((ents) => {

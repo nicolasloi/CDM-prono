@@ -4,16 +4,28 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "22 juin | 03:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Nouvelle-Zélande",
+          "predHome": 1,
+          "away": "Egypte",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "22 juin | 00:00",
           "stadium": "Stade de Miami",
           "home": "Uruguay",
           "predHome": 2,
           "away": "Cap Vert",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 2,
+          "points": 1,
+          "played": true
         },
         {
           "date": "21 juin | 21:00",
@@ -465,16 +477,28 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "22 juin | 03:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Nouvelle-Zélande",
+          "predHome": 0,
+          "away": "Egypte",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "22 juin | 00:00",
           "stadium": "Stade de Miami",
           "home": "Uruguay",
           "predHome": 2,
           "away": "Cap Vert",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 2,
+          "points": 1,
+          "played": true
         },
         {
           "date": "21 juin | 21:00",
@@ -926,16 +950,28 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "22 juin | 03:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Nouvelle-Zélande",
+          "predHome": 1,
+          "away": "Egypte",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "22 juin | 00:00",
           "stadium": "Stade de Miami",
           "home": "Uruguay",
           "predHome": 1,
           "away": "Cap Vert",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 2,
+          "points": 0,
+          "played": true
         },
         {
           "date": "21 juin | 21:00",
@@ -1387,16 +1423,28 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "22 juin | 03:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Nouvelle-Zélande",
+          "predHome": 0,
+          "away": "Egypte",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "22 juin | 00:00",
           "stadium": "Stade de Miami",
           "home": "Uruguay",
           "predHome": 1,
           "away": "Cap Vert",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 2,
+          "points": 8,
+          "played": true
         },
         {
           "date": "21 juin | 21:00",
@@ -1848,16 +1896,28 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "22 juin | 03:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Nouvelle-Zélande",
+          "predHome": 0,
+          "away": "Egypte",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "22 juin | 00:00",
           "stadium": "Stade de Miami",
           "home": "Uruguay",
           "predHome": 2,
           "away": "Cap Vert",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 2,
+          "points": 1,
+          "played": true
         },
         {
           "date": "21 juin | 21:00",
@@ -2309,16 +2369,28 @@
       "name": "Thomas M",
       "matches": [
         {
+          "date": "22 juin | 03:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Nouvelle-Zélande",
+          "predHome": 1,
+          "away": "Egypte",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "22 juin | 00:00",
           "stadium": "Stade de Miami",
           "home": "Uruguay",
           "predHome": 2,
           "away": "Cap Vert",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 2,
+          "points": 1,
+          "played": true
         },
         {
           "date": "21 juin | 21:00",

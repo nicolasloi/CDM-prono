@@ -3,8 +3,10 @@ import Base from '../layouts/Base.astro';
 import Sparkline from '../components/Sparkline.astro';
 import MovementArrow from '../components/MovementArrow.astro';
 import Trophy from '../components/Trophy.astro';
+import RankChart from '../components/RankChart.astro';
 import { getLatest, getTimeseries, keyOf } from '../data';
-import { accentFor } from '../../scripts/lib/members.mjs';
+import { buildColorMap } from '../../scripts/lib/members.mjs';
+import { buildRankByDay } from '../../scripts/lib/bump.mjs';
 import { flagFor } from '../../scripts/lib/flags.mjs';
 import predictionsData from '../../data/predictions.json';
 
@@ -12,6 +14,8 @@ const latest = getLatest();
 const ts = getTimeseries();
 const members = latest.members;
 const top3 = members.slice(0, 3);
+const colorMap = buildColorMap(members.map((m) => keyOf(m)));
+const bump = buildRankByDay(ts);
 const updated = new Date(latest.takenAt).toLocaleString('fr-CH', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Zurich' });
 
 // Enrichit les pronos avec les drapeaux (au build) pour le drawer.
@@ -59,19 +63,28 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
   <!-- LISTE -->
   <section class="board">
     {members.map((m, idx) => (
-      <button class={`lbrow${idx === 0 ? ' leader' : ''}`} data-id={m.id} style={`--accent:${accentFor(idx)};--i:${idx}`}>
+      <button class={`lbrow${idx === 0 ? ' leader' : ''}`} data-id={m.id} style={`--accent:${colorMap[keyOf(m)]};--i:${idx}`}>
         <span class="rk">{m.rank}</span>
         <span class="dot"></span>
         <span class="who">
           <span class="nm">{m.name}</span>
           <span class="see">Voir ses pronos →</span>
         </span>
-        <span class="spark"><Sparkline points={ts[keyOf(m)] || []} w={84} h={26} color={accentFor(idx)} /></span>
+        <span class="spark"><Sparkline points={ts[keyOf(m)] || []} w={84} h={26} color={colorMap[keyOf(m)]} /></span>
         <span class="mv"><MovementArrow delta={m.rankDelta} /></span>
         <span class="pts">{m.totalPoints}</span>
       </button>
     ))}
   </section>
+
+  <!-- ÉVOLUTION -->
+  {bump.days.length > 1 && (
+    <section class="evo">
+      <p class="kicker">★ Le fil du classement</p>
+      <h2 class="evo-h">L'<em>évolution</em> des places</h2>
+      <RankChart data={bump} colorMap={colorMap} />
+    </section>
+  )}
 
   <p class="dim foot-note">Clique sur un joueur pour voir tous ses pronostics, match par match. Points et classement issus du jeu RTS, rafraîchis automatiquement plusieurs fois par jour.</p>
 
@@ -203,6 +216,9 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
       .lbrow { grid-template-columns: 34px 8px 1fr 58px; padding: 13px 14px; gap: 10px; }
       .lbrow .spark, .lbrow .mv { display: none; }
     }
+    .evo { margin-top: 36px; }
+    .evo-h { font-size: clamp(24px, 5vw, 38px); font-weight: 900; letter-spacing: -.02em; line-height: .95; margin: 6px 0 16px; }
+    .evo-h em { color: var(--gold); font-style: italic; }
     .foot-note { font-size: 12px; margin: 22px 0 8px; }
 
     /* DRAWER */

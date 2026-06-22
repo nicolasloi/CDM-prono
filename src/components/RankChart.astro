@@ -1,0 +1,90 @@
+---
+// Bump chart : position au classement de chaque joueur, jour par jour.
+// Props : data = { days:[YYYY-MM-DD], byId:{ key:{name,positions[]} } }, colorMap = { key: '#hex' }
+const { data, colorMap = {} } = Astro.props;
+const days: string[] = data.days;
+const entries = Object.entries<any>(data.byId);
+const N = entries.length;
+const D = days.length;
+
+const W = 760, H = 24 + (N - 1) * 40 + 38;
+const padT = 24, padB = 38, padL = 30, padR = 124;
+const plotW = W - padL - padR, plotH = H - padT - padB;
+const xAt = (i: number) => padL + (D <= 1 ? 0 : (i / (D - 1)) * plotW);
+const yAt = (pos: number) => padT + ((pos - 1) / Math.max(1, N - 1)) * plotH;
+
+// Courbe lissée (béziers à tangentes horizontales) pour un rendu "bump".
+function smooth(pts: { x: number; y: number }[]) {
+  if (!pts.length) return '';
+  let d = `M ${pts[0].x},${pts[0].y}`;
+  for (let i = 1; i < pts.length; i++) {
+    const a = pts[i - 1], b = pts[i], mx = (a.x + b.x) / 2;
+    d += ` C ${mx},${a.y} ${mx},${b.y} ${b.x},${b.y}`;
+  }
+  return d;
+}
+
+const lines = entries.map(([key, v]) => {
+  const pts = v.positions.map((p: number, i: number) => ({ x: xAt(i), y: yAt(p) }));
+  return { key, name: v.name, color: colorMap[key] || '#e8c66a', pts, d: smooth(pts), last: pts[pts.length - 1], lastPos: v.positions[v.positions.length - 1] };
+});
+
+// Étiquettes de jour : on en montre ~12 max pour éviter l'entassement.
+const step = Math.ceil(D / 12);
+const dayLabel = (k: string) => { const p = k.split('-'); return `${+p[2]}.${+p[1]}`; };
+---
+<div class="bump">
+  <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid meet" role="img" aria-label="Évolution des places">
+    <!-- grille des places -->
+    {Array.from({ length: N }, (_, i) => i + 1).map((pos) => (
+      <g>
+        <line x1={padL} y1={yAt(pos)} x2={padL + plotW} y2={yAt(pos)} stroke="var(--line)" stroke-width="1" stroke-dasharray="2 5" />
+        <text x={padL - 10} y={yAt(pos) + 4} text-anchor="end" font-size="12" font-weight="800" fill="var(--text-dim)">{pos}</text>
+      </g>
+    ))}
+    <!-- étiquettes de jour -->
+    {days.map((k, i) => (i % step === 0 || i === D - 1) && (
+      <text x={xAt(i)} y={H - 12} text-anchor="middle" font-size="10" fill="var(--text-dim)">{dayLabel(k)}</text>
+    ))}
+    <!-- lignes -->
+    {lines.map((l) => (
+      <g class="ln" data-key={l.key}>
+        <path d={l.d} fill="none" stroke={l.color} stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        {l.pts.map((p: any) => <circle cx={p.x} cy={p.y} r="3.5" fill={l.color} />)}
+        <circle cx={l.last.x} cy={l.last.y} r="5.5" fill={l.color} stroke="var(--bg)" stroke-width="2" />
+        <text class="lbl" x={l.last.x + 12} y={l.last.y + 4} font-size="13" font-weight="700" fill={l.color}>{l.name}</text>
+      </g>
+    ))}
+  </svg>
+  <p class="bump-hint dim">Position au classement, jour par jour · 1 = en tête · survole un joueur pour le suivre</p>
+</div>
+
+<script>
+  const chart = document.querySelector('.bump');
+  if (chart) {
+    const lns = Array.from(chart.querySelectorAll('.ln'));
+    const set = (key) => lns.forEach((g) => {
+      g.classList.toggle('faded', !!key && g.dataset.key !== key);
+      g.classList.toggle('hl', !!key && g.dataset.key === key);
+    });
+    lns.forEach((g) => {
+      g.addEventListener('mouseenter', () => set(g.dataset.key));
+      g.addEventListener('mouseleave', () => set(null));
+    });
+  }
+</script>
+
+<style is:global>
+  .bump { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 18px 18px 10px; overflow: hidden; }
+  .bump svg { width: 100%; height: auto; display: block; }
+  @media (max-width: 560px) {
+    .bump { overflow-x: auto; overscroll-behavior-x: contain; }
+    .bump svg { min-width: 560px; }
+  }
+  .ln { transition: opacity .18s ease; cursor: pointer; }
+  .ln path { transition: stroke-width .18s ease; }
+  .ln.faded { opacity: .14; }
+  .ln.hl path { stroke-width: 4.5; }
+  .ln .lbl { paint-order: stroke; }
+  .bump-hint { font-size: 11px; text-align: center; margin: 10px 0 4px; }
+</style>

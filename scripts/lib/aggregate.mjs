@@ -22,10 +22,11 @@ export function buildTimeseries(snapshots) {
   const sorted = [...snapshots].sort((a, b) => a.takenAt.localeCompare(b.takenAt));
   const series = {};
   for (const snap of sorted) {
-    for (const m of snap.members) {
+    snap.members.forEach((m, i) => {
       const k = keyOf(m);
-      (series[k] ||= []).push({ takenAt: snap.takenAt, totalPoints: m.totalPoints, rank: m.rank, name: m.name });
-    }
+      // pos = position dans le classement (ordre du snapshot) → unique même en cas d'ex æquo
+      (series[k] ||= []).push({ takenAt: snap.takenAt, totalPoints: m.totalPoints, rank: m.rank, pos: i + 1, name: m.name });
+    });
   }
   return series;
 }

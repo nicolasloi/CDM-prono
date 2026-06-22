@@ -24,10 +24,12 @@ const nextMatch = upcoming[0] || null; // défaut au build ; le client choisit l
 const updated = new Date(latest.takenAt).toLocaleString('fr-CH', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Zurich' });
 
 // Enrichit les pronos avec les drapeaux (au build) pour le drawer.
+const totalById: Record<string, number> = Object.fromEntries(members.map((m) => [m.id, m.totalPoints]));
 const preds: Record<string, any> = {};
 for (const [id, p] of Object.entries<any>(predictionsData.byId)) {
   preds[id] = {
     name: p.name,
+    total: totalById[id] ?? null, // total officiel (= classement), inclut les points bonus hors match
     matches: p.matches.map((m: any) => ({ ...m, homeFlag: flagFor(m.home), awayFlag: flagFor(m.away) })),
   };
 }
@@ -166,8 +168,6 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
     function open(id: string) {
       const p = PREDS[id];
       if (!p) return;
-      const total = p.matches.reduce((s: number, m: any) => s + (m.points || 0), 0);
-      const best = p.matches.reduce((b: any, m: any) => (m.points > (b?.points ?? -1) ? m : b), null);
       const done = p.matches.filter((m: any) => m.actualHome != null && m.actualAway != null);
       const exact = done.filter((m: any) => m.predHome === m.actualHome && m.predAway === m.actualAway).length;
       const hit = done.filter((m: any) => m.points > 0).length;
@@ -177,11 +177,10 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
           <p class="kicker">Parcours</p>
           <h2 class="d-name">${esc(p.name)}</h2>
           <div class="d-stats">
+            ${p.total != null ? `<span><b>${p.total}</b> pts</span>` : ''}
             <span><b>${p.matches.length}</b> pronos</span>
-            <span><b>${total}</b> pts cumulés</span>
             <span><b>${exact}</b> exacts</span>
             <span><b>${acc}%</b> réussis</span>
-            ${best ? `<span>meilleur&nbsp;: <b>+${best.points}</b></span>` : ''}
           </div>
         </div>`;
       body.innerHTML += `

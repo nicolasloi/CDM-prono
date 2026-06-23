@@ -10,10 +10,10 @@
           "predHome": 0,
           "away": "Algérie",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 1,
+          "actualAway": 2,
+          "points": 0,
+          "played": true
         },
         {
           "date": "23 juin | 02:00",
@@ -1052,10 +1052,10 @@
           "predHome": 0,
           "away": "Algérie",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 1,
+          "actualAway": 2,
+          "points": 5,
+          "played": true
         },
         {
           "date": "23 juin | 02:00",
@@ -1573,10 +1573,10 @@
           "predHome": 0,
           "away": "Algérie",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 1,
+          "actualAway": 2,
+          "points": 8,
+          "played": true
         },
         {
           "date": "23 juin | 02:00",
@@ -2094,10 +2094,10 @@
           "predHome": 1,
           "away": "Algérie",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 1,
+          "actualAway": 2,
+          "points": 10,
+          "played": true
         },
         {
           "date": "23 juin | 02:00",
@@ -2615,10 +2615,10 @@
           "predHome": 0,
           "away": "Algérie",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 1,
+          "actualAway": 2,
+          "points": 6,
+          "played": true
         },
         {
           "date": "23 juin | 02:00",

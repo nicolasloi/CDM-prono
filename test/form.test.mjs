@@ -12,7 +12,18 @@ test('plus gros gain sur 24h', () => {
     b: [at(-30, 5, 'B'), at(-1, 8, 'B'), at(0, 20, 'B')],     // baseline -30h = 5 ; gain 15
   };
   const m = topMover(ts);
-  assert.equal(m.name, 'A');
+  assert.deepEqual(m.names, ['A']);
+  assert.equal(m.gain, 20);
+});
+
+test('ex æquo : tous les joueurs à égalité au sommet', () => {
+  const ts = {
+    a: [at(-30, 10, 'A'), at(0, 30, 'A')], // gain 20
+    b: [at(-30, 5, 'B'), at(0, 25, 'B')],  // gain 20
+    c: [at(-30, 5, 'C'), at(0, 20, 'C')],  // gain 15
+  };
+  const m = topMover(ts);
+  assert.deepEqual(m.names, ['A', 'B']);
   assert.equal(m.gain, 20);
 });
 

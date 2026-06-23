@@ -66,7 +66,7 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
       {mover && (
         <div class="strip-card form">
           <span class="strip-k">🔥 En forme</span>
-          <span class="strip-main">{mover.name}</span>
+          <span class="strip-main">{mover.names.join(', ')}</span>
           <span class="strip-val">+{mover.gain} <small>pts / 24h</small></span>
         </div>
       )}

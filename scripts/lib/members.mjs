@@ -14,5 +14,9 @@ export function buildColorMap(keys) {
   return map;
 }
 
+// Nom d'affichage : retire l'initiale du nom de famille en fin de nom ("Nicolas L" → "Nicolas").
+// Un vrai nom de famille écrit en entier ("Vitor Pinto") est conservé.
+export const shortName = (name) => String(name || '').replace(/\s+\p{L}\.?$/u, '').trim() || String(name || '');
+
 // Normalise un nom pour servir de clé stable si l'id manque.
 export const nameKey = (s) => s.normalize('NFKD').replace(/[^\w]/g, '').toLowerCase();

@@ -5,7 +5,7 @@ import MovementArrow from '../components/MovementArrow.astro';
 import Trophy from '../components/Trophy.astro';
 import RankChart from '../components/RankChart.astro';
 import { getLatest, getTimeseries, keyOf } from '../data';
-import { buildColorMap } from '../../scripts/lib/members.mjs';
+import { buildColorMap, shortName } from '../../scripts/lib/members.mjs';
 import { buildRankByDay } from '../../scripts/lib/bump.mjs';
 import { topMover } from '../../scripts/lib/form.mjs';
 import { flagFor } from '../../scripts/lib/flags.mjs';
@@ -18,6 +18,7 @@ const members = latest.members;
 const top3 = members.slice(0, 3);
 const colorMap = buildColorMap(members.map((m) => keyOf(m)));
 const bump = buildRankByDay(ts);
+for (const k in bump.byId) bump.byId[k].name = shortName(bump.byId[k].name);
 const mover = topMover(ts);
 const upcoming = (fixturesData.upcoming || []) as any[];
 const nextMatch = upcoming[0] || null; // défaut au build ; le client choisit le bon « prochain »
@@ -28,7 +29,7 @@ const totalById: Record<string, number> = Object.fromEntries(members.map((m) => 
 const preds: Record<string, any> = {};
 for (const [id, p] of Object.entries<any>(predictionsData.byId)) {
   preds[id] = {
-    name: p.name,
+    name: shortName(p.name),
     total: totalById[id] ?? null, // total officiel (= classement), inclut les points bonus hors match
     matches: p.matches.map((m: any) => ({ ...m, homeFlag: flagFor(m.home), awayFlag: flagFor(m.away) })),
   };
@@ -66,7 +67,7 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
       {mover && (
         <div class="strip-card form">
           <span class="strip-k">🔥 En forme</span>
-          <span class="strip-main">{mover.names.join(', ')}</span>
+          <span class="strip-main">{mover.names.map(shortName).join(', ')}</span>
           <span class="strip-val">+{mover.gain} <small>pts / 24h</small></span>
         </div>
       )}
@@ -78,7 +79,7 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
     {podiumOrder.filter((i) => top3[i]).map((i) => (
       <button class="ped" data-id={top3[i].id} style={`--h:${pedestalH[i]}px;--medal:${medal[i]}`}>
         {i === 0 && <div class="ped-trophy"><Trophy size={40} /></div>}
-        <div class="ped-name">{top3[i].name}</div>
+        <div class="ped-name">{shortName(top3[i].name)}</div>
         <div class="ped-pts">{top3[i].totalPoints}<span>pts</span></div>
         <div class="ped-base">
           <span class="ped-rank">{top3[i].rank}</span>
@@ -94,7 +95,7 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
       <p class="me-pop-h">Qui es-tu&nbsp;?</p>
       <div class="me-grid">
         {members.map((m) => (
-          <button class="me-opt" data-id={m.id} data-name={m.name}><span class="cdot" style={`background:${colorMap[keyOf(m)]}`}></span>{m.name}</button>
+          <button class="me-opt" data-id={m.id} data-name={shortName(m.name)}><span class="cdot" style={`background:${colorMap[keyOf(m)]}`}></span>{shortName(m.name)}</button>
         ))}
       </div>
       <button class="me-opt me-clear" data-id="" data-name="">Effacer</button>
@@ -108,7 +109,7 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
         <span class="rk">{m.rank}</span>
         <span class="dot"></span>
         <span class="who">
-          <span class="nm">{m.name}</span>
+          <span class="nm">{shortName(m.name)}</span>
           <span class="see">Voir ses pronos →</span>
         </span>
         <span class="spark"><Sparkline points={ts[keyOf(m)] || []} w={84} h={26} color={colorMap[keyOf(m)]} /></span>
@@ -329,10 +330,10 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
     .lbrow:hover { transform: translateY(-2px); border-color: var(--gold-soft); background: var(--surface-hi); }
     .lbrow .rk { font-weight: 900; font-size: clamp(22px, 3vw, 30px); color: var(--text-dim); text-align: center; }
     .lbrow .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
-    .lbrow .who { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .lbrow .who { display: flex; flex-direction: row; align-items: center; gap: 10px; min-width: 0; }
     .lbrow .nm { font-weight: 700; font-size: clamp(16px, 2.1vw, 21px); display: flex; align-items: center; gap: 8px; }
     .lbrow .nm .adm { font-style: normal; font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--bg); background: var(--gold); padding: 2px 6px; border-radius: 20px; font-weight: 800; }
-    .lbrow .see { font-size: 12px; color: var(--text-dim); opacity: 0; transform: translateX(-4px); transition: .15s; }
+    .lbrow .see { font-size: 12px; color: var(--text-dim); opacity: 0; transform: translateX(-4px); transition: .15s; white-space: nowrap; }
     .lbrow:hover .see { opacity: 1; transform: none; color: var(--gold); }
     .lbrow .spark { display: flex; }
     .lbrow .pts { font-weight: 900; font-size: clamp(20px, 2.6vw, 26px); text-align: right; }

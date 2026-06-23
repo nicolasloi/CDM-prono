@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import matchesData from '../../data/matches.json';
+import { shortName } from '../../scripts/lib/members.mjs';
 
 const all = matchesData.matches as any[];
 
@@ -74,7 +75,7 @@ let gi = 0;
                 return (
                   <div class={`px${ok ? '' : ' z'}${isBest ? ' best' : ''}${exactOf(p) ? ' exact' : ''}`}>
                     {isBest && <span class="crown">👑</span>}
-                    <span class="px-n">{p.name}</span>
+                    <span class="px-n">{shortName(p.name)}</span>
                     <span class="px-s">{p.predHome}<i>·</i>{p.predAway}</span>
                     <span class="px-pt">{ok ? '+' + p.points : '—'}{exactOf(p) ? ' ★' : ''}</span>
                   </div>

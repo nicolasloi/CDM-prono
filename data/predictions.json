@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "23 juin | 02:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Norvège",
+          "predHome": 1,
+          "away": "Sénégal",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "22 juin | 23:00",
           "stadium": "Stade de Philadelphie",
           "home": "France",
@@ -500,6 +512,18 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "23 juin | 02:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Norvège",
+          "predHome": 2,
+          "away": "Sénégal",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "22 juin | 23:00",
           "stadium": "Stade de Philadelphie",
@@ -998,6 +1022,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "23 juin | 02:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Norvège",
+          "predHome": 1,
+          "away": "Sénégal",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "22 juin | 23:00",
           "stadium": "Stade de Philadelphie",
           "home": "France",
@@ -1494,6 +1530,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "23 juin | 02:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Norvège",
+          "predHome": 2,
+          "away": "Sénégal",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "22 juin | 23:00",
           "stadium": "Stade de Philadelphie",
@@ -1992,6 +2040,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "23 juin | 02:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Norvège",
+          "predHome": 0,
+          "away": "Sénégal",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "22 juin | 23:00",
           "stadium": "Stade de Philadelphie",
           "home": "France",
@@ -2488,6 +2548,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "23 juin | 02:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Norvège",
+          "predHome": 1,
+          "away": "Sénégal",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "22 juin | 23:00",
           "stadium": "Stade de Philadelphie",

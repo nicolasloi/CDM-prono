@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "23 juin | 05:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Jordanie",
+          "predHome": 0,
+          "away": "Algérie",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "23 juin | 02:00",
           "stadium": "Stade de New York New Jersey",
           "home": "Norvège",
@@ -512,6 +524,18 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "23 juin | 05:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Jordanie",
+          "predHome": 0,
+          "away": "Algérie",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "23 juin | 02:00",
           "stadium": "Stade de New York New Jersey",
@@ -1022,6 +1046,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "23 juin | 05:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Jordanie",
+          "predHome": 0,
+          "away": "Algérie",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "23 juin | 02:00",
           "stadium": "Stade de New York New Jersey",
           "home": "Norvège",
@@ -1530,6 +1566,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "23 juin | 05:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Jordanie",
+          "predHome": 0,
+          "away": "Algérie",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "23 juin | 02:00",
           "stadium": "Stade de New York New Jersey",
@@ -2040,6 +2088,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "23 juin | 05:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Jordanie",
+          "predHome": 1,
+          "away": "Algérie",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "23 juin | 02:00",
           "stadium": "Stade de New York New Jersey",
           "home": "Norvège",
@@ -2548,6 +2608,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "23 juin | 05:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Jordanie",
+          "predHome": 0,
+          "away": "Algérie",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "23 juin | 02:00",
           "stadium": "Stade de New York New Jersey",

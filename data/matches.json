@@ -1,6 +1,61 @@
 {
   "matches": [
     {
+      "date": "23 juin | 19:00",
+      "kickoff": "2026-06-23T19:00:00+02:00",
+      "home": "Portugal",
+      "away": "Ouzbékistan",
+      "homeFlag": "🇵🇹",
+      "awayFlag": "🇺🇿",
+      "stadium": "Stade de Houston",
+      "actualHome": null,
+      "actualAway": null,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 4,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 4,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 3,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 3,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 3,
+          "predAway": 0,
+          "points": null
+        }
+      ]
+    },
+    {
       "date": "23 juin | 05:00",
       "kickoff": "2026-06-23T05:00:00+02:00",
       "home": "Jordanie",

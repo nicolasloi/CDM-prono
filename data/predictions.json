@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "23 juin | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Portugal",
+          "predHome": 4,
+          "away": "Ouzbékistan",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "23 juin | 05:00",
           "stadium": "Stade de la baie de San Francisco",
           "home": "Jordanie",
@@ -524,6 +536,18 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "23 juin | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Portugal",
+          "predHome": 4,
+          "away": "Ouzbékistan",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "23 juin | 05:00",
           "stadium": "Stade de la baie de San Francisco",
@@ -1046,6 +1070,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "23 juin | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Portugal",
+          "predHome": 2,
+          "away": "Ouzbékistan",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "23 juin | 05:00",
           "stadium": "Stade de la baie de San Francisco",
           "home": "Jordanie",
@@ -1566,6 +1602,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "23 juin | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Portugal",
+          "predHome": 3,
+          "away": "Ouzbékistan",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "23 juin | 05:00",
           "stadium": "Stade de la baie de San Francisco",
@@ -2088,6 +2136,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "23 juin | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Portugal",
+          "predHome": 3,
+          "away": "Ouzbékistan",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "23 juin | 05:00",
           "stadium": "Stade de la baie de San Francisco",
           "home": "Jordanie",
@@ -2608,6 +2668,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "23 juin | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Portugal",
+          "predHome": 3,
+          "away": "Ouzbékistan",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "23 juin | 05:00",
           "stadium": "Stade de la baie de San Francisco",

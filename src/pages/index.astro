@@ -169,10 +169,27 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
     function open(id: string) {
       const p = PREDS[id];
       if (!p) return;
+      const sg = (a: number, b: number) => Math.sign(a - b);
       const done = p.matches.filter((m: any) => m.actualHome != null && m.actualAway != null);
-      const exact = done.filter((m: any) => m.predHome === m.actualHome && m.predAway === m.actualAway).length;
-      const hit = done.filter((m: any) => m.points > 0).length;
-      const acc = done.length ? Math.round((hit / done.length) * 100) : 0;
+      const tot = done.length;
+      const isExact = (m: any) => m.predHome === m.actualHome && m.predAway === m.actualAway;
+      const sameDiff = (m: any) => (m.predHome - m.predAway) === (m.actualHome - m.actualAway);
+      const sameOut = (m: any) => sg(m.predHome, m.predAway) === sg(m.actualHome, m.actualAway);
+      const tiers = [
+        { label: '🎯 Score exact', color: 'var(--gold)', n: done.filter(isExact).length },
+        { label: '📐 Vainqueur + écart', color: '#51e39a', n: done.filter((m: any) => !isExact(m) && sameDiff(m)).length },
+        { label: '✅ Bon vainqueur', color: '#2dd4ff', n: done.filter((m: any) => sameOut(m) && !sameDiff(m)).length },
+        { label: '❌ Raté', color: 'var(--text-dim)', n: done.filter((m: any) => !sameOut(m)).length },
+      ];
+      const hit = done.filter(sameOut).length; // « réussi » = au moins le bon vainqueur (cohérent avec la tranche « raté »)
+      const acc = tot ? Math.round((hit / tot) * 100) : 0;
+      const pct = (n: number) => (tot ? Math.round((n / tot) * 100) : 0);
+      const breakdown = tot ? `<div class="d-break">` + tiers.map((t) => `
+        <div class="dbk">
+          <span class="dbk-l">${t.label}</span>
+          <span class="dbk-bar"><span style="width:${pct(t.n)}%;background:${t.color}"></span></span>
+          <span class="dbk-v">${pct(t.n)}% <small>· ${t.n}</small></span>
+        </div>`).join('') + `</div>` : '';
       body.innerHTML = `
         <div class="d-head">
           <p class="kicker">Parcours</p>
@@ -180,9 +197,9 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
           <div class="d-stats">
             ${p.total != null ? `<span><b>${p.total}</b> pts</span>` : ''}
             <span><b>${p.matches.length}</b> pronos</span>
-            <span><b>${exact}</b> exacts</span>
             <span><b>${acc}%</b> réussis</span>
           </div>
+          ${breakdown}
         </div>`;
       body.innerHTML += `
         ${p.matches.length ? `<div class="d-list">${p.matches.map(matchRow).join('')}</div>` : '<p class="dim" style="padding:18px">Aucun prono révélé pour l’instant.</p>'}`;
@@ -383,6 +400,13 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
     .d-stats { display: flex; flex-wrap: wrap; gap: 8px; }
     .d-stats span { font-size: 12px; color: var(--text-dim); background: var(--surface); padding: 6px 10px; border-radius: 30px; }
     .d-stats b { color: var(--text); font-size: 14px; }
+    .d-break { display: flex; flex-direction: column; gap: 7px; margin-top: 14px; }
+    .dbk { display: grid; grid-template-columns: 132px 1fr 52px; align-items: center; gap: 10px; }
+    .dbk-l { font-size: 12px; color: var(--text-dim); white-space: nowrap; }
+    .dbk-bar { height: 7px; background: var(--bg); border-radius: 6px; overflow: hidden; }
+    .dbk-bar span { display: block; height: 100%; border-radius: 6px; min-width: 2px; transition: width .45s cubic-bezier(.2,.7,.2,1); }
+    .dbk-v { text-align: right; font-weight: 800; font-size: 12px; }
+    .dbk-v small { color: var(--text-dim); font-weight: 600; }
     .d-list { padding: 14px 16px 30px; display: flex; flex-direction: column; gap: 10px; }
     .m { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; }
     .m-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }

@@ -10,10 +10,10 @@
           "predHome": 4,
           "away": "Ouzbékistan",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 5,
+          "actualAway": 0,
+          "points": 5,
+          "played": true
         },
         {
           "date": "23 juin | 05:00",
@@ -1076,10 +1076,10 @@
           "predHome": 2,
           "away": "Ouzbékistan",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 5,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
         },
         {
           "date": "23 juin | 05:00",
@@ -1609,10 +1609,10 @@
           "predHome": 3,
           "away": "Ouzbékistan",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 5,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
         },
         {
           "date": "23 juin | 05:00",
@@ -2142,10 +2142,10 @@
           "predHome": 3,
           "away": "Ouzbékistan",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 5,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
         },
         {
           "date": "23 juin | 05:00",
@@ -2675,10 +2675,10 @@
           "predHome": 3,
           "away": "Ouzbékistan",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 5,
+          "actualAway": 0,
+          "points": 6,
+          "played": true
         },
         {
           "date": "23 juin | 05:00",

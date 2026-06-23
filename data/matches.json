@@ -8,48 +8,48 @@
       "homeFlag": "🇵🇹",
       "awayFlag": "🇺🇿",
       "stadium": "Stade de Houston",
-      "actualHome": null,
-      "actualAway": null,
+      "actualHome": 5,
+      "actualAway": 0,
       "picks": [
-        {
-          "id": "O52a",
-          "name": "Joao M",
-          "predHome": 4,
-          "predAway": 1,
-          "points": null
-        },
-        {
-          "id": "8Yak",
-          "name": "Cayan F",
-          "predHome": 4,
-          "predAway": 0,
-          "points": null
-        },
         {
           "id": "wmd3",
           "name": "Nicolas L",
           "predHome": 2,
           "predAway": 0,
-          "points": null
+          "points": 6
         },
         {
           "id": "9Nz1",
           "name": "Vitor Pinto",
           "predHome": 3,
           "predAway": 0,
-          "points": null
+          "points": 6
         },
         {
           "id": "7GjW",
           "name": "Mehdi M",
           "predHome": 3,
           "predAway": 0,
-          "points": null
+          "points": 6
         },
         {
           "id": "G3EG",
           "name": "Thomas M",
           "predHome": 3,
+          "predAway": 0,
+          "points": 6
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 4,
+          "predAway": 1,
+          "points": 5
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 4,
           "predAway": 0,
           "points": null
         }

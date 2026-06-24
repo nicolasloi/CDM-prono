@@ -20,7 +20,7 @@ const colorMap = buildColorMap(members.map((m) => keyOf(m)));
 const bump = buildRankByDay(ts);
 for (const k in bump.byId) bump.byId[k].name = shortName(bump.byId[k].name);
 const mover = topMover(ts);
-const moverDay = mover ? new Date(mover.day + 'T12:00:00+02:00').toLocaleDateString('fr-CH', { day: 'numeric', month: 'short', timeZone: 'Europe/Zurich' }) : '';
+const moverDay = mover ? new Date(mover.day + 'T12:00:00Z').toLocaleDateString('fr-CH', { day: 'numeric', month: 'short', timeZone: 'UTC' }) : '';
 const upcoming = (fixturesData.upcoming || []) as any[];
 const nextMatch = upcoming[0] || null; // défaut au build ; le client choisit le bon « prochain »
 const updated = new Date(latest.takenAt).toLocaleString('fr-CH', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Zurich' });

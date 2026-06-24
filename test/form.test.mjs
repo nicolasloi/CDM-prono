@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { topMover } from '../scripts/lib/form.mjs';
 
 const at = (iso, pts, name) => ({ takenAt: iso, totalPoints: pts, name });
-// 20:00 UTC = 22:00 à Zurich (été) → le jour reste celui de la date.
+// Journées coupées à midi CEST. 20:00 UTC = 22:00 CEST (soir) → journée du jour même.
 
 test('gain sur la dernière journée active', () => {
   const ts = {

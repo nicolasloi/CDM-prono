@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "24 juin | 04:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Colombie",
+          "predHome": 3,
+          "away": "RD Congo",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "24 juin | 01:00",
           "stadium": "Stade de Toronto",
           "home": "Panama",
@@ -560,6 +572,18 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "24 juin | 04:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Colombie",
+          "predHome": 2,
+          "away": "RD Congo",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "24 juin | 01:00",
           "stadium": "Stade de Toronto",
@@ -1118,6 +1142,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "24 juin | 04:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Colombie",
+          "predHome": 2,
+          "away": "RD Congo",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "24 juin | 01:00",
           "stadium": "Stade de Toronto",
           "home": "Panama",
@@ -1674,6 +1710,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "24 juin | 04:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Colombie",
+          "predHome": 2,
+          "away": "RD Congo",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "24 juin | 01:00",
           "stadium": "Stade de Toronto",
@@ -2232,6 +2280,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "24 juin | 04:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Colombie",
+          "predHome": 1,
+          "away": "RD Congo",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "24 juin | 01:00",
           "stadium": "Stade de Toronto",
           "home": "Panama",
@@ -2788,6 +2848,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "24 juin | 04:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Colombie",
+          "predHome": 3,
+          "away": "RD Congo",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "24 juin | 01:00",
           "stadium": "Stade de Toronto",

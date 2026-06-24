@@ -4,6 +4,30 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "25 juin | 00:00",
+          "stadium": "Stade de Miami",
+          "home": "Écosse",
+          "predHome": 0,
+          "away": "Brésil",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 00:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Maroc",
+          "predHome": 3,
+          "away": "Haïti",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "24 juin | 21:00",
           "stadium": "BC Place de Vancouver",
           "home": "Suisse",
@@ -596,6 +620,30 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "25 juin | 00:00",
+          "stadium": "Stade de Miami",
+          "home": "Écosse",
+          "predHome": 0,
+          "away": "Brésil",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 00:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Maroc",
+          "predHome": 3,
+          "away": "Haïti",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "24 juin | 21:00",
           "stadium": "BC Place de Vancouver",
@@ -1190,6 +1238,30 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "25 juin | 00:00",
+          "stadium": "Stade de Miami",
+          "home": "Écosse",
+          "predHome": 1,
+          "away": "Brésil",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 00:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Maroc",
+          "predHome": 2,
+          "away": "Haïti",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "24 juin | 21:00",
           "stadium": "BC Place de Vancouver",
           "home": "Suisse",
@@ -1782,6 +1854,30 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "25 juin | 00:00",
+          "stadium": "Stade de Miami",
+          "home": "Écosse",
+          "predHome": 1,
+          "away": "Brésil",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 00:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Maroc",
+          "predHome": 2,
+          "away": "Haïti",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "24 juin | 21:00",
           "stadium": "BC Place de Vancouver",
@@ -2376,6 +2472,30 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "25 juin | 00:00",
+          "stadium": "Stade de Miami",
+          "home": "Écosse",
+          "predHome": 0,
+          "away": "Brésil",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 00:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Maroc",
+          "predHome": 3,
+          "away": "Haïti",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "24 juin | 21:00",
           "stadium": "BC Place de Vancouver",
           "home": "Suisse",
@@ -2968,6 +3088,30 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "25 juin | 00:00",
+          "stadium": "Stade de Miami",
+          "home": "Écosse",
+          "predHome": 0,
+          "away": "Brésil",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 00:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Maroc",
+          "predHome": 2,
+          "away": "Haïti",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "24 juin | 21:00",
           "stadium": "BC Place de Vancouver",

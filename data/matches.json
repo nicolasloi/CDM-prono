@@ -8,50 +8,50 @@
       "homeFlag": "🇨🇭",
       "awayFlag": "🇨🇦",
       "stadium": "BC Place de Vancouver",
-      "actualHome": null,
-      "actualAway": null,
+      "actualHome": 2,
+      "actualAway": 1,
       "picks": [
-        {
-          "id": "O52a",
-          "name": "Joao M",
-          "predHome": 1,
-          "predAway": 2,
-          "points": null
-        },
         {
           "id": "8Yak",
           "name": "Cayan F",
           "predHome": 2,
           "predAway": 1,
-          "points": null
-        },
-        {
-          "id": "wmd3",
-          "name": "Nicolas L",
-          "predHome": 3,
-          "predAway": 1,
-          "points": null
+          "points": 10
         },
         {
           "id": "9Nz1",
           "name": "Vitor Pinto",
           "predHome": 2,
           "predAway": 1,
-          "points": null
-        },
-        {
-          "id": "7GjW",
-          "name": "Mehdi M",
-          "predHome": 4,
-          "predAway": 1,
-          "points": null
+          "points": 10
         },
         {
           "id": "G3EG",
           "name": "Thomas M",
           "predHome": 2,
           "predAway": 1,
-          "points": null
+          "points": 10
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 3,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 4,
+          "predAway": 1,
+          "points": 6
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 1,
+          "predAway": 2,
+          "points": 0
         }
       ]
     },
@@ -63,50 +63,50 @@
       "homeFlag": "🇧🇦",
       "awayFlag": "🇶🇦",
       "stadium": "Stade de Seattle",
-      "actualHome": null,
-      "actualAway": null,
+      "actualHome": 3,
+      "actualAway": 1,
       "picks": [
-        {
-          "id": "O52a",
-          "name": "Joao M",
-          "predHome": 0,
-          "predAway": 0,
-          "points": null
-        },
         {
           "id": "8Yak",
           "name": "Cayan F",
           "predHome": 2,
           "predAway": 0,
-          "points": null
+          "points": 8
         },
         {
           "id": "wmd3",
           "name": "Nicolas L",
           "predHome": 2,
           "predAway": 0,
-          "points": null
+          "points": 8
         },
         {
           "id": "9Nz1",
           "name": "Vitor Pinto",
           "predHome": 2,
           "predAway": 0,
-          "points": null
+          "points": 8
         },
         {
           "id": "7GjW",
           "name": "Mehdi M",
           "predHome": 2,
           "predAway": 0,
-          "points": null
+          "points": 8
         },
         {
           "id": "G3EG",
           "name": "Thomas M",
           "predHome": 1,
           "predAway": 1,
-          "points": null
+          "points": 1
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 0,
+          "predAway": 0,
+          "points": 0
         }
       ]
     },

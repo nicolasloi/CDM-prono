@@ -1,10 +1,6 @@
-// « Joueur(s) en forme » : plus gros gain de points sur la DERNIÈRE JOURNÉE de matchs.
-// Comme la CDM est aux USA/Canada/Mexique, les matchs se jouent la nuit en Europe (≈18h→08h CEST)
-// et chevauchent minuit. On coupe donc les journées à MIDI (heure suisse), en pleine période calme
-// (aucun match ~08h–18h CEST) : toute une soirée/nuit de matchs tombe dans une seule journée,
-// étiquetée par le jour du soir. En cas d'égalité au sommet, on renvoie TOUS les ex æquo.
-const dayOf = (iso) => new Date(new Date(iso).getTime() - 12 * 3600 * 1000)
-  .toLocaleDateString('fr-CA', { timeZone: 'Europe/Zurich' });
+// « Joueur(s) en forme » : plus gros gain de points sur la DERNIÈRE JOURNÉE de matchs
+// (journée = créneau midi→midi CEST, cf. matchDay). En cas d'égalité au sommet, on renvoie tous les ex æquo.
+import { matchDay as dayOf } from './datetime.mjs';
 
 export function topMover(ts) {
   const allSeries = Object.values(ts).filter((s) => s && s.length);

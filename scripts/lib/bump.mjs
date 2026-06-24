@@ -1,6 +1,7 @@
-// Construit les données du bump chart : la position de chaque joueur au classement, par jour.
-// On prend la dernière position connue de chaque jour (fuseau Europe/Zurich) et on reporte les jours manquants.
-const dayOf = (iso) => new Date(iso).toLocaleDateString('fr-CA', { timeZone: 'Europe/Zurich' }); // "2026-06-12"
+// Construit les données du bump chart : la position de chaque joueur au classement, par JOURNÉE de match
+// (créneau midi→midi CEST, cf. matchDay) — une soirée/nuit de matchs = une seule colonne.
+// On prend la dernière position connue de chaque journée et on reporte les journées manquantes.
+import { matchDay as dayOf } from './datetime.mjs';
 
 export function buildRankByDay(ts) {
   const daySet = new Set();

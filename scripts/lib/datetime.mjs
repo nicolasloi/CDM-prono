@@ -17,3 +17,10 @@ export function toISO(dateStr) {
   const d = m[1].padStart(2, '0');
   return `${YEAR}-${mo}-${d}T${m[3].padStart(2, '0')}:${m[4]}:00+02:00`;
 }
+
+// « Journée de match » à partir d'un instant ISO : on coupe les journées à MIDI (heure suisse),
+// en pleine période calme (aucun match ~08h–18h CEST). Comme la CDM est aux USA/Canada/Mexique,
+// une soirée/nuit de matchs (≈18h→08h CEST) chevauche minuit ; ce découpage la garde en UNE seule
+// journée, étiquetée par le jour du soir. Renvoie "YYYY-MM-DD".
+export const matchDay = (iso) =>
+  new Date(new Date(iso).getTime() - 12 * 3600 * 1000).toLocaleDateString('fr-CA', { timeZone: 'Europe/Zurich' });

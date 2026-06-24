@@ -10,9 +10,9 @@
           "predHome": 3,
           "away": "RD Congo",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 5,
           "played": false
         },
         {
@@ -579,9 +579,9 @@
           "predHome": 2,
           "away": "RD Congo",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 8,
           "played": false
         },
         {
@@ -1148,9 +1148,9 @@
           "predHome": 2,
           "away": "RD Congo",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 8,
           "played": false
         },
         {
@@ -1717,9 +1717,9 @@
           "predHome": 2,
           "away": "RD Congo",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 8,
           "played": false
         },
         {
@@ -2286,9 +2286,9 @@
           "predHome": 1,
           "away": "RD Congo",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 10,
           "played": false
         },
         {
@@ -2855,9 +2855,9 @@
           "predHome": 3,
           "away": "RD Congo",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 5,
           "played": false
         },
         {

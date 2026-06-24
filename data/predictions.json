@@ -4,6 +4,30 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "24 juin | 21:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 1,
+          "away": "Canada",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "24 juin | 21:00",
+          "stadium": "Stade de Seattle",
+          "home": "Bosnie-Herzégovine",
+          "predHome": 0,
+          "away": "Qatar",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "24 juin | 04:00",
           "stadium": "Stade de Guadalajara",
           "home": "Colombie",
@@ -572,6 +596,30 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "24 juin | 21:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 2,
+          "away": "Canada",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "24 juin | 21:00",
+          "stadium": "Stade de Seattle",
+          "home": "Bosnie-Herzégovine",
+          "predHome": 2,
+          "away": "Qatar",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "24 juin | 04:00",
           "stadium": "Stade de Guadalajara",
@@ -1142,6 +1190,30 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "24 juin | 21:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 3,
+          "away": "Canada",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "24 juin | 21:00",
+          "stadium": "Stade de Seattle",
+          "home": "Bosnie-Herzégovine",
+          "predHome": 2,
+          "away": "Qatar",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "24 juin | 04:00",
           "stadium": "Stade de Guadalajara",
           "home": "Colombie",
@@ -1710,6 +1782,30 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "24 juin | 21:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 2,
+          "away": "Canada",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "24 juin | 21:00",
+          "stadium": "Stade de Seattle",
+          "home": "Bosnie-Herzégovine",
+          "predHome": 2,
+          "away": "Qatar",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "24 juin | 04:00",
           "stadium": "Stade de Guadalajara",
@@ -2280,6 +2376,30 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "24 juin | 21:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 4,
+          "away": "Canada",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "24 juin | 21:00",
+          "stadium": "Stade de Seattle",
+          "home": "Bosnie-Herzégovine",
+          "predHome": 2,
+          "away": "Qatar",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "24 juin | 04:00",
           "stadium": "Stade de Guadalajara",
           "home": "Colombie",
@@ -2848,6 +2968,30 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "24 juin | 21:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 2,
+          "away": "Canada",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "24 juin | 21:00",
+          "stadium": "Stade de Seattle",
+          "home": "Bosnie-Herzégovine",
+          "predHome": 1,
+          "away": "Qatar",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "24 juin | 04:00",
           "stadium": "Stade de Guadalajara",

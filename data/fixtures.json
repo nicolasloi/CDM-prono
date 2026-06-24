@@ -1,6 +1,22 @@
 {
   "upcoming": [
     {
+      "home": "Suisse",
+      "away": "Canada",
+      "homeFlag": "🇨🇭",
+      "awayFlag": "🇨🇦",
+      "stadium": "BC Place de Vancouver",
+      "kickoff": "2026-06-24T21:00:00+02:00"
+    },
+    {
+      "home": "Bosnie-Herzégovine",
+      "away": "Qatar",
+      "homeFlag": "🇧🇦",
+      "awayFlag": "🇶🇦",
+      "stadium": "Stade de Seattle",
+      "kickoff": "2026-06-24T21:00:00+02:00"
+    },
+    {
       "home": "Écosse",
       "away": "Brésil",
       "homeFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",

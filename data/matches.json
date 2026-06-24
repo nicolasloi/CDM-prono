@@ -1,6 +1,116 @@
 {
   "matches": [
     {
+      "date": "24 juin | 21:00",
+      "kickoff": "2026-06-24T21:00:00+02:00",
+      "home": "Suisse",
+      "away": "Canada",
+      "homeFlag": "🇨🇭",
+      "awayFlag": "🇨🇦",
+      "stadium": "BC Place de Vancouver",
+      "actualHome": null,
+      "actualAway": null,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 1,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 3,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 4,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": null
+        }
+      ]
+    },
+    {
+      "date": "24 juin | 21:00",
+      "kickoff": "2026-06-24T21:00:00+02:00",
+      "home": "Bosnie-Herzégovine",
+      "away": "Qatar",
+      "homeFlag": "🇧🇦",
+      "awayFlag": "🇶🇦",
+      "stadium": "Stade de Seattle",
+      "actualHome": null,
+      "actualAway": null,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 0,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": null
+        }
+      ]
+    },
+    {
       "date": "24 juin | 04:00",
       "kickoff": "2026-06-24T04:00:00+02:00",
       "home": "Colombie",

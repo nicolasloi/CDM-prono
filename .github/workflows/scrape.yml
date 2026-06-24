@@ -8,6 +8,9 @@ on:
     - cron: '*/5 0-6 * * *'
     # Hors période (09h–18h CEST = 07h–15h UTC) → toutes les heures à :05
     - cron: '5 7-15 * * *'
+    # Cleaner du matin (6h30 CEST = 4h30 UTC) : passage dédié après les matchs de la nuit
+    # pour garantir scores finaux + classement à jour, même si un cron */5 a été ignoré.
+    - cron: '30 4 * * *'
   workflow_dispatch:
 
 permissions:

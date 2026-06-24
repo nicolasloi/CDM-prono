@@ -2,37 +2,41 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { topMover } from '../scripts/lib/form.mjs';
 
-const H = 3600 * 1000;
-const base = Date.parse('2026-06-22T12:00:00Z');
-const at = (h, pts, name) => ({ takenAt: new Date(base + h * H).toISOString(), totalPoints: pts, name });
+const at = (iso, pts, name) => ({ takenAt: iso, totalPoints: pts, name });
+// 20:00 UTC = 22:00 à Zurich (été) → le jour reste celui de la date.
 
-test('plus gros gain sur 24h', () => {
+test('gain sur la dernière journée active', () => {
   const ts = {
-    a: [at(-30, 10, 'A'), at(-20, 12, 'A'), at(0, 30, 'A')], // baseline = relevé à -30h (≤ -24h) → 30-10 ? non : ≤ cutoff(-24h) = -30h → 10 ; gain 20
-    b: [at(-30, 5, 'B'), at(-1, 8, 'B'), at(0, 20, 'B')],     // baseline -30h = 5 ; gain 15
+    a: [at('2026-06-22T20:00:00Z', 10, 'A'), at('2026-06-23T20:00:00Z', 30, 'A')],
+    b: [at('2026-06-22T20:00:00Z', 8, 'B'), at('2026-06-23T20:00:00Z', 15, 'B')],
   };
   const m = topMover(ts);
   assert.deepEqual(m.names, ['A']);
   assert.equal(m.gain, 20);
+  assert.equal(m.day, '2026-06-23');
 });
 
-test('ex æquo : tous les joueurs à égalité au sommet', () => {
+test('ignore les journées sans changement (remonte au dernier jour actif)', () => {
   const ts = {
-    a: [at(-30, 10, 'A'), at(0, 30, 'A')], // gain 20
-    b: [at(-30, 5, 'B'), at(0, 25, 'B')],  // gain 20
-    c: [at(-30, 5, 'C'), at(0, 20, 'C')],  // gain 15
+    a: [at('2026-06-22T20:00:00Z', 10, 'A'), at('2026-06-23T20:00:00Z', 30, 'A'), at('2026-06-24T20:00:00Z', 30, 'A')],
+    b: [at('2026-06-22T20:00:00Z', 8, 'B'), at('2026-06-23T20:00:00Z', 15, 'B'), at('2026-06-24T20:00:00Z', 15, 'B')],
   };
   const m = topMover(ts);
-  assert.deepEqual(m.names, ['A', 'B']);
+  assert.equal(m.day, '2026-06-23'); // le 24 n'a pas bougé → on prend le 23
   assert.equal(m.gain, 20);
 });
 
-test('null si personne ne progresse', () => {
-  const ts = { a: [at(-2, 10, 'A'), at(0, 10, 'A')] };
-  assert.equal(topMover(ts), null);
+test('ex æquo : tous les noms au sommet', () => {
+  const ts = {
+    a: [at('2026-06-22T20:00:00Z', 10, 'A'), at('2026-06-23T20:00:00Z', 20, 'A')],
+    b: [at('2026-06-22T20:00:00Z', 5, 'B'), at('2026-06-23T20:00:00Z', 15, 'B')],
+  };
+  const m = topMover(ts);
+  assert.deepEqual(m.names.sort(), ['A', 'B']);
+  assert.equal(m.gain, 10);
 });
 
-test('série trop courte ignorée', () => {
-  const ts = { a: [at(0, 10, 'A')] };
+test('null si une seule journée', () => {
+  const ts = { a: [at('2026-06-23T20:00:00Z', 10, 'A')] };
   assert.equal(topMover(ts), null);
 });

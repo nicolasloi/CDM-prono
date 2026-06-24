@@ -20,6 +20,7 @@ const colorMap = buildColorMap(members.map((m) => keyOf(m)));
 const bump = buildRankByDay(ts);
 for (const k in bump.byId) bump.byId[k].name = shortName(bump.byId[k].name);
 const mover = topMover(ts);
+const moverDay = mover ? new Date(mover.day + 'T12:00:00+02:00').toLocaleDateString('fr-CH', { day: 'numeric', month: 'short', timeZone: 'Europe/Zurich' }) : '';
 const upcoming = (fixturesData.upcoming || []) as any[];
 const nextMatch = upcoming[0] || null; // défaut au build ; le client choisit le bon « prochain »
 const updated = new Date(latest.takenAt).toLocaleString('fr-CH', { dateStyle: 'long', timeStyle: 'short', timeZone: 'Europe/Zurich' });
@@ -68,7 +69,7 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
         <div class="strip-card form">
           <span class="strip-k">🔥 En forme</span>
           <span class="strip-main">{mover.names.map(shortName).join(', ')}</span>
-          <span class="strip-val">+{mover.gain} <small>pts / 24h</small></span>
+          <span class="strip-val">+{mover.gain} <small>pts · {moverDay}</small></span>
         </div>
       )}
     </section>

@@ -1,6 +1,22 @@
 {
   "upcoming": [
     {
+      "home": "Equateur",
+      "away": "Allemagne",
+      "homeFlag": "🇪🇨",
+      "awayFlag": "🇩🇪",
+      "stadium": "Stade de New York New Jersey",
+      "kickoff": "2026-06-25T22:00:00+02:00"
+    },
+    {
+      "home": "Curacao",
+      "away": "Côte d'Ivoire",
+      "homeFlag": "🇨🇼",
+      "awayFlag": "🇨🇮",
+      "stadium": "Stade de Philadelphie",
+      "kickoff": "2026-06-25T22:00:00+02:00"
+    },
+    {
       "home": "Tunisie",
       "away": "Pays-Bas",
       "homeFlag": "🇹🇳",

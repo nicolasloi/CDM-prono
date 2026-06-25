@@ -1,6 +1,116 @@
 {
   "matches": [
     {
+      "date": "25 juin | 22:00",
+      "kickoff": "2026-06-25T22:00:00+02:00",
+      "home": "Equateur",
+      "away": "Allemagne",
+      "homeFlag": "🇪🇨",
+      "awayFlag": "🇩🇪",
+      "stadium": "Stade de New York New Jersey",
+      "actualHome": null,
+      "actualAway": null,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 0,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 1,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 1,
+          "predAway": 3,
+          "points": null
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 0,
+          "predAway": 4,
+          "points": null
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 0,
+          "predAway": 3,
+          "points": null
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 0,
+          "predAway": 2,
+          "points": null
+        }
+      ]
+    },
+    {
+      "date": "25 juin | 22:00",
+      "kickoff": "2026-06-25T22:00:00+02:00",
+      "home": "Curacao",
+      "away": "Côte d'Ivoire",
+      "homeFlag": "🇨🇼",
+      "awayFlag": "🇨🇮",
+      "stadium": "Stade de Philadelphie",
+      "actualHome": null,
+      "actualAway": null,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 0,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 0,
+          "predAway": 3,
+          "points": null
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 0,
+          "predAway": 3,
+          "points": null
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 0,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 0,
+          "predAway": 3,
+          "points": null
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 0,
+          "predAway": 1,
+          "points": null
+        }
+      ]
+    },
+    {
       "date": "25 juin | 03:00",
       "kickoff": "2026-06-25T03:00:00+02:00",
       "home": "Afrique du Sud",

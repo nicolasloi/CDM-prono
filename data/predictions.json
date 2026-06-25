@@ -4,6 +4,30 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "25 juin | 22:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Equateur",
+          "predHome": 0,
+          "away": "Allemagne",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 22:00",
+          "stadium": "Stade de Philadelphie",
+          "home": "Curacao",
+          "predHome": 0,
+          "away": "Côte d'Ivoire",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "25 juin | 03:00",
           "stadium": "Stade de Monterrey",
           "home": "Afrique du Sud",
@@ -644,6 +668,30 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "25 juin | 22:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Equateur",
+          "predHome": 1,
+          "away": "Allemagne",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 22:00",
+          "stadium": "Stade de Philadelphie",
+          "home": "Curacao",
+          "predHome": 0,
+          "away": "Côte d'Ivoire",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "25 juin | 03:00",
           "stadium": "Stade de Monterrey",
@@ -1286,6 +1334,30 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "25 juin | 22:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Equateur",
+          "predHome": 1,
+          "away": "Allemagne",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 22:00",
+          "stadium": "Stade de Philadelphie",
+          "home": "Curacao",
+          "predHome": 0,
+          "away": "Côte d'Ivoire",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "25 juin | 03:00",
           "stadium": "Stade de Monterrey",
           "home": "Afrique du Sud",
@@ -1926,6 +1998,30 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "25 juin | 22:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Equateur",
+          "predHome": 0,
+          "away": "Allemagne",
+          "predAway": 4,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 22:00",
+          "stadium": "Stade de Philadelphie",
+          "home": "Curacao",
+          "predHome": 0,
+          "away": "Côte d'Ivoire",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "25 juin | 03:00",
           "stadium": "Stade de Monterrey",
@@ -2568,6 +2664,30 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "25 juin | 22:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Equateur",
+          "predHome": 0,
+          "away": "Allemagne",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 22:00",
+          "stadium": "Stade de Philadelphie",
+          "home": "Curacao",
+          "predHome": 0,
+          "away": "Côte d'Ivoire",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "25 juin | 03:00",
           "stadium": "Stade de Monterrey",
           "home": "Afrique du Sud",
@@ -3208,6 +3328,30 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "25 juin | 22:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Equateur",
+          "predHome": 0,
+          "away": "Allemagne",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 22:00",
+          "stadium": "Stade de Philadelphie",
+          "home": "Curacao",
+          "predHome": 0,
+          "away": "Côte d'Ivoire",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "25 juin | 03:00",
           "stadium": "Stade de Monterrey",

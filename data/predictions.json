@@ -4,6 +4,30 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "25 juin | 03:00",
+          "stadium": "Stade de Monterrey",
+          "home": "Afrique du Sud",
+          "predHome": 0,
+          "away": "Corée du Sud",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 03:00",
+          "stadium": "Stade de Mexico",
+          "home": "Tchéquie",
+          "predHome": 0,
+          "away": "Mexique",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "25 juin | 00:00",
           "stadium": "Stade de Miami",
           "home": "Écosse",
@@ -620,6 +644,30 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "25 juin | 03:00",
+          "stadium": "Stade de Monterrey",
+          "home": "Afrique du Sud",
+          "predHome": 0,
+          "away": "Corée du Sud",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 03:00",
+          "stadium": "Stade de Mexico",
+          "home": "Tchéquie",
+          "predHome": 1,
+          "away": "Mexique",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "25 juin | 00:00",
           "stadium": "Stade de Miami",
@@ -1238,6 +1286,30 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "25 juin | 03:00",
+          "stadium": "Stade de Monterrey",
+          "home": "Afrique du Sud",
+          "predHome": 1,
+          "away": "Corée du Sud",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 03:00",
+          "stadium": "Stade de Mexico",
+          "home": "Tchéquie",
+          "predHome": 1,
+          "away": "Mexique",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "25 juin | 00:00",
           "stadium": "Stade de Miami",
           "home": "Écosse",
@@ -1854,6 +1926,30 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "25 juin | 03:00",
+          "stadium": "Stade de Monterrey",
+          "home": "Afrique du Sud",
+          "predHome": 1,
+          "away": "Corée du Sud",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 03:00",
+          "stadium": "Stade de Mexico",
+          "home": "Tchéquie",
+          "predHome": 1,
+          "away": "Mexique",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "25 juin | 00:00",
           "stadium": "Stade de Miami",
@@ -2472,6 +2568,30 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "25 juin | 03:00",
+          "stadium": "Stade de Monterrey",
+          "home": "Afrique du Sud",
+          "predHome": 1,
+          "away": "Corée du Sud",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 03:00",
+          "stadium": "Stade de Mexico",
+          "home": "Tchéquie",
+          "predHome": 0,
+          "away": "Mexique",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "25 juin | 00:00",
           "stadium": "Stade de Miami",
           "home": "Écosse",
@@ -3088,6 +3208,30 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "25 juin | 03:00",
+          "stadium": "Stade de Monterrey",
+          "home": "Afrique du Sud",
+          "predHome": 1,
+          "away": "Corée du Sud",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "25 juin | 03:00",
+          "stadium": "Stade de Mexico",
+          "home": "Tchéquie",
+          "predHome": 2,
+          "away": "Mexique",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "25 juin | 00:00",
           "stadium": "Stade de Miami",

@@ -1,6 +1,116 @@
 {
   "matches": [
     {
+      "date": "25 juin | 03:00",
+      "kickoff": "2026-06-25T03:00:00+02:00",
+      "home": "Afrique du Sud",
+      "away": "Corée du Sud",
+      "homeFlag": "🇿🇦",
+      "awayFlag": "🇰🇷",
+      "stadium": "Stade de Monterrey",
+      "actualHome": null,
+      "actualAway": null,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 0,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 0,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 1,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 1,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": null
+        }
+      ]
+    },
+    {
+      "date": "25 juin | 03:00",
+      "kickoff": "2026-06-25T03:00:00+02:00",
+      "home": "Tchéquie",
+      "away": "Mexique",
+      "homeFlag": "🇨🇿",
+      "awayFlag": "🇲🇽",
+      "stadium": "Stade de Mexico",
+      "actualHome": null,
+      "actualAway": null,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 0,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 1,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 1,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 1,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 0,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 2,
+          "predAway": 2,
+          "points": null
+        }
+      ]
+    },
+    {
       "date": "25 juin | 00:00",
       "kickoff": "2026-06-25T00:00:00+02:00",
       "home": "Écosse",

@@ -10,10 +10,10 @@
           "predHome": 0,
           "away": "Corée du Sud",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
         },
         {
           "date": "25 juin | 03:00",
@@ -22,10 +22,10 @@
           "predHome": 0,
           "away": "Mexique",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 3,
+          "points": 6,
+          "played": true
         },
         {
           "date": "25 juin | 00:00",
@@ -651,10 +651,10 @@
           "predHome": 0,
           "away": "Corée du Sud",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 0,
+          "played": true
         },
         {
           "date": "25 juin | 03:00",
@@ -663,10 +663,10 @@
           "predHome": 1,
           "away": "Mexique",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 3,
+          "points": 5,
+          "played": true
         },
         {
           "date": "25 juin | 00:00",
@@ -1292,10 +1292,10 @@
           "predHome": 1,
           "away": "Corée du Sud",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
         },
         {
           "date": "25 juin | 03:00",
@@ -1304,10 +1304,10 @@
           "predHome": 1,
           "away": "Mexique",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 3,
+          "points": 5,
+          "played": true
         },
         {
           "date": "25 juin | 00:00",
@@ -1933,10 +1933,10 @@
           "predHome": 1,
           "away": "Corée du Sud",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
         },
         {
           "date": "25 juin | 03:00",
@@ -1945,10 +1945,10 @@
           "predHome": 1,
           "away": "Mexique",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 3,
+          "points": 5,
+          "played": true
         },
         {
           "date": "25 juin | 00:00",
@@ -2574,10 +2574,10 @@
           "predHome": 1,
           "away": "Corée du Sud",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
         },
         {
           "date": "25 juin | 03:00",
@@ -2586,10 +2586,10 @@
           "predHome": 0,
           "away": "Mexique",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 3,
+          "points": 1,
+          "played": true
         },
         {
           "date": "25 juin | 00:00",
@@ -3215,10 +3215,10 @@
           "predHome": 1,
           "away": "Corée du Sud",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 1,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
         },
         {
           "date": "25 juin | 03:00",
@@ -3227,10 +3227,10 @@
           "predHome": 2,
           "away": "Mexique",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 3,
+          "points": 0,
+          "played": true
         },
         {
           "date": "25 juin | 00:00",

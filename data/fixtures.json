@@ -1,22 +1,6 @@
 {
   "upcoming": [
     {
-      "home": "Afrique du Sud",
-      "away": "Corée du Sud",
-      "homeFlag": "🇿🇦",
-      "awayFlag": "🇰🇷",
-      "stadium": "Stade de Monterrey",
-      "kickoff": "2026-06-25T03:00:00+02:00"
-    },
-    {
-      "home": "Tchéquie",
-      "away": "Mexique",
-      "homeFlag": "🇨🇿",
-      "awayFlag": "🇲🇽",
-      "stadium": "Stade de Mexico",
-      "kickoff": "2026-06-25T03:00:00+02:00"
-    },
-    {
       "home": "Equateur",
       "away": "Allemagne",
       "homeFlag": "🇪🇨",

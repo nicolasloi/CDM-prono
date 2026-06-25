@@ -10,10 +10,10 @@
           "predHome": 0,
           "away": "Allemagne",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
         },
         {
           "date": "25 juin | 22:00",
@@ -22,10 +22,10 @@
           "predHome": 0,
           "away": "Côte d'Ivoire",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 2,
+          "points": 10,
+          "played": true
         },
         {
           "date": "25 juin | 03:00",
@@ -675,10 +675,10 @@
           "predHome": 1,
           "away": "Allemagne",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 1,
+          "points": 0,
+          "played": true
         },
         {
           "date": "25 juin | 22:00",
@@ -687,10 +687,10 @@
           "predHome": 0,
           "away": "Côte d'Ivoire",
           "predAway": 3,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 2,
+          "points": 6,
+          "played": true
         },
         {
           "date": "25 juin | 03:00",
@@ -1340,10 +1340,10 @@
           "predHome": 1,
           "away": "Allemagne",
           "predAway": 3,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 1,
+          "points": 0,
+          "played": true
         },
         {
           "date": "25 juin | 22:00",
@@ -1352,10 +1352,10 @@
           "predHome": 0,
           "away": "Côte d'Ivoire",
           "predAway": 3,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 2,
+          "points": 6,
+          "played": true
         },
         {
           "date": "25 juin | 03:00",
@@ -2005,10 +2005,10 @@
           "predHome": 0,
           "away": "Allemagne",
           "predAway": 4,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 1,
+          "points": 0,
+          "played": true
         },
         {
           "date": "25 juin | 22:00",
@@ -2017,10 +2017,10 @@
           "predHome": 0,
           "away": "Côte d'Ivoire",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 2,
+          "points": 6,
+          "played": true
         },
         {
           "date": "25 juin | 03:00",
@@ -2670,10 +2670,10 @@
           "predHome": 0,
           "away": "Allemagne",
           "predAway": 3,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 1,
+          "points": 0,
+          "played": true
         },
         {
           "date": "25 juin | 22:00",
@@ -2682,10 +2682,10 @@
           "predHome": 0,
           "away": "Côte d'Ivoire",
           "predAway": 3,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 2,
+          "points": 6,
+          "played": true
         },
         {
           "date": "25 juin | 03:00",
@@ -3335,10 +3335,10 @@
           "predHome": 0,
           "away": "Allemagne",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 1,
+          "points": 0,
+          "played": true
         },
         {
           "date": "25 juin | 22:00",
@@ -3347,10 +3347,10 @@
           "predHome": 0,
           "away": "Côte d'Ivoire",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 2,
+          "points": 6,
+          "played": true
         },
         {
           "date": "25 juin | 03:00",

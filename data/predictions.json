@@ -4,6 +4,30 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "26 juin | 01:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Tunisie",
+          "predHome": 0,
+          "away": "Pays-Bas",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 01:00",
+          "stadium": "Stade de Dallas",
+          "home": "Japon",
+          "predHome": 0,
+          "away": "Suède",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "25 juin | 22:00",
           "stadium": "Stade de New York New Jersey",
           "home": "Equateur",
@@ -668,6 +692,30 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "26 juin | 01:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Tunisie",
+          "predHome": 0,
+          "away": "Pays-Bas",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 01:00",
+          "stadium": "Stade de Dallas",
+          "home": "Japon",
+          "predHome": 2,
+          "away": "Suède",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "25 juin | 22:00",
           "stadium": "Stade de New York New Jersey",
@@ -1334,6 +1382,30 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "26 juin | 01:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Tunisie",
+          "predHome": 0,
+          "away": "Pays-Bas",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 01:00",
+          "stadium": "Stade de Dallas",
+          "home": "Japon",
+          "predHome": 2,
+          "away": "Suède",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "25 juin | 22:00",
           "stadium": "Stade de New York New Jersey",
           "home": "Equateur",
@@ -1998,6 +2070,30 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "26 juin | 01:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Tunisie",
+          "predHome": 1,
+          "away": "Pays-Bas",
+          "predAway": 5,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 01:00",
+          "stadium": "Stade de Dallas",
+          "home": "Japon",
+          "predHome": 2,
+          "away": "Suède",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "25 juin | 22:00",
           "stadium": "Stade de New York New Jersey",
@@ -2664,6 +2760,30 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "26 juin | 01:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Tunisie",
+          "predHome": 0,
+          "away": "Pays-Bas",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 01:00",
+          "stadium": "Stade de Dallas",
+          "home": "Japon",
+          "predHome": 2,
+          "away": "Suède",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "25 juin | 22:00",
           "stadium": "Stade de New York New Jersey",
           "home": "Equateur",
@@ -3328,6 +3448,30 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "26 juin | 01:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Tunisie",
+          "predHome": 0,
+          "away": "Pays-Bas",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 01:00",
+          "stadium": "Stade de Dallas",
+          "home": "Japon",
+          "predHome": 1,
+          "away": "Suède",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "25 juin | 22:00",
           "stadium": "Stade de New York New Jersey",

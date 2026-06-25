@@ -1,22 +1,6 @@
 {
   "upcoming": [
     {
-      "home": "Écosse",
-      "away": "Brésil",
-      "homeFlag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-      "awayFlag": "🇧🇷",
-      "stadium": "Stade de Miami",
-      "kickoff": "2026-06-25T00:00:00+02:00"
-    },
-    {
-      "home": "Maroc",
-      "away": "Haïti",
-      "homeFlag": "🇲🇦",
-      "awayFlag": "🇭🇹",
-      "stadium": "Stade d'Atlanta",
-      "kickoff": "2026-06-25T00:00:00+02:00"
-    },
-    {
       "home": "Afrique du Sud",
       "away": "Corée du Sud",
       "homeFlag": "🇿🇦",

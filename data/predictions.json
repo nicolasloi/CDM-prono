@@ -10,10 +10,10 @@
           "predHome": 0,
           "away": "Brésil",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 3,
+          "points": 6,
+          "played": true
         },
         {
           "date": "25 juin | 00:00",
@@ -22,10 +22,10 @@
           "predHome": 3,
           "away": "Haïti",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 4,
+          "actualAway": 2,
+          "points": 5,
+          "played": true
         },
         {
           "date": "24 juin | 21:00",
@@ -627,10 +627,10 @@
           "predHome": 0,
           "away": "Brésil",
           "predAway": 3,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 3,
+          "points": 10,
+          "played": true
         },
         {
           "date": "25 juin | 00:00",
@@ -639,10 +639,10 @@
           "predHome": 3,
           "away": "Haïti",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 4,
+          "actualAway": 2,
+          "points": 5,
+          "played": true
         },
         {
           "date": "24 juin | 21:00",
@@ -1244,10 +1244,10 @@
           "predHome": 1,
           "away": "Brésil",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 3,
+          "points": 5,
+          "played": true
         },
         {
           "date": "25 juin | 00:00",
@@ -1256,10 +1256,10 @@
           "predHome": 2,
           "away": "Haïti",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 4,
+          "actualAway": 2,
+          "points": 8,
+          "played": true
         },
         {
           "date": "24 juin | 21:00",
@@ -1861,10 +1861,10 @@
           "predHome": 1,
           "away": "Brésil",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 3,
+          "points": 5,
+          "played": true
         },
         {
           "date": "25 juin | 00:00",
@@ -1873,10 +1873,10 @@
           "predHome": 2,
           "away": "Haïti",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 4,
+          "actualAway": 2,
+          "points": 8,
+          "played": true
         },
         {
           "date": "24 juin | 21:00",
@@ -2478,10 +2478,10 @@
           "predHome": 0,
           "away": "Brésil",
           "predAway": 3,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 3,
+          "points": 10,
+          "played": true
         },
         {
           "date": "25 juin | 00:00",
@@ -2490,10 +2490,10 @@
           "predHome": 3,
           "away": "Haïti",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 4,
+          "actualAway": 2,
+          "points": 5,
+          "played": true
         },
         {
           "date": "24 juin | 21:00",
@@ -3095,10 +3095,10 @@
           "predHome": 0,
           "away": "Brésil",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 3,
+          "points": 6,
+          "played": true
         },
         {
           "date": "25 juin | 00:00",
@@ -3107,10 +3107,10 @@
           "predHome": 2,
           "away": "Haïti",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 4,
+          "actualAway": 2,
+          "points": 8,
+          "played": true
         },
         {
           "date": "24 juin | 21:00",

@@ -1,22 +1,6 @@
 {
   "upcoming": [
     {
-      "home": "Tunisie",
-      "away": "Pays-Bas",
-      "homeFlag": "🇹🇳",
-      "awayFlag": "🇳🇱",
-      "stadium": "Stade de Kansas City",
-      "kickoff": "2026-06-26T01:00:00+02:00"
-    },
-    {
-      "home": "Japon",
-      "away": "Suède",
-      "homeFlag": "🇯🇵",
-      "awayFlag": "🇸🇪",
-      "stadium": "Stade de Dallas",
-      "kickoff": "2026-06-26T01:00:00+02:00"
-    },
-    {
       "home": "Paraguay",
       "away": "Australie",
       "homeFlag": "🇵🇾",

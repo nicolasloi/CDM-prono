@@ -4,6 +4,30 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "26 juin | 04:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Paraguay",
+          "predHome": 0,
+          "away": "Australie",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 04:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Turquie",
+          "predHome": 1,
+          "away": "USA",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "26 juin | 01:00",
           "stadium": "Stade de Kansas City",
           "home": "Tunisie",
@@ -692,6 +716,30 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "26 juin | 04:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Paraguay",
+          "predHome": 2,
+          "away": "Australie",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 04:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Turquie",
+          "predHome": 1,
+          "away": "USA",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "26 juin | 01:00",
           "stadium": "Stade de Kansas City",
@@ -1382,6 +1430,30 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "26 juin | 04:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Paraguay",
+          "predHome": 0,
+          "away": "Australie",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 04:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Turquie",
+          "predHome": 1,
+          "away": "USA",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "26 juin | 01:00",
           "stadium": "Stade de Kansas City",
           "home": "Tunisie",
@@ -2070,6 +2142,30 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "26 juin | 04:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Paraguay",
+          "predHome": 1,
+          "away": "Australie",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 04:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Turquie",
+          "predHome": 1,
+          "away": "USA",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "26 juin | 01:00",
           "stadium": "Stade de Kansas City",
@@ -2760,6 +2856,30 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "26 juin | 04:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Paraguay",
+          "predHome": 0,
+          "away": "Australie",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 04:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Turquie",
+          "predHome": 0,
+          "away": "USA",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "26 juin | 01:00",
           "stadium": "Stade de Kansas City",
           "home": "Tunisie",
@@ -3448,6 +3568,30 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "26 juin | 04:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "Paraguay",
+          "predHome": 0,
+          "away": "Australie",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 04:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Turquie",
+          "predHome": 1,
+          "away": "USA",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "26 juin | 01:00",
           "stadium": "Stade de Kansas City",

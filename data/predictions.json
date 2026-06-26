@@ -10,10 +10,10 @@
           "predHome": 0,
           "away": "Australie",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 10,
+          "played": true
         },
         {
           "date": "26 juin | 04:00",
@@ -22,10 +22,10 @@
           "predHome": 1,
           "away": "USA",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 2,
+          "points": 0,
+          "played": true
         },
         {
           "date": "26 juin | 01:00",
@@ -723,10 +723,10 @@
           "predHome": 2,
           "away": "Australie",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 0,
+          "played": true
         },
         {
           "date": "26 juin | 04:00",
@@ -735,10 +735,10 @@
           "predHome": 1,
           "away": "USA",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 2,
+          "points": 0,
+          "played": true
         },
         {
           "date": "26 juin | 01:00",
@@ -1436,10 +1436,10 @@
           "predHome": 0,
           "away": "Australie",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 1,
+          "played": true
         },
         {
           "date": "26 juin | 04:00",
@@ -1448,10 +1448,10 @@
           "predHome": 1,
           "away": "USA",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 2,
+          "points": 1,
+          "played": true
         },
         {
           "date": "26 juin | 01:00",
@@ -2149,10 +2149,10 @@
           "predHome": 1,
           "away": "Australie",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 8,
+          "played": true
         },
         {
           "date": "26 juin | 04:00",
@@ -2161,10 +2161,10 @@
           "predHome": 1,
           "away": "USA",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 2,
+          "points": 1,
+          "played": true
         },
         {
           "date": "26 juin | 01:00",
@@ -2862,10 +2862,10 @@
           "predHome": 0,
           "away": "Australie",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 10,
+          "played": true
         },
         {
           "date": "26 juin | 04:00",
@@ -2874,10 +2874,10 @@
           "predHome": 0,
           "away": "USA",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 2,
+          "points": 1,
+          "played": true
         },
         {
           "date": "26 juin | 01:00",
@@ -3575,10 +3575,10 @@
           "predHome": 0,
           "away": "Australie",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 0,
+          "points": 10,
+          "played": true
         },
         {
           "date": "26 juin | 04:00",
@@ -3587,10 +3587,10 @@
           "predHome": 1,
           "away": "USA",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 2,
+          "points": 1,
+          "played": true
         },
         {
           "date": "26 juin | 01:00",

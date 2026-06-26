@@ -1,22 +1,6 @@
 {
   "upcoming": [
     {
-      "home": "Norvège",
-      "away": "France",
-      "homeFlag": "🇳🇴",
-      "awayFlag": "🇫🇷",
-      "stadium": "Stade de Boston",
-      "kickoff": "2026-06-26T21:00:00+02:00"
-    },
-    {
-      "home": "Sénégal",
-      "away": "Irak",
-      "homeFlag": "🇸🇳",
-      "awayFlag": "🇮🇶",
-      "stadium": "Stade de Toronto",
-      "kickoff": "2026-06-26T21:00:00+02:00"
-    },
-    {
       "home": "Uruguay",
       "away": "Espagne",
       "homeFlag": "🇺🇾",

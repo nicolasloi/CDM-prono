@@ -4,6 +4,30 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "26 juin | 21:00",
+          "stadium": "Stade de Boston",
+          "home": "Norvège",
+          "predHome": 0,
+          "away": "France",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 21:00",
+          "stadium": "Stade de Toronto",
+          "home": "Sénégal",
+          "predHome": 3,
+          "away": "Irak",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "26 juin | 04:00",
           "stadium": "Stade de la baie de San Francisco",
           "home": "Paraguay",
@@ -716,6 +740,30 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "26 juin | 21:00",
+          "stadium": "Stade de Boston",
+          "home": "Norvège",
+          "predHome": 1,
+          "away": "France",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 21:00",
+          "stadium": "Stade de Toronto",
+          "home": "Sénégal",
+          "predHome": 2,
+          "away": "Irak",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "26 juin | 04:00",
           "stadium": "Stade de la baie de San Francisco",
@@ -1430,6 +1478,30 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "26 juin | 21:00",
+          "stadium": "Stade de Boston",
+          "home": "Norvège",
+          "predHome": 1,
+          "away": "France",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 21:00",
+          "stadium": "Stade de Toronto",
+          "home": "Sénégal",
+          "predHome": 2,
+          "away": "Irak",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "26 juin | 04:00",
           "stadium": "Stade de la baie de San Francisco",
           "home": "Paraguay",
@@ -2142,6 +2214,30 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "26 juin | 21:00",
+          "stadium": "Stade de Boston",
+          "home": "Norvège",
+          "predHome": 1,
+          "away": "France",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 21:00",
+          "stadium": "Stade de Toronto",
+          "home": "Sénégal",
+          "predHome": 2,
+          "away": "Irak",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "26 juin | 04:00",
           "stadium": "Stade de la baie de San Francisco",
@@ -2856,6 +2952,30 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "26 juin | 21:00",
+          "stadium": "Stade de Boston",
+          "home": "Norvège",
+          "predHome": 1,
+          "away": "France",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 21:00",
+          "stadium": "Stade de Toronto",
+          "home": "Sénégal",
+          "predHome": 2,
+          "away": "Irak",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "26 juin | 04:00",
           "stadium": "Stade de la baie de San Francisco",
           "home": "Paraguay",
@@ -3568,6 +3688,30 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "26 juin | 21:00",
+          "stadium": "Stade de Boston",
+          "home": "Norvège",
+          "predHome": 1,
+          "away": "France",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "26 juin | 21:00",
+          "stadium": "Stade de Toronto",
+          "home": "Sénégal",
+          "predHome": 2,
+          "away": "Irak",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "26 juin | 04:00",
           "stadium": "Stade de la baie de San Francisco",

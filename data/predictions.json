@@ -4,6 +4,30 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "27 juin | 05:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Nouvelle-Zélande",
+          "predHome": 1,
+          "away": "Belgique",
+          "predAway": 4,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 05:00",
+          "stadium": "Stade de Seattle",
+          "home": "Egypte",
+          "predHome": 3,
+          "away": "Iran",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "27 juin | 02:00",
           "stadium": "Stade de Guadalajara",
           "home": "Uruguay",
@@ -764,6 +788,30 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "27 juin | 05:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Nouvelle-Zélande",
+          "predHome": 0,
+          "away": "Belgique",
+          "predAway": 4,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 05:00",
+          "stadium": "Stade de Seattle",
+          "home": "Egypte",
+          "predHome": 1,
+          "away": "Iran",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "27 juin | 02:00",
           "stadium": "Stade de Guadalajara",
@@ -1526,6 +1574,30 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "27 juin | 05:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Nouvelle-Zélande",
+          "predHome": 0,
+          "away": "Belgique",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 05:00",
+          "stadium": "Stade de Seattle",
+          "home": "Egypte",
+          "predHome": 1,
+          "away": "Iran",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "27 juin | 02:00",
           "stadium": "Stade de Guadalajara",
           "home": "Uruguay",
@@ -2286,6 +2358,30 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "27 juin | 05:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Nouvelle-Zélande",
+          "predHome": 0,
+          "away": "Belgique",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 05:00",
+          "stadium": "Stade de Seattle",
+          "home": "Egypte",
+          "predHome": 2,
+          "away": "Iran",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "27 juin | 02:00",
           "stadium": "Stade de Guadalajara",
@@ -3048,6 +3144,30 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "27 juin | 05:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Nouvelle-Zélande",
+          "predHome": 0,
+          "away": "Belgique",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 05:00",
+          "stadium": "Stade de Seattle",
+          "home": "Egypte",
+          "predHome": 2,
+          "away": "Iran",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "27 juin | 02:00",
           "stadium": "Stade de Guadalajara",
           "home": "Uruguay",
@@ -3808,6 +3928,30 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "27 juin | 05:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Nouvelle-Zélande",
+          "predHome": 0,
+          "away": "Belgique",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 05:00",
+          "stadium": "Stade de Seattle",
+          "home": "Egypte",
+          "predHome": 1,
+          "away": "Iran",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "27 juin | 02:00",
           "stadium": "Stade de Guadalajara",

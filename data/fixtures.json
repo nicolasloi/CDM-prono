@@ -1,22 +1,6 @@
 {
   "upcoming": [
     {
-      "home": "Nouvelle-Zélande",
-      "away": "Belgique",
-      "homeFlag": "🇳🇿",
-      "awayFlag": "🇧🇪",
-      "stadium": "BC Place de Vancouver",
-      "kickoff": "2026-06-27T05:00:00+02:00"
-    },
-    {
-      "home": "Egypte",
-      "away": "Iran",
-      "homeFlag": "🇪🇬",
-      "awayFlag": "🇮🇷",
-      "stadium": "Stade de Seattle",
-      "kickoff": "2026-06-27T05:00:00+02:00"
-    },
-    {
       "home": "Croatie",
       "away": "Ghana",
       "homeFlag": "🇭🇷",

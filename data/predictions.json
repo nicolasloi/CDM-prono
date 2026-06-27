@@ -4,6 +4,30 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "28 juin | 01:30",
+          "stadium": "Stade de Miami",
+          "home": "Colombie",
+          "predHome": 1,
+          "away": "Portugal",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "28 juin | 01:30",
+          "stadium": "Stade d'Atlanta",
+          "home": "RD Congo",
+          "predHome": 2,
+          "away": "Ouzbékistan",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "27 juin | 23:00",
           "stadium": "Stade de Philadelphie",
           "home": "Croatie",
@@ -812,6 +836,30 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "28 juin | 01:30",
+          "stadium": "Stade de Miami",
+          "home": "Colombie",
+          "predHome": 1,
+          "away": "Portugal",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "28 juin | 01:30",
+          "stadium": "Stade d'Atlanta",
+          "home": "RD Congo",
+          "predHome": 1,
+          "away": "Ouzbékistan",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "27 juin | 23:00",
           "stadium": "Stade de Philadelphie",
@@ -1622,6 +1670,30 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "28 juin | 01:30",
+          "stadium": "Stade de Miami",
+          "home": "Colombie",
+          "predHome": 1,
+          "away": "Portugal",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "28 juin | 01:30",
+          "stadium": "Stade d'Atlanta",
+          "home": "RD Congo",
+          "predHome": 2,
+          "away": "Ouzbékistan",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "27 juin | 23:00",
           "stadium": "Stade de Philadelphie",
           "home": "Croatie",
@@ -2430,6 +2502,30 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "28 juin | 01:30",
+          "stadium": "Stade de Miami",
+          "home": "Colombie",
+          "predHome": 0,
+          "away": "Portugal",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "28 juin | 01:30",
+          "stadium": "Stade d'Atlanta",
+          "home": "RD Congo",
+          "predHome": 2,
+          "away": "Ouzbékistan",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "27 juin | 23:00",
           "stadium": "Stade de Philadelphie",
@@ -3240,6 +3336,30 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "28 juin | 01:30",
+          "stadium": "Stade de Miami",
+          "home": "Colombie",
+          "predHome": 1,
+          "away": "Portugal",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "28 juin | 01:30",
+          "stadium": "Stade d'Atlanta",
+          "home": "RD Congo",
+          "predHome": 1,
+          "away": "Ouzbékistan",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "27 juin | 23:00",
           "stadium": "Stade de Philadelphie",
           "home": "Croatie",
@@ -4048,6 +4168,30 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "28 juin | 01:30",
+          "stadium": "Stade de Miami",
+          "home": "Colombie",
+          "predHome": 1,
+          "away": "Portugal",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "28 juin | 01:30",
+          "stadium": "Stade d'Atlanta",
+          "home": "RD Congo",
+          "predHome": 1,
+          "away": "Ouzbékistan",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "27 juin | 23:00",
           "stadium": "Stade de Philadelphie",

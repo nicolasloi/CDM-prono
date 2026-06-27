@@ -4,6 +4,30 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "27 juin | 23:00",
+          "stadium": "Stade de Philadelphie",
+          "home": "Croatie",
+          "predHome": 1,
+          "away": "Ghana",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 23:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Panama",
+          "predHome": 0,
+          "away": "Angleterre",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "27 juin | 05:00",
           "stadium": "BC Place de Vancouver",
           "home": "Nouvelle-Zélande",
@@ -788,6 +812,30 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "27 juin | 23:00",
+          "stadium": "Stade de Philadelphie",
+          "home": "Croatie",
+          "predHome": 2,
+          "away": "Ghana",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 23:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Panama",
+          "predHome": 0,
+          "away": "Angleterre",
+          "predAway": 4,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "27 juin | 05:00",
           "stadium": "BC Place de Vancouver",
@@ -1574,6 +1622,30 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "27 juin | 23:00",
+          "stadium": "Stade de Philadelphie",
+          "home": "Croatie",
+          "predHome": 1,
+          "away": "Ghana",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 23:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Panama",
+          "predHome": 0,
+          "away": "Angleterre",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "27 juin | 05:00",
           "stadium": "BC Place de Vancouver",
           "home": "Nouvelle-Zélande",
@@ -2358,6 +2430,30 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "27 juin | 23:00",
+          "stadium": "Stade de Philadelphie",
+          "home": "Croatie",
+          "predHome": 2,
+          "away": "Ghana",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 23:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Panama",
+          "predHome": 0,
+          "away": "Angleterre",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "27 juin | 05:00",
           "stadium": "BC Place de Vancouver",
@@ -3144,6 +3240,30 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "27 juin | 23:00",
+          "stadium": "Stade de Philadelphie",
+          "home": "Croatie",
+          "predHome": 2,
+          "away": "Ghana",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 23:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Panama",
+          "predHome": 0,
+          "away": "Angleterre",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "27 juin | 05:00",
           "stadium": "BC Place de Vancouver",
           "home": "Nouvelle-Zélande",
@@ -3928,6 +4048,30 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "27 juin | 23:00",
+          "stadium": "Stade de Philadelphie",
+          "home": "Croatie",
+          "predHome": 2,
+          "away": "Ghana",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 23:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Panama",
+          "predHome": 0,
+          "away": "Angleterre",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "27 juin | 05:00",
           "stadium": "BC Place de Vancouver",

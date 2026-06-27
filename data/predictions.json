@@ -4,6 +4,30 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "27 juin | 02:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Uruguay",
+          "predHome": 0,
+          "away": "Espagne",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 02:00",
+          "stadium": "Stade de Houston",
+          "home": "Cap Vert",
+          "predHome": 0,
+          "away": "Arabie saoudite",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "26 juin | 21:00",
           "stadium": "Stade de Boston",
           "home": "Norvège",
@@ -740,6 +764,30 @@
     "8Yak": {
       "name": "Cayan F",
       "matches": [
+        {
+          "date": "27 juin | 02:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Uruguay",
+          "predHome": 1,
+          "away": "Espagne",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 02:00",
+          "stadium": "Stade de Houston",
+          "home": "Cap Vert",
+          "predHome": 1,
+          "away": "Arabie saoudite",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "26 juin | 21:00",
           "stadium": "Stade de Boston",
@@ -1478,6 +1526,30 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "27 juin | 02:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Uruguay",
+          "predHome": 1,
+          "away": "Espagne",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 02:00",
+          "stadium": "Stade de Houston",
+          "home": "Cap Vert",
+          "predHome": 1,
+          "away": "Arabie saoudite",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "26 juin | 21:00",
           "stadium": "Stade de Boston",
           "home": "Norvège",
@@ -2214,6 +2286,30 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "27 juin | 02:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Uruguay",
+          "predHome": 1,
+          "away": "Espagne",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 02:00",
+          "stadium": "Stade de Houston",
+          "home": "Cap Vert",
+          "predHome": 1,
+          "away": "Arabie saoudite",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "26 juin | 21:00",
           "stadium": "Stade de Boston",
@@ -2952,6 +3048,30 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "27 juin | 02:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Uruguay",
+          "predHome": 1,
+          "away": "Espagne",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 02:00",
+          "stadium": "Stade de Houston",
+          "home": "Cap Vert",
+          "predHome": 1,
+          "away": "Arabie saoudite",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "26 juin | 21:00",
           "stadium": "Stade de Boston",
           "home": "Norvège",
@@ -3688,6 +3808,30 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "27 juin | 02:00",
+          "stadium": "Stade de Guadalajara",
+          "home": "Uruguay",
+          "predHome": 1,
+          "away": "Espagne",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "27 juin | 02:00",
+          "stadium": "Stade de Houston",
+          "home": "Cap Vert",
+          "predHome": 1,
+          "away": "Arabie saoudite",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "26 juin | 21:00",
           "stadium": "Stade de Boston",

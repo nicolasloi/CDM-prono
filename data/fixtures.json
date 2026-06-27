@@ -1,22 +1,6 @@
 {
   "upcoming": [
     {
-      "home": "Croatie",
-      "away": "Ghana",
-      "homeFlag": "🇭🇷",
-      "awayFlag": "🇬🇭",
-      "stadium": "Stade de Philadelphie",
-      "kickoff": "2026-06-27T23:00:00+02:00"
-    },
-    {
-      "home": "Panama",
-      "away": "Angleterre",
-      "homeFlag": "🇵🇦",
-      "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      "stadium": "Stade de New York New Jersey",
-      "kickoff": "2026-06-27T23:00:00+02:00"
-    },
-    {
       "home": "Colombie",
       "away": "Portugal",
       "homeFlag": "🇨🇴",

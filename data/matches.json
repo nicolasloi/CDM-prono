@@ -8,50 +8,50 @@
       "homeFlag": "🇨🇴",
       "awayFlag": "🇵🇹",
       "stadium": "Stade de Miami",
-      "actualHome": null,
-      "actualAway": null,
+      "actualHome": 0,
+      "actualAway": 0,
       "picks": [
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 0,
+          "predAway": 1,
+          "points": 1
+        },
         {
           "id": "O52a",
           "name": "Joao M",
           "predHome": 1,
           "predAway": 3,
-          "points": null
+          "points": 0
         },
         {
           "id": "8Yak",
           "name": "Cayan F",
           "predHome": 1,
           "predAway": 2,
-          "points": null
+          "points": 0
         },
         {
           "id": "wmd3",
           "name": "Nicolas L",
           "predHome": 1,
           "predAway": 2,
-          "points": null
-        },
-        {
-          "id": "9Nz1",
-          "name": "Vitor Pinto",
-          "predHome": 0,
-          "predAway": 1,
-          "points": null
+          "points": 0
         },
         {
           "id": "7GjW",
           "name": "Mehdi M",
           "predHome": 1,
           "predAway": 3,
-          "points": null
+          "points": 0
         },
         {
           "id": "G3EG",
           "name": "Thomas M",
           "predHome": 1,
           "predAway": 2,
-          "points": null
+          "points": 0
         }
       ]
     },

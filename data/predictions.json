@@ -10,10 +10,10 @@
           "predHome": 0,
           "away": "Canada",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 1,
+          "points": 12,
+          "played": true
         },
         {
           "date": "28 juin | 04:00",
@@ -1736,10 +1736,10 @@
           "predHome": 1,
           "away": "Canada",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 1,
+          "points": 16,
+          "played": true
         },
         {
           "date": "28 juin | 04:00",
@@ -2605,10 +2605,10 @@
           "predHome": 1,
           "away": "Canada",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 1,
+          "points": 16,
+          "played": true
         },
         {
           "date": "28 juin | 04:00",
@@ -3474,10 +3474,10 @@
           "predHome": 1,
           "away": "Canada",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 1,
+          "points": 16,
+          "played": true
         },
         {
           "date": "28 juin | 04:00",
@@ -4343,10 +4343,10 @@
           "predHome": 1,
           "away": "Canada",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 0,
+          "actualAway": 1,
+          "points": 16,
+          "played": true
         },
         {
           "date": "28 juin | 04:00",

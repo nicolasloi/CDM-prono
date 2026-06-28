@@ -1,6 +1,116 @@
 {
   "matches": [
     {
+      "date": "28 juin | 04:00",
+      "kickoff": "2026-06-28T04:00:00+02:00",
+      "home": "Algérie",
+      "away": "Autriche",
+      "homeFlag": "🇩🇿",
+      "awayFlag": "🇦🇹",
+      "stadium": "Stade de Kansas City",
+      "actualHome": null,
+      "actualAway": null,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 3,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 1,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 1,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 1,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": null
+        }
+      ]
+    },
+    {
+      "date": "28 juin | 04:00",
+      "kickoff": "2026-06-28T04:00:00+02:00",
+      "home": "Jordanie",
+      "away": "Argentine",
+      "homeFlag": "🇯🇴",
+      "awayFlag": "🇦🇷",
+      "stadium": "Stade de Dallas",
+      "actualHome": null,
+      "actualAway": null,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 1,
+          "predAway": 3,
+          "points": null
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 0,
+          "predAway": 4,
+          "points": null
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 0,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 0,
+          "predAway": 3,
+          "points": null
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 0,
+          "predAway": 3,
+          "points": null
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 0,
+          "predAway": 3,
+          "points": null
+        }
+      ]
+    },
+    {
       "date": "28 juin | 01:30",
       "kickoff": "2026-06-28T01:30:00+02:00",
       "home": "Colombie",
@@ -63,50 +173,50 @@
       "homeFlag": "🇨🇩",
       "awayFlag": "🇺🇿",
       "stadium": "Stade d'Atlanta",
-      "actualHome": null,
-      "actualAway": null,
+      "actualHome": 3,
+      "actualAway": 1,
       "picks": [
-        {
-          "id": "O52a",
-          "name": "Joao M",
-          "predHome": 2,
-          "predAway": 2,
-          "points": null
-        },
-        {
-          "id": "8Yak",
-          "name": "Cayan F",
-          "predHome": 1,
-          "predAway": 0,
-          "points": null
-        },
         {
           "id": "wmd3",
           "name": "Nicolas L",
           "predHome": 2,
           "predAway": 0,
-          "points": null
+          "points": 8
         },
         {
           "id": "9Nz1",
           "name": "Vitor Pinto",
           "predHome": 2,
           "predAway": 0,
-          "points": null
+          "points": 8
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 1,
+          "predAway": 0,
+          "points": 5
         },
         {
           "id": "7GjW",
           "name": "Mehdi M",
           "predHome": 1,
           "predAway": 0,
-          "points": null
+          "points": 5
         },
         {
           "id": "G3EG",
           "name": "Thomas M",
           "predHome": 1,
           "predAway": 1,
-          "points": null
+          "points": 1
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 2,
+          "predAway": 2,
+          "points": 0
         }
       ]
     },

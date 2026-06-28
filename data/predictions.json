@@ -4,6 +4,30 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "28 juin | 04:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Algérie",
+          "predHome": 3,
+          "away": "Autriche",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "28 juin | 04:00",
+          "stadium": "Stade de Dallas",
+          "home": "Jordanie",
+          "predHome": 1,
+          "away": "Argentine",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "28 juin | 01:30",
           "stadium": "Stade de Miami",
           "home": "Colombie",
@@ -22,10 +46,10 @@
           "predHome": 2,
           "away": "Ouzbékistan",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 1,
+          "points": 0,
+          "played": true
         },
         {
           "date": "27 juin | 23:00",
@@ -837,6 +861,30 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "28 juin | 04:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Algérie",
+          "predHome": 1,
+          "away": "Autriche",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "28 juin | 04:00",
+          "stadium": "Stade de Dallas",
+          "home": "Jordanie",
+          "predHome": 0,
+          "away": "Argentine",
+          "predAway": 4,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "28 juin | 01:30",
           "stadium": "Stade de Miami",
           "home": "Colombie",
@@ -855,10 +903,10 @@
           "predHome": 1,
           "away": "Ouzbékistan",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 1,
+          "points": 5,
+          "played": true
         },
         {
           "date": "27 juin | 23:00",
@@ -1670,6 +1718,30 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "28 juin | 04:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Algérie",
+          "predHome": 1,
+          "away": "Autriche",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "28 juin | 04:00",
+          "stadium": "Stade de Dallas",
+          "home": "Jordanie",
+          "predHome": 0,
+          "away": "Argentine",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "28 juin | 01:30",
           "stadium": "Stade de Miami",
           "home": "Colombie",
@@ -1688,10 +1760,10 @@
           "predHome": 2,
           "away": "Ouzbékistan",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 1,
+          "points": 8,
+          "played": true
         },
         {
           "date": "27 juin | 23:00",
@@ -2503,6 +2575,30 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "28 juin | 04:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Algérie",
+          "predHome": 1,
+          "away": "Autriche",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "28 juin | 04:00",
+          "stadium": "Stade de Dallas",
+          "home": "Jordanie",
+          "predHome": 0,
+          "away": "Argentine",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "28 juin | 01:30",
           "stadium": "Stade de Miami",
           "home": "Colombie",
@@ -2521,10 +2617,10 @@
           "predHome": 2,
           "away": "Ouzbékistan",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 1,
+          "points": 8,
+          "played": true
         },
         {
           "date": "27 juin | 23:00",
@@ -3336,6 +3432,30 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "28 juin | 04:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Algérie",
+          "predHome": 1,
+          "away": "Autriche",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "28 juin | 04:00",
+          "stadium": "Stade de Dallas",
+          "home": "Jordanie",
+          "predHome": 0,
+          "away": "Argentine",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "28 juin | 01:30",
           "stadium": "Stade de Miami",
           "home": "Colombie",
@@ -3354,10 +3474,10 @@
           "predHome": 1,
           "away": "Ouzbékistan",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 1,
+          "points": 5,
+          "played": true
         },
         {
           "date": "27 juin | 23:00",
@@ -4169,6 +4289,30 @@
       "name": "Thomas M",
       "matches": [
         {
+          "date": "28 juin | 04:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Algérie",
+          "predHome": 1,
+          "away": "Autriche",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
+          "date": "28 juin | 04:00",
+          "stadium": "Stade de Dallas",
+          "home": "Jordanie",
+          "predHome": 0,
+          "away": "Argentine",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "28 juin | 01:30",
           "stadium": "Stade de Miami",
           "home": "Colombie",
@@ -4187,10 +4331,10 @@
           "predHome": 1,
           "away": "Ouzbékistan",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 1,
+          "points": 1,
+          "played": true
         },
         {
           "date": "27 juin | 23:00",

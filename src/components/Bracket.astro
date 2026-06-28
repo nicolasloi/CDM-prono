@@ -6,12 +6,13 @@ const { rounds = [] } = Astro.props;
 const fl = (t: string) => flagFor(t);
 ---
 <div class="bracket">
-  {rounds.map((r: any) => (
+  <svg class="bk-links" aria-hidden="true"><path /></svg>
+  {rounds.map((r: any, ri: number) => (
     <div class="bk-round">
       <p class="bk-rk">{r.name}</p>
       <div class="bk-ties">
-        {r.ties.map((t: any) => {
-          if (t.placeholder) return <div class="bk-tie ph"><span class="bk-ph">à venir</span></div>;
+        {r.ties.map((t: any, si: number) => {
+          if (t.placeholder) return <div class="bk-tie ph" data-r={ri} data-s={si}><span class="bk-ph">à venir</span></div>;
           const played = t.actualHome != null && t.actualAway != null;
           const homeW = played && t.actualHome > t.actualAway;
           const awayW = played && t.actualAway > t.actualHome;
@@ -28,9 +29,9 @@ const fl = (t: string) => flagFor(t);
               </div>
             </>
           );
-          if (t.upcoming) return <div class="bk-tie up">{rows}<span class="bk-foot up">à venir</span></div>;
+          if (t.upcoming) return <div class="bk-tie up" data-r={ri} data-s={si}>{rows}<span class="bk-foot up">à venir</span></div>;
           return (
-            <details class={`bk-tie${played ? '' : ' live'}`}>
+            <details class={`bk-tie${played ? '' : ' live'}`} data-r={ri} data-s={si}>
               <summary>{rows}<span class="bk-foot">{played ? t.date : <span class="bk-live">● en cours</span>}<span class="bk-caret">›</span></span></summary>
               <div class="bk-picks">
                 {(t.picks || []).map((p: any) => {
@@ -53,21 +54,59 @@ const fl = (t: string) => flagFor(t);
   ))}
 </div>
 
+<script>
+  function drawLinks(wrap: HTMLElement) {
+    const svg = wrap.querySelector('.bk-links') as SVGSVGElement | null;
+    const path = svg?.querySelector('path') as SVGPathElement | null;
+    if (!svg || !path) return;
+    const map: Record<string, HTMLElement> = {};
+    wrap.querySelectorAll<HTMLElement>('[data-r]').forEach((el) => { map[el.dataset.r + '-' + el.dataset.s] = el; });
+    const W = wrap.scrollWidth, H = wrap.scrollHeight;
+    svg.setAttribute('width', String(W)); svg.setAttribute('height', String(H));
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    const base = wrap.getBoundingClientRect();
+    const c = (el: HTMLElement) => {
+      const r = el.getBoundingClientRect();
+      return { l: r.left - base.left + wrap.scrollLeft, r: r.right - base.left + wrap.scrollLeft, y: r.top - base.top + wrap.scrollTop + r.height / 2 };
+    };
+    let d = '';
+    for (const key in map) {
+      const [ri, si] = key.split('-').map(Number);
+      if (ri === 0) continue;
+      const a = map[(ri - 1) + '-' + (2 * si)], b = map[(ri - 1) + '-' + (2 * si + 1)], p = map[key];
+      if (!a || !b) continue;
+      const A = c(a), B = c(b), P = c(p), midX = (A.r + P.l) / 2;
+      const vy1 = Math.min(A.y, B.y, P.y), vy2 = Math.max(A.y, B.y, P.y);
+      d += `M${A.r} ${A.y} H${midX} M${B.r} ${B.y} H${midX} M${midX} ${vy1} V${vy2} M${midX} ${P.y} H${P.l} `;
+    }
+    path.setAttribute('d', d);
+  }
+  const wrap = document.querySelector('.bracket') as HTMLElement | null;
+  if (wrap) {
+    const draw = () => drawLinks(wrap);
+    draw();
+    requestAnimationFrame(draw);
+    setTimeout(draw, 200);
+    addEventListener('resize', draw);
+    wrap.addEventListener('toggle', () => requestAnimationFrame(draw), true); // ouverture d'un match
+    if ((document as any).fonts?.ready) (document as any).fonts.ready.then(draw);
+  }
+</script>
+
 <style>
-  .bracket { display: flex; gap: 14px; overflow-x: auto; padding: 4px 2px 18px; -webkit-overflow-scrolling: touch; }
-  .bk-round { min-width: 210px; flex: 0 0 auto; display: flex; flex-direction: column; }
-  .bk-rk { position: sticky; top: 0; z-index: 1; font: 800 11px/1 var(--font); letter-spacing: .18em; text-transform: uppercase; color: var(--gold);
+  .bracket { position: relative; display: flex; gap: 28px; overflow-x: auto; padding: 4px 2px 18px; -webkit-overflow-scrolling: touch; }
+  .bk-links { position: absolute; top: 0; left: 0; pointer-events: none; z-index: 0; overflow: visible; }
+  .bk-links path { fill: none; stroke: var(--gold-soft); stroke-width: 1.5; }
+  .bk-round { min-width: 200px; flex: 0 0 auto; display: flex; flex-direction: column; position: relative; z-index: 1; }
+  .bk-rk { position: sticky; top: 0; z-index: 2; font: 800 11px/1 var(--font); letter-spacing: .18em; text-transform: uppercase; color: var(--gold);
     margin: 0 0 10px; padding: 8px 0; background: var(--bg); border-bottom: 1px solid var(--line); }
   /* space-around → les tours suivants se centrent entre les paires (forme d'arbre) */
   .bk-ties { display: flex; flex-direction: column; justify-content: space-around; gap: 8px; flex: 1; }
 
   .bk-tie { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; position: relative; }
-  /* connecteurs entre tours (forme d'arbre, façon bracket) */
-  .bk-round:not(:last-child) .bk-tie::after { content: ''; position: absolute; top: 50%; right: -7px; width: 7px; height: 1px; background: var(--line); }
-  .bk-round:not(:first-child) .bk-tie::before { content: ''; position: absolute; top: 50%; left: -7px; width: 7px; height: 1px; background: var(--line); }
   .bk-tie[open] { border-color: var(--gold-soft); }
   .bk-tie.live { border-color: rgba(227,52,47,.5); }
-  .bk-tie.ph { border-style: dashed; opacity: .5; min-height: 64px; display: flex; align-items: center; justify-content: center; }
+  .bk-tie.ph { border-style: dashed; opacity: .5; min-height: 60px; display: flex; align-items: center; justify-content: center; }
   .bk-ph { font-size: 11px; color: var(--text-dim); font-weight: 700; }
   .bk-tie.up { padding-bottom: 6px; }
 

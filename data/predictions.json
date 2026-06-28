@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "28 juin | 21:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Afrique du Sud",
+          "predHome": 0,
+          "away": "Canada",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "28 juin | 04:00",
           "stadium": "Stade de Kansas City",
           "home": "Algérie",
@@ -1718,6 +1730,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "28 juin | 21:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Afrique du Sud",
+          "predHome": 1,
+          "away": "Canada",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "28 juin | 04:00",
           "stadium": "Stade de Kansas City",
           "home": "Algérie",
@@ -2574,6 +2598,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "28 juin | 21:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Afrique du Sud",
+          "predHome": 1,
+          "away": "Canada",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "28 juin | 04:00",
           "stadium": "Stade de Kansas City",
@@ -3432,6 +3468,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "28 juin | 21:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Afrique du Sud",
+          "predHome": 1,
+          "away": "Canada",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "28 juin | 04:00",
           "stadium": "Stade de Kansas City",
           "home": "Algérie",
@@ -4288,6 +4336,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "28 juin | 21:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Afrique du Sud",
+          "predHome": 1,
+          "away": "Canada",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "28 juin | 04:00",
           "stadium": "Stade de Kansas City",

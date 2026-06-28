@@ -1,5 +1,4 @@
 ---
-import { SITE } from '../config';
 const base = import.meta.env.BASE_URL;
 const home = `${base}/`.replace(/\/{2,}/g, '/');
 const matchsHref = `${home}matchs`.replace(/\/{2,}/g, '/');
@@ -16,9 +15,5 @@ const bracketHref = `${home}bracket`.replace(/\/{2,}/g, '/');
       <a href={matchsHref} style="text-decoration:none;color:var(--text-dim)">Matchs</a>
       <a href={bracketHref} style="text-decoration:none;color:var(--text-dim)">Tableau</a>
     </nav>
-    <a href={SITE.rtsCommunityUrl} target="_blank" rel="noopener"
-       style="margin-left:auto;font-size:12px;font-weight:700;color:var(--gold);text-decoration:none;border:1px solid var(--gold-soft);padding:7px 12px;border-radius:30px">
-      Tableau officiel RTS ↗
-    </a>
   </div>
 </header>

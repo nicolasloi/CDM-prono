@@ -29,7 +29,7 @@ const fl = (t: string) => flagFor(t);
               </div>
             </>
           );
-          if (t.upcoming) return <div class="bk-tie up" data-r={ri} data-s={si}>{rows}<span class="bk-foot up">à venir</span></div>;
+          if (t.upcoming) return <div class="bk-tie up" data-r={ri} data-s={si}>{rows}<span class="bk-foot up">{t.when || 'à venir'}</span></div>;
           return (
             <details class={`bk-tie${played ? '' : ' live'}`} data-r={ri} data-s={si}>
               <summary>{rows}<span class="bk-foot">{played ? t.date : <span class="bk-live">● en cours</span>}<span class="bk-caret">›</span></span></summary>
@@ -117,7 +117,9 @@ const fl = (t: string) => flagFor(t);
   .bk-line .fl { font-size: 17px; line-height: 1; }
   .bk-line .nm { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; font-size: 13px; color: var(--text-dim); }
   .bk-line .sc { font-weight: 900; font-size: 15px; min-width: 12px; text-align: right; color: var(--text-dim); }
-  .bk-line.w .nm { color: var(--text); }
+  /* le gagnant avance → sa ligne passe en doré ; le perdant reste gris */
+  .bk-line.w { box-shadow: inset 3px 0 0 var(--gold); }
+  .bk-line.w .nm { color: var(--gold); font-weight: 800; }
   .bk-line.w .sc { color: var(--gold); }
 
   .bk-foot { display: flex; align-items: center; justify-content: space-between; padding: 4px 10px 6px; font-size: 10px; color: var(--text-dim); font-weight: 700; }

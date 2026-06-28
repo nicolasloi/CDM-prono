@@ -1,9 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
 import matchesData from '../../data/matches.json';
+import fixturesData from '../../data/fixtures.json';
 import { shortName } from '../../scripts/lib/members.mjs';
+import { whenLabel } from '../../scripts/lib/datetime.mjs';
 
 const all = matchesData.matches as any[];
+
+// Matchs à venir (pronos encore cachés) → onglet « À venir », triés du plus proche au plus lointain.
+const fxKey = (f: any) => { const m = /^2026-(0[67])-(\d{2})T(\d{2}):(\d{2})/.exec(f.kickoff || ''); return m ? Number(m[1] + m[2] + m[3] + m[4]) : Infinity; };
+const upcoming = (((fixturesData as any).upcoming || []) as any[])
+  .map((f) => ({ ...f, when: whenLabel(f) }))
+  .sort((a, b) => fxKey(a) - fxKey(b));
 
 // Regroupe par jour (le plus récent d'abord), libellé "jeudi 19 juin".
 function dayKey(m: any) { return (m.date || '').split(' | ')[0]; }
@@ -36,6 +44,7 @@ let gi = 0;
       <button class="on" data-filter="all">Tous</button>
       <button data-filter="live"><span class="ld"></span>En cours <span class="cnt" id="cnt-live">0</span></button>
       <button data-filter="done">Terminés</button>
+      <button data-filter="upcoming">À venir</button>
     </div>
     <div class="legend">
       <span><i class="lg gold"></i>prono</span>
@@ -44,6 +53,22 @@ let gi = 0;
       <span>👑 meilleur</span>
     </div>
   </div>
+
+  {upcoming.length > 0 && (
+    <section class="day">
+      <h2 class="day-h">À venir</h2>
+      {upcoming.map((f: any) => (
+        <article class="mx up" data-state="upcoming">
+          <header class="mx-top">
+            <div class="mx-team"><span class="fl">{f.homeFlag}</span><span class="tn">{f.home}</span></div>
+            <div class="mx-score"><span class="mx-soon">{f.when || 'à venir'}</span></div>
+            <div class="mx-team r"><span class="tn">{f.away}</span><span class="fl">{f.awayFlag}</span></div>
+          </header>
+          <div class="mx-stad">{f.stadium}</div>
+        </article>
+      ))}
+    </section>
+  )}
 
   {groups.map((g) => (
     <section class="day">
@@ -137,13 +162,19 @@ let gi = 0;
     } else {
       cards.forEach((c) => c.classList.add('in'));
     }
+    // Les cartes « à venir » (cachées par défaut) : visibles d'emblée quand on ouvre l'onglet.
+    cards.forEach((c) => { if (c.dataset.state === 'upcoming') c.classList.add('in'); });
 
     // Filtre
     const days = Array.from(document.querySelectorAll('.day'));
     function apply(f) {
-      cards.forEach((c) => { c.style.display = (f === 'all' || c.dataset.state === f) ? '' : 'none'; });
+      cards.forEach((c) => {
+        const st = c.dataset.state;
+        c.style.display = (f === 'all' ? st !== 'upcoming' : st === f) ? '' : 'none';
+      });
       days.forEach((d) => { d.style.display = d.querySelector('.mx:not([style*="display: none"])') ? '' : 'none'; });
     }
+    apply('all'); // état initial : onglet « Tous » (les à-venir restent dans leur onglet)
     document.querySelectorAll('.seg button').forEach((b) => {
       b.addEventListener('click', () => {
         document.querySelectorAll('.seg button').forEach((x) => x.classList.remove('on'));
@@ -183,6 +214,10 @@ let gi = 0;
       .mx.in { opacity: 1; transform: none; }
     }
     .mx:hover { transform: translateY(-3px); border-color: var(--gold-soft); }
+    /* Carte « à venir » : pas de score, juste la date */
+    .mx.up { border-style: dashed; }
+    .mx.up .mx-stad { opacity: .8; }
+    .mx-soon { font-size: 14px; font-weight: 800; color: var(--gold); white-space: nowrap; }
     .mx-glow { position: absolute; inset: -1px; border-radius: 20px; pointer-events: none; opacity: 0; transition: opacity .3s; background: radial-gradient(120% 90% at 50% -20%, var(--gold-soft), transparent 55%); }
     .mx:hover .mx-glow { opacity: 1; }
     .mx.islive { border-color: rgba(227,52,47,.55); box-shadow: 0 0 50px -20px var(--red); }

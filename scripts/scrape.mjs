@@ -71,7 +71,7 @@ async function main() {
   const prevFix = readJSON(fileUrl('fixtures.json'));
   const upcoming = (scraped.fixtures && scraped.fixtures.length)
     ? scraped.fixtures
-        .map((f) => ({ home: f.home, away: f.away, homeFlag: flagFor(f.home), awayFlag: flagFor(f.away), stadium: f.stadium, kickoff: toISO(f.date) }))
+        .map((f) => ({ home: f.home, away: f.away, homeFlag: flagFor(f.home), awayFlag: flagFor(f.away), stadium: f.stadium, date: f.date, kickoff: toISO(f.date) }))
         .sort((a, b) => String(a.kickoff).localeCompare(String(b.kickoff)))
     : (prevFix?.upcoming || []);
   const fixChanged = JSON.stringify(upcoming) !== JSON.stringify(prevFix?.upcoming);

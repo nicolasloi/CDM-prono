@@ -2,6 +2,8 @@
 // CDM 2026. Les 16es sont dans l'ordre de l'arbre (binaire, paires adjacentes) :
 // le vainqueur de la paire (2i, 2i+1) avance au 8e i, etc. jusqu'à la finale.
 // Données RTS en heure suisse (CEST) ; noms d'équipes en français (cf. RTS).
+import { whenLabel } from './datetime.mjs';
+
 const MONTHS = { juin: 6, juillet: 7 };
 
 export function kosort(date) {
@@ -51,7 +53,7 @@ export function buildBracket(matches = [], fixtures = []) {
   // Affiches à venir (RTS) → leur slot (équipes connues = tour suivant qui se précise)
   for (const f of fixtures) {
     const p = placeOf(f.home, f.away, teamTie);
-    if (p) rounds[p.r].ties[p.slot] = { home: f.home, away: f.away, homeFlag: f.homeFlag, awayFlag: f.awayFlag, stadium: f.stadium, upcoming: true, picks: [] };
+    if (p) rounds[p.r].ties[p.slot] = { home: f.home, away: f.away, homeFlag: f.homeFlag, awayFlag: f.awayFlag, stadium: f.stadium, upcoming: true, when: whenLabel(f), picks: [] };
   }
   // Matchs joués / en cours (priment) — uniquement la phase finale (exclut les poules)
   for (const m of matches) {

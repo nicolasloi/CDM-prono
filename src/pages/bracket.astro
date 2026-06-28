@@ -2,20 +2,22 @@
 import Base from '../layouts/Base.astro';
 import Bracket from '../components/Bracket.astro';
 import matchesData from '../../data/matches.json';
+import fixturesData from '../../data/fixtures.json';
 import { buildBracket } from '../../scripts/lib/bracket.mjs';
 
-const rounds = buildBracket(matchesData.matches as any[]);
+const rounds = buildBracket(matchesData.matches as any[], (fixturesData as any).upcoming || []);
+const hasAny = rounds.some((r: any) => r.ties.some((t: any) => !t.placeholder));
 ---
 <Base title="Tableau">
   <section class="hero2">
     <p class="kicker">★ Phases finales</p>
     <h1 class="h1">Le <em>Tableau</em></h1>
-    <p class="dim lede">Le parcours de la Coupe du Monde, des 16es à la finale. Touche un match pour voir le prono de chaque joueur.</p>
+    <p class="dim lede">Des 16es à la finale, vue d'ensemble. Touche un match commencé pour voir le prono de chaque joueur.</p>
   </section>
 
-  {rounds.length === 0
-    ? <p class="dim empty">Les phases finales s'afficheront ici dès les 16es de finale (28 juin). Reviens bientôt !</p>
-    : <Bracket rounds={rounds} />}
+  {hasAny
+    ? <Bracket rounds={rounds} />
+    : <p class="dim empty">Le tableau s'affichera dès que les affiches des 16es seront connues.</p>}
 
   <style>
     .hero2 { padding: 18px 0 14px; }

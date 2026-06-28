@@ -1,7 +1,9 @@
 ---
 import { shortName } from '../../scripts/lib/members.mjs';
-// rounds: [{ name, ties: [match, ...] }]  (match = entrée de matches.json)
+import { flagFor } from '../../scripts/lib/flags.mjs';
+// rounds: [{ name, ties: [match | fixture(upcoming) | {placeholder}] }]
 const { rounds = [] } = Astro.props;
+const fl = (t: string) => flagFor(t);
 ---
 <div class="bracket">
   {rounds.map((r: any) => (
@@ -9,27 +11,30 @@ const { rounds = [] } = Astro.props;
       <p class="bk-rk">{r.name}</p>
       <div class="bk-ties">
         {r.ties.map((t: any) => {
+          if (t.placeholder) return <div class="bk-tie ph"><span class="bk-ph">à venir</span></div>;
           const played = t.actualHome != null && t.actualAway != null;
           const homeW = played && t.actualHome > t.actualAway;
           const awayW = played && t.actualAway > t.actualHome;
-          const maxPts = Math.max(0, ...t.picks.map((p: any) => p.points || 0));
+          const maxPts = Math.max(0, ...(t.picks || []).map((p: any) => p.points || 0));
+          const rows = (
+            <>
+              <div class={`bk-line${homeW ? ' w' : ''}`}>
+                <span class="fl">{t.homeFlag || fl(t.home)}</span><span class="nm">{t.home}</span>
+                <span class="sc">{played ? t.actualHome : ''}</span>
+              </div>
+              <div class={`bk-line${awayW ? ' w' : ''}`}>
+                <span class="fl">{t.awayFlag || fl(t.away)}</span><span class="nm">{t.away}</span>
+                <span class="sc">{played ? t.actualAway : ''}</span>
+              </div>
+            </>
+          );
+          if (t.upcoming) return <div class="bk-tie up">{rows}<span class="bk-foot up">à venir</span></div>;
           return (
             <details class={`bk-tie${played ? '' : ' live'}`}>
-              <summary>
-                <div class="bk-line">
-                  <span class={`bk-team${homeW ? ' w' : ''}`}><span class="fl">{t.homeFlag}</span><span class="nm">{t.home}</span></span>
-                  <span class="sc">{played ? t.actualHome : '·'}</span>
-                </div>
-                <div class="bk-line">
-                  <span class={`bk-team${awayW ? ' w' : ''}`}><span class="fl">{t.awayFlag}</span><span class="nm">{t.away}</span></span>
-                  <span class="sc">{played ? t.actualAway : '·'}</span>
-                </div>
-                <span class="bk-foot">{played ? t.date : <span class="bk-live">● en cours</span>}<span class="bk-caret">›</span></span>
-              </summary>
+              <summary>{rows}<span class="bk-foot">{played ? t.date : <span class="bk-live">● en cours</span>}<span class="bk-caret">›</span></span></summary>
               <div class="bk-picks">
-                {t.picks.map((p: any) => {
-                  const ok = p.points > 0;
-                  const best = maxPts > 0 && p.points === maxPts;
+                {(t.picks || []).map((p: any) => {
+                  const ok = p.points > 0, best = maxPts > 0 && p.points === maxPts;
                   return (
                     <div class={`bk-pick${best ? ' best' : ''}`}>
                       {best && <span class="cr">👑</span>}
@@ -49,34 +54,42 @@ const { rounds = [] } = Astro.props;
 </div>
 
 <style>
-  .bracket { display: flex; gap: 16px; overflow-x: auto; padding: 6px 2px 16px; scroll-snap-type: x proximity; }
-  .bk-round { min-width: 232px; flex: 0 0 auto; scroll-snap-align: start; display: flex; flex-direction: column; }
-  .bk-rk { font: 800 11px/1 var(--font); letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin: 0 0 12px; padding: 8px 0; border-bottom: 1px solid var(--line); }
-  .bk-ties { display: flex; flex-direction: column; gap: 10px; justify-content: space-around; flex: 1; }
+  .bracket { display: flex; gap: 14px; overflow-x: auto; padding: 4px 2px 18px; -webkit-overflow-scrolling: touch; }
+  .bk-round { min-width: 210px; flex: 0 0 auto; display: flex; flex-direction: column; }
+  .bk-rk { position: sticky; top: 0; z-index: 1; font: 800 11px/1 var(--font); letter-spacing: .18em; text-transform: uppercase; color: var(--gold);
+    margin: 0 0 10px; padding: 8px 0; background: var(--bg); border-bottom: 1px solid var(--line); }
+  /* space-around → les tours suivants se centrent entre les paires (forme d'arbre) */
+  .bk-ties { display: flex; flex-direction: column; justify-content: space-around; gap: 8px; flex: 1; }
 
-  .bk-tie { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; transition: border-color .15s; }
+  .bk-tie { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
   .bk-tie[open] { border-color: var(--gold-soft); }
-  .bk-tie.live { border-color: rgba(227,52,47,.45); }
-  .bk-tie summary { list-style: none; cursor: pointer; padding: 10px 12px; display: flex; flex-direction: column; gap: 4px; }
+  .bk-tie.live { border-color: rgba(227,52,47,.5); }
+  .bk-tie.ph { border-style: dashed; opacity: .5; min-height: 64px; display: flex; align-items: center; justify-content: center; }
+  .bk-ph { font-size: 11px; color: var(--text-dim); font-weight: 700; }
+  .bk-tie.up { padding-bottom: 6px; }
+
+  .bk-tie summary { list-style: none; cursor: pointer; }
   .bk-tie summary::-webkit-details-marker { display: none; }
-  .bk-line { display: flex; align-items: center; gap: 8px; }
-  .bk-team { display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1; color: var(--text-dim); font-weight: 700; font-size: 14px; }
-  .bk-team.w { color: var(--text); }
-  .bk-team .fl { font-size: 19px; line-height: 1; }
-  .bk-team .nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .sc { font-weight: 900; font-size: 16px; min-width: 14px; text-align: right; }
-  .bk-team.w + .sc { color: var(--gold); }
-  .bk-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; font-size: 10.5px; color: var(--text-dim); font-weight: 700; }
+  .bk-line { display: flex; align-items: center; gap: 7px; padding: 7px 10px; }
+  .bk-line + .bk-line { border-top: 1px solid var(--line); }
+  .bk-line .fl { font-size: 17px; line-height: 1; }
+  .bk-line .nm { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; font-size: 13px; color: var(--text-dim); }
+  .bk-line .sc { font-weight: 900; font-size: 15px; min-width: 12px; text-align: right; color: var(--text-dim); }
+  .bk-line.w .nm { color: var(--text); }
+  .bk-line.w .sc { color: var(--gold); }
+
+  .bk-foot { display: flex; align-items: center; justify-content: space-between; padding: 4px 10px 6px; font-size: 10px; color: var(--text-dim); font-weight: 700; }
+  .bk-foot.up { justify-content: center; font-style: italic; opacity: .8; }
   .bk-live { color: var(--red); }
   .bk-caret { transition: transform .15s; }
   .bk-tie[open] .bk-caret { transform: rotate(90deg); }
 
-  .bk-picks { border-top: 1px dashed var(--line); padding: 8px 12px 10px; display: flex; flex-direction: column; gap: 5px; }
+  .bk-picks { border-top: 1px dashed var(--line); padding: 7px 10px 9px; display: flex; flex-direction: column; gap: 5px; }
   .bk-pick { position: relative; display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 8px; font-size: 12px; }
   .bk-pick .pn { color: var(--text-dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .bk-pick .pp { font-weight: 900; color: var(--gold); }
   .bk-pick .pp i { color: var(--text-dim); font-style: normal; margin: 0 2px; }
-  .bk-pick .pt { font-weight: 800; font-size: 11px; min-width: 30px; text-align: right; color: #51e39a; }
+  .bk-pick .pt { font-weight: 800; font-size: 11px; min-width: 26px; text-align: right; color: #51e39a; }
   .bk-pick.best .pn { color: var(--text); font-weight: 800; }
-  .bk-pick .cr { position: absolute; left: -2px; top: -8px; font-size: 11px; }
+  .bk-pick .cr { position: absolute; left: -3px; top: -8px; font-size: 11px; }
 </style>

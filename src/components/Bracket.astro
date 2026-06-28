@@ -61,7 +61,10 @@ const fl = (t: string) => flagFor(t);
   /* space-around → les tours suivants se centrent entre les paires (forme d'arbre) */
   .bk-ties { display: flex; flex-direction: column; justify-content: space-around; gap: 8px; flex: 1; }
 
-  .bk-tie { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .bk-tie { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; position: relative; }
+  /* connecteurs entre tours (forme d'arbre, façon bracket) */
+  .bk-round:not(:last-child) .bk-tie::after { content: ''; position: absolute; top: 50%; right: -7px; width: 7px; height: 1px; background: var(--line); }
+  .bk-round:not(:first-child) .bk-tie::before { content: ''; position: absolute; top: 50%; left: -7px; width: 7px; height: 1px; background: var(--line); }
   .bk-tie[open] { border-color: var(--gold-soft); }
   .bk-tie.live { border-color: rgba(227,52,47,.5); }
   .bk-tie.ph { border-style: dashed; opacity: .5; min-height: 64px; display: flex; align-items: center; justify-content: center; }

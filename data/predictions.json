@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "29 juin | 22:30",
+          "stadium": "Stade de Boston",
+          "home": "Allemagne",
+          "predHome": 4,
+          "away": "Paraguay",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "29 juin | 19:00",
           "stadium": "Stade de Houston",
           "home": "Brésil",
@@ -885,6 +897,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "29 juin | 22:30",
+          "stadium": "Stade de Boston",
+          "home": "Allemagne",
+          "predHome": 3,
+          "away": "Paraguay",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "29 juin | 19:00",
           "stadium": "Stade de Houston",
           "home": "Brésil",
@@ -1753,6 +1777,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "29 juin | 22:30",
+          "stadium": "Stade de Boston",
+          "home": "Allemagne",
+          "predHome": 3,
+          "away": "Paraguay",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "29 juin | 19:00",
           "stadium": "Stade de Houston",
@@ -2635,6 +2671,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "29 juin | 22:30",
+          "stadium": "Stade de Boston",
+          "home": "Allemagne",
+          "predHome": 3,
+          "away": "Paraguay",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "29 juin | 19:00",
           "stadium": "Stade de Houston",
           "home": "Brésil",
@@ -3516,6 +3564,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "29 juin | 22:30",
+          "stadium": "Stade de Boston",
+          "home": "Allemagne",
+          "predHome": 2,
+          "away": "Paraguay",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "29 juin | 19:00",
           "stadium": "Stade de Houston",
           "home": "Brésil",
@@ -4396,6 +4456,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "29 juin | 22:30",
+          "stadium": "Stade de Boston",
+          "home": "Allemagne",
+          "predHome": 2,
+          "away": "Paraguay",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "29 juin | 19:00",
           "stadium": "Stade de Houston",

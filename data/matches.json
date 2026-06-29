@@ -8,50 +8,50 @@
       "homeFlag": "🇩🇪",
       "awayFlag": "🇵🇾",
       "stadium": "Stade de Boston",
-      "actualHome": null,
-      "actualAway": null,
+      "actualHome": 1,
+      "actualAway": 1,
       "picks": [
-        {
-          "id": "O52a",
-          "name": "Joao M",
-          "predHome": 4,
-          "predAway": 0,
-          "points": null
-        },
-        {
-          "id": "8Yak",
-          "name": "Cayan F",
-          "predHome": 3,
-          "predAway": 0,
-          "points": null
-        },
         {
           "id": "wmd3",
           "name": "Nicolas L",
           "predHome": 3,
           "predAway": 1,
-          "points": null
+          "points": 2
         },
         {
           "id": "9Nz1",
           "name": "Vitor Pinto",
           "predHome": 3,
           "predAway": 1,
-          "points": null
+          "points": 2
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 4,
+          "predAway": 0,
+          "points": 0
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 3,
+          "predAway": 0,
+          "points": 0
         },
         {
           "id": "7GjW",
           "name": "Mehdi M",
           "predHome": 2,
           "predAway": 0,
-          "points": null
+          "points": 0
         },
         {
           "id": "G3EG",
           "name": "Thomas M",
           "predHome": 2,
           "predAway": 0,
-          "points": null
+          "points": 0
         }
       ]
     },

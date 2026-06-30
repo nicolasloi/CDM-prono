@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "30 juin | 23:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "France",
+          "predHome": 3,
+          "away": "Suède",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "30 juin | 19:00",
           "stadium": "Stade de Dallas",
           "home": "Côte d'Ivoire",
@@ -921,6 +933,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "30 juin | 23:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "France",
+          "predHome": 4,
+          "away": "Suède",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "30 juin | 19:00",
           "stadium": "Stade de Dallas",
           "home": "Côte d'Ivoire",
@@ -1825,6 +1849,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "30 juin | 23:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "France",
+          "predHome": 3,
+          "away": "Suède",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "30 juin | 19:00",
           "stadium": "Stade de Dallas",
@@ -2743,6 +2779,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "30 juin | 23:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "France",
+          "predHome": 3,
+          "away": "Suède",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "30 juin | 19:00",
           "stadium": "Stade de Dallas",
           "home": "Côte d'Ivoire",
@@ -3660,6 +3708,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "30 juin | 23:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "France",
+          "predHome": 3,
+          "away": "Suède",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "30 juin | 19:00",
           "stadium": "Stade de Dallas",
           "home": "Côte d'Ivoire",
@@ -4576,6 +4636,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "30 juin | 23:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "France",
+          "predHome": 2,
+          "away": "Suède",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "30 juin | 19:00",
           "stadium": "Stade de Dallas",

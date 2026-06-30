@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "30 juin | 19:00",
+          "stadium": "Stade de Dallas",
+          "home": "Côte d'Ivoire",
+          "predHome": 2,
+          "away": "Norvège",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "30 juin | 03:00",
           "stadium": "Stade de Monterrey",
           "home": "Pays-Bas",
@@ -909,6 +921,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "30 juin | 19:00",
+          "stadium": "Stade de Dallas",
+          "home": "Côte d'Ivoire",
+          "predHome": 0,
+          "away": "Norvège",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "30 juin | 03:00",
           "stadium": "Stade de Monterrey",
           "home": "Pays-Bas",
@@ -1801,6 +1825,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "30 juin | 19:00",
+          "stadium": "Stade de Dallas",
+          "home": "Côte d'Ivoire",
+          "predHome": 2,
+          "away": "Norvège",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "30 juin | 03:00",
           "stadium": "Stade de Monterrey",
@@ -2707,6 +2743,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "30 juin | 19:00",
+          "stadium": "Stade de Dallas",
+          "home": "Côte d'Ivoire",
+          "predHome": 2,
+          "away": "Norvège",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "30 juin | 03:00",
           "stadium": "Stade de Monterrey",
           "home": "Pays-Bas",
@@ -3612,6 +3660,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "30 juin | 19:00",
+          "stadium": "Stade de Dallas",
+          "home": "Côte d'Ivoire",
+          "predHome": 1,
+          "away": "Norvège",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "30 juin | 03:00",
           "stadium": "Stade de Monterrey",
           "home": "Pays-Bas",
@@ -4516,6 +4576,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "30 juin | 19:00",
+          "stadium": "Stade de Dallas",
+          "home": "Côte d'Ivoire",
+          "predHome": 1,
+          "away": "Norvège",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "30 juin | 03:00",
           "stadium": "Stade de Monterrey",

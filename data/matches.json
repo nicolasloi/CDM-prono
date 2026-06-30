@@ -1,6 +1,61 @@
 {
   "matches": [
     {
+      "date": "30 juin | 19:00",
+      "kickoff": "2026-06-30T19:00:00+02:00",
+      "home": "Côte d'Ivoire",
+      "away": "Norvège",
+      "homeFlag": "🇨🇮",
+      "awayFlag": "🇳🇴",
+      "stadium": "Stade de Dallas",
+      "actualHome": null,
+      "actualAway": null,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 2,
+          "predAway": 3,
+          "points": null
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 0,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 3,
+          "points": null
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 3,
+          "points": null
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 1,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": null
+        }
+      ]
+    },
+    {
       "date": "30 juin | 03:00",
       "kickoff": "2026-06-30T03:00:00+02:00",
       "home": "Pays-Bas",

@@ -10,10 +10,10 @@
           "predHome": 3,
           "away": "Suède",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 0,
+          "points": 20,
+          "played": true
         },
         {
           "date": "30 juin | 19:00",
@@ -939,10 +939,10 @@
           "predHome": 4,
           "away": "Suède",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 0,
+          "points": 16,
+          "played": true
         },
         {
           "date": "30 juin | 19:00",
@@ -1856,10 +1856,10 @@
           "predHome": 3,
           "away": "Suède",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 0,
+          "points": 12,
+          "played": true
         },
         {
           "date": "30 juin | 19:00",
@@ -2785,10 +2785,10 @@
           "predHome": 3,
           "away": "Suède",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 0,
+          "points": 12,
+          "played": true
         },
         {
           "date": "30 juin | 19:00",
@@ -3714,10 +3714,10 @@
           "predHome": 3,
           "away": "Suède",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 0,
+          "points": 12,
+          "played": true
         },
         {
           "date": "30 juin | 19:00",
@@ -4643,10 +4643,10 @@
           "predHome": 2,
           "away": "Suède",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 3,
+          "actualAway": 0,
+          "points": 12,
+          "played": true
         },
         {
           "date": "30 juin | 19:00",

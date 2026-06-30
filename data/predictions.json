@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "30 juin | 03:00",
+          "stadium": "Stade de Monterrey",
+          "home": "Pays-Bas",
+          "predHome": 0,
+          "away": "Maroc",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "29 juin | 22:30",
           "stadium": "Stade de Boston",
           "home": "Allemagne",
@@ -897,6 +909,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "30 juin | 03:00",
+          "stadium": "Stade de Monterrey",
+          "home": "Pays-Bas",
+          "predHome": 2,
+          "away": "Maroc",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "29 juin | 22:30",
           "stadium": "Stade de Boston",
           "home": "Allemagne",
@@ -1777,6 +1801,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "30 juin | 03:00",
+          "stadium": "Stade de Monterrey",
+          "home": "Pays-Bas",
+          "predHome": 2,
+          "away": "Maroc",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "29 juin | 22:30",
           "stadium": "Stade de Boston",
@@ -2671,6 +2707,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "30 juin | 03:00",
+          "stadium": "Stade de Monterrey",
+          "home": "Pays-Bas",
+          "predHome": 2,
+          "away": "Maroc",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "29 juin | 22:30",
           "stadium": "Stade de Boston",
           "home": "Allemagne",
@@ -3564,6 +3612,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "30 juin | 03:00",
+          "stadium": "Stade de Monterrey",
+          "home": "Pays-Bas",
+          "predHome": 1,
+          "away": "Maroc",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "29 juin | 22:30",
           "stadium": "Stade de Boston",
           "home": "Allemagne",
@@ -4456,6 +4516,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "30 juin | 03:00",
+          "stadium": "Stade de Monterrey",
+          "home": "Pays-Bas",
+          "predHome": 2,
+          "away": "Maroc",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "29 juin | 22:30",
           "stadium": "Stade de Boston",

@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "1 juil. | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Angleterre",
+          "predHome": 1,
+          "away": "RD Congo",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "1 juil. | 04:00",
           "stadium": "Stade de Mexico",
           "home": "Mexique",
@@ -945,6 +957,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "1 juil. | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Angleterre",
+          "predHome": 1,
+          "away": "RD Congo",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "1 juil. | 04:00",
           "stadium": "Stade de Mexico",
           "home": "Mexique",
@@ -1873,6 +1897,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "1 juil. | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Angleterre",
+          "predHome": 2,
+          "away": "RD Congo",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "1 juil. | 04:00",
           "stadium": "Stade de Mexico",
@@ -2815,6 +2851,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "1 juil. | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Angleterre",
+          "predHome": 2,
+          "away": "RD Congo",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "1 juil. | 04:00",
           "stadium": "Stade de Mexico",
           "home": "Mexique",
@@ -3756,6 +3804,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "1 juil. | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Angleterre",
+          "predHome": 2,
+          "away": "RD Congo",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "1 juil. | 04:00",
           "stadium": "Stade de Mexico",
           "home": "Mexique",
@@ -4696,6 +4756,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "1 juil. | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Angleterre",
+          "predHome": 2,
+          "away": "RD Congo",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "1 juil. | 04:00",
           "stadium": "Stade de Mexico",

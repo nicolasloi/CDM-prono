@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "1 juil. | 03:00",
+          "stadium": "Stade de Mexico",
+          "home": "Mexique",
+          "predHome": 1,
+          "away": "Equateur",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "30 juin | 23:00",
           "stadium": "Stade de New York New Jersey",
           "home": "France",
@@ -933,6 +945,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "1 juil. | 03:00",
+          "stadium": "Stade de Mexico",
+          "home": "Mexique",
+          "predHome": 1,
+          "away": "Equateur",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "30 juin | 23:00",
           "stadium": "Stade de New York New Jersey",
           "home": "France",
@@ -1849,6 +1873,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "1 juil. | 03:00",
+          "stadium": "Stade de Mexico",
+          "home": "Mexique",
+          "predHome": 2,
+          "away": "Equateur",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "30 juin | 23:00",
           "stadium": "Stade de New York New Jersey",
@@ -2779,6 +2815,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "1 juil. | 03:00",
+          "stadium": "Stade de Mexico",
+          "home": "Mexique",
+          "predHome": 2,
+          "away": "Equateur",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "30 juin | 23:00",
           "stadium": "Stade de New York New Jersey",
           "home": "France",
@@ -3708,6 +3756,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "1 juil. | 03:00",
+          "stadium": "Stade de Mexico",
+          "home": "Mexique",
+          "predHome": 1,
+          "away": "Equateur",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "30 juin | 23:00",
           "stadium": "Stade de New York New Jersey",
           "home": "France",
@@ -4636,6 +4696,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "1 juil. | 03:00",
+          "stadium": "Stade de Mexico",
+          "home": "Mexique",
+          "predHome": 1,
+          "away": "Equateur",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "30 juin | 23:00",
           "stadium": "Stade de New York New Jersey",

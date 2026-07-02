@@ -12,33 +12,36 @@ const fl = (t: string) => flagFor(t);
       <p class="bk-rk">{r.name}</p>
       <div class="bk-ties">
         {r.ties.map((t: any, si: number) => {
-          if (t.placeholder) return <div class="bk-tie ph" data-r={ri} data-s={si}><span class="bk-ph">à venir</span></div>;
+          if (t.placeholder) return <div class="bk-tie ph" data-r={ri} data-s={si}><span class="bk-ph">{r.date || 'à venir'}</span></div>;
           const played = t.actualHome != null && t.actualAway != null;
-          const homeW = played && t.actualHome > t.actualAway;
-          const awayW = played && t.actualAway > t.actualHome;
+          const draw = played && t.actualHome === t.actualAway;
+          const penW = t.penHome != null && t.penAway != null ? (t.penAway > t.penHome ? 'away' : 'home') : null;
+          const homeW = played && (t.actualHome > t.actualAway || (draw && penW === 'home'));
+          const awayW = played && (t.actualAway > t.actualHome || (draw && penW === 'away'));
           const maxPts = Math.max(0, ...(t.picks || []).map((p: any) => p.points || 0));
+          // Nom connu, sinon « Vainq. X-Y » (les 2 équipes potentielles du match d'origine).
+          const nm = (name: string, from: any) => name || (from ? `Vainq. ${from.home}-${from.away}` : 'À déterminer');
           const rows = (
             <>
-              <div class={`bk-line${homeW ? ' w' : ''}`}>
-                <span class="fl">{t.homeFlag || fl(t.home)}</span><span class="nm">{t.home}</span>
-                <span class="sc">{played ? t.actualHome : ''}</span>
+              <div class={`bk-line${homeW ? ' w' : ''}${t.home ? '' : ' tbd'}`}>
+                <span class="fl">{t.homeFlag || (t.home ? fl(t.home) : '')}</span><span class="nm">{nm(t.home, t.homeFrom)}</span>
+                <span class="sc">{played ? t.actualHome : ''}{draw && t.penHome != null ? <i class="pk">({t.penHome})</i> : ''}</span>
               </div>
-              <div class={`bk-line${awayW ? ' w' : ''}`}>
-                <span class="fl">{t.awayFlag || fl(t.away)}</span><span class="nm">{t.away}</span>
-                <span class="sc">{played ? t.actualAway : ''}</span>
+              <div class={`bk-line${awayW ? ' w' : ''}${t.away ? '' : ' tbd'}`}>
+                <span class="fl">{t.awayFlag || (t.away ? fl(t.away) : '')}</span><span class="nm">{nm(t.away, t.awayFrom)}</span>
+                <span class="sc">{played ? t.actualAway : ''}{draw && t.penAway != null ? <i class="pk">({t.penAway})</i> : ''}</span>
               </div>
             </>
           );
-          if (t.upcoming) return <div class="bk-tie up" data-r={ri} data-s={si}>{rows}<span class="bk-foot up">{t.when || 'à venir'}</span></div>;
+          if (t.upcoming) return <div class="bk-tie up" data-r={ri} data-s={si}>{rows}<span class="bk-foot up">{t.when || r.date || 'à venir'}</span></div>;
           return (
             <details class={`bk-tie${played ? '' : ' live'}`} data-r={ri} data-s={si}>
-              <summary>{rows}<span class="bk-foot">{played ? t.date : <span class="bk-live">● en cours</span>}<span class="bk-caret">›</span></span></summary>
+              <summary>{rows}<span class="bk-foot">{played ? (draw && penW ? `${t.date} · t.a.b.` : t.date) : <span class="bk-live">● en cours</span>}<span class="bk-caret">›</span></span></summary>
               <div class="bk-picks">
                 {(t.picks || []).map((p: any) => {
                   const ok = p.points > 0, best = maxPts > 0 && p.points === maxPts;
                   return (
                     <div class={`bk-pick${best ? ' best' : ''}`}>
-                      {best && <span class="cr">👑</span>}
                       <span class="pn">{shortName(p.name)}</span>
                       <span class="pp">{p.predHome}<i>·</i>{p.predAway}</span>
                       <span class="pt">{played ? (ok ? '+' + p.points : '0') : '—'}</span>
@@ -121,6 +124,10 @@ const fl = (t: string) => flagFor(t);
   .bk-line.w { box-shadow: inset 3px 0 0 var(--gold); }
   .bk-line.w .nm { color: var(--gold); font-weight: 800; }
   .bk-line.w .sc { color: var(--gold); }
+  /* équipe encore inconnue : « Vainq. X-Y » (les 2 potentielles) en italique atténué */
+  .bk-line.tbd .nm { font-style: italic; font-weight: 700; font-size: 12px; opacity: .7; }
+  /* score des tirs au but, entre parenthèses à côté du score */
+  .bk-line .sc .pk { font-style: normal; font-size: 11px; font-weight: 800; margin-left: 3px; }
 
   .bk-foot { display: flex; align-items: center; justify-content: space-between; padding: 4px 10px 6px; font-size: 10px; color: var(--text-dim); font-weight: 700; }
   .bk-foot.up { justify-content: center; font-style: italic; opacity: .8; }
@@ -135,5 +142,4 @@ const fl = (t: string) => flagFor(t);
   .bk-pick .pp i { color: var(--text-dim); font-style: normal; margin: 0 2px; }
   .bk-pick .pt { font-weight: 800; font-size: 11px; min-width: 26px; text-align: right; color: #51e39a; }
   .bk-pick.best .pn { color: var(--text); font-weight: 800; }
-  .bk-pick .cr { position: absolute; left: -3px; top: -8px; font-size: 11px; }
 </style>

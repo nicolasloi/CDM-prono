@@ -1,11 +1,16 @@
 import { nameKey } from './members.mjs';
+import { matchDay } from './datetime.mjs';
 
 const keyOf = (m) => m.id || nameKey(m.name);
 
 export function buildLatest(snapshots) {
   const sorted = [...snapshots].sort((a, b) => a.takenAt.localeCompare(b.takenAt));
   const curr = sorted[sorted.length - 1];
-  const prev = sorted[sorted.length - 2];
+  // Référence = dernier snapshot d'une JOURNÉE de match antérieure (créneau midi→midi CEST,
+  // cf. matchDay) → les flèches montrent le mouvement « depuis la veille », stable sur la journée,
+  // au lieu de sauter à chaque scrape. Repli sur le snapshot précédent si un seul jour d'historique.
+  const currDay = matchDay(curr.takenAt);
+  const prev = [...sorted].reverse().find((s) => matchDay(s.takenAt) < currDay) || sorted[sorted.length - 2];
   const prevByKey = new Map((prev?.members || []).map((m) => [keyOf(m), m]));
   const members = curr.members.map((m) => {
     const p = prevByKey.get(keyOf(m));

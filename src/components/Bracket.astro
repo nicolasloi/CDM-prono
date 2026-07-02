@@ -64,6 +64,9 @@ const fl = (t: string) => flagFor(t);
     if (!svg || !path) return;
     const map: Record<string, HTMLElement> = {};
     wrap.querySelectorAll<HTMLElement>('[data-r]').forEach((el) => { map[el.dataset.r + '-' + el.dataset.s] = el; });
+    // On remet le SVG à 0 AVANT de mesurer : sinon, après avoir replié un match, sa taille
+    // précédente (plus grande) gonfle scrollWidth/scrollHeight et laisse du scroll fantôme.
+    svg.setAttribute('width', '0'); svg.setAttribute('height', '0');
     const W = wrap.scrollWidth, H = wrap.scrollHeight;
     svg.setAttribute('width', String(W)); svg.setAttribute('height', String(H));
     svg.setAttribute('viewBox', `0 0 ${W} ${H}`);

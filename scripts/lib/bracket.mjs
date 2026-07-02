@@ -19,8 +19,19 @@ export const R32 = [
 ];
 
 const ROUND_NAMES = ['16es de finale', '8es de finale', 'Quarts', 'Demies', 'Finale'];
-// Dates officielles par tour (pour les affiches à venir dont RTS n'a pas encore l'horaire).
+// Dates officielles par tour (repli si le créneau précis d'une case est inconnu).
 const ROUND_DATE = ['', '4–7 juil.', '9–11 juil.', '14–15 juil.', '19 juil.'];
+// Calendrier officiel FIFA (heure suisse CEST = heure US Est + 6 h), case par case et par tour,
+// en attendant que RTS publie chaque tour avec l'horaire exact (RTS prime alors). Ordre = slots
+// du tableau (cf. R32 / arbre binaire). Les 16es (tour 0) sont fournis par RTS → null.
+const SCHEDULE = [
+  null,
+  ['4 juil. · 23:00', '4 juil. · 19:00', '6 juil. · 21:00', '7 juil. · 02:00', '5 juil. · 22:00', '6 juil. · 02:00', '7 juil. · 18:00', '7 juil. · 22:00'],
+  ['9 juil. · 22:00', '10 juil. · 21:00', '11 juil. · 23:00', '12 juil. · 03:00'],
+  ['14 juil. · 21:00', '15 juil. · 21:00'],
+  ['19 juil. · 21:00'],
+];
+const slotWhen = (r, slot) => (SCHEDULE[r] && SCHEDULE[r][slot]) || ROUND_DATE[r] || null;
 
 const norm = (s) => (s || '').toLowerCase().replace(/[’']/g, "'").trim();
 
@@ -89,7 +100,7 @@ export function buildBracket(matches = [], fixtures = []) {
       let parent = rounds[r + 1].ties[pslot];
       if (parent && parent.actualHome != null) return; // match suivant déjà joué → on n'y touche pas
       if (!parent || parent.placeholder) {
-        parent = rounds[r + 1].ties[pslot] = { upcoming: true, picks: [], when: rounds[r + 1].date };
+        parent = rounds[r + 1].ties[pslot] = { upcoming: true, picks: [], when: slotWhen(r + 1, pslot) };
       }
       const side = s % 2 === 0 ? 'home' : 'away'; // enfant pair = haut = domicile
       if (t.home && t.away) parent[side + 'From'] = { home: t.home, away: t.away };

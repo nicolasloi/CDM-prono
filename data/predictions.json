@@ -10,10 +10,10 @@
           "predHome": 2,
           "away": "Bosnie-Herzégovine",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 20,
+          "played": true
         },
         {
           "date": "1 juil. | 22:00",
@@ -987,10 +987,10 @@
           "predHome": 2,
           "away": "Bosnie-Herzégovine",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 12,
+          "played": true
         },
         {
           "date": "1 juil. | 22:00",
@@ -1952,10 +1952,10 @@
           "predHome": 2,
           "away": "Bosnie-Herzégovine",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 20,
+          "played": true
         },
         {
           "date": "1 juil. | 22:00",
@@ -2929,10 +2929,10 @@
           "predHome": 1,
           "away": "Bosnie-Herzégovine",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 12,
+          "played": true
         },
         {
           "date": "1 juil. | 22:00",
@@ -3906,10 +3906,10 @@
           "predHome": 2,
           "away": "Bosnie-Herzégovine",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 12,
+          "played": true
         },
         {
           "date": "1 juil. | 22:00",
@@ -4883,10 +4883,10 @@
           "predHome": 2,
           "away": "Bosnie-Herzégovine",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 12,
+          "played": true
         },
         {
           "date": "1 juil. | 22:00",

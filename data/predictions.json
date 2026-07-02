@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "3 juil. | 01:00",
+          "stadium": "Stade de Toronto",
+          "home": "Portugal",
+          "predHome": 0,
+          "away": "Croatie",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "2 juil. | 21:00",
           "stadium": "Stade de Los Angeles",
           "home": "Espagne",
@@ -993,6 +1005,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "3 juil. | 01:00",
+          "stadium": "Stade de Toronto",
+          "home": "Portugal",
+          "predHome": 1,
+          "away": "Croatie",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "2 juil. | 21:00",
           "stadium": "Stade de Los Angeles",
           "home": "Espagne",
@@ -1969,6 +1993,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "3 juil. | 01:00",
+          "stadium": "Stade de Toronto",
+          "home": "Portugal",
+          "predHome": 2,
+          "away": "Croatie",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "2 juil. | 21:00",
           "stadium": "Stade de Los Angeles",
@@ -2959,6 +2995,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "3 juil. | 01:00",
+          "stadium": "Stade de Toronto",
+          "home": "Portugal",
+          "predHome": 2,
+          "away": "Croatie",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "2 juil. | 21:00",
           "stadium": "Stade de Los Angeles",
           "home": "Espagne",
@@ -3948,6 +3996,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "3 juil. | 01:00",
+          "stadium": "Stade de Toronto",
+          "home": "Portugal",
+          "predHome": 2,
+          "away": "Croatie",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "2 juil. | 21:00",
           "stadium": "Stade de Los Angeles",
           "home": "Espagne",
@@ -4936,6 +4996,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "3 juil. | 01:00",
+          "stadium": "Stade de Toronto",
+          "home": "Portugal",
+          "predHome": 1,
+          "away": "Croatie",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "2 juil. | 21:00",
           "stadium": "Stade de Los Angeles",

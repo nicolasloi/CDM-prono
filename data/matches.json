@@ -1,6 +1,61 @@
 {
   "matches": [
     {
+      "date": "2 juil. | 02:00",
+      "kickoff": "2026-07-02T02:00:00+02:00",
+      "home": "USA",
+      "away": "Bosnie-Herzégovine",
+      "homeFlag": "🇺🇸",
+      "awayFlag": "🇧🇦",
+      "stadium": "Stade de la baie de San Francisco",
+      "actualHome": null,
+      "actualAway": null,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 1,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": null
+        }
+      ]
+    },
+    {
       "date": "1 juil. | 22:00",
       "kickoff": "2026-07-01T22:00:00+02:00",
       "home": "Belgique",

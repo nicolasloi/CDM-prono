@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "2 juil. | 02:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "USA",
+          "predHome": 2,
+          "away": "Bosnie-Herzégovine",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "1 juil. | 22:00",
           "stadium": "Stade de Seattle",
           "home": "Belgique",
@@ -969,6 +981,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "2 juil. | 02:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "USA",
+          "predHome": 2,
+          "away": "Bosnie-Herzégovine",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "1 juil. | 22:00",
           "stadium": "Stade de Seattle",
           "home": "Belgique",
@@ -1921,6 +1945,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "2 juil. | 02:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "USA",
+          "predHome": 2,
+          "away": "Bosnie-Herzégovine",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "1 juil. | 22:00",
           "stadium": "Stade de Seattle",
@@ -2887,6 +2923,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "2 juil. | 02:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "USA",
+          "predHome": 1,
+          "away": "Bosnie-Herzégovine",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "1 juil. | 22:00",
           "stadium": "Stade de Seattle",
           "home": "Belgique",
@@ -3852,6 +3900,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "2 juil. | 02:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "USA",
+          "predHome": 2,
+          "away": "Bosnie-Herzégovine",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "1 juil. | 22:00",
           "stadium": "Stade de Seattle",
           "home": "Belgique",
@@ -4816,6 +4876,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "2 juil. | 02:00",
+          "stadium": "Stade de la baie de San Francisco",
+          "home": "USA",
+          "predHome": 2,
+          "away": "Bosnie-Herzégovine",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "1 juil. | 22:00",
           "stadium": "Stade de Seattle",

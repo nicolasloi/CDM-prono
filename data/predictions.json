@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "2 juil. | 21:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Espagne",
+          "predHome": 2,
+          "away": "Autriche",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "2 juil. | 02:00",
           "stadium": "Stade de la baie de San Francisco",
           "home": "USA",
@@ -981,6 +993,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "2 juil. | 21:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Espagne",
+          "predHome": 1,
+          "away": "Autriche",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "2 juil. | 02:00",
           "stadium": "Stade de la baie de San Francisco",
           "home": "USA",
@@ -1945,6 +1969,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "2 juil. | 21:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Espagne",
+          "predHome": 2,
+          "away": "Autriche",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "2 juil. | 02:00",
           "stadium": "Stade de la baie de San Francisco",
@@ -2923,6 +2959,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "2 juil. | 21:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Espagne",
+          "predHome": 3,
+          "away": "Autriche",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "2 juil. | 02:00",
           "stadium": "Stade de la baie de San Francisco",
           "home": "USA",
@@ -3900,6 +3948,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "2 juil. | 21:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Espagne",
+          "predHome": 3,
+          "away": "Autriche",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "2 juil. | 02:00",
           "stadium": "Stade de la baie de San Francisco",
           "home": "USA",
@@ -4876,6 +4936,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "2 juil. | 21:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Espagne",
+          "predHome": 2,
+          "away": "Autriche",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "2 juil. | 02:00",
           "stadium": "Stade de la baie de San Francisco",

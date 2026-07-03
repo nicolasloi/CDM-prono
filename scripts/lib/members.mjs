@@ -6,11 +6,34 @@ export const accentFor = (i) => ACCENTS[i % ACCENTS.length];
 // (réutilisée pour la pastille du classement, le sparkline et le bump chart).
 export const PLAYER_COLORS = ['#e8c66a', '#e3342f', '#2b6fff', '#00a85a', '#ff7a3d', '#b06bff', '#00d2c6'];
 
-// Map clé→couleur stable (clés triées → assignation déterministe).
+// Couleur FIXE par id RTS, dérivée une fois pour toutes de l'ordre trié des 7 membres
+// d'ORIGINE (Mica P inclus, alors en tête de tri). Si buildColorMap recalculait juste sur les
+// membres actuellement affichés, exclure quelqu'un décalerait la couleur de tout le monde
+// (ex. exclure Mica a fait perdre sa couleur à chaque joueur restant) — donc chaque joueur
+// garde ici toujours la même couleur, peu importe qui d'autre est affiché.
+const FIXED_COLORS = {
+  '2xN6': '#e8c66a', // Mica P (exclu du site, gardé ici pour ne pas décaler les couleurs des autres)
+  '7GjW': '#e3342f', // Mehdi M
+  '8Yak': '#2b6fff', // Cayan F
+  '9Nz1': '#00a85a', // Vitor Pinto
+  'G3EG': '#ff7a3d', // Thomas M
+  'O52a': '#b06bff', // Joao M
+  'wmd3': '#00d2c6', // Nicolas L
+};
+
+// Map clé→couleur stable. Priorité à FIXED_COLORS (couleur signature figée par joueur) ;
+// repli déterministe (clés triées, palette restante) pour un id encore inconnu.
 export function buildColorMap(keys) {
   const sorted = [...new Set(keys)].sort();
+  const used = new Set(Object.values(FIXED_COLORS));
   const map = {};
-  sorted.forEach((k, i) => { map[k] = PLAYER_COLORS[i % PLAYER_COLORS.length]; });
+  let next = 0;
+  for (const k of sorted) {
+    if (FIXED_COLORS[k]) { map[k] = FIXED_COLORS[k]; continue; }
+    while (used.has(PLAYER_COLORS[next % PLAYER_COLORS.length])) next++;
+    map[k] = PLAYER_COLORS[next % PLAYER_COLORS.length];
+    next++;
+  }
   return map;
 }
 

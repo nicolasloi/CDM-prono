@@ -1,5 +1,84 @@
 {
-  "questions": [],
-  "byId": {},
-  "actuals": { "matchsNuls": 0, "suisseButs": 0, "suisseParcours": null }
+  "questions": [
+    {
+      "id": "243",
+      "key": "champion",
+      "question": "Quel pays sera champion du monde ?"
+    },
+    {
+      "id": "244",
+      "key": "suisseParcours",
+      "question": "Jusqu'où ira l’équipe de Suisse ?"
+    },
+    {
+      "id": "245",
+      "key": "suisseButs",
+      "question": "Combien de buts l’équipe de Suisse marquera-t-elle sur l'ensemble du tournoi (sans compter les buts marqués lors des tirs au but) ?"
+    },
+    {
+      "id": "246",
+      "key": "buteurButs",
+      "question": "Combien de buts le meilleur buteur marquera-t-il sur l'ensemble du tournoi (sans compter les buts marqués lors des tirs au but) ?"
+    },
+    {
+      "id": "247",
+      "key": "matchsNuls",
+      "question": "Combien de matchs du tournoi se termineront sur un score de 0:0 (pour les matchs avec prolongation et/ou tirs au but, le résultat à la fin des prolongations compte) ?"
+    }
+  ],
+  "byId": {
+    "wmd3": {
+      "name": "Nicolas L",
+      "champion": "Espagne",
+      "suisseParcours": "8es de finale",
+      "suisseButs": "6",
+      "buteurButs": "8",
+      "matchsNuls": "8"
+    },
+    "8Yak": {
+      "name": "Cayan F",
+      "champion": "Espagne",
+      "suisseParcours": "Quarts de finale",
+      "suisseButs": "5",
+      "buteurButs": "8",
+      "matchsNuls": "7"
+    },
+    "9Nz1": {
+      "name": "Vitor Pinto",
+      "champion": "France",
+      "suisseParcours": "8es de finale",
+      "suisseButs": "4",
+      "buteurButs": "12",
+      "matchsNuls": "3"
+    },
+    "7GjW": {
+      "name": "Mehdi M",
+      "champion": "Espagne",
+      "suisseParcours": "16es de finale",
+      "suisseButs": "8",
+      "buteurButs": "10",
+      "matchsNuls": "6"
+    },
+    "O52a": {
+      "name": "Joao M",
+      "champion": "Espagne",
+      "suisseParcours": "8es de finale",
+      "suisseButs": "8",
+      "buteurButs": "7",
+      "matchsNuls": "6"
+    },
+    "G3EG": {
+      "name": "Thomas M",
+      "champion": "Espagne",
+      "suisseParcours": "Quarts de finale",
+      "suisseButs": "6",
+      "buteurButs": "8",
+      "matchsNuls": "11"
+    }
+  },
+  "actuals": {
+    "matchsNuls": 7,
+    "suisseButs": 9,
+    "suisseParcours": "8es de finale (en cours)"
+  }
 }

@@ -8,50 +8,50 @@
       "homeFlag": "🇦🇺",
       "awayFlag": "🇪🇬",
       "stadium": "Stade de Dallas",
-      "actualHome": null,
-      "actualAway": null,
+      "actualHome": 1,
+      "actualAway": 1,
       "picks": [
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 1,
+          "predAway": 1,
+          "points": 20
+        },
         {
           "id": "O52a",
           "name": "Joao M",
           "predHome": 1,
           "predAway": 2,
-          "points": null
-        },
-        {
-          "id": "8Yak",
-          "name": "Cayan F",
-          "predHome": 0,
-          "predAway": 2,
-          "points": null
+          "points": 2
         },
         {
           "id": "wmd3",
           "name": "Nicolas L",
           "predHome": 1,
           "predAway": 2,
-          "points": null
+          "points": 2
         },
         {
           "id": "9Nz1",
           "name": "Vitor Pinto",
           "predHome": 1,
           "predAway": 2,
-          "points": null
+          "points": 2
         },
         {
           "id": "7GjW",
           "name": "Mehdi M",
           "predHome": 1,
           "predAway": 2,
-          "points": null
+          "points": 2
         },
         {
-          "id": "G3EG",
-          "name": "Thomas M",
-          "predHome": 1,
-          "predAway": 1,
-          "points": null
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 0,
+          "predAway": 2,
+          "points": 0
         }
       ]
     },

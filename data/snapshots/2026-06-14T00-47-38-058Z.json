@@ -25,7 +25,7 @@
     {
       "id": "8Yak",
       "name": "Cayan F",
-      "rank": 3,
+      "rank": 4,
       "totalPoints": 19,
       "isAdmin": false
     },
@@ -41,13 +41,6 @@
       "name": "Thomas M",
       "rank": 6,
       "totalPoints": 14,
-      "isAdmin": false
-    },
-    {
-      "id": "2xN6",
-      "name": "Mica P",
-      "rank": 7,
-      "totalPoints": 6,
       "isAdmin": false
     }
   ],

@@ -20,3 +20,14 @@ export const shortName = (name) => String(name || '').replace(/\s+\p{L}\.?$/u, '
 
 // Normalise un nom pour servir de clé stable si l'id manque.
 export const nameKey = (s) => s.normalize('NFKD').replace(/[^\w]/g, '').toLowerCase();
+
+// Membres inactifs (ne jouent pas) → exclus de tout le site : classement, courbes, tableau,
+// matchs, historique. Identifié par id RTS (stable) avec repli sur le nom normalisé.
+export const EXCLUDED_IDS = new Set(['2xN6']); // Mica P
+const EXCLUDED_NAMES = new Set(['micap']); // nameKey('Mica P')
+export const isExcludedMember = (m) => EXCLUDED_IDS.has(m?.id) || EXCLUDED_NAMES.has(nameKey(m?.name || ''));
+
+// Filtre une liste de membres et réindexe le rang (1..N) sur ce qui reste.
+export function excludeInactiveMembers(members = []) {
+  return members.filter((m) => !isExcludedMember(m)).map((m, i) => ({ ...m, rank: i + 1 }));
+}

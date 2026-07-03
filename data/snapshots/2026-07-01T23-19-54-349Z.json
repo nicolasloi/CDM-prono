@@ -32,7 +32,7 @@
     {
       "id": "O52a",
       "name": "Joao M",
-      "rank": 4,
+      "rank": 5,
       "totalPoints": 406,
       "isAdmin": false
     },
@@ -41,13 +41,6 @@
       "name": "Thomas M",
       "rank": 6,
       "totalPoints": 393,
-      "isAdmin": false
-    },
-    {
-      "id": "2xN6",
-      "name": "Mica P",
-      "rank": 7,
-      "totalPoints": 6,
       "isAdmin": false
     }
   ],

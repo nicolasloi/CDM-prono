@@ -54,15 +54,6 @@
       "isAdmin": false,
       "pointsDelta": 24,
       "rankDelta": 0
-    },
-    {
-      "id": "2xN6",
-      "name": "Mica P",
-      "rank": 7,
-      "totalPoints": 6,
-      "isAdmin": false,
-      "pointsDelta": 0,
-      "rankDelta": 0
     }
   ],
   "experts": []

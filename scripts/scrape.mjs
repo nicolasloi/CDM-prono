@@ -5,6 +5,7 @@ import { mkdirSync, writeFileSync, readFileSync, readdirSync, existsSync } from 
 import { parseCommunity } from './lib/parse.mjs';
 import { buildLatest, buildTimeseries } from './lib/aggregate.mjs';
 import { scrapePredictions, mergePredictions } from './lib/predictions.mjs';
+import { excludeInactiveMembers } from './lib/members.mjs';
 import { buildMatches } from './lib/matches.mjs';
 import { flagFor } from './lib/flags.mjs';
 import { toISO } from './lib/datetime.mjs';
@@ -43,6 +44,8 @@ async function main() {
     console.error('Aucun membre parsé — HTML probablement changé. Abandon sans écrire.');
     process.exit(1);
   }
+  // Membres inactifs (ne jouent pas) exclus dès la source : jamais scrapés, jamais stockés.
+  parsed.members = excludeInactiveMembers(parsed.members);
 
   const prevLatest = readJSON(fileUrl('latest.json'));
   const prevPreds = readJSON(fileUrl('predictions.json'));

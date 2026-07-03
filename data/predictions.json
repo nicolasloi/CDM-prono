@@ -6065,23 +6065,6 @@
           "played": true
         }
       ]
-    },
-    "2xN6": {
-      "name": "Mica P",
-      "matches": [
-        {
-          "date": "11 juin | 21:00",
-          "stadium": "Stade de Mexico",
-          "home": "Mexique",
-          "predHome": 2,
-          "away": "Afrique du Sud",
-          "predAway": 1,
-          "actualHome": 2,
-          "actualAway": 0,
-          "points": 6,
-          "played": true
-        }
-      ]
     }
   }
 }

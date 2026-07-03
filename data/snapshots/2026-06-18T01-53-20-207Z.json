@@ -25,7 +25,7 @@
     {
       "id": "9Nz1",
       "name": "Vitor Pinto",
-      "rank": 3,
+      "rank": 4,
       "totalPoints": 84,
       "isAdmin": false
     },
@@ -41,13 +41,6 @@
       "name": "Thomas M",
       "rank": 6,
       "totalPoints": 59,
-      "isAdmin": false
-    },
-    {
-      "id": "2xN6",
-      "name": "Mica P",
-      "rank": 7,
-      "totalPoints": 6,
       "isAdmin": false
     }
   ],

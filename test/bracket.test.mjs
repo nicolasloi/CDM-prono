@@ -19,8 +19,13 @@ test('16es = affiches officielles ; tours suivants « à venir » avec équipes 
   assert.equal(r[1].ties.every((t) => t.upcoming && t.actualHome == null), true);
   assert.deepEqual(r[1].ties[0].homeFrom, { home: 'Allemagne', away: 'Paraguay' });
   assert.deepEqual(r[1].ties[0].awayFrom, { home: 'France', away: 'Suède' });
-  // Créneau officiel câblé sur la case (heure suisse).
+  // Créneau officiel câblé sur la case (heure suisse), + kickoff ISO pour le tri chrono
+  // avec les autres affiches « à venir » (onglet Matchs).
   assert.equal(r[1].ties[0].when, '4 juil. · 23:00');
+  assert.equal(r[1].ties[0].kickoff, '2026-07-04T23:00:00+02:00');
+  // Tours lointains sans aucune affiche connue (ex. demies) : provenance vide (pas de "?" inventé).
+  assert.equal(r[3].ties[0].homeFrom, undefined);
+  assert.equal(r[3].ties[0].kickoff, '2026-07-14T21:00:00+02:00');
 });
 
 test('un 16e joué affiche son score dans le bon slot', () => {

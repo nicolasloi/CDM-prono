@@ -4,14 +4,32 @@ import matchesData from '../../data/matches.json';
 import fixturesData from '../../data/fixtures.json';
 import { shortName } from '../../scripts/lib/members.mjs';
 import { whenLabel } from '../../scripts/lib/datetime.mjs';
+import { buildBracket } from '../../scripts/lib/bracket.mjs';
 
 const all = matchesData.matches as any[];
 
 // Matchs à venir (pronos encore cachés) → onglet « À venir », triés du plus proche au plus lointain.
 const fxKey = (f: any) => { const m = /^2026-(0[67])-(\d{2})T(\d{2}):(\d{2})/.exec(f.kickoff || ''); return m ? Number(m[1] + m[2] + m[3] + m[4]) : Infinity; };
-const upcoming = (((fixturesData as any).upcoming || []) as any[])
-  .map((f) => ({ ...f, when: whenLabel(f) }))
-  .sort((a, b) => fxKey(a) - fxKey(b));
+const nearFixtures = (((fixturesData as any).upcoming || []) as any[])
+  .map((f) => ({ kind: 'fixture', home: f.home, away: f.away, homeFlag: f.homeFlag, awayFlag: f.awayFlag, stadium: f.stadium, when: whenLabel(f), kickoff: f.kickoff }));
+
+// Phase finale au-delà des 16es (8es→finale) : construite automatiquement à partir du tableau
+// (mêmes données que /tableau), donc se met à jour toute seule dès qu'un tour se précise —
+// équipes connues si les 2 affiches d'origine sont jouées, sinon « Vainq. X · Y », sinon vide.
+const koRounds = buildBracket(all, (fixturesData as any).upcoming || []).slice(1);
+const koFixtures = koRounds.flatMap((r: any) => r.ties
+  .filter((t: any) => t.upcoming)
+  .map((t: any) => ({ kind: 'ko', roundName: r.name, home: t.home, away: t.away, homeFlag: t.homeFlag, awayFlag: t.awayFlag, homeFrom: t.homeFrom, awayFrom: t.awayFrom, when: t.when, kickoff: t.kickoff })));
+
+const upcoming = [...nearFixtures, ...koFixtures].sort((a, b) => fxKey(a) - fxKey(b));
+
+// Nom à afficher pour un côté d'une affiche à venir : équipe connue, sinon « Vainq. X · Y »
+// (les 2 équipes potentielles), sinon un simple « ? » si les 2 affiches d'origine sont inconnues.
+function potentialTeam(name: string | undefined, flag: string | undefined, from: { home: string; away: string } | undefined) {
+  if (name) return { text: name, flag: flag || '', tbd: false };
+  if (from) return { text: `${from.home} · ${from.away}`, flag: '', tbd: true };
+  return { text: '?', flag: '', tbd: true };
+}
 
 // Regroupe par jour (le plus récent d'abord), libellé "jeudi 19 juin".
 function dayKey(m: any) { return (m.date || '').split(' | ')[0]; }
@@ -57,16 +75,30 @@ let gi = 0;
   {upcoming.length > 0 && (
     <section class="day">
       <h2 class="day-h">À venir</h2>
-      {upcoming.map((f: any) => (
-        <article class="mx up" data-state="upcoming">
-          <header class="mx-top">
-            <div class="mx-team"><span class="fl">{f.homeFlag}</span><span class="tn">{f.home}</span></div>
-            <div class="mx-score"><span class="mx-soon">{f.when || 'à venir'}</span></div>
-            <div class="mx-team r"><span class="tn">{f.away}</span><span class="fl">{f.awayFlag}</span></div>
-          </header>
-          <div class="mx-stad">{f.stadium}</div>
-        </article>
-      ))}
+      {upcoming.map((f: any) => {
+        if (f.kind === 'fixture') return (
+          <article class="mx up" data-state="upcoming">
+            <header class="mx-top">
+              <div class="mx-team"><span class="fl">{f.homeFlag}</span><span class="tn">{f.home}</span></div>
+              <div class="mx-score"><span class="mx-soon">{f.when || 'à venir'}</span></div>
+              <div class="mx-team r"><span class="tn">{f.away}</span><span class="fl">{f.awayFlag}</span></div>
+            </header>
+            <div class="mx-stad">{f.stadium}</div>
+          </article>
+        );
+        const hl = potentialTeam(f.home, f.homeFlag, f.homeFrom);
+        const al = potentialTeam(f.away, f.awayFlag, f.awayFrom);
+        return (
+          <article class="mx up ko" data-state="upcoming">
+            <p class="mx-round">{f.roundName}</p>
+            <header class="mx-top">
+              <div class={`mx-team${hl.tbd ? ' tbd' : ''}`}><span class="fl">{hl.flag}</span><span class="tn">{hl.text}</span></div>
+              <div class="mx-score"><span class="mx-soon">{f.when || 'à venir'}</span></div>
+              <div class={`mx-team r${al.tbd ? ' tbd' : ''}`}><span class="tn">{al.text}</span><span class="fl">{al.flag}</span></div>
+            </header>
+          </article>
+        );
+      })}
     </section>
   )}
 
@@ -218,6 +250,9 @@ let gi = 0;
     .mx.up { border-style: dashed; }
     .mx.up .mx-stad { opacity: .8; }
     .mx-soon { font-size: 14px; font-weight: 800; color: var(--gold); white-space: nowrap; }
+    /* Tours futurs (8es→finale) : équipes encore incertaines, générées depuis le tableau */
+    .mx-round { font: 800 10px/1 var(--font); letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin: 0 0 10px; text-align: center; }
+    .mx.ko .mx-team.tbd { font-style: italic; font-weight: 600; opacity: .65; font-size: .85em; }
     .mx-glow { position: absolute; inset: -1px; border-radius: 20px; pointer-events: none; opacity: 0; transition: opacity .3s; background: radial-gradient(120% 90% at 50% -20%, var(--gold-soft), transparent 55%); }
     .mx:hover .mx-glow { opacity: 1; }
     .mx.islive { border-color: rgba(227,52,47,.55); box-shadow: 0 0 50px -20px var(--red); }

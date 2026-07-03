@@ -24,14 +24,24 @@ const ROUND_DATE = ['', '4–7 juil.', '9–11 juil.', '14–15 juil.', '19 juil
 // Calendrier officiel FIFA (heure suisse CEST = heure US Est + 6 h), case par case et par tour,
 // en attendant que RTS publie chaque tour avec l'horaire exact (RTS prime alors). Ordre = slots
 // du tableau (cf. R32 / arbre binaire). Les 16es (tour 0) sont fournis par RTS → null.
+// kickoff ISO inclus pour pouvoir trier ces cases avec les autres affiches « à venir ».
 const SCHEDULE = [
   null,
-  ['4 juil. · 23:00', '4 juil. · 19:00', '6 juil. · 21:00', '7 juil. · 02:00', '5 juil. · 22:00', '6 juil. · 02:00', '7 juil. · 18:00', '7 juil. · 22:00'],
-  ['9 juil. · 22:00', '10 juil. · 21:00', '11 juil. · 23:00', '12 juil. · 03:00'],
-  ['14 juil. · 21:00', '15 juil. · 21:00'],
-  ['19 juil. · 21:00'],
+  [
+    ['4 juil. · 23:00', '2026-07-04T23:00:00+02:00'], ['4 juil. · 19:00', '2026-07-04T19:00:00+02:00'],
+    ['6 juil. · 21:00', '2026-07-06T21:00:00+02:00'], ['7 juil. · 02:00', '2026-07-07T02:00:00+02:00'],
+    ['5 juil. · 22:00', '2026-07-05T22:00:00+02:00'], ['6 juil. · 02:00', '2026-07-06T02:00:00+02:00'],
+    ['7 juil. · 18:00', '2026-07-07T18:00:00+02:00'], ['7 juil. · 22:00', '2026-07-07T22:00:00+02:00'],
+  ],
+  [
+    ['9 juil. · 22:00', '2026-07-09T22:00:00+02:00'], ['10 juil. · 21:00', '2026-07-10T21:00:00+02:00'],
+    ['11 juil. · 23:00', '2026-07-11T23:00:00+02:00'], ['12 juil. · 03:00', '2026-07-12T03:00:00+02:00'],
+  ],
+  [['14 juil. · 21:00', '2026-07-14T21:00:00+02:00'], ['15 juil. · 21:00', '2026-07-15T21:00:00+02:00']],
+  [['19 juil. · 21:00', '2026-07-19T21:00:00+02:00']],
 ];
-const slotWhen = (r, slot) => (SCHEDULE[r] && SCHEDULE[r][slot]) || ROUND_DATE[r] || null;
+const slotWhen = (r, slot) => (SCHEDULE[r] && SCHEDULE[r][slot]?.[0]) || ROUND_DATE[r] || null;
+const slotKickoff = (r, slot) => (SCHEDULE[r] && SCHEDULE[r][slot]?.[1]) || null;
 
 const norm = (s) => (s || '').toLowerCase().replace(/[’']/g, "'").trim();
 
@@ -100,7 +110,7 @@ export function buildBracket(matches = [], fixtures = []) {
       let parent = rounds[r + 1].ties[pslot];
       if (parent && parent.actualHome != null) return; // match suivant déjà joué → on n'y touche pas
       if (!parent || parent.placeholder) {
-        parent = rounds[r + 1].ties[pslot] = { upcoming: true, picks: [], when: slotWhen(r + 1, pslot) };
+        parent = rounds[r + 1].ties[pslot] = { upcoming: true, picks: [], when: slotWhen(r + 1, pslot), kickoff: slotKickoff(r + 1, pslot) };
       }
       const side = s % 2 === 0 ? 'home' : 'away'; // enfant pair = haut = domicile
       if (t.home && t.away) parent[side + 'From'] = { home: t.home, away: t.away };

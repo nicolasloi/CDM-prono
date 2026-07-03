@@ -10,10 +10,10 @@
           "predHome": 1,
           "away": "Algérie",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 12,
+          "played": true
         },
         {
           "date": "3 juil. | 01:00",
@@ -1023,10 +1023,10 @@
           "predHome": 2,
           "away": "Algérie",
           "predAway": 0,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 20,
+          "played": true
         },
         {
           "date": "3 juil. | 01:00",
@@ -2024,10 +2024,10 @@
           "predHome": 2,
           "away": "Algérie",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 12,
+          "played": true
         },
         {
           "date": "3 juil. | 01:00",
@@ -3037,10 +3037,10 @@
           "predHome": 2,
           "away": "Algérie",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 12,
+          "played": true
         },
         {
           "date": "3 juil. | 01:00",
@@ -4050,10 +4050,10 @@
           "predHome": 1,
           "away": "Algérie",
           "predAway": 2,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 0,
+          "played": true
         },
         {
           "date": "3 juil. | 01:00",
@@ -5063,10 +5063,10 @@
           "predHome": 2,
           "away": "Algérie",
           "predAway": 1,
-          "actualHome": null,
-          "actualAway": null,
-          "points": null,
-          "played": false
+          "actualHome": 2,
+          "actualAway": 0,
+          "points": 12,
+          "played": true
         },
         {
           "date": "3 juil. | 01:00",

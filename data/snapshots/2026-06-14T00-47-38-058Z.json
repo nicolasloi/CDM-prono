@@ -44,32 +44,5 @@
       "isAdmin": false
     }
   ],
-  "otherGroups": [
-    {
-      "rank": 1,
-      "name": "Les Tamalous",
-      "points": 32
-    },
-    {
-      "rank": 1,
-      "name": "Messerstein",
-      "points": 32
-    },
-    {
-      "rank": 1,
-      "name": "Elouis",
-      "points": 32
-    },
-    {
-      "rank": 1,
-      "name": "Seb-Mel-Lou",
-      "points": 32
-    },
-    {
-      "rank": 5,
-      "name": "Goodenough",
-      "points": 31
-    }
-  ],
   "experts": []
 }

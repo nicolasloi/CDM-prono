@@ -44,32 +44,5 @@
       "isAdmin": false
     }
   ],
-  "otherGroups": [
-    {
-      "rank": 1,
-      "name": "Goodenough",
-      "points": 30
-    },
-    {
-      "rank": 1,
-      "name": "GOATESQUE GUYS",
-      "points": 30
-    },
-    {
-      "rank": 3,
-      "name": "Les Essoufflés",
-      "points": 29
-    },
-    {
-      "rank": 3,
-      "name": "Les décalés au foot",
-      "points": 29
-    },
-    {
-      "rank": 3,
-      "name": "FC ERDE",
-      "points": 29
-    }
-  ],
   "experts": []
 }

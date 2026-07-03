@@ -44,32 +44,5 @@
       "isAdmin": false
     }
   ],
-  "otherGroups": [
-    {
-      "rank": 1,
-      "name": "Sassel crew ⚽️ 2026",
-      "points": 97
-    },
-    {
-      "rank": 2,
-      "name": "Famille Peiris",
-      "points": 96
-    },
-    {
-      "rank": 3,
-      "name": "À nous 5 🤍",
-      "points": 95
-    },
-    {
-      "rank": 3,
-      "name": "GOATESQUE GUYS",
-      "points": 95
-    },
-    {
-      "rank": 3,
-      "name": "Les winners",
-      "points": 95
-    }
-  ],
   "experts": []
 }

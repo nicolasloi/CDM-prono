@@ -44,32 +44,5 @@
       "isAdmin": false
     }
   ],
-  "otherGroups": [
-    {
-      "rank": 1,
-      "name": "Bolosses 🥳",
-      "points": 54
-    },
-    {
-      "rank": 1,
-      "name": "Kopa Dorak",
-      "points": 54
-    },
-    {
-      "rank": 3,
-      "name": "Famille Peiris",
-      "points": 53
-    },
-    {
-      "rank": 3,
-      "name": "Les décalés au foot",
-      "points": 53
-    },
-    {
-      "rank": 5,
-      "name": "⚽️🏟️CDM26🏟️⚽️ Family 💪🏻",
-      "points": 52
-    }
-  ],
   "experts": []
 }

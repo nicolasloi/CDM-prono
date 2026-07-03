@@ -44,32 +44,5 @@
       "isAdmin": false
     }
   ],
-  "otherGroups": [
-    {
-      "rank": 1,
-      "name": "Elouis",
-      "points": 50
-    },
-    {
-      "rank": 1,
-      "name": "Seb-Mel-Lou",
-      "points": 50
-    },
-    {
-      "rank": 3,
-      "name": "CM 2018",
-      "points": 49
-    },
-    {
-      "rank": 3,
-      "name": "À nous 5 🤍",
-      "points": 49
-    },
-    {
-      "rank": 3,
-      "name": "Kopa Dorak",
-      "points": 49
-    }
-  ],
   "experts": []
 }

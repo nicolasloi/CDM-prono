@@ -44,32 +44,5 @@
       "isAdmin": false
     }
   ],
-  "otherGroups": [
-    {
-      "rank": 1,
-      "name": "GOATESQUE GUYS",
-      "points": 138
-    },
-    {
-      "rank": 2,
-      "name": "KLAK&co",
-      "points": 136
-    },
-    {
-      "rank": 3,
-      "name": "Sassel crew ⚽️ 2026",
-      "points": 134
-    },
-    {
-      "rank": 4,
-      "name": "FC Grande",
-      "points": 133
-    },
-    {
-      "rank": 5,
-      "name": "Famille Beuret",
-      "points": 132
-    }
-  ],
   "experts": []
 }

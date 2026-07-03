@@ -44,32 +44,5 @@
       "isAdmin": false
     }
   ],
-  "otherGroups": [
-    {
-      "rank": 1,
-      "name": "Goatesque",
-      "points": 25
-    },
-    {
-      "rank": 1,
-      "name": "Les Tamalous",
-      "points": 25
-    },
-    {
-      "rank": 1,
-      "name": "9vp1",
-      "points": 25
-    },
-    {
-      "rank": 4,
-      "name": "Goodenough",
-      "points": 24
-    },
-    {
-      "rank": 4,
-      "name": "GOATESQUE GUYS",
-      "points": 24
-    }
-  ],
   "experts": []
 }

@@ -44,32 +44,5 @@
       "isAdmin": false
     }
   ],
-  "otherGroups": [
-    {
-      "rank": 1,
-      "name": "Bolosses 🥳",
-      "points": 65
-    },
-    {
-      "rank": 2,
-      "name": "Goodenough",
-      "points": 63
-    },
-    {
-      "rank": 2,
-      "name": "Les décalés au foot",
-      "points": 63
-    },
-    {
-      "rank": 4,
-      "name": "Citrons et compagnie",
-      "points": 62
-    },
-    {
-      "rank": 4,
-      "name": "Famille Peiris",
-      "points": 62
-    }
-  ],
   "experts": []
 }

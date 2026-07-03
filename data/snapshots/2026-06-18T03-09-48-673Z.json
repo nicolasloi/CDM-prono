@@ -44,32 +44,5 @@
       "isAdmin": false
     }
   ],
-  "otherGroups": [
-    {
-      "rank": 1,
-      "name": "GOATESQUE GUYS",
-      "points": 104
-    },
-    {
-      "rank": 2,
-      "name": "Sassel crew ⚽️ 2026",
-      "points": 103
-    },
-    {
-      "rank": 3,
-      "name": "La team Essron",
-      "points": 101
-    },
-    {
-      "rank": 3,
-      "name": "À nous 5 🤍",
-      "points": 101
-    },
-    {
-      "rank": 3,
-      "name": "SRBIJA 2030🏆",
-      "points": 101
-    }
-  ],
   "experts": []
 }

@@ -44,32 +44,5 @@
       "isAdmin": false
     }
   ],
-  "otherGroups": [
-    {
-      "rank": 1,
-      "name": "CM 2018",
-      "points": 45
-    },
-    {
-      "rank": 2,
-      "name": "⚽️🏟️CDM26🏟️⚽️ Family 💪🏻",
-      "points": 44
-    },
-    {
-      "rank": 2,
-      "name": "À nous 5 🤍",
-      "points": 44
-    },
-    {
-      "rank": 2,
-      "name": "Les Tamalous",
-      "points": 44
-    },
-    {
-      "rank": 2,
-      "name": "Kopa Dorak",
-      "points": 44
-    }
-  ],
   "experts": []
 }

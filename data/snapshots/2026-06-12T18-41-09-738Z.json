@@ -44,32 +44,5 @@
       "isAdmin": false
     }
   ],
-  "otherGroups": [
-    {
-      "rank": 1,
-      "name": "Sebulba Lalas",
-      "points": 19
-    },
-    {
-      "rank": 1,
-      "name": "9vp1",
-      "points": 19
-    },
-    {
-      "rank": 1,
-      "name": "Family Team",
-      "points": 19
-    },
-    {
-      "rank": 1,
-      "name": "Jeunesse Bramoisienne 👹",
-      "points": 19
-    },
-    {
-      "rank": 5,
-      "name": "Batraciens",
-      "points": 18
-    }
-  ],
   "experts": []
 }

@@ -44,32 +44,5 @@
       "isAdmin": false
     }
   ],
-  "otherGroups": [
-    {
-      "rank": 1,
-      "name": "Messerstein",
-      "points": 40
-    },
-    {
-      "rank": 2,
-      "name": "CM 2018",
-      "points": 39
-    },
-    {
-      "rank": 2,
-      "name": "⚽️🏟️CDM26🏟️⚽️ Family 💪🏻",
-      "points": 39
-    },
-    {
-      "rank": 2,
-      "name": "À nous 5 🤍",
-      "points": 39
-    },
-    {
-      "rank": 2,
-      "name": "Kopa Dorak",
-      "points": 39
-    }
-  ],
   "experts": []
 }

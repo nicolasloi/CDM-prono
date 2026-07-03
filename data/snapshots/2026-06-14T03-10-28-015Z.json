@@ -44,32 +44,5 @@
       "isAdmin": false
     }
   ],
-  "otherGroups": [
-    {
-      "rank": 1,
-      "name": "Messerstein",
-      "points": 40
-    },
-    {
-      "rank": 2,
-      "name": "À nous 5 🤍",
-      "points": 39
-    },
-    {
-      "rank": 2,
-      "name": "Elouis",
-      "points": 39
-    },
-    {
-      "rank": 4,
-      "name": "OWT",
-      "points": 38
-    },
-    {
-      "rank": 4,
-      "name": "Les Tamalous",
-      "points": 38
-    }
-  ],
   "experts": []
 }

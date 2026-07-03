@@ -44,32 +44,5 @@
       "isAdmin": false
     }
   ],
-  "otherGroups": [
-    {
-      "rank": 1,
-      "name": "Sassel crew ⚽️ 2026",
-      "points": 95
-    },
-    {
-      "rank": 2,
-      "name": "Les décalés au foot",
-      "points": 92
-    },
-    {
-      "rank": 3,
-      "name": "Les Accoudés",
-      "points": 91
-    },
-    {
-      "rank": 3,
-      "name": "À nous 5 🤍",
-      "points": 91
-    },
-    {
-      "rank": 3,
-      "name": "Famille Peiris",
-      "points": 91
-    }
-  ],
   "experts": []
 }

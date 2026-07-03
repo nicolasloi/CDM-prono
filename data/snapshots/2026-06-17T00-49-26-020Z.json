@@ -44,32 +44,5 @@
       "isAdmin": false
     }
   ],
-  "otherGroups": [
-    {
-      "rank": 1,
-      "name": "Sassel crew ⚽️ 2026",
-      "points": 83
-    },
-    {
-      "rank": 1,
-      "name": "Les décalés au foot",
-      "points": 83
-    },
-    {
-      "rank": 3,
-      "name": "Bolosses 🥳",
-      "points": 80
-    },
-    {
-      "rank": 4,
-      "name": "Goodenough",
-      "points": 79
-    },
-    {
-      "rank": 5,
-      "name": "Les Accoudés",
-      "points": 78
-    }
-  ],
   "experts": []
 }

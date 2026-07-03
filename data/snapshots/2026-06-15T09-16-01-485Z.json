@@ -44,32 +44,5 @@
       "isAdmin": false
     }
   ],
-  "otherGroups": [
-    {
-      "rank": 1,
-      "name": "Bolosses 🥳",
-      "points": 60
-    },
-    {
-      "rank": 2,
-      "name": "Kopa Dorak",
-      "points": 58
-    },
-    {
-      "rank": 2,
-      "name": "Les décalés au foot",
-      "points": 58
-    },
-    {
-      "rank": 4,
-      "name": "À nous 5 🤍",
-      "points": 57
-    },
-    {
-      "rank": 4,
-      "name": "Seb-Mel-Lou",
-      "points": 57
-    }
-  ],
   "experts": []
 }

@@ -24,3 +24,5 @@ jobs:
           key: ${{ runner.os }}-playwright-${{ hashFiles('pnpm-lock.yaml') }}
       - run: pnpm exec playwright install --with-deps chromium
       - run: node scripts/explore-round.mjs "${{ inputs.url }}"
+      - run: node scripts/explore-round.mjs "https://pronostics.rts.ch/users/wmd3/round/21"
+      - run: node scripts/explore-round.mjs "https://pronostics.rts.ch/users/9Nz1"

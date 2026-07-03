@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "3 juil. | 05:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 1,
+          "away": "Algérie",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "3 juil. | 01:00",
           "stadium": "Stade de Toronto",
           "home": "Portugal",
@@ -1005,6 +1017,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "3 juil. | 05:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 2,
+          "away": "Algérie",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "3 juil. | 01:00",
           "stadium": "Stade de Toronto",
           "home": "Portugal",
@@ -1993,6 +2017,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "3 juil. | 05:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 2,
+          "away": "Algérie",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "3 juil. | 01:00",
           "stadium": "Stade de Toronto",
@@ -2995,6 +3031,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "3 juil. | 05:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 2,
+          "away": "Algérie",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "3 juil. | 01:00",
           "stadium": "Stade de Toronto",
           "home": "Portugal",
@@ -3996,6 +4044,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "3 juil. | 05:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 1,
+          "away": "Algérie",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "3 juil. | 01:00",
           "stadium": "Stade de Toronto",
           "home": "Portugal",
@@ -4996,6 +5056,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "3 juil. | 05:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 2,
+          "away": "Algérie",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "3 juil. | 01:00",
           "stadium": "Stade de Toronto",

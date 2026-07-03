@@ -33,7 +33,10 @@
       "suisseParcours": "8es de finale",
       "suisseButs": "6",
       "buteurButs": "8",
-      "matchsNuls": "8"
+      "matchsNuls": "8",
+      "lost": {
+        "suisseButs": true
+      }
     },
     "8Yak": {
       "name": "Cayan F",
@@ -41,7 +44,10 @@
       "suisseParcours": "Quarts de finale",
       "suisseButs": "5",
       "buteurButs": "8",
-      "matchsNuls": "7"
+      "matchsNuls": "7",
+      "lost": {
+        "suisseButs": true
+      }
     },
     "9Nz1": {
       "name": "Vitor Pinto",
@@ -49,7 +55,11 @@
       "suisseParcours": "8es de finale",
       "suisseButs": "4",
       "buteurButs": "12",
-      "matchsNuls": "3"
+      "matchsNuls": "3",
+      "lost": {
+        "suisseButs": true,
+        "matchsNuls": true
+      }
     },
     "7GjW": {
       "name": "Mehdi M",
@@ -57,7 +67,12 @@
       "suisseParcours": "16es de finale",
       "suisseButs": "8",
       "buteurButs": "10",
-      "matchsNuls": "6"
+      "matchsNuls": "6",
+      "lost": {
+        "suisseParcours": true,
+        "suisseButs": true,
+        "matchsNuls": true
+      }
     },
     "O52a": {
       "name": "Joao M",
@@ -65,7 +80,11 @@
       "suisseParcours": "8es de finale",
       "suisseButs": "8",
       "buteurButs": "7",
-      "matchsNuls": "6"
+      "matchsNuls": "6",
+      "lost": {
+        "suisseButs": true,
+        "matchsNuls": true
+      }
     },
     "G3EG": {
       "name": "Thomas M",
@@ -73,7 +92,10 @@
       "suisseParcours": "Quarts de finale",
       "suisseButs": "6",
       "buteurButs": "8",
-      "matchsNuls": "11"
+      "matchsNuls": "11",
+      "lost": {
+        "suisseButs": true
+      }
     }
   },
   "actuals": {

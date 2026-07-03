@@ -10,7 +10,7 @@ import { buildMatches } from './lib/matches.mjs';
 import { flagFor } from './lib/flags.mjs';
 import { toISO } from './lib/datetime.mjs';
 import { TOURNAMENT_OVER } from './lib/season.mjs';
-import { scrapePretournamentFor, computeActuals } from './lib/pretournament.mjs';
+import { scrapePretournamentFor, computeActuals, annotateLost } from './lib/pretournament.mjs';
 import { buildBracket } from './lib/bracket.mjs';
 
 const COMMUNITY_URL = 'https://pronostics.rts.ch/communities/484';
@@ -116,13 +116,14 @@ async function main() {
 
   const matches = buildMatches(byId);
   const rounds = buildBracket(matches, upcoming);
+  const actuals = computeActuals(matches, rounds);
 
   write('latest.json', buildLatest(all));
   write('timeseries.json', buildTimeseries(all));
   write('predictions.json', { byId });
   write('matches.json', { matches });
   write('fixtures.json', { upcoming });
-  write('pretournament.json', { questions: pretQuestions, byId: pretById, actuals: computeActuals(matches, rounds) });
+  write('pretournament.json', { questions: pretQuestions, byId: annotateLost(pretById, rounds, actuals), actuals });
 
   console.log(`MAJ : ${parsed.members.length} membres, ${totalPreds} pronos${membersChanged ? ' (points changés)' : ''}.`);
 }

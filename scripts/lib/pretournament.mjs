@@ -88,3 +88,65 @@ export function computeActuals(matches = [], rounds = []) {
 
   return { matchsNuls, suisseButs, suisseParcours };
 }
+
+// Détection « pari déjà perdu » (mathématiquement impossible vu l'état actuel du tournoi),
+// pour griser ces réponses sur la fiche du joueur — les paris encore en cours restent normaux.
+const PARCOURS_ORDER = ['Phase de groupes', '16es de finale', '8es de finale', 'Quarts de finale', 'Demi-finales', 'Finale'];
+
+// Affiche la plus profonde où `team` a joué, dans `rounds` (sortie de buildBracket).
+function deepestTie(team, rounds) {
+  for (let r = rounds.length - 1; r >= 0; r--) {
+    const tie = (rounds[r]?.ties || []).find((t) => t && (t.home === team || t.away === team));
+    if (tie) return { r, tie };
+  }
+  return null;
+}
+
+function isEliminated(team, rounds) {
+  const found = deepestTie(team, rounds);
+  if (!found || found.tie.actualHome == null) return false;
+  const { tie } = found;
+  const home = tie.home === team;
+  const won = home ? tie.actualHome > tie.actualAway : tie.actualAway > tie.actualHome;
+  return !won;
+}
+
+// « Jusqu'où ira l'équipe de Suisse ? » : perdu si le tour pronostiqué est déjà dépassé (encore
+// en lice à un tour plus profond) ou ne correspond pas à son tour d'élimination effectif.
+function suisseParcoursLost(predicted, rounds) {
+  const idx = PARCOURS_ORDER.indexOf(predicted);
+  if (idx < 0) return false;
+  const found = deepestTie('Suisse', rounds);
+  if (!found) return false;
+  const { r, tie } = found;
+  const depth = r + 1; // rounds[0] = 16es de finale = PARCOURS_ORDER[1] (index 0 = Phase de groupes)
+  if (tie.actualHome != null) {
+    const home = tie.home === 'Suisse';
+    const won = home ? tie.actualHome > tie.actualAway : tie.actualAway > tie.actualHome;
+    if (!won) return idx !== depth; // éliminée : perdu sauf pronostic exact
+  }
+  return idx < depth; // encore en lice : perdu si le prono est déjà dépassé
+}
+
+// Totaux qui ne peuvent que croître sur le tournoi (buts, matchs nuls) : perdu dès que le total
+// actuel dépasse le chiffre pronostiqué. « plus de 15 » n'est jamais déclaré perdu en cours de route.
+function numericLost(predicted, actual) {
+  if (predicted === 'plus de 15' || actual == null) return false;
+  const n = Number(predicted);
+  return Number.isFinite(n) && actual > n;
+}
+
+// byId: sortie de scrapePretournamentFor ; rounds: sortie de buildBracket ; actuals: computeActuals(...)
+// → même byId, chaque réponse enrichie d'un flag `lost.<key>` quand elle est déjà impossible.
+export function annotateLost(byId, rounds, actuals) {
+  const out = {};
+  for (const [id, answers] of Object.entries(byId)) {
+    const lost = {};
+    if (answers.champion && isEliminated(answers.champion, rounds)) lost.champion = true;
+    if (answers.suisseParcours && suisseParcoursLost(answers.suisseParcours, rounds)) lost.suisseParcours = true;
+    if (numericLost(answers.suisseButs, actuals.suisseButs)) lost.suisseButs = true;
+    if (numericLost(answers.matchsNuls, actuals.matchsNuls)) lost.matchsNuls = true;
+    out[id] = { ...answers, lost };
+  }
+  return out;
+}

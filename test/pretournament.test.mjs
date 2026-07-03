@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { computeActuals } from '../scripts/lib/pretournament.mjs';
+import { computeActuals, annotateLost } from '../scripts/lib/pretournament.mjs';
 
 test('matchsNuls compte tous les 0:0 (poules + phase finale)', () => {
   const matches = [
@@ -41,4 +41,54 @@ test('suisseParcours : éliminée si le tour le plus profond joué est perdu', (
     { ties: [{ placeholder: true }] },
   ];
   assert.equal(computeActuals([], rounds).suisseParcours, 'éliminée en 8es de finale');
+});
+
+test('annotateLost : champion déjà éliminé → grisé', () => {
+  const rounds = [
+    { ties: [{ home: 'Brésil', away: 'Japon', actualHome: 0, actualAway: 1 }] }, // Brésil éliminé aux 16es
+    { ties: [{ placeholder: true }] }, { ties: [{ placeholder: true }] },
+    { ties: [{ placeholder: true }] }, { ties: [{ placeholder: true }] },
+  ];
+  const byId = { a: { champion: 'Brésil' }, b: { champion: 'Japon' } };
+  const out = annotateLost(byId, rounds, {});
+  assert.equal(out.a.lost.champion, true);
+  assert.equal(out.b.lost.champion, undefined); // Japon toujours en lice → pas de flag
+});
+
+test('annotateLost : parcours Suisse encore possible vs déjà dépassé', () => {
+  const rounds = [
+    { ties: [{ home: 'Suisse', away: 'Algérie', actualHome: 2, actualAway: 0 }] },
+    { ties: [{ home: 'Suisse', away: 'Ghana', actualHome: null, actualAway: null }] }, // encore en lice au 8e
+    { ties: [{ placeholder: true }] }, { ties: [{ placeholder: true }] }, { ties: [{ placeholder: true }] },
+  ];
+  const byId = {
+    aTropCourt: { suisseParcours: '16es de finale' }, // déjà dépassé → perdu
+    bEncorePossible: { suisseParcours: 'Quarts de finale' }, // pas encore exclu → pas perdu
+  };
+  const out = annotateLost(byId, rounds, {});
+  assert.equal(out.aTropCourt.lost.suisseParcours, true);
+  assert.equal(out.bEncorePossible.lost.suisseParcours, undefined);
+});
+
+test('annotateLost : total déjà dépassé (buts/nuls, ne peut que croître) → grisé', () => {
+  const byId = {
+    a: { suisseButs: '4', matchsNuls: '10' },
+    b: { suisseButs: '4' },
+  };
+  const out = annotateLost(byId, [], { suisseButs: 9, matchsNuls: 7 });
+  assert.equal(out.a.lost.suisseButs, true); // 9 > 4
+  assert.equal(out.a.lost.matchsNuls, undefined); // 7 <= 10, encore possible
+  assert.equal(out.b.lost.suisseButs, true);
+});
+
+test('annotateLost : "plus de 15" jamais déclaré perdu en cours de route', () => {
+  const byId = { a: { matchsNuls: 'plus de 15' } };
+  const out = annotateLost(byId, [], { matchsNuls: 20 });
+  assert.equal(out.a.lost.matchsNuls, undefined);
+});
+
+test('annotateLost : meilleur buteur jamais marqué perdu (pas de stat scrapée)', () => {
+  const byId = { a: { buteurButs: '3' } };
+  const out = annotateLost(byId, [], { suisseButs: 999, matchsNuls: 999 });
+  assert.equal(out.a.lost.buteurButs, undefined);
 });

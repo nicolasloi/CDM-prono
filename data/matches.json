@@ -1,6 +1,61 @@
 {
   "matches": [
     {
+      "date": "4 juil. | 00:00",
+      "kickoff": "2026-07-04T00:00:00+02:00",
+      "home": "Argentine",
+      "away": "Cap Vert",
+      "homeFlag": "🇦🇷",
+      "awayFlag": "🇨🇻",
+      "stadium": "Stade de Miami",
+      "actualHome": null,
+      "actualAway": null,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 4,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 3,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 3,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 3,
+          "predAway": 0,
+          "points": null
+        }
+      ]
+    },
+    {
       "date": "3 juil. | 20:00",
       "kickoff": "2026-07-03T20:00:00+02:00",
       "home": "Australie",

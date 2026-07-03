@@ -4,7 +4,7 @@ import Sparkline from '../components/Sparkline.astro';
 import MovementArrow from '../components/MovementArrow.astro';
 import Trophy from '../components/Trophy.astro';
 import RankChart from '../components/RankChart.astro';
-import { getLatest, getTimeseries, keyOf } from '../data';
+import { getLatest, getTimeseries, getPretournament, keyOf } from '../data';
 import { buildColorMap, shortName } from '../../scripts/lib/members.mjs';
 import { buildRankByDay } from '../../scripts/lib/bump.mjs';
 import { topMover } from '../../scripts/lib/form.mjs';
@@ -14,7 +14,14 @@ import fixturesData from '../../data/fixtures.json';
 
 const latest = getLatest();
 const ts = getTimeseries();
+const pret = getPretournament();
 const members = latest.members;
+// Pays pronostiqué champion du monde par chaque joueur (avant-tournoi) → drapeau à côté du nom.
+const championFlag: Record<string, string> = {};
+for (const m of members) {
+  const champion = pret.byId[m.id!]?.champion;
+  if (champion) championFlag[m.id!] = flagFor(champion);
+}
 const top3 = members.slice(0, 3);
 const colorMap = buildColorMap(members.map((m) => keyOf(m)));
 const bump = buildRankByDay(ts);
@@ -33,6 +40,7 @@ for (const [id, p] of Object.entries<any>(predictionsData.byId)) {
     name: shortName(p.name),
     total: totalById[id] ?? null, // total officiel (= classement), inclut les points bonus hors match
     matches: p.matches.map((m: any) => ({ ...m, homeFlag: flagFor(m.home), awayFlag: flagFor(m.away) })),
+    pretournament: pret.byId[id] || null,
   };
 }
 const podiumOrder = [1, 0, 2];
@@ -80,7 +88,7 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
     {podiumOrder.filter((i) => top3[i]).map((i) => (
       <button class="ped" data-id={top3[i].id} style={`--h:${pedestalH[i]}px;--medal:${medal[i]}`}>
         {i === 0 && <div class="ped-trophy"><Trophy size={40} /></div>}
-        <div class="ped-name">{shortName(top3[i].name)}</div>
+        <div class="ped-name">{shortName(top3[i].name)}{championFlag[top3[i].id!] && <span class="ped-champ" title="Pronostiqué champion du monde">{championFlag[top3[i].id!]}</span>}</div>
         <div class="ped-pts">{top3[i].totalPoints}<span>pts</span></div>
         <div class="ped-base">
           <span class="ped-rank">{top3[i].rank}</span>
@@ -110,7 +118,7 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
         <span class="rk">{m.rank}</span>
         <span class="dot"></span>
         <span class="who">
-          <span class="nm">{shortName(m.name)}</span>
+          <span class="nm">{shortName(m.name)}{championFlag[m.id!] && <span class="champ" title="Pronostiqué champion du monde">{championFlag[m.id!]}</span>}</span>
           <span class="see">Voir ses pronos →</span>
         </span>
         <span class="spark"><Sparkline points={ts[keyOf(m)] || []} w={84} h={26} color={colorMap[keyOf(m)]} /></span>
@@ -138,11 +146,15 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
     <div id="drawer-body"></div>
   </aside>
 
-  <script is:inline define:vars={{ preds }}>
+  <script is:inline define:vars={{ preds, pretQuestions: pret.questions, pretActuals: pret.actuals }}>
     window.__PREDS = preds;
+    window.__PRET_Q = pretQuestions;
+    window.__PRET_ACTUALS = pretActuals;
   </script>
   <script>
     const PREDS = (window as any).__PREDS || {};
+    const PRET_Q = (window as any).__PRET_Q || [];
+    const PRET_ACTUALS = (window as any).__PRET_ACTUALS || {};
     const drawer = document.getElementById('drawer')!;
     const backdrop = document.getElementById('backdrop')!;
     const body = document.getElementById('drawer-body')!;
@@ -164,6 +176,36 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
             <span class="m-team r">${esc(m.away)}<span class="fl">${esc(m.awayFlag)}</span></span>
           </div>
           <div class="m-bot"><span class="m-real">${hasScore ? `Résultat <b>${m.actualHome}–${m.actualAway}</b>` : '<b>En cours</b>'}</span><span class="m-stad">${esc(m.stadium)}</span></div>
+        </div>`;
+    }
+
+    // Réponses "actuelles" affichables (dérivées des résultats déjà connus) par clé de question.
+    // buteurButs volontairement absent : pas de stat buteur individuel scrapée, donc pas de valeur honnête.
+    function actualFor(key: string) {
+      if (key === 'matchsNuls' && PRET_ACTUALS.matchsNuls != null) return String(PRET_ACTUALS.matchsNuls);
+      if (key === 'suisseButs' && PRET_ACTUALS.suisseButs != null) return String(PRET_ACTUALS.suisseButs);
+      if (key === 'suisseParcours' && PRET_ACTUALS.suisseParcours) return PRET_ACTUALS.suisseParcours;
+      return null;
+    }
+    function pretBlock(p: any) {
+      const answers = p.pretournament;
+      if (!answers || !PRET_Q.length) return '';
+      const rows = PRET_Q.map((q: any) => {
+        const val = answers[q.key];
+        if (val == null) return '';
+        const actual = actualFor(q.key);
+        return `
+          <div class="pq">
+            <span class="pq-q">${esc(q.question)}</span>
+            <span class="pq-a">${esc(val)}</span>
+            ${actual ? `<span class="pq-actual">actuel : <b>${esc(actual)}</b></span>` : ''}
+          </div>`;
+      }).join('');
+      if (!rows) return '';
+      return `
+        <div class="d-pret">
+          <p class="d-pret-h">🎲 Pronostics d'avant-tournoi</p>
+          ${rows}
         </div>`;
     }
 
@@ -202,6 +244,7 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
           </div>
           ${breakdown}
         </div>`;
+      body.innerHTML += pretBlock(p);
       body.innerHTML += `
         ${p.matches.length ? `<div class="d-list">${p.matches.map(matchRow).join('')}</div>` : '<p class="dim" style="padding:18px">Aucun prono révélé pour l’instant.</p>'}`;
       drawer.classList.add('open');
@@ -326,6 +369,7 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
     .ped:hover { transform: translateY(-6px); }
     .ped-trophy { margin-bottom: 6px; filter: drop-shadow(0 6px 16px rgba(232,198,106,.4)); }
     .ped-name { font-weight: 700; font-size: clamp(13px, 1.6vw, 16px); }
+    .ped-champ { margin-left: 5px; font-size: .95em; }
     .ped-pts { font-weight: 900; color: var(--gold); font-size: clamp(22px, 3.4vw, 34px); line-height: 1.1; }
     .ped-pts span { font-size: 12px; color: var(--text-dim); font-weight: 700; margin-left: 3px; }
     .ped-base { height: var(--h); margin-top: 8px; border-radius: 16px 16px 0 0; position: relative;
@@ -351,6 +395,7 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
     .lbrow .who { display: flex; flex-direction: row; align-items: center; gap: 10px; min-width: 0; }
     .lbrow .nm { font-weight: 700; font-size: clamp(16px, 2.1vw, 21px); display: flex; align-items: center; gap: 8px; }
     .lbrow .nm .adm { font-style: normal; font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--bg); background: var(--gold); padding: 2px 6px; border-radius: 20px; font-weight: 800; }
+    .lbrow .nm .champ { font-size: 15px; line-height: 1; filter: drop-shadow(0 1px 2px rgba(0,0,0,.3)); }
     .lbrow .see { font-size: 12px; color: var(--text-dim); opacity: 0; transform: translateX(-4px); transition: .15s; white-space: nowrap; }
     .lbrow:hover .see { opacity: 1; transform: none; color: var(--gold); }
     .lbrow .spark { display: flex; }
@@ -408,6 +453,13 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
     .dbk-bar span { display: block; height: 100%; border-radius: 6px; min-width: 2px; transition: width .45s cubic-bezier(.2,.7,.2,1); }
     .dbk-v { text-align: right; font-weight: 800; font-size: 12px; }
     .dbk-v small { color: var(--text-dim); font-weight: 600; }
+    .d-pret { padding: 16px 22px; border-bottom: 1px dashed var(--line); display: flex; flex-direction: column; gap: 9px; }
+    .d-pret-h { font: 800 11px/1 var(--font); letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin: 0 0 2px; }
+    .pq { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; font-size: 12.5px; }
+    .pq-q { color: var(--text-dim); flex: 1 1 100%; }
+    .pq-a { font-weight: 800; color: var(--text); background: var(--surface); padding: 2px 9px; border-radius: 20px; }
+    .pq-actual { color: var(--text-dim); }
+    .pq-actual b { color: #51e39a; }
     .d-list { padding: 14px 16px 30px; display: flex; flex-direction: column; gap: 10px; }
     .m { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; }
     .m-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }

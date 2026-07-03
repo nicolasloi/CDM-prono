@@ -22,17 +22,16 @@ const FIXED_COLORS = {
 };
 
 // Map clé→couleur stable. Priorité à FIXED_COLORS (couleur signature figée par joueur) ;
-// repli déterministe (clés triées, palette restante) pour un id encore inconnu.
+// repli déterministe (clés triées, cycle sur la palette) pour un id encore inconnu. Pas de
+// recherche de couleur "libre" : avec 7 couleurs déjà toutes prises par FIXED_COLORS, un id
+// inconnu ne peut de toute façon pas en obtenir une exclusive — mieux vaut cycler simplement
+// que boucler indéfiniment à chercher une couleur qui n'existe pas.
 export function buildColorMap(keys) {
   const sorted = [...new Set(keys)].sort();
-  const used = new Set(Object.values(FIXED_COLORS));
   const map = {};
   let next = 0;
   for (const k of sorted) {
-    if (FIXED_COLORS[k]) { map[k] = FIXED_COLORS[k]; continue; }
-    while (used.has(PLAYER_COLORS[next % PLAYER_COLORS.length])) next++;
-    map[k] = PLAYER_COLORS[next % PLAYER_COLORS.length];
-    next++;
+    map[k] = FIXED_COLORS[k] || PLAYER_COLORS[next++ % PLAYER_COLORS.length];
   }
   return map;
 }

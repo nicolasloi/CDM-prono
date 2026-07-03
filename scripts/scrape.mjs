@@ -10,6 +10,8 @@ import { buildMatches } from './lib/matches.mjs';
 import { flagFor } from './lib/flags.mjs';
 import { toISO } from './lib/datetime.mjs';
 import { TOURNAMENT_OVER } from './lib/season.mjs';
+import { scrapePretournamentFor, computeActuals } from './lib/pretournament.mjs';
+import { buildBracket } from './lib/bracket.mjs';
 
 const COMMUNITY_URL = 'https://pronostics.rts.ch/communities/484';
 const DATA = new URL('../data/', import.meta.url);
@@ -79,7 +81,25 @@ async function main() {
     : (prevFix?.upcoming || []);
   const fixChanged = JSON.stringify(upcoming) !== JSON.stringify(prevFix?.upcoming);
 
-  if (!membersChanged && !predsChanged && !fixChanged) {
+  // Pronostics d'avant-tournoi ("Questions supplémentaires") : figés une fois pour toutes après
+  // la date-limite (11 juin), donc on ne scrape QUE les membres qu'on n'a pas encore (jamais de
+  // re-scrape inutile à chaque passage du cron). Best-effort, comme les pronos par match.
+  const prevPret = readJSON(fileUrl('pretournament.json'));
+  const missingPret = parsed.members.filter((m) => m.id && !prevPret?.byId?.[m.id]);
+  let pretById = { ...(prevPret?.byId || {}) };
+  let pretQuestions = prevPret?.questions || [];
+  if (missingPret.length) {
+    try {
+      const res = await scrapePretournamentFor(missingPret);
+      pretById = { ...pretById, ...res.byId };
+      pretQuestions = res.questions.length ? res.questions : pretQuestions;
+    } catch (e) {
+      console.error(`Scrape pronos avant-tournoi échoué (bonus ignoré) : ${e.message}`);
+    }
+  }
+  const pretChanged = JSON.stringify(pretById) !== JSON.stringify(prevPret?.byId || {});
+
+  if (!membersChanged && !predsChanged && !fixChanged && !pretChanged) {
     console.log('Rien de neuf — aucun fichier réécrit.');
     return;
   }
@@ -94,11 +114,15 @@ async function main() {
     all.push({ takenAt, ...parsed });
   }
 
+  const matches = buildMatches(byId);
+  const rounds = buildBracket(matches, upcoming);
+
   write('latest.json', buildLatest(all));
   write('timeseries.json', buildTimeseries(all));
   write('predictions.json', { byId });
-  write('matches.json', { matches: buildMatches(byId) });
+  write('matches.json', { matches });
   write('fixtures.json', { upcoming });
+  write('pretournament.json', { questions: pretQuestions, byId: pretById, actuals: computeActuals(matches, rounds) });
 
   console.log(`MAJ : ${parsed.members.length} membres, ${totalPreds} pronos${membersChanged ? ' (points changés)' : ''}.`);
 }

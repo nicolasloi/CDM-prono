@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "4 juil. | 03:30",
+          "stadium": "Stade de Kansas City",
+          "home": "Colombie",
+          "predHome": 2,
+          "away": "Ghana",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "4 juil. | 00:00",
           "stadium": "Stade de Miami",
           "home": "Argentine",
@@ -1041,6 +1053,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "4 juil. | 03:30",
+          "stadium": "Stade de Kansas City",
+          "home": "Colombie",
+          "predHome": 0,
+          "away": "Ghana",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "4 juil. | 00:00",
           "stadium": "Stade de Miami",
           "home": "Argentine",
@@ -2065,6 +2089,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "4 juil. | 03:30",
+          "stadium": "Stade de Kansas City",
+          "home": "Colombie",
+          "predHome": 2,
+          "away": "Ghana",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "4 juil. | 00:00",
           "stadium": "Stade de Miami",
@@ -3103,6 +3139,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "4 juil. | 03:30",
+          "stadium": "Stade de Kansas City",
+          "home": "Colombie",
+          "predHome": 2,
+          "away": "Ghana",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "4 juil. | 00:00",
           "stadium": "Stade de Miami",
           "home": "Argentine",
@@ -4140,6 +4188,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "4 juil. | 03:30",
+          "stadium": "Stade de Kansas City",
+          "home": "Colombie",
+          "predHome": 2,
+          "away": "Ghana",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "4 juil. | 00:00",
           "stadium": "Stade de Miami",
           "home": "Argentine",
@@ -5176,6 +5236,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "4 juil. | 03:30",
+          "stadium": "Stade de Kansas City",
+          "home": "Colombie",
+          "predHome": 2,
+          "away": "Ghana",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "4 juil. | 00:00",
           "stadium": "Stade de Miami",

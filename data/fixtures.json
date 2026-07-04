@@ -1,13 +1,76 @@
 {
   "upcoming": [
     {
-      "home": "Colombie",
-      "away": "Ghana",
-      "homeFlag": "🇨🇴",
-      "awayFlag": "🇬🇭",
-      "stadium": "Stade de Kansas City",
-      "date": "4 juil. | 03:30",
-      "kickoff": "2026-07-04T03:30:00+02:00"
+      "home": "Canada",
+      "away": "Maroc",
+      "homeFlag": "🇨🇦",
+      "awayFlag": "🇲🇦",
+      "stadium": "Stade de Houston",
+      "date": "4 juil. | 19:00",
+      "kickoff": "2026-07-04T19:00:00+02:00"
+    },
+    {
+      "home": "Paraguay",
+      "away": "France",
+      "homeFlag": "🇵🇾",
+      "awayFlag": "🇫🇷",
+      "stadium": "Stade de Philadelphie",
+      "date": "4 juil. | 23:00",
+      "kickoff": "2026-07-04T23:00:00+02:00"
+    },
+    {
+      "home": "Brésil",
+      "away": "Norvège",
+      "homeFlag": "🇧🇷",
+      "awayFlag": "🇳🇴",
+      "stadium": "Stade de New York New Jersey",
+      "date": "5 juil. | 22:00",
+      "kickoff": "2026-07-05T22:00:00+02:00"
+    },
+    {
+      "home": "Mexique",
+      "away": "Angleterre",
+      "homeFlag": "🇲🇽",
+      "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "stadium": "Stade de Mexico",
+      "date": "6 juil. | 02:00",
+      "kickoff": "2026-07-06T02:00:00+02:00"
+    },
+    {
+      "home": "Portugal",
+      "away": "Espagne",
+      "homeFlag": "🇵🇹",
+      "awayFlag": "🇪🇸",
+      "stadium": "Stade de Dallas",
+      "date": "6 juil. | 21:00",
+      "kickoff": "2026-07-06T21:00:00+02:00"
+    },
+    {
+      "home": "USA",
+      "away": "Belgique",
+      "homeFlag": "🇺🇸",
+      "awayFlag": "🇧🇪",
+      "stadium": "Stade de Seattle",
+      "date": "7 juil. | 02:00",
+      "kickoff": "2026-07-07T02:00:00+02:00"
+    },
+    {
+      "home": "Argentine",
+      "away": "Egypte",
+      "homeFlag": "🇦🇷",
+      "awayFlag": "🇪🇬",
+      "stadium": "Stade d'Atlanta",
+      "date": "7 juil. | 18:00",
+      "kickoff": "2026-07-07T18:00:00+02:00"
+    },
+    {
+      "home": "Suisse",
+      "away": "Colombie",
+      "homeFlag": "🇨🇭",
+      "awayFlag": "🇨🇴",
+      "stadium": "BC Place de Vancouver",
+      "date": "7 juil. | 22:00",
+      "kickoff": "2026-07-07T22:00:00+02:00"
     }
   ]
 }

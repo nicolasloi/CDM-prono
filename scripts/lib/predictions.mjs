@@ -33,6 +33,38 @@ function extractInPage() {
 // Clé indépendante du fuseau horaire (le profil RTS affiche l'heure dans le fuseau du navigateur).
 const matchKey = (m) => `${m.home}|${m.away}`;
 
+// La page de profil par défaut (/users/<id>, sans /round/N) affiche le tour que RTS considère
+// "actuel" — mais dès qu'un tour se termine, RTS bascule cet affichage par défaut sur le tour
+// SUIVANT (souvent encore vide, aucun match joué). Sans repli, les derniers matchs du tour qui
+// vient de finir (ex. le dernier 16e de finale) ne sont alors plus jamais récupérés : la page par
+// défaut ne les montre plus, et on ne les redemande jamais explicitement. Fenêtres officielles
+// (mêmes dates que le sélecteur de tour du site) → on revérifie systématiquement ces tours-là en
+// plus de la page par défaut, ce qui couvre aussi TOUTES les bascules futures (8es→quarts, etc.),
+// pas seulement celle d'aujourd'hui.
+const ROUND_WINDOWS = [
+  { round: 22, start: '2026-06-11', end: '2026-06-18' }, // 1ère journée
+  { round: 23, start: '2026-06-18', end: '2026-06-24' }, // 2e journée
+  { round: 24, start: '2026-06-24', end: '2026-06-28' }, // 3e journée
+  { round: 25, start: '2026-06-28', end: '2026-07-04' }, // 16es de finale
+  { round: 26, start: '2026-07-04', end: '2026-07-07' }, // 8es de finale
+  { round: 27, start: '2026-07-09', end: '2026-07-12' }, // Quarts de finale
+  { round: 28, start: '2026-07-14', end: '2026-07-15' }, // Demi-finales
+  { round: 29, start: '2026-07-18', end: '2026-07-18' }, // Finale 3e place
+  { round: 30, start: '2026-07-19', end: '2026-07-19' }, // Finale
+];
+
+// Tours dont la fenêtre officielle touche `now` à ±1 jour près (couvre la bascule de tour ET
+// d'éventuels résultats qui arrivent après la fin officielle de la fenêtre).
+export function roundsToRecheck(now = new Date()) {
+  const DAY = 86400000;
+  const t = now.getTime();
+  return ROUND_WINDOWS.filter((w) => {
+    const s = Date.parse(`${w.start}T00:00:00Z`) - DAY;
+    const e = Date.parse(`${w.end}T23:59:59Z`) + DAY;
+    return t >= s && t <= e;
+  }).map((w) => w.round);
+}
+
 // Fusionne l'historique stocké avec le scrape courant (le profil RTS ne montre qu'une fenêtre glissante).
 // Les matchs frais écrasent les anciens (mise à jour des scores/points en direct), les anciens hors-fenêtre sont conservés.
 export function mergePredictions(prevById = {}, freshById = {}) {
@@ -53,18 +85,31 @@ export function mergePredictions(prevById = {}, freshById = {}) {
   return out;
 }
 
+async function scrapeOnePage(page, url) {
+  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+  await page.waitForFunction(() => /\d{1,2} \S+ \| \d{1,2}:\d{2}/.test(document.body.innerText), { timeout: 15000 }).catch(() => {});
+  return page.evaluate(extractInPage);
+}
+
 // members: [{ id, name }] → { byId: { <id>: { name, matches:[...] } } } (matchs joués, plus récent d'abord)
 export async function scrapePredictions(members) {
   const browser = await chromium.launch();
   const ctx = await browser.newContext({ userAgent: 'Mozilla/5.0 MarvelousBot', timezoneId: 'Europe/Zurich', locale: 'fr-CH' });
   const byId = {};
   const fixMap = new Map(); // matchs à venir (pronos encore masqués) = calendrier
+  const recheck = roundsToRecheck();
   for (const mem of members) {
     const page = await ctx.newPage();
     try {
-      await page.goto(`https://pronostics.rts.ch/users/${mem.id}`, { waitUntil: 'domcontentloaded', timeout: 30000 });
-      await page.waitForFunction(() => /\d{1,2} \S+ \| \d{1,2}:\d{2}/.test(document.body.innerText), { timeout: 15000 }).catch(() => {});
-      const raw = await page.evaluate(extractInPage);
+      // Page par défaut (tour "actuel" selon RTS) + tours de la fenêtre courante explicitement
+      // redemandés (cf. commentaire sur ROUND_WINDOWS) : dédoublonné par date+équipes.
+      const rawByKey = new Map();
+      const addAll = (raw) => { for (const x of raw) rawByKey.set(`${x.date}|${x.home}|${x.away}`, x); };
+      addAll(await scrapeOnePage(page, `https://pronostics.rts.ch/users/${mem.id}`));
+      for (const r of recheck) {
+        addAll(await scrapeOnePage(page, `https://pronostics.rts.ch/users/${mem.id}/round/${r}`));
+      }
+      const raw = [...rawByKey.values()];
       // On garde un match dès que les pronos sont visibles (RTS ne les révèle qu'au coup d'envoi)
       // — donc un match « en cours » apparaît tout de suite, sans attendre le score final.
       const matches = raw

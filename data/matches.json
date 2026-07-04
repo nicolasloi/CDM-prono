@@ -1,6 +1,61 @@
 {
   "matches": [
     {
+      "date": "4 juil. | 19:00",
+      "kickoff": "2026-07-04T19:00:00+02:00",
+      "home": "Canada",
+      "away": "Maroc",
+      "homeFlag": "🇨🇦",
+      "awayFlag": "🇲🇦",
+      "stadium": "Stade de Houston",
+      "actualHome": null,
+      "actualAway": null,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 0,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 1,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 0,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 1,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 1,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 1,
+          "predAway": 2,
+          "points": null
+        }
+      ]
+    },
+    {
       "date": "4 juil. | 03:30",
       "kickoff": "2026-07-04T03:30:00+02:00",
       "home": "Colombie",

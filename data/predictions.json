@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "4 juil. | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Canada",
+          "predHome": 0,
+          "away": "Maroc",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "4 juil. | 03:30",
           "stadium": "Stade de Kansas City",
           "home": "Colombie",
@@ -1053,6 +1065,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "4 juil. | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Canada",
+          "predHome": 1,
+          "away": "Maroc",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "4 juil. | 03:30",
           "stadium": "Stade de Kansas City",
           "home": "Colombie",
@@ -2089,6 +2113,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "4 juil. | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Canada",
+          "predHome": 0,
+          "away": "Maroc",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "4 juil. | 03:30",
           "stadium": "Stade de Kansas City",
@@ -3139,6 +3175,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "4 juil. | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Canada",
+          "predHome": 1,
+          "away": "Maroc",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "4 juil. | 03:30",
           "stadium": "Stade de Kansas City",
           "home": "Colombie",
@@ -4188,6 +4236,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "4 juil. | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Canada",
+          "predHome": 1,
+          "away": "Maroc",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "4 juil. | 03:30",
           "stadium": "Stade de Kansas City",
           "home": "Colombie",
@@ -5236,6 +5296,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "4 juil. | 19:00",
+          "stadium": "Stade de Houston",
+          "home": "Canada",
+          "predHome": 1,
+          "away": "Maroc",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "4 juil. | 03:30",
           "stadium": "Stade de Kansas City",

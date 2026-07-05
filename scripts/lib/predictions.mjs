@@ -116,10 +116,17 @@ export async function scrapePredictions(members) {
         .filter((x) => x.predHome !== null && x.predAway !== null)
         .sort((a, b) => sortKey(b.date) - sortKey(a.date));
       byId[mem.id] = { name: mem.name, matches };
-      // Matchs à venir : aucun résultat encore (coup d'envoi pas passé). Commun à tous → on déduplique.
-      // NB : on ne se fie pas au prono masqué (un membre peut juste ne pas avoir pronostiqué un match déjà joué).
+      // Matchs à venir : coup d'envoi pas encore passé. Commun à tous → on déduplique.
+      // Un match « pas de résultat » (!x.played) ne veut PAS dire « pas commencé » : une fois le
+      // coup d'envoi donné, RTS révèle aussitôt le prono (predHome/predAway) bien avant le score
+      // final — sans le test sur predHome, un match EN COURS réapparaissait à tort dans « à venir »
+      // en plus de sa carte « en cours » (doublon visible sur la page Matchs). On exige donc aussi
+      // qu'AUCUN prono ne soit encore révélé pour ce match (le sien inclus).
+      // NB : on ne se fie qu'au prono DE CE membre ici ; un membre qui n'a simplement pas pronostiqué
+      // un match déjà en cours/joué ne doit pas le faire réapparaître comme « à venir » — d'où le
+      // test combiné avec !x.played (déjà joué → jamais « à venir », quel que soit predHome).
       for (const x of raw) {
-        if (!x.played && x.home && x.away) {
+        if (!x.played && x.predHome == null && x.predAway == null && x.home && x.away) {
           const k = `${x.home}|${x.away}`;
           if (!fixMap.has(k)) fixMap.set(k, { home: x.home, away: x.away, stadium: x.stadium, date: x.date });
         }

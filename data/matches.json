@@ -8,50 +8,50 @@
       "homeFlag": "🇧🇷",
       "awayFlag": "🇳🇴",
       "stadium": "Stade de New York New Jersey",
-      "actualHome": null,
-      "actualAway": null,
+      "actualHome": 1,
+      "actualAway": 2,
       "picks": [
-        {
-          "id": "O52a",
-          "name": "Joao M",
-          "predHome": 2,
-          "predAway": 1,
-          "points": null
-        },
-        {
-          "id": "8Yak",
-          "name": "Cayan F",
-          "predHome": 0,
-          "predAway": 2,
-          "points": null
-        },
         {
           "id": "wmd3",
           "name": "Nicolas L",
           "predHome": 1,
           "predAway": 2,
-          "points": null
+          "points": 20
         },
         {
           "id": "9Nz1",
           "name": "Vitor Pinto",
           "predHome": 1,
           "predAway": 2,
-          "points": null
+          "points": 20
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 0,
+          "predAway": 2,
+          "points": 12
+        },
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 0
         },
         {
           "id": "7GjW",
           "name": "Mehdi M",
           "predHome": 2,
           "predAway": 1,
-          "points": null
+          "points": 0
         },
         {
           "id": "G3EG",
           "name": "Thomas M",
           "predHome": 2,
           "predAway": 0,
-          "points": null
+          "points": 0
         }
       ]
     },

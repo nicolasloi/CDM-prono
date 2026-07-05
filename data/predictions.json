@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "5 juil. | 22:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Brésil",
+          "predHome": 2,
+          "away": "Norvège",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "4 juil. | 23:00",
           "stadium": "Stade de Philadelphie",
           "home": "Paraguay",
@@ -1077,6 +1089,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "5 juil. | 22:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Brésil",
+          "predHome": 0,
+          "away": "Norvège",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "4 juil. | 23:00",
           "stadium": "Stade de Philadelphie",
           "home": "Paraguay",
@@ -2137,6 +2161,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "5 juil. | 22:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Brésil",
+          "predHome": 1,
+          "away": "Norvège",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "4 juil. | 23:00",
           "stadium": "Stade de Philadelphie",
@@ -3211,6 +3247,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "5 juil. | 22:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Brésil",
+          "predHome": 1,
+          "away": "Norvège",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "4 juil. | 23:00",
           "stadium": "Stade de Philadelphie",
           "home": "Paraguay",
@@ -4284,6 +4332,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "5 juil. | 22:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Brésil",
+          "predHome": 2,
+          "away": "Norvège",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "4 juil. | 23:00",
           "stadium": "Stade de Philadelphie",
           "home": "Paraguay",
@@ -5356,6 +5416,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "5 juil. | 22:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Brésil",
+          "predHome": 2,
+          "away": "Norvège",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "4 juil. | 23:00",
           "stadium": "Stade de Philadelphie",

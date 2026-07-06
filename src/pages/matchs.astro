@@ -12,13 +12,16 @@ const all = matchesData.matches as any[];
 const fxKey = (f: any) => { const m = /^2026-(0[67])-(\d{2})T(\d{2}):(\d{2})/.exec(f.kickoff || ''); return m ? Number(m[1] + m[2] + m[3] + m[4]) : Infinity; };
 const nearFixtures = (((fixturesData as any).upcoming || []) as any[])
   .map((f) => ({ kind: 'fixture', home: f.home, away: f.away, homeFlag: f.homeFlag, awayFlag: f.awayFlag, stadium: f.stadium, when: whenLabel(f), kickoff: f.kickoff }));
+// RTS finit par révéler ces mêmes affiches (une fois les 2 16es d'origine joués, le tableau les
+// projette déjà avec les noms exacts) → on déduplique par affiche pour ne jamais les compter deux fois.
+const nearKeys = new Set(nearFixtures.map((f) => `${f.home}|${f.away}`));
 
 // Phase finale au-delà des 16es (8es→finale) : construite automatiquement à partir du tableau
 // (mêmes données que /tableau), donc se met à jour toute seule dès qu'un tour se précise —
 // équipes connues si les 2 affiches d'origine sont jouées, sinon « Vainq. X · Y », sinon vide.
 const koRounds = buildBracket(all, (fixturesData as any).upcoming || []).slice(1);
 const koFixtures = koRounds.flatMap((r: any) => r.ties
-  .filter((t: any) => t.upcoming)
+  .filter((t: any) => t.upcoming && !(t.home && t.away && nearKeys.has(`${t.home}|${t.away}`)))
   .map((t: any) => ({ kind: 'ko', roundName: r.name, home: t.home, away: t.away, homeFlag: t.homeFlag, awayFlag: t.awayFlag, homeFrom: t.homeFrom, awayFrom: t.awayFrom, when: t.when, kickoff: t.kickoff })));
 
 const upcoming = [...nearFixtures, ...koFixtures].sort((a, b) => fxKey(a) - fxKey(b));

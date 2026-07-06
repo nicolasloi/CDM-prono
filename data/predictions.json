@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "6 juil. | 21:00",
+          "stadium": "Stade de Dallas",
+          "home": "Portugal",
+          "predHome": 0,
+          "away": "Espagne",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "6 juil. | 03:00",
           "stadium": "Stade de Mexico",
           "home": "Mexique",
@@ -1101,6 +1113,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "6 juil. | 21:00",
+          "stadium": "Stade de Dallas",
+          "home": "Portugal",
+          "predHome": 1,
+          "away": "Espagne",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "6 juil. | 03:00",
           "stadium": "Stade de Mexico",
           "home": "Mexique",
@@ -2185,6 +2209,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "6 juil. | 21:00",
+          "stadium": "Stade de Dallas",
+          "home": "Portugal",
+          "predHome": 1,
+          "away": "Espagne",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "6 juil. | 03:00",
           "stadium": "Stade de Mexico",
@@ -3283,6 +3319,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "6 juil. | 21:00",
+          "stadium": "Stade de Dallas",
+          "home": "Portugal",
+          "predHome": 2,
+          "away": "Espagne",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "6 juil. | 03:00",
           "stadium": "Stade de Mexico",
           "home": "Mexique",
@@ -4380,6 +4428,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "6 juil. | 21:00",
+          "stadium": "Stade de Dallas",
+          "home": "Portugal",
+          "predHome": 0,
+          "away": "Espagne",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "6 juil. | 03:00",
           "stadium": "Stade de Mexico",
           "home": "Mexique",
@@ -5476,6 +5536,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "6 juil. | 21:00",
+          "stadium": "Stade de Dallas",
+          "home": "Portugal",
+          "predHome": 1,
+          "away": "Espagne",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "6 juil. | 03:00",
           "stadium": "Stade de Mexico",

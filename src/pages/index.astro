@@ -183,6 +183,15 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
       if (key === 'suisseParcours' && PRET_ACTUALS.suisseParcours) return PRET_ACTUALS.suisseParcours;
       return null;
     }
+    // Libellés courts pour l'affichage (la question RTS d'origine est bien plus longue) ;
+    // repli sur la question complète pour une éventuelle clé inconnue (nouvelle question RTS).
+    const PQ_LABEL: Record<string, string> = {
+      champion: '🏆 Champion',
+      suisseParcours: '🇨🇭 Parcours Suisse',
+      suisseButs: '⚽ Buts Suisse',
+      buteurButs: '🥅 Buts meilleur buteur',
+      matchsNuls: '🤝 Matchs 0:0',
+    };
     function pretBlock(p: any) {
       const answers = p.pretournament;
       if (!answers || !PRET_Q.length) return '';
@@ -192,17 +201,18 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
         const actual = actualFor(q.key);
         const lost = !!answers.lost?.[q.key]; // déjà mathématiquement impossible → grisé
         const flag = q.key === 'champion' && answers.championFlag ? answers.championFlag + ' ' : '';
+        const label = PQ_LABEL[q.key] || q.question;
         return `
           <div class="pq${lost ? ' lost' : ''}">
-            <span class="pq-q">${esc(q.question)}</span>
-            <span class="pq-a">${flag}${esc(val)}${lost ? ' <i class="pq-x">✗ perdu</i>' : ''}</span>
-            ${actual && !lost ? `<span class="pq-actual">actuel : <b>${esc(actual)}</b></span>` : ''}
+            <span class="pq-q">${esc(label)}</span>
+            <span class="pq-a">${flag}${esc(val)}${lost ? ' <i class="pq-x">✗</i>' : ''}</span>
+            ${actual && !lost ? `<span class="pq-actual" title="Valeur actuelle">→ ${esc(actual)}</span>` : ''}
           </div>`;
       }).join('');
       if (!rows) return '';
       return `
         <div class="d-pret">
-          <p class="d-pret-h">🎲 Pronostics d'avant-tournoi</p>
+          <p class="d-pret-h">🎲 Avant-tournoi</p>
           ${rows}
         </div>`;
     }
@@ -449,13 +459,12 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
     .dbk-bar span { display: block; height: 100%; border-radius: 6px; min-width: 2px; transition: width .45s cubic-bezier(.2,.7,.2,1); }
     .dbk-v { text-align: right; font-weight: 800; font-size: 12px; }
     .dbk-v small { color: var(--text-dim); font-weight: 600; }
-    .d-pret { padding: 16px 22px; border-bottom: 1px dashed var(--line); display: flex; flex-direction: column; gap: 9px; }
+    .d-pret { padding: 12px 22px; border-bottom: 1px dashed var(--line); display: flex; flex-direction: column; gap: 5px; }
     .d-pret-h { font: 800 11px/1 var(--font); letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin: 0 0 2px; }
-    .pq { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; font-size: 12.5px; }
-    .pq-q { color: var(--text-dim); flex: 1 1 100%; }
-    .pq-a { font-weight: 800; color: var(--text); background: var(--surface); padding: 2px 9px; border-radius: 20px; }
-    .pq-actual { color: var(--text-dim); }
-    .pq-actual b { color: #51e39a; }
+    .pq { display: flex; align-items: center; gap: 7px; font-size: 12px; line-height: 1.3; }
+    .pq-q { color: var(--text-dim); flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .pq-a { flex: 0 0 auto; font-weight: 800; color: var(--text); background: var(--surface); padding: 1px 8px; border-radius: 20px; white-space: nowrap; }
+    .pq-actual { flex: 0 0 auto; color: #51e39a; font-weight: 700; white-space: nowrap; }
     /* Pari déjà mathématiquement impossible (équipe éliminée, total déjà dépassé...) : grisé + tag explicite */
     .pq.lost .pq-a { color: var(--text-dim); background: transparent; text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--text-dim) 60%, transparent); font-weight: 700; }
     .pq-x { font-style: normal; font-size: 10.5px; font-weight: 800; color: var(--red); text-decoration: none; margin-left: 2px; }

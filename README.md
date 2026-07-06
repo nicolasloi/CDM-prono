@@ -12,8 +12,9 @@ Site statique qui scrape le jeu de pronostics [RTS](https://pronostics.rts.ch/) 
 - **Classement** live (podium, points, sparklines, couleur signature par joueur).
 - **« C'est moi »** : marque ton nom → ta ligne et ta courbe sont mises en avant (mémorisé sur ton appareil).
 - **Évolution des places** : un *bump chart* montrant qui était à quelle place, jour par jour.
-- **Fiche joueur** (clic sur un nom) : tous ses pronos match par match + ses stats (exacts, % de réussite).
-- **Matchs** : tous les matchs récents avec **qui a misé quoi**, badge « en cours » dès le coup d'envoi, 👑 sur le meilleur prono.
+- **Fiche joueur** (clic sur un nom) : tous ses pronos match par match + ses stats (exacts, % de réussite), plus ses **pronostics d'avant-tournoi** (champion, parcours de la Suisse, etc.) avec la valeur réelle en regard et un flag sur ceux déjà mathématiquement perdus.
+- **Matchs** : tous les matchs récents avec **qui a misé quoi**, badge « en cours » dès le coup d'envoi, 👑 sur le meilleur prono, onglet **« À venir »** qui couvre toute la phase finale restante (8es → finale), même les tours dont les équipes ne sont pas encore connues.
+- **Tableau** : bracket interactif des 16es à la finale façon BBC — vainqueurs qui avancent automatiquement dans la case suivante, tirs au but pris en compte, dates officielles.
 - **Prochain match + compte à rebours** et **joueur en forme** (gain sur 24h).
 - **Installable** sur mobile (PWA) : icône sur l'écran d'accueil, plein écran, hors-ligne.
 
@@ -22,16 +23,19 @@ Site statique qui scrape le jeu de pronostics [RTS](https://pronostics.rts.ch/) 
 Aucune base de données, aucun serveur, aucun identifiant — tout est **public et gratuit**.
 
 ```
-GitHub Actions (cron)
+Ping externe (cron-job.org, ~10 min) ─┐
+GitHub Actions workflow_dispatch  ←────┘   (filet de secours natif : 1×/heure)
   └─ scripts/scrape.mjs
        ├─ classement : fetch du HTML public de la communauté RTS
        ├─ pronos par joueur : Playwright (rendus en JS) sur les profils publics
+       ├─ pronostics d'avant-tournoi : idem, une seule fois par joueur (figés après le 11 juin)
        └─ écrit data/*.json  (seulement si quelque chose a changé)
-  └─ commit (cdm-bot) → build Astro → déploiement GitHub Pages
+  └─ commit (cdm-bot) → build Astro → déploiement GitHub Pages (avec re-essais automatiques)
 ```
 
 - Les pronos d'un joueur ne sont publics qu'**au coup d'envoi** ; on **accumule** l'historique au fil des relevés.
-- Rafraîchissement : **toutes les 5 min pendant les matchs** (18h–09h), **toutes les heures** sinon.
+- Rafraîchissement : le cron natif GitHub (`schedule:`) s'étant montré peu fiable pour un rythme soutenu (retards de 30 min à plus d'1h, voire passages sautés), le déclenchement se fait via un **ping externe gratuit toutes les ~10 min** (appel à l'API `workflow_dispatch`, qui n'est pas soumis à ce bridage) ; un filet de secours natif tourne en plus, 1×/heure.
+- Le déploiement GitHub Pages réessaie automatiquement (jusqu'à 3 fois) en cas de panne transitoire côté GitHub.
 - Le bot **s'arrête tout seul** après la finale (cf. `scripts/lib/season.mjs`).
 
 ## Stack
@@ -60,6 +64,7 @@ node scripts/scrape.mjs    # lance un scrape réel (écrit data/)
 | `predictions.json` | pronos par joueur, match par match |
 | `matches.json` | pivot par match : qui a misé quoi |
 | `fixtures.json` | prochains matchs (calendrier) |
+| `pretournament.json` | pronostics d'avant-tournoi (5 questions bonus) + valeurs réelles à jour |
 | `snapshots/` | relevés immuables du classement |
 
 ---

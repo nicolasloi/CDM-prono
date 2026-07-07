@@ -1,6 +1,61 @@
 {
   "matches": [
     {
+      "date": "7 juil. | 18:00",
+      "kickoff": "2026-07-07T18:00:00+02:00",
+      "home": "Argentine",
+      "away": "Egypte",
+      "homeFlag": "🇦🇷",
+      "awayFlag": "🇪🇬",
+      "stadium": "Stade d'Atlanta",
+      "actualHome": null,
+      "actualAway": null,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 3,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 1,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 3,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 3,
+          "predAway": 0,
+          "points": null
+        }
+      ]
+    },
+    {
       "date": "7 juil. | 02:00",
       "kickoff": "2026-07-07T02:00:00+02:00",
       "home": "USA",

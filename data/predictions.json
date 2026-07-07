@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "7 juil. | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Argentine",
+          "predHome": 3,
+          "away": "Egypte",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "7 juil. | 02:00",
           "stadium": "Stade de Seattle",
           "home": "USA",
@@ -1125,6 +1137,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "7 juil. | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Argentine",
+          "predHome": 1,
+          "away": "Egypte",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "7 juil. | 02:00",
           "stadium": "Stade de Seattle",
           "home": "USA",
@@ -2233,6 +2257,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "7 juil. | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Argentine",
+          "predHome": 2,
+          "away": "Egypte",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "7 juil. | 02:00",
           "stadium": "Stade de Seattle",
@@ -3355,6 +3391,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "7 juil. | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Argentine",
+          "predHome": 2,
+          "away": "Egypte",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "7 juil. | 02:00",
           "stadium": "Stade de Seattle",
           "home": "USA",
@@ -4476,6 +4524,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "7 juil. | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Argentine",
+          "predHome": 3,
+          "away": "Egypte",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "7 juil. | 02:00",
           "stadium": "Stade de Seattle",
           "home": "USA",
@@ -5596,6 +5656,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "7 juil. | 18:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Argentine",
+          "predHome": 3,
+          "away": "Egypte",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "7 juil. | 02:00",
           "stadium": "Stade de Seattle",

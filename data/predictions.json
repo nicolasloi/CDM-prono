@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "7 juil. | 22:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 1,
+          "away": "Colombie",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "7 juil. | 18:00",
           "stadium": "Stade d'Atlanta",
           "home": "Argentine",
@@ -1137,6 +1149,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "7 juil. | 22:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 1,
+          "away": "Colombie",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "7 juil. | 18:00",
           "stadium": "Stade d'Atlanta",
           "home": "Argentine",
@@ -2257,6 +2281,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "7 juil. | 22:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 1,
+          "away": "Colombie",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "7 juil. | 18:00",
           "stadium": "Stade d'Atlanta",
@@ -3391,6 +3427,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "7 juil. | 22:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 1,
+          "away": "Colombie",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "7 juil. | 18:00",
           "stadium": "Stade d'Atlanta",
           "home": "Argentine",
@@ -4524,6 +4572,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "7 juil. | 22:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 0,
+          "away": "Colombie",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "7 juil. | 18:00",
           "stadium": "Stade d'Atlanta",
           "home": "Argentine",
@@ -5656,6 +5716,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "7 juil. | 22:00",
+          "stadium": "BC Place de Vancouver",
+          "home": "Suisse",
+          "predHome": 0,
+          "away": "Colombie",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "7 juil. | 18:00",
           "stadium": "Stade d'Atlanta",

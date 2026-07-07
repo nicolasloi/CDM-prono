@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "7 juil. | 02:00",
+          "stadium": "Stade de Seattle",
+          "home": "USA",
+          "predHome": 3,
+          "away": "Belgique",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "6 juil. | 21:00",
           "stadium": "Stade de Dallas",
           "home": "Portugal",
@@ -1113,6 +1125,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "7 juil. | 02:00",
+          "stadium": "Stade de Seattle",
+          "home": "USA",
+          "predHome": 2,
+          "away": "Belgique",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "6 juil. | 21:00",
           "stadium": "Stade de Dallas",
           "home": "Portugal",
@@ -2209,6 +2233,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "7 juil. | 02:00",
+          "stadium": "Stade de Seattle",
+          "home": "USA",
+          "predHome": 2,
+          "away": "Belgique",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "6 juil. | 21:00",
           "stadium": "Stade de Dallas",
@@ -3319,6 +3355,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "7 juil. | 02:00",
+          "stadium": "Stade de Seattle",
+          "home": "USA",
+          "predHome": 1,
+          "away": "Belgique",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "6 juil. | 21:00",
           "stadium": "Stade de Dallas",
           "home": "Portugal",
@@ -4428,6 +4476,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "7 juil. | 02:00",
+          "stadium": "Stade de Seattle",
+          "home": "USA",
+          "predHome": 1,
+          "away": "Belgique",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "6 juil. | 21:00",
           "stadium": "Stade de Dallas",
           "home": "Portugal",
@@ -5536,6 +5596,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "7 juil. | 02:00",
+          "stadium": "Stade de Seattle",
+          "home": "USA",
+          "predHome": 2,
+          "away": "Belgique",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "6 juil. | 21:00",
           "stadium": "Stade de Dallas",

@@ -1,13 +1,40 @@
 {
   "upcoming": [
     {
-      "home": "Suisse",
-      "away": "Colombie",
-      "homeFlag": "🇨🇭",
-      "awayFlag": "🇨🇴",
-      "stadium": "BC Place de Vancouver",
-      "date": "7 juil. | 22:00",
-      "kickoff": "2026-07-07T22:00:00+02:00"
+      "home": "France",
+      "away": "Maroc",
+      "homeFlag": "🇫🇷",
+      "awayFlag": "🇲🇦",
+      "stadium": "Stade de Boston",
+      "date": "9 juil. | 22:00",
+      "kickoff": "2026-07-09T22:00:00+02:00"
+    },
+    {
+      "home": "Espagne",
+      "away": "Belgique",
+      "homeFlag": "🇪🇸",
+      "awayFlag": "🇧🇪",
+      "stadium": "Stade de Los Angeles",
+      "date": "10 juil. | 21:00",
+      "kickoff": "2026-07-10T21:00:00+02:00"
+    },
+    {
+      "home": "Norvège",
+      "away": "Angleterre",
+      "homeFlag": "🇳🇴",
+      "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "stadium": "Stade de Miami",
+      "date": "11 juil. | 23:00",
+      "kickoff": "2026-07-11T23:00:00+02:00"
+    },
+    {
+      "home": "Argentine",
+      "away": "Vainqueur 8e 8",
+      "homeFlag": "🇦🇷",
+      "awayFlag": "",
+      "stadium": "Stade de Kansas City",
+      "date": "12 juil. | 03:00",
+      "kickoff": "2026-07-12T03:00:00+02:00"
     }
   ]
 }

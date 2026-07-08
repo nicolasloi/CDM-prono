@@ -6,7 +6,7 @@ const { rounds = [] } = Astro.props;
 const fl = (t: string) => flagFor(t);
 ---
 <div class="bracket">
-  <svg class="bk-links" aria-hidden="true"><path class="dim" /><path class="gold" /></svg>
+  <svg class="bk-links" aria-hidden="true"><path /></svg>
   {rounds.map((r: any, ri: number) => (
     <div class="bk-round">
       <p class="bk-rk">{r.name}</p>
@@ -41,14 +41,8 @@ const fl = (t: string) => flagFor(t);
             </>
           );
           if (t.upcoming) return <div class="bk-tie up" data-r={ri} data-s={si}>{rows}<span class="bk-foot up">{t.when || r.date || 'à venir'}</span></div>;
-          // « En lice » = cette affiche a un vainqueur connu qui avance ET qui n'est pas éliminé
-          // par la suite (cf. homeOut/awayOut, calculé sur tout le tableau dans bracket.mjs) → sert
-          // à colorer le trait SVG de cette branche dans drawLinks() ci-dessous (le client lit cet
-          // attribut, pas de recalcul côté DOM). Une équipe qui gagne puis sort plus tard ne doit
-          // plus faire ressortir sa branche : seul le trajet des équipes ENCORE en course compte.
-          const stillIn = (homeW && !homeElim) || (awayW && !awayElim);
           return (
-            <details class={`bk-tie${played ? '' : ' live'}`} data-r={ri} data-s={si} data-live={stillIn ? 'true' : 'false'}>
+            <details class={`bk-tie${played ? '' : ' live'}`} data-r={ri} data-s={si}>
               <summary>{rows}<span class="bk-foot">{played ? (draw && penW ? `${t.date} · t.a.b.` : t.date) : <span class="bk-live">● en cours</span>}<span class="bk-caret">›</span></span></summary>
               <div class="bk-picks">
                 {(t.picks || []).map((p: any) => {
@@ -73,9 +67,8 @@ const fl = (t: string) => flagFor(t);
 <script>
   function drawLinks(wrap: HTMLElement) {
     const svg = wrap.querySelector('.bk-links') as SVGSVGElement | null;
-    const pathDim = svg?.querySelector('path.dim') as SVGPathElement | null;
-    const pathGold = svg?.querySelector('path.gold') as SVGPathElement | null;
-    if (!svg || !pathDim || !pathGold) return;
+    const path = svg?.querySelector('path') as SVGPathElement | null;
+    if (!svg || !path) return;
     const map: Record<string, HTMLElement> = {};
     wrap.querySelectorAll<HTMLElement>('[data-r]').forEach((el) => { map[el.dataset.r + '-' + el.dataset.s] = el; });
     // On remet le SVG à 0 AVANT de mesurer : sinon, après avoir replié un match, sa taille
@@ -89,29 +82,17 @@ const fl = (t: string) => flagFor(t);
       const r = el.getBoundingClientRect();
       return { l: r.left - base.left + wrap.scrollLeft, r: r.right - base.left + wrap.scrollLeft, y: r.top - base.top + wrap.scrollTop + r.height / 2 };
     };
-    let dGold = '', dDim = '';
+    let d = '';
     for (const key in map) {
       const [ri, si] = key.split('-').map(Number);
       if (ri === 0) continue;
-      const aEl = map[(ri - 1) + '-' + (2 * si)], bEl = map[(ri - 1) + '-' + (2 * si + 1)], pEl = map[key];
-      if (!aEl || !bEl) continue;
-      const A = c(aEl), B = c(bEl), P = c(pEl), midX = (A.r + P.l) / 2;
-      // Branche empruntée par une équipe encore en lice (cf. data-live posé dans le template) →
-      // tracée en doré ; sinon trait neutre.
-      const aLive = aEl.dataset.live === 'true';
-      const bLive = bEl.dataset.live === 'true';
-      const segA = `M${A.r} ${A.y} H${midX} `;
-      const segB = `M${B.r} ${B.y} H${midX} `;
+      const a = map[(ri - 1) + '-' + (2 * si)], b = map[(ri - 1) + '-' + (2 * si + 1)], p = map[key];
+      if (!a || !b) continue;
+      const A = c(a), B = c(b), P = c(p), midX = (A.r + P.l) / 2;
       const vy1 = Math.min(A.y, B.y, P.y), vy2 = Math.max(A.y, B.y, P.y);
-      // Tronc commun (vertical + segment final vers la case suivante) : doré dès qu'une des 2
-      // branches vient d'une équipe encore en lice.
-      const segMerge = `M${midX} ${vy1} V${vy2} M${midX} ${P.y} H${P.l} `;
-      if (aLive) dGold += segA; else dDim += segA;
-      if (bLive) dGold += segB; else dDim += segB;
-      if (aLive || bLive) dGold += segMerge; else dDim += segMerge;
+      d += `M${A.r} ${A.y} H${midX} M${B.r} ${B.y} H${midX} M${midX} ${vy1} V${vy2} M${midX} ${P.y} H${P.l} `;
     }
-    pathDim.setAttribute('d', dDim);
-    pathGold.setAttribute('d', dGold);
+    path.setAttribute('d', d);
   }
   const wrap = document.querySelector('.bracket') as HTMLElement | null;
   if (wrap) {
@@ -128,10 +109,7 @@ const fl = (t: string) => flagFor(t);
 <style>
   .bracket { position: relative; display: flex; gap: 28px; overflow-x: auto; padding: 4px 2px 18px; -webkit-overflow-scrolling: touch; }
   .bk-links { position: absolute; top: 0; left: 0; pointer-events: none; z-index: 0; overflow: visible; }
-  .bk-links path { fill: none; }
-  .bk-links path.dim { stroke: var(--line); stroke-width: 1.5; }
-  /* branche empruntée par une équipe encore en lice : simple trait doré, sans effet superflu */
-  .bk-links path.gold { stroke: var(--gold); stroke-width: 2; }
+  .bk-links path { fill: none; stroke: var(--gold-soft); stroke-width: 1.5; }
   .bk-round { min-width: 200px; flex: 0 0 auto; display: flex; flex-direction: column; position: relative; z-index: 1; }
   .bk-rk { position: sticky; top: 0; z-index: 2; font: 800 11px/1 var(--font); letter-spacing: .18em; text-transform: uppercase; color: var(--gold);
     margin: 0 0 10px; padding: 8px 0; background: var(--bg); border-bottom: 1px solid var(--line); }

@@ -19,21 +19,22 @@ const fl = (t: string) => flagFor(t);
           const homeW = played && (t.actualHome > t.actualAway || (draw && penW === 'home'));
           const awayW = played && (t.actualAway > t.actualHome || (draw && penW === 'away'));
           // Éliminée = l'équipe a perdu N'IMPORTE QUEL match de la phase finale (calculé sur tout
-          // le tableau, cf. bracket.mjs) → grise TOUT son parcours, y compris ses victoires des
-          // tours précédents (une équipe sortie au 8e ne doit plus jamais réapparaître en doré,
-          // même à son 16e qu'elle a gagné). Prime sur le style « vainqueur » de CE match précis.
+          // le tableau, cf. bracket.mjs) → estompe TOUT son parcours, y compris ses victoires des
+          // tours précédents. Les deux classes se cumulent : une victoire d'une équipe depuis
+          // éliminée garde une touche dorée (on voit qu'elle avait gagné CE match) mais estompée
+          // (cf. .lost.w), différente à la fois du doré plein (encore en lice) et du gris plat
+          // (a perdu CE match précis).
           const homeElim = !!t.homeOut, awayElim = !!t.awayOut;
-          const homeGold = homeW && !homeElim, awayGold = awayW && !awayElim;
           const maxPts = Math.max(0, ...(t.picks || []).map((p: any) => p.points || 0));
           // Nom connu, sinon « Vainq. X-Y » (les 2 équipes potentielles du match d'origine).
           const nm = (name: string, from: any) => name || (from ? `Vainq. ${from.home}-${from.away}` : 'À déterminer');
           const rows = (
             <>
-              <div class={`bk-line${homeGold ? ' w' : ''}${homeElim ? ' lost' : ''}${t.home ? '' : ' tbd'}`}>
+              <div class={`bk-line${homeW ? ' w' : ''}${homeElim ? ' lost' : ''}${t.home ? '' : ' tbd'}`}>
                 <span class="fl">{t.homeFlag || (t.home ? fl(t.home) : '')}</span><span class="nm">{nm(t.home, t.homeFrom)}</span>
                 <span class="sc">{played ? t.actualHome : ''}{draw && t.penHome != null ? <i class="pk">({t.penHome})</i> : ''}</span>
               </div>
-              <div class={`bk-line${awayGold ? ' w' : ''}${awayElim ? ' lost' : ''}${t.away ? '' : ' tbd'}`}>
+              <div class={`bk-line${awayW ? ' w' : ''}${awayElim ? ' lost' : ''}${t.away ? '' : ' tbd'}`}>
                 <span class="fl">{t.awayFlag || (t.away ? fl(t.away) : '')}</span><span class="nm">{nm(t.away, t.awayFrom)}</span>
                 <span class="sc">{played ? t.actualAway : ''}{draw && t.penAway != null ? <i class="pk">({t.penAway})</i> : ''}</span>
               </div>
@@ -129,14 +130,20 @@ const fl = (t: string) => flagFor(t);
   .bk-line .fl { font-size: 17px; line-height: 1; }
   .bk-line .nm { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 700; font-size: 13px; color: var(--text-dim); }
   .bk-line .sc { font-weight: 900; font-size: 15px; min-width: 12px; text-align: right; color: var(--text-dim); }
-  /* le gagnant avance → sa ligne passe en doré ; le perdant reste gris */
+  /* le gagnant de CE match passe en doré ; le perdant reste gris */
   .bk-line.w { box-shadow: inset 3px 0 0 var(--gold); }
   .bk-line.w .nm { color: var(--gold); font-weight: 800; }
   .bk-line.w .sc { color: var(--gold); }
-  /* équipe éliminée : légèrement estompée pour la distinguer d'un coup d'œil des équipes encore
-     en lice (dont le style ne change pas, cf. ci-dessus et ci-dessous pour les cases futures) */
+  /* équipe éliminée (a perdu un tour ultérieur, cf. bracket.mjs) : estompée pour ressortir des
+     équipes encore en lice (dont le style .w plein ci-dessus ne change pas) */
   .bk-line.lost { opacity: .45; }
   .bk-line.lost .fl { filter: grayscale(70%); }
+  /* cas particulier : équipe éliminée qui avait gagné CE match précis (ex. sortie au 8e après
+     avoir remporté son 16e) → garde une touche dorée, mais estompée — pour voir qu'elle avait
+     gagné sans la confondre avec les équipes encore en lice (doré plein) */
+  .bk-line.lost.w { opacity: .6; box-shadow: inset 3px 0 0 color-mix(in srgb, var(--gold) 45%, var(--text-dim)); }
+  .bk-line.lost.w .nm, .bk-line.lost.w .sc { color: color-mix(in srgb, var(--gold) 45%, var(--text-dim)); }
+  .bk-line.lost.w .fl { filter: grayscale(40%); }
   /* équipe encore inconnue : « Vainq. X-Y » (les 2 potentielles) en italique atténué */
   .bk-line.tbd .nm { font-style: italic; font-weight: 700; font-size: 12px; opacity: .7; }
   /* score des tirs au but, entre parenthèses à côté du score */

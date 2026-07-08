@@ -6,7 +6,7 @@ const { rounds = [] } = Astro.props;
 const fl = (t: string) => flagFor(t);
 ---
 <div class="bracket">
-  <svg class="bk-links" aria-hidden="true"><path /></svg>
+  <svg class="bk-links" aria-hidden="true"><path class="dim" /><path class="gold" /></svg>
   {rounds.map((r: any, ri: number) => (
     <div class="bk-round">
       <p class="bk-rk">{r.name}</p>
@@ -41,8 +41,12 @@ const fl = (t: string) => flagFor(t);
             </>
           );
           if (t.upcoming) return <div class="bk-tie up" data-r={ri} data-s={si}>{rows}<span class="bk-foot up">{t.when || r.date || 'à venir'}</span></div>;
+          // « Décidée » = cette affiche a un vainqueur connu qui avance réellement au tour suivant
+          // (nul sans t.a.b. connu exclu) → sert à colorer/animer le trait SVG de cette branche
+          // dans drawLinks() ci-dessous (le client lit cet attribut, pas de recalcul côté DOM).
+          const decided = homeW || awayW;
           return (
-            <details class={`bk-tie${played ? '' : ' live'}`} data-r={ri} data-s={si}>
+            <details class={`bk-tie${played ? '' : ' live'}`} data-r={ri} data-s={si} data-decided={decided ? 'true' : 'false'}>
               <summary>{rows}<span class="bk-foot">{played ? (draw && penW ? `${t.date} · t.a.b.` : t.date) : <span class="bk-live">● en cours</span>}<span class="bk-caret">›</span></span></summary>
               <div class="bk-picks">
                 {(t.picks || []).map((p: any) => {
@@ -67,8 +71,9 @@ const fl = (t: string) => flagFor(t);
 <script>
   function drawLinks(wrap: HTMLElement) {
     const svg = wrap.querySelector('.bk-links') as SVGSVGElement | null;
-    const path = svg?.querySelector('path') as SVGPathElement | null;
-    if (!svg || !path) return;
+    const pathDim = svg?.querySelector('path.dim') as SVGPathElement | null;
+    const pathGold = svg?.querySelector('path.gold') as SVGPathElement | null;
+    if (!svg || !pathDim || !pathGold) return;
     const map: Record<string, HTMLElement> = {};
     wrap.querySelectorAll<HTMLElement>('[data-r]').forEach((el) => { map[el.dataset.r + '-' + el.dataset.s] = el; });
     // On remet le SVG à 0 AVANT de mesurer : sinon, après avoir replié un match, sa taille
@@ -82,17 +87,29 @@ const fl = (t: string) => flagFor(t);
       const r = el.getBoundingClientRect();
       return { l: r.left - base.left + wrap.scrollLeft, r: r.right - base.left + wrap.scrollLeft, y: r.top - base.top + wrap.scrollTop + r.height / 2 };
     };
-    let d = '';
+    let dGold = '', dDim = '';
     for (const key in map) {
       const [ri, si] = key.split('-').map(Number);
       if (ri === 0) continue;
-      const a = map[(ri - 1) + '-' + (2 * si)], b = map[(ri - 1) + '-' + (2 * si + 1)], p = map[key];
-      if (!a || !b) continue;
-      const A = c(a), B = c(b), P = c(p), midX = (A.r + P.l) / 2;
+      const aEl = map[(ri - 1) + '-' + (2 * si)], bEl = map[(ri - 1) + '-' + (2 * si + 1)], pEl = map[key];
+      if (!aEl || !bEl) continue;
+      const A = c(aEl), B = c(bEl), P = c(pEl), midX = (A.r + P.l) / 2;
+      // Branche « décidée » (un vainqueur en est réellement issu, cf. data-decided posé dans le
+      // template) → tracée en doré animé ; sinon trait neutre statique.
+      const aDecided = aEl.dataset.decided === 'true';
+      const bDecided = bEl.dataset.decided === 'true';
+      const segA = `M${A.r} ${A.y} H${midX} `;
+      const segB = `M${B.r} ${B.y} H${midX} `;
       const vy1 = Math.min(A.y, B.y, P.y), vy2 = Math.max(A.y, B.y, P.y);
-      d += `M${A.r} ${A.y} H${midX} M${B.r} ${B.y} H${midX} M${midX} ${vy1} V${vy2} M${midX} ${P.y} H${P.l} `;
+      // Tronc commun (vertical + segment final vers la case suivante) : doré dès qu'une des 2
+      // branches a produit un vainqueur (l'équipe qui avance est physiquement arrivée jusque-là).
+      const segMerge = `M${midX} ${vy1} V${vy2} M${midX} ${P.y} H${P.l} `;
+      if (aDecided) dGold += segA; else dDim += segA;
+      if (bDecided) dGold += segB; else dDim += segB;
+      if (aDecided || bDecided) dGold += segMerge; else dDim += segMerge;
     }
-    path.setAttribute('d', d);
+    pathDim.setAttribute('d', dDim);
+    pathGold.setAttribute('d', dGold);
   }
   const wrap = document.querySelector('.bracket') as HTMLElement | null;
   if (wrap) {
@@ -109,7 +126,16 @@ const fl = (t: string) => flagFor(t);
 <style>
   .bracket { position: relative; display: flex; gap: 28px; overflow-x: auto; padding: 4px 2px 18px; -webkit-overflow-scrolling: touch; }
   .bk-links { position: absolute; top: 0; left: 0; pointer-events: none; z-index: 0; overflow: visible; }
-  .bk-links path { fill: none; stroke: var(--gold-soft); stroke-width: 1.5; }
+  .bk-links path { fill: none; }
+  .bk-links path.dim { stroke: var(--line); stroke-width: 1.5; }
+  /* branche empruntée par un vainqueur réel : trait doré qui ressort, avec un léger halo lumineux */
+  .bk-links path.gold { stroke: var(--gold); stroke-width: 2; filter: drop-shadow(0 0 4px color-mix(in srgb, var(--gold) 55%, transparent)); }
+  /* petit flux animé qui « avance » le long des branches dorées (rounds affichés de gauche à
+     droite → le tireté défile dans ce sens, comme une énergie qui circule vers le tour suivant) */
+  @media (prefers-reduced-motion: no-preference) {
+    .bk-links path.gold { stroke-dasharray: 5 7; animation: bk-flow .9s linear infinite; }
+    @keyframes bk-flow { to { stroke-dashoffset: -24; } }
+  }
   .bk-round { min-width: 200px; flex: 0 0 auto; display: flex; flex-direction: column; position: relative; z-index: 1; }
   .bk-rk { position: sticky; top: 0; z-index: 2; font: 800 11px/1 var(--font); letter-spacing: .18em; text-transform: uppercase; color: var(--gold);
     margin: 0 0 10px; padding: 8px 0; background: var(--bg); border-bottom: 1px solid var(--line); }

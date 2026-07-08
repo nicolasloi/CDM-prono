@@ -18,16 +18,19 @@ const fl = (t: string) => flagFor(t);
           const penW = t.penHome != null && t.penAway != null ? (t.penAway > t.penHome ? 'away' : 'home') : null;
           const homeW = played && (t.actualHome > t.actualAway || (draw && penW === 'home'));
           const awayW = played && (t.actualAway > t.actualHome || (draw && penW === 'away'));
+          // Éliminé = l'autre camp a gagné cette affiche (jamais les deux à la fois, et ni l'un
+          // ni l'autre si le nul n'a pas encore de vainqueur aux t.a.b. connu).
+          const homeLost = awayW, awayLost = homeW;
           const maxPts = Math.max(0, ...(t.picks || []).map((p: any) => p.points || 0));
           // Nom connu, sinon « Vainq. X-Y » (les 2 équipes potentielles du match d'origine).
           const nm = (name: string, from: any) => name || (from ? `Vainq. ${from.home}-${from.away}` : 'À déterminer');
           const rows = (
             <>
-              <div class={`bk-line${homeW ? ' w' : ''}${t.home ? '' : ' tbd'}`}>
+              <div class={`bk-line${homeW ? ' w' : ''}${homeLost ? ' lost' : ''}${t.home ? '' : ' tbd'}`}>
                 <span class="fl">{t.homeFlag || (t.home ? fl(t.home) : '')}</span><span class="nm">{nm(t.home, t.homeFrom)}</span>
                 <span class="sc">{played ? t.actualHome : ''}{draw && t.penHome != null ? <i class="pk">({t.penHome})</i> : ''}</span>
               </div>
-              <div class={`bk-line${awayW ? ' w' : ''}${t.away ? '' : ' tbd'}`}>
+              <div class={`bk-line${awayW ? ' w' : ''}${awayLost ? ' lost' : ''}${t.away ? '' : ' tbd'}`}>
                 <span class="fl">{t.awayFlag || (t.away ? fl(t.away) : '')}</span><span class="nm">{nm(t.away, t.awayFrom)}</span>
                 <span class="sc">{played ? t.actualAway : ''}{draw && t.penAway != null ? <i class="pk">({t.penAway})</i> : ''}</span>
               </div>
@@ -127,6 +130,10 @@ const fl = (t: string) => flagFor(t);
   .bk-line.w { box-shadow: inset 3px 0 0 var(--gold); }
   .bk-line.w .nm { color: var(--gold); font-weight: 800; }
   .bk-line.w .sc { color: var(--gold); }
+  /* équipe éliminée : légèrement estompée pour la distinguer d'un coup d'œil des équipes encore
+     en lice (dont le style ne change pas, cf. ci-dessus et ci-dessous pour les cases futures) */
+  .bk-line.lost { opacity: .45; }
+  .bk-line.lost .fl { filter: grayscale(70%); }
   /* équipe encore inconnue : « Vainq. X-Y » (les 2 potentielles) en italique atténué */
   .bk-line.tbd .nm { font-style: italic; font-weight: 700; font-size: 12px; opacity: .7; }
   /* score des tirs au but, entre parenthèses à côté du score */

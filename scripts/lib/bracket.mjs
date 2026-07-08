@@ -51,6 +51,8 @@ const norm = (s) => (s || '').toLowerCase().replace(/[’']/g, "'").trim();
 const SHOOTOUT = {
   'allemagne|paraguay': { winner: 'away', home: 3, away: 4 },
   'pays-bas|maroc': { winner: 'away', home: 2, away: 3 },
+  'australie|egypte': { winner: 'away', home: 2, away: 4 },
+  'suisse|colombie': { winner: 'home', home: 4, away: 3 },
 };
 
 const shootoutFor = (home, away) => SHOOTOUT[norm(home) + '|' + norm(away)] || null;

@@ -53,6 +53,22 @@ test('un 8e (équipes de 2 16es voisins) tombe au bon tour/slot', () => {
   assert.equal(r[1].ties[0].home, 'Allemagne'); // 8es slot 0
 });
 
+test('équipe éliminée : marquée « out » sur TOUT son parcours, y compris ses victoires antérieures', () => {
+  // Paraguay gagne son 16e (vs Allemagne) puis perd son 8e (vs France) → doit être marqué
+  // homeOut/awayOut aux DEUX tours, pas seulement au 8e où il sort.
+  const m = [
+    { date: '29 juin | 22:30', home: 'Allemagne', away: 'Paraguay', actualHome: 1, actualAway: 2, picks: [] },
+    { date: '4 juil. | 23:00', home: 'Paraguay', away: 'France', actualHome: 0, actualAway: 1, picks: [] },
+  ];
+  const r = buildBracket(m, []);
+  assert.equal(r[0].ties[0].awayOut, true); // Paraguay (away) a gagné ce 16e mais est éliminé plus tard
+  assert.equal(r[1].ties[0].homeOut, true); // Paraguay (home) a perdu ce 8e
+  // Allemagne (éliminée dès le 16e, jamais gagné) : marquée out sur son unique apparition.
+  assert.equal(r[0].ties[0].homeOut, true);
+  // France (toujours en lice) : jamais marquée out.
+  assert.equal(r[1].ties[0].awayOut, undefined);
+});
+
 test('un match de POULE entre 2 équipes qualifiées n’est pas pris pour la finale', () => {
   // Algérie et Autriche sont dans des moitiés différentes → se "rencontreraient" en finale,
   // mais leur match de poule (28 juin matin) doit être exclu (aucun résultat en finale).

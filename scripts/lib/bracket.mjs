@@ -124,5 +124,27 @@ export function buildBracket(matches = [], fixtures = []) {
     });
   }
 
+  // Équipes définitivement éliminées (ont perdu n'importe quel match de la phase finale) : sert à
+  // griser tout leur PARCOURS dans le tableau, pas seulement le match où elles sont sorties — une
+  // équipe qui gagne son 16e puis perd son 8e doit apparaître grisée aux DEUX tours, pas seulement
+  // au 8e (sinon sa victoire au 16e reste dorée alors qu'elle est hors course).
+  const eliminated = new Set();
+  for (const r of rounds) {
+    for (const t of r.ties) {
+      if (!t || t.placeholder || t.actualHome == null || t.actualAway == null) continue;
+      const w = tieWinner(t);
+      if (!w) continue; // nul sans t.a.b. connu : personne de marqué éliminé pour l'instant
+      const loser = w === 'home' ? t.away : t.home;
+      if (loser) eliminated.add(norm(loser));
+    }
+  }
+  for (const r of rounds) {
+    for (const t of r.ties) {
+      if (!t || t.placeholder) continue;
+      if (t.home && eliminated.has(norm(t.home))) t.homeOut = true;
+      if (t.away && eliminated.has(norm(t.away))) t.awayOut = true;
+    }
+  }
+
   return rounds;
 }

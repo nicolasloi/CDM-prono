@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "9 juil. | 22:00",
+          "stadium": "Stade de Boston",
+          "home": "France",
+          "predHome": 1,
+          "away": "Maroc",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "7 juil. | 22:00",
           "stadium": "BC Place de Vancouver",
           "home": "Suisse",
@@ -1149,6 +1161,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "9 juil. | 22:00",
+          "stadium": "Stade de Boston",
+          "home": "France",
+          "predHome": 2,
+          "away": "Maroc",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "7 juil. | 22:00",
           "stadium": "BC Place de Vancouver",
           "home": "Suisse",
@@ -2281,6 +2305,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "9 juil. | 22:00",
+          "stadium": "Stade de Boston",
+          "home": "France",
+          "predHome": 2,
+          "away": "Maroc",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "7 juil. | 22:00",
           "stadium": "BC Place de Vancouver",
@@ -3427,6 +3463,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "9 juil. | 22:00",
+          "stadium": "Stade de Boston",
+          "home": "France",
+          "predHome": 3,
+          "away": "Maroc",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "7 juil. | 22:00",
           "stadium": "BC Place de Vancouver",
           "home": "Suisse",
@@ -4572,6 +4620,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "9 juil. | 22:00",
+          "stadium": "Stade de Boston",
+          "home": "France",
+          "predHome": 2,
+          "away": "Maroc",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "7 juil. | 22:00",
           "stadium": "BC Place de Vancouver",
           "home": "Suisse",
@@ -5716,6 +5776,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "9 juil. | 22:00",
+          "stadium": "Stade de Boston",
+          "home": "France",
+          "predHome": 2,
+          "away": "Maroc",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "7 juil. | 22:00",
           "stadium": "BC Place de Vancouver",

@@ -1,6 +1,61 @@
 {
   "matches": [
     {
+      "date": "9 juil. | 22:00",
+      "kickoff": "2026-07-09T22:00:00+02:00",
+      "home": "France",
+      "away": "Maroc",
+      "homeFlag": "🇫🇷",
+      "awayFlag": "🇲🇦",
+      "stadium": "Stade de Boston",
+      "actualHome": null,
+      "actualAway": null,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 1,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 2,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 3,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": null
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": null
+        }
+      ]
+    },
+    {
       "date": "7 juil. | 22:00",
       "kickoff": "2026-07-07T22:00:00+02:00",
       "home": "Suisse",

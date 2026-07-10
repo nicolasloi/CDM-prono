@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "10 juil. | 21:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Espagne",
+          "predHome": 0,
+          "away": "Belgique",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "9 juil. | 22:00",
           "stadium": "Stade de Boston",
           "home": "France",
@@ -1161,6 +1173,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "10 juil. | 21:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Espagne",
+          "predHome": 2,
+          "away": "Belgique",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "9 juil. | 22:00",
           "stadium": "Stade de Boston",
           "home": "France",
@@ -2305,6 +2329,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "10 juil. | 21:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Espagne",
+          "predHome": 1,
+          "away": "Belgique",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "9 juil. | 22:00",
           "stadium": "Stade de Boston",
@@ -3463,6 +3499,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "10 juil. | 21:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Espagne",
+          "predHome": 2,
+          "away": "Belgique",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "9 juil. | 22:00",
           "stadium": "Stade de Boston",
           "home": "France",
@@ -4620,6 +4668,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "10 juil. | 21:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Espagne",
+          "predHome": 2,
+          "away": "Belgique",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "9 juil. | 22:00",
           "stadium": "Stade de Boston",
           "home": "France",
@@ -5776,6 +5836,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "10 juil. | 21:00",
+          "stadium": "Stade de Los Angeles",
+          "home": "Espagne",
+          "predHome": 2,
+          "away": "Belgique",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "9 juil. | 22:00",
           "stadium": "Stade de Boston",

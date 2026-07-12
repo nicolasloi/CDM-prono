@@ -1,6 +1,61 @@
 {
   "matches": [
     {
+      "date": "12 juil. | 03:00",
+      "kickoff": "2026-07-12T03:00:00+02:00",
+      "home": "Argentine",
+      "away": "Suisse",
+      "homeFlag": "🇦🇷",
+      "awayFlag": "🇨🇭",
+      "stadium": "Stade de Kansas City",
+      "actualHome": null,
+      "actualAway": null,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "8Yak",
+          "name": "Cayan F",
+          "predHome": 1,
+          "predAway": 2,
+          "points": null
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 1,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 2,
+          "predAway": 0,
+          "points": null
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": null
+        }
+      ]
+    },
+    {
       "date": "11 juil. | 23:00",
       "kickoff": "2026-07-11T23:00:00+02:00",
       "home": "Norvège",

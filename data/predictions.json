@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "12 juil. | 03:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Argentine",
+          "predHome": 2,
+          "away": "Suisse",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "11 juil. | 23:00",
           "stadium": "Stade de Miami",
           "home": "Norvège",
@@ -1185,6 +1197,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "12 juil. | 03:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Argentine",
+          "predHome": 1,
+          "away": "Suisse",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "11 juil. | 23:00",
           "stadium": "Stade de Miami",
           "home": "Norvège",
@@ -2353,6 +2377,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "12 juil. | 03:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Argentine",
+          "predHome": 2,
+          "away": "Suisse",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "11 juil. | 23:00",
           "stadium": "Stade de Miami",
@@ -3535,6 +3571,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "12 juil. | 03:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Argentine",
+          "predHome": 1,
+          "away": "Suisse",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "11 juil. | 23:00",
           "stadium": "Stade de Miami",
           "home": "Norvège",
@@ -4716,6 +4764,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "12 juil. | 03:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Argentine",
+          "predHome": 2,
+          "away": "Suisse",
+          "predAway": 0,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "11 juil. | 23:00",
           "stadium": "Stade de Miami",
           "home": "Norvège",
@@ -5896,6 +5956,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "12 juil. | 03:00",
+          "stadium": "Stade de Kansas City",
+          "home": "Argentine",
+          "predHome": 2,
+          "away": "Suisse",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "11 juil. | 23:00",
           "stadium": "Stade de Miami",

@@ -10,7 +10,6 @@ const colorMap = buildColorMap(members.map((m) => keyOf(m)));
 const top3 = members.slice(0, 3);
 const rest = members.slice(3);
 const updated = new Date(latest.takenAt).toLocaleDateString('fr-CH', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Zurich' });
-const generated = new Date().toLocaleDateString('fr-CH', { day: 'numeric', month: 'long', year: 'numeric' });
 const podiumOrder = [1, 0, 2];
 const medal = ['var(--gold)', '#cdd2dc', '#cd7f4d'];
 const pedestalH: Record<number, number> = { 0: 190, 1: 140, 2: 110 };
@@ -58,8 +57,6 @@ const pedestalH: Record<number, number> = { 0: 190, 1: 140, 2: 110 };
         </li>
       ))}
     </ol>
-
-    <div class="poster-foot"><span class="pf-dot" aria-hidden="true"></span>Généré le {generated} · jeu de pronostics RTS · cdm-prono.github.io</div>
   </div>
 </Base>
 
@@ -83,7 +80,7 @@ const pedestalH: Record<number, number> = { 0: 190, 1: 140, 2: 110 };
   .poster .streaks svg { width: 100%; height: 100%; }
   .poster .num26 { position: absolute; right: -8px; top: -22px; font: 900 italic clamp(100px, 18vw, 220px)/1 var(--font);
     color: transparent; -webkit-text-stroke: 2px var(--gold-soft); z-index: 0; pointer-events: none; }
-  .poster-head, .poster-podium, .poster-list, .poster-foot { position: relative; z-index: 1; }
+  .poster-head, .poster-podium, .poster-list { position: relative; z-index: 1; }
 
   .poster-head { text-align: center; }
   .poster-head .kicker { display: block; }
@@ -113,16 +110,13 @@ const pedestalH: Record<number, number> = { 0: 190, 1: 140, 2: 110 };
   .pr-pt { font-weight: 900; font-size: 16px; color: var(--gold); }
   .pr-pt small { font-weight: 700; font-size: 10px; color: var(--text-dim); }
 
-  .poster-foot { margin-top: 34px; padding-top: 16px; border-top: 1px solid var(--line); text-align: center;
-    font-size: 11px; color: var(--text-dim); display: flex; align-items: center; justify-content: center; gap: 8px; }
-  .pf-dot { width: 6px; height: 6px; border-radius: 50%; background: linear-gradient(135deg, var(--red), var(--green) 50%, var(--blue)); }
-
   @media print {
     :global(body > header), :global(body > footer), .no-print { display: none !important; }
     :global(html), :global(body) { background: var(--bg) !important; }
     :global(main.container) { width: 100% !important; max-width: none !important; padding: 0 !important; margin: 0 !important; }
     * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
-    .poster { border-radius: 0; border: 0; padding: 14mm 12mm; margin: 0; }
+    .poster { border-radius: 0; border: 0; padding: 10mm 12mm; margin: 0; height: 277mm; display: flex; flex-direction: column; justify-content: center; }
+    .poster-podium { margin: 30px 0 26px; }
   }
-  @page { margin: 6mm; }
+  @page { size: A4; margin: 10mm; }
 </style>

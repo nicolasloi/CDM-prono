@@ -9,7 +9,6 @@ const members = latest.members;
 const colorMap = buildColorMap(members.map((m) => keyOf(m)));
 const top3 = members.slice(0, 3);
 const rest = members.slice(3);
-const updated = new Date(latest.takenAt).toLocaleDateString('fr-CH', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Zurich' });
 const podiumOrder = [1, 0, 2];
 const medal = ['var(--gold)', '#cdd2dc', '#cd7f4d'];
 const pedestalH: Record<number, number> = { 0: 190, 1: 140, 2: 110 };
@@ -33,7 +32,6 @@ const pedestalH: Record<number, number> = { 0: 190, 1: 140, 2: 110 };
     <div class="poster-head">
       <p class="kicker">★ Marvelous Digital · Coupe du monde 2026</p>
       <h1 class="poster-h1">Le <em>Classement</em></h1>
-      <p class="poster-sub">Souvenir arrêté au {updated}</p>
     </div>
 
     <section class="poster-podium">
@@ -86,7 +84,6 @@ const pedestalH: Record<number, number> = { 0: 190, 1: 140, 2: 110 };
   .poster-head .kicker { display: block; }
   .poster-h1 { font-size: clamp(38px, 6.6vw, 68px); font-weight: 900; letter-spacing: -.03em; line-height: .95; margin: 10px 0 4px; }
   .poster-h1 em { color: var(--gold); font-style: italic; }
-  .poster-sub { color: var(--text-dim); font-size: 14px; margin: 0; }
 
   .poster-podium { display: flex; align-items: flex-end; justify-content: center; gap: 22px; margin: 40px 0 34px; }
   .pp { flex: 1; max-width: 240px; text-align: center; }

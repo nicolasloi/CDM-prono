@@ -1,13 +1,22 @@
 {
   "upcoming": [
     {
-      "home": "Argentine",
-      "away": "Suisse",
-      "homeFlag": "🇦🇷",
-      "awayFlag": "🇨🇭",
-      "stadium": "Stade de Kansas City",
-      "date": "12 juil. | 03:00",
-      "kickoff": "2026-07-12T03:00:00+02:00"
+      "home": "France",
+      "away": "Espagne",
+      "homeFlag": "🇫🇷",
+      "awayFlag": "🇪🇸",
+      "stadium": "Stade de Dallas",
+      "date": "14 juil. | 21:00",
+      "kickoff": "2026-07-14T21:00:00+02:00"
+    },
+    {
+      "home": "Angleterre",
+      "away": "Vainqueur 1/4 4",
+      "homeFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "awayFlag": "",
+      "stadium": "Stade d'Atlanta",
+      "date": "15 juil. | 21:00",
+      "kickoff": "2026-07-15T21:00:00+02:00"
     }
   ]
 }

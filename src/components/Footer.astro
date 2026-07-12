@@ -1,6 +1,10 @@
 ---
 import { SITE } from '../config';
+const base = import.meta.env.BASE_URL;
+const printHref = `${base}/imprimer`.replace(/\/{2,}/g, '/');
 ---
 <footer class="container dim" style="padding:28px 0;font-size:12px;border-top:1px solid var(--line);margin-top:40px">
-  <p>Données : <a href={SITE.rtsCommunityUrl} target="_blank" rel="noopener" style="color:var(--gold)">jeu de pronostics RTS ↗</a>. Site non officiel.</p>
+  <p>Données : <a href={SITE.rtsCommunityUrl} target="_blank" rel="noopener" style="color:var(--gold)">jeu de pronostics RTS ↗</a>. Site non officiel.
+    · <a href={printHref} style="color:var(--text-dim)">🖨️ Imprimer le classement</a>
+  </p>
 </footer>

@@ -1,0 +1,83 @@
+---
+import Base from '../layouts/Base.astro';
+import { getLatest } from '../data';
+import { shortName } from '../../scripts/lib/members.mjs';
+
+const latest = getLatest();
+const members = latest.members;
+const updated = new Date(latest.takenAt).toLocaleDateString('fr-CH', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Zurich' });
+const generated = new Date().toLocaleDateString('fr-CH', { day: 'numeric', month: 'long', year: 'numeric' });
+const medal = ['🥇', '🥈', '🥉'];
+---
+<Base title="Classement à imprimer">
+  <section class="no-print bar">
+    <p class="dim">Un joli souvenir du classement à garder une fois la Coupe du monde terminée. Ouvre la boîte de dialogue d'impression et choisis « Enregistrer en PDF » comme imprimante pour en garder une copie.</p>
+    <button id="print-btn" class="print-btn">🖨️ Imprimer / Enregistrer en PDF</button>
+  </section>
+
+  <div class="sheet" id="sheet">
+    <div class="sheet-flag" aria-hidden="true"></div>
+    <p class="sheet-kicker">Marvelous Digital · Coupe du monde 2026</p>
+    <h1 class="sheet-h1">Classement <em>des pronostics</em></h1>
+    <p class="sheet-sub">Arrêté au {updated}</p>
+
+    <ol class="sheet-list">
+      {members.map((m, i) => (
+        <li class={`sr${i < 3 ? ` sr-${i + 1}` : ''}`}>
+          <span class="sr-rk">{medal[i] || m.rank}</span>
+          <span class="sr-nm">{shortName(m.name)}</span>
+          <span class="sr-pt">{m.totalPoints}<small> pts</small></span>
+        </li>
+      ))}
+    </ol>
+
+    <p class="sheet-foot">Généré le {generated} · cdm-prono.github.io</p>
+  </div>
+</Base>
+
+<script>
+  document.getElementById('print-btn')?.addEventListener('click', () => window.print());
+</script>
+
+<style>
+  .bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 22px; }
+  .bar p { max-width: 46ch; font-size: 13px; margin: 0; }
+  .print-btn {
+    flex: 0 0 auto; border: none; border-radius: 999px; padding: 12px 22px; font: 800 14px var(--font);
+    background: var(--gold); color: #17140a; cursor: pointer;
+  }
+  .print-btn:hover { filter: brightness(1.06); }
+
+  .sheet {
+    background: #fff; color: #14161f; border-radius: 20px; padding: 44px 40px 34px;
+    box-shadow: 0 30px 70px rgba(0,0,0,.45); max-width: 640px; margin: 0 auto 40px;
+  }
+  .sheet-flag { height: 6px; border-radius: 4px; margin-bottom: 22px;
+    background: linear-gradient(90deg, var(--red), var(--green) 50%, var(--blue)); }
+  .sheet-kicker { font: 800 11px/1 var(--font); letter-spacing: .24em; text-transform: uppercase; color: #9a8332; margin: 0; }
+  .sheet-h1 { font-size: 34px; font-weight: 900; letter-spacing: -.02em; margin: 8px 0 2px; }
+  .sheet-h1 em { color: #b8912e; font-style: italic; }
+  .sheet-sub { color: #6b7080; font-size: 13px; margin: 0 0 26px; }
+
+  .sheet-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+  .sr { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 12px; }
+  .sr:nth-child(even) { background: #f6f5f1; }
+  .sr-rk { width: 30px; font-weight: 900; font-size: 16px; text-align: center; }
+  .sr-nm { flex: 1; font-weight: 700; font-size: 15px; }
+  .sr-pt { font-weight: 900; font-size: 15px; }
+  .sr-pt small { font-weight: 700; font-size: 10px; color: #6b7080; }
+  .sr-1 { background: #fbf1d6; }
+  .sr-2 { background: #f1f1f1; }
+  .sr-3 { background: #f7e9dc; }
+
+  .sheet-foot { margin: 30px 0 0; text-align: center; font-size: 11px; color: #9096a5; font-style: italic; }
+
+  @media print {
+    :global(header), :global(footer), .no-print { display: none !important; }
+    :global(body) { background: #fff; }
+    :global(main.container) { width: 100% !important; padding: 0 !important; }
+    .sheet { box-shadow: none; border-radius: 0; max-width: none; margin: 0; padding: 8mm; }
+    .sr:nth-child(even), .sr-1, .sr-2, .sr-3 { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+  @page { margin: 14mm; }
+</style>

@@ -87,7 +87,8 @@
       "lost": {
         "suisseParcours": true,
         "suisseButs": true,
-        "matchsNuls": true
+        "matchsNuls": true,
+        "buteurButs": true
       }
     },
     "G3EG": {
@@ -105,6 +106,8 @@
   "actuals": {
     "matchsNuls": 8,
     "suisseButs": 10,
-    "suisseParcours": "éliminée en Quarts de finale"
+    "suisseParcours": "éliminée en Quarts de finale",
+    "buteurButs": 8,
+    "topScorerName": "Mbappé, Messi"
   }
 }

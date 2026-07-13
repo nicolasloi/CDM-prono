@@ -99,7 +99,16 @@ async function main() {
   }
   const pretChanged = JSON.stringify(pretById) !== JSON.stringify(prevPret?.byId || {});
 
-  if (!membersChanged && !predsChanged && !fixChanged && !pretChanged) {
+  // Calculé même si rien d'autre n'a changé : des champs de `computeActuals` sont maintenus À LA
+  // MAIN (ex. meilleur buteur, cf. pretournament.mjs) et peuvent changer sans qu'aucun match ni
+  // prono ne bouge — sans cette comparaison, une mise à jour manuelle ne serait jamais écrite
+  // tant qu'un vrai résultat de match ne déclenche pas une réécriture par ailleurs.
+  const matchesForActuals = buildMatches(byId);
+  const roundsForActuals = buildBracket(matchesForActuals, upcoming);
+  const actualsPreview = computeActuals(matchesForActuals, roundsForActuals);
+  const actualsChanged = JSON.stringify(actualsPreview) !== JSON.stringify(prevPret?.actuals || null);
+
+  if (!membersChanged && !predsChanged && !fixChanged && !pretChanged && !actualsChanged) {
     console.log('Rien de neuf — aucun fichier réécrit.');
     return;
   }
@@ -114,9 +123,9 @@ async function main() {
     all.push({ takenAt, ...parsed });
   }
 
-  const matches = buildMatches(byId);
-  const rounds = buildBracket(matches, upcoming);
-  const actuals = computeActuals(matches, rounds);
+  const matches = matchesForActuals;
+  const rounds = roundsForActuals;
+  const actuals = actualsPreview;
 
   write('latest.json', buildLatest(all));
   write('timeseries.json', buildTimeseries(all));

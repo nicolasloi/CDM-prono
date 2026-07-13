@@ -176,11 +176,13 @@ const pedestalH: Record<number, number> = { 0: 150, 1: 108, 2: 84 };
     }
 
     // Réponses "actuelles" affichables (dérivées des résultats déjà connus) par clé de question.
-    // buteurButs volontairement absent : pas de stat buteur individuel scrapée, donc pas de valeur honnête.
     function actualFor(key: string) {
       if (key === 'matchsNuls' && PRET_ACTUALS.matchsNuls != null) return String(PRET_ACTUALS.matchsNuls);
       if (key === 'suisseButs' && PRET_ACTUALS.suisseButs != null) return String(PRET_ACTUALS.suisseButs);
       if (key === 'suisseParcours' && PRET_ACTUALS.suisseParcours) return PRET_ACTUALS.suisseParcours;
+      if (key === 'buteurButs' && PRET_ACTUALS.buteurButs != null) {
+        return PRET_ACTUALS.topScorerName ? `${PRET_ACTUALS.buteurButs} (${PRET_ACTUALS.topScorerName})` : String(PRET_ACTUALS.buteurButs);
+      }
       return null;
     }
     // Libellés courts pour l'affichage (la question RTS d'origine est bien plus longue) ;

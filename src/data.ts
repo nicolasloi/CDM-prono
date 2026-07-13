@@ -16,7 +16,7 @@ export type PretournamentQuestion = { id: string; key: string; question: string 
 export type Pretournament = {
   questions: PretournamentQuestion[];
   byId: Record<string, { name?: string; [key: string]: any }>;
-  actuals: { matchsNuls: number; suisseButs: number; suisseParcours: string | null };
+  actuals: { matchsNuls: number; suisseButs: number; suisseParcours: string | null; buteurButs: number | null; topScorerName?: string | null };
 };
 
 export const getLatest = (): Latest => latest as Latest;

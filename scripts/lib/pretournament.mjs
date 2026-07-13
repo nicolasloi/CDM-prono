@@ -57,10 +57,14 @@ export async function scrapePretournamentFor(members) {
 
 // Valeurs RÉELLES observées à ce jour pour les questions dérivables des résultats de matchs
 // (pas le score exact, mais un décompte qui se met à jour au fil du tournoi — cf. demande :
-// "pouvoir voir par exemple le nombre de matchs 0-0 jusqu'à maintenant"). "Meilleur buteur"
-// n'est volontairement pas inclus : on ne scrape pas les buteurs individuels, donc pas de valeur
-// honnête à afficher pour cette question.
+// "pouvoir voir par exemple le nombre de matchs 0-0 jusqu'à maintenant").
 const ROUND_LABELS = ['16es de finale', '8es de finale', 'Quarts de finale', 'Demi-finales', 'Finale'];
+
+// Meilleur(s) buteur(s) actuel(s) du tournoi (buts, hors tirs au but) : RTS n'expose aucune stat
+// buteur individuelle, donc impossible à dériver des résultats de matchs qu'on scrape déjà.
+// Renseigné À LA MAIN au fil du tournoi (source : classement Soulier d'or FIFA / presse) — à
+// mettre à jour manuellement ici quand le nombre de buts du leader change.
+const TOP_SCORER = { name: 'Mbappé, Messi', goals: 8 };
 
 export function computeActuals(matches = [], rounds = []) {
   const played = matches.filter((m) => m.actualHome != null && m.actualAway != null);
@@ -86,7 +90,7 @@ export function computeActuals(matches = [], rounds = []) {
     break;
   }
 
-  return { matchsNuls, suisseButs, suisseParcours };
+  return { matchsNuls, suisseButs, suisseParcours, buteurButs: TOP_SCORER.goals, topScorerName: TOP_SCORER.name };
 }
 
 // Détection « pari déjà perdu » (mathématiquement impossible vu l'état actuel du tournoi),
@@ -146,6 +150,7 @@ export function annotateLost(byId, rounds, actuals) {
     if (answers.suisseParcours && suisseParcoursLost(answers.suisseParcours, rounds)) lost.suisseParcours = true;
     if (numericLost(answers.suisseButs, actuals.suisseButs)) lost.suisseButs = true;
     if (numericLost(answers.matchsNuls, actuals.matchsNuls)) lost.matchsNuls = true;
+    if (numericLost(answers.buteurButs, actuals.buteurButs)) lost.buteurButs = true;
     out[id] = { ...answers, lost };
   }
   return out;

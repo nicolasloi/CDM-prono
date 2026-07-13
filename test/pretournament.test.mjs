@@ -87,8 +87,18 @@ test('annotateLost : "plus de 15" jamais déclaré perdu en cours de route', () 
   assert.equal(out.a.lost.matchsNuls, undefined);
 });
 
-test('annotateLost : meilleur buteur jamais marqué perdu (pas de stat scrapée)', () => {
-  const byId = { a: { buteurButs: '3' } };
-  const out = annotateLost(byId, [], { suisseButs: 999, matchsNuls: 999 });
-  assert.equal(out.a.lost.buteurButs, undefined);
+test('annotateLost : meilleur buteur, même logique que les autres totaux (renseigné à la main)', () => {
+  const byId = {
+    aTropCourt: { buteurButs: '3' }, // déjà dépassé par le leader actuel → perdu
+    bEncorePossible: { buteurButs: '12' }, // encore atteignable → pas perdu
+  };
+  const out = annotateLost(byId, [], { buteurButs: 8 });
+  assert.equal(out.aTropCourt.lost.buteurButs, true);
+  assert.equal(out.bEncorePossible.lost.buteurButs, undefined);
+});
+
+test('computeActuals inclut le meilleur buteur actuel (valeur maintenue à la main)', () => {
+  const actuals = computeActuals([], []);
+  assert.equal(typeof actuals.buteurButs, 'number');
+  assert.ok(actuals.topScorerName);
 });

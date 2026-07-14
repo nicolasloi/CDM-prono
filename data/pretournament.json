@@ -59,6 +59,7 @@
       "buteurButs": "12",
       "matchsNuls": "3",
       "lost": {
+        "champion": true,
         "suisseParcours": true,
         "suisseButs": true,
         "matchsNuls": true

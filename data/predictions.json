@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "15 juil. | 21:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Angleterre",
+          "predHome": 1,
+          "away": "Argentine",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "14 juil. | 21:00",
           "stadium": "Stade de Dallas",
           "home": "France",
@@ -1209,6 +1221,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "15 juil. | 21:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Angleterre",
+          "predHome": 2,
+          "away": "Argentine",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "14 juil. | 21:00",
           "stadium": "Stade de Dallas",
           "home": "France",
@@ -2401,6 +2425,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "15 juil. | 21:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Angleterre",
+          "predHome": 3,
+          "away": "Argentine",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "14 juil. | 21:00",
           "stadium": "Stade de Dallas",
@@ -3607,6 +3643,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "15 juil. | 21:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Angleterre",
+          "predHome": 1,
+          "away": "Argentine",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "14 juil. | 21:00",
           "stadium": "Stade de Dallas",
           "home": "France",
@@ -4812,6 +4860,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "15 juil. | 21:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Angleterre",
+          "predHome": 1,
+          "away": "Argentine",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "14 juil. | 21:00",
           "stadium": "Stade de Dallas",
           "home": "France",
@@ -6016,6 +6076,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "15 juil. | 21:00",
+          "stadium": "Stade d'Atlanta",
+          "home": "Angleterre",
+          "predHome": 3,
+          "away": "Argentine",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "14 juil. | 21:00",
           "stadium": "Stade de Dallas",

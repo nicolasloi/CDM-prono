@@ -4,7 +4,7 @@ import matchesData from '../../data/matches.json';
 import fixturesData from '../../data/fixtures.json';
 import { shortName } from '../../scripts/lib/members.mjs';
 import { whenLabel } from '../../scripts/lib/datetime.mjs';
-import { buildBracket } from '../../scripts/lib/bracket.mjs';
+import { buildBracket, buildThirdPlace } from '../../scripts/lib/bracket.mjs';
 
 const all = matchesData.matches as any[];
 
@@ -19,10 +19,23 @@ const nearKeys = new Set(nearFixtures.map((f) => `${f.home}|${f.away}`));
 // Phase finale au-delà des 16es (8es→finale) : construite automatiquement à partir du tableau
 // (mêmes données que /tableau), donc se met à jour toute seule dès qu'un tour se précise —
 // équipes connues si les 2 affiches d'origine sont jouées, sinon « Vainq. X · Y », sinon vide.
-const koRounds = buildBracket(all, (fixturesData as any).upcoming || []).slice(1);
+const koRoundsFull = buildBracket(all, (fixturesData as any).upcoming || []);
+const koRounds = koRoundsFull.slice(1);
 const koFixtures = koRounds.flatMap((r: any) => r.ties
   .filter((t: any) => t.upcoming && !(t.home && t.away && nearKeys.has(`${t.home}|${t.away}`)))
   .map((t: any) => ({ kind: 'ko', roundName: r.name, home: t.home, away: t.away, homeFlag: t.homeFlag, awayFlag: t.awayFlag, homeFrom: t.homeFrom, awayFrom: t.awayFrom, when: t.when, kickoff: t.kickoff })));
+
+// Match pour la 3e place : hors arbre (cf. bracket.mjs), donc pas dans koRounds. Affiché ici
+// dès qu'au moins 1 perdant de demie est pressenti (homeFrom/awayFrom) — sinon rien à montrer.
+const thirdPlace = buildThirdPlace(koRoundsFull, all, (fixturesData as any).upcoming || []);
+const thirdPlaceKnown = thirdPlace.home || thirdPlace.away || thirdPlace.homeFrom || thirdPlace.awayFrom;
+if (thirdPlace.upcoming && thirdPlaceKnown && !(thirdPlace.home && thirdPlace.away && nearKeys.has(`${thirdPlace.home}|${thirdPlace.away}`))) {
+  koFixtures.push({
+    kind: 'ko', roundName: 'Match pour la 3e place', home: thirdPlace.home, away: thirdPlace.away,
+    homeFlag: thirdPlace.homeFlag, awayFlag: thirdPlace.awayFlag, homeFrom: thirdPlace.homeFrom, awayFrom: thirdPlace.awayFrom,
+    when: thirdPlace.when, kickoff: thirdPlace.kickoff,
+  });
+}
 
 const upcoming = [...nearFixtures, ...koFixtures].sort((a, b) => fxKey(a) - fxKey(b));
 

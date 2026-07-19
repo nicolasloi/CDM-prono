@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "19 juil. | 21:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Espagne",
+          "predHome": 2,
+          "away": "Argentine",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "18 juil. | 23:00",
           "stadium": "Stade de Miami",
           "home": "France",
@@ -1233,6 +1245,18 @@
       "name": "Cayan F",
       "matches": [
         {
+          "date": "19 juil. | 21:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Espagne",
+          "predHome": 2,
+          "away": "Argentine",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "15 juil. | 21:00",
           "stadium": "Stade d'Atlanta",
           "home": "Angleterre",
@@ -2437,6 +2461,18 @@
     "wmd3": {
       "name": "Nicolas L",
       "matches": [
+        {
+          "date": "19 juil. | 21:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Espagne",
+          "predHome": 2,
+          "away": "Argentine",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "18 juil. | 23:00",
           "stadium": "Stade de Miami",
@@ -3667,6 +3703,18 @@
       "name": "Vitor Pinto",
       "matches": [
         {
+          "date": "19 juil. | 21:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Espagne",
+          "predHome": 1,
+          "away": "Argentine",
+          "predAway": 2,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "18 juil. | 23:00",
           "stadium": "Stade de Miami",
           "home": "France",
@@ -4896,6 +4944,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "19 juil. | 21:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Espagne",
+          "predHome": 2,
+          "away": "Argentine",
+          "predAway": 3,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
+        {
           "date": "18 juil. | 23:00",
           "stadium": "Stade de Miami",
           "home": "France",
@@ -6124,6 +6184,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "19 juil. | 21:00",
+          "stadium": "Stade de New York New Jersey",
+          "home": "Espagne",
+          "predHome": 2,
+          "away": "Argentine",
+          "predAway": 1,
+          "actualHome": null,
+          "actualAway": null,
+          "points": null,
+          "played": false
+        },
         {
           "date": "18 juil. | 23:00",
           "stadium": "Stade de Miami",

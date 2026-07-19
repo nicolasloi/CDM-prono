@@ -1,6 +1,54 @@
 {
   "matches": [
     {
+      "date": "18 juil. | 23:00",
+      "kickoff": "2026-07-18T23:00:00+02:00",
+      "home": "France",
+      "away": "Angleterre",
+      "homeFlag": "🇫🇷",
+      "awayFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "stadium": "Stade de Miami",
+      "actualHome": 4,
+      "actualAway": 6,
+      "picks": [
+        {
+          "id": "O52a",
+          "name": "Joao M",
+          "predHome": 3,
+          "predAway": 0,
+          "points": 0
+        },
+        {
+          "id": "wmd3",
+          "name": "Nicolas L",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 0
+        },
+        {
+          "id": "9Nz1",
+          "name": "Vitor Pinto",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 0
+        },
+        {
+          "id": "7GjW",
+          "name": "Mehdi M",
+          "predHome": 2,
+          "predAway": 1,
+          "points": 0
+        },
+        {
+          "id": "G3EG",
+          "name": "Thomas M",
+          "predHome": 3,
+          "predAway": 1,
+          "points": 0
+        }
+      ]
+    },
+    {
       "date": "15 juil. | 21:00",
       "kickoff": "2026-07-15T21:00:00+02:00",
       "home": "Angleterre",

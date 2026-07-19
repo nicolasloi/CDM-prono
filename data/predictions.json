@@ -4,6 +4,18 @@
       "name": "Joao M",
       "matches": [
         {
+          "date": "18 juil. | 23:00",
+          "stadium": "Stade de Miami",
+          "home": "France",
+          "predHome": 3,
+          "away": "Angleterre",
+          "predAway": 0,
+          "actualHome": 4,
+          "actualAway": 6,
+          "points": 0,
+          "played": true
+        },
+        {
           "date": "15 juil. | 21:00",
           "stadium": "Stade d'Atlanta",
           "home": "Angleterre",
@@ -2426,6 +2438,18 @@
       "name": "Nicolas L",
       "matches": [
         {
+          "date": "18 juil. | 23:00",
+          "stadium": "Stade de Miami",
+          "home": "France",
+          "predHome": 2,
+          "away": "Angleterre",
+          "predAway": 1,
+          "actualHome": 4,
+          "actualAway": 6,
+          "points": 0,
+          "played": true
+        },
+        {
           "date": "15 juil. | 21:00",
           "stadium": "Stade d'Atlanta",
           "home": "Angleterre",
@@ -3642,6 +3666,18 @@
     "9Nz1": {
       "name": "Vitor Pinto",
       "matches": [
+        {
+          "date": "18 juil. | 23:00",
+          "stadium": "Stade de Miami",
+          "home": "France",
+          "predHome": 2,
+          "away": "Angleterre",
+          "predAway": 1,
+          "actualHome": 4,
+          "actualAway": 6,
+          "points": 0,
+          "played": true
+        },
         {
           "date": "15 juil. | 21:00",
           "stadium": "Stade d'Atlanta",
@@ -4860,6 +4896,18 @@
       "name": "Mehdi M",
       "matches": [
         {
+          "date": "18 juil. | 23:00",
+          "stadium": "Stade de Miami",
+          "home": "France",
+          "predHome": 2,
+          "away": "Angleterre",
+          "predAway": 1,
+          "actualHome": 4,
+          "actualAway": 6,
+          "points": 0,
+          "played": true
+        },
+        {
           "date": "15 juil. | 21:00",
           "stadium": "Stade d'Atlanta",
           "home": "Angleterre",
@@ -6076,6 +6124,18 @@
     "G3EG": {
       "name": "Thomas M",
       "matches": [
+        {
+          "date": "18 juil. | 23:00",
+          "stadium": "Stade de Miami",
+          "home": "France",
+          "predHome": 3,
+          "away": "Angleterre",
+          "predAway": 1,
+          "actualHome": 4,
+          "actualAway": 6,
+          "points": 0,
+          "played": true
+        },
         {
           "date": "15 juil. | 21:00",
           "stadium": "Stade d'Atlanta",

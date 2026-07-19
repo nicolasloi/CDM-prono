@@ -1,13 +1,13 @@
 {
   "upcoming": [
     {
-      "home": "Angleterre",
+      "home": "Espagne",
       "away": "Argentine",
-      "homeFlag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "homeFlag": "🇪🇸",
       "awayFlag": "🇦🇷",
-      "stadium": "Stade d'Atlanta",
-      "date": "15 juil. | 21:00",
-      "kickoff": "2026-07-15T21:00:00+02:00"
+      "stadium": "Stade de New York New Jersey",
+      "date": "19 juil. | 21:00",
+      "kickoff": "2026-07-19T21:00:00+02:00"
     }
   ]
 }

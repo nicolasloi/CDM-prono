@@ -8,16 +8,19 @@ function extractInPage() {
   const dateLeaves = [...document.querySelectorAll('span,div,h3,p')]
     .filter((e) => e.childElementCount === 0 && dateRe.test(e.textContent.trim()));
   if (!dateLeaves.length) return [];
-  // Remonte jusqu'au conteneur commun à TOUTES les dates (plusieurs matchs sur la page). Piège :
-  // Node.contains() est vrai pour le nœud lui-même, donc avec UNE SEULE date sur la page (ex.
-  // Finale 3e place, Finale : un seul match par tour) la condition était déjà satisfaite par la
-  // feuille de départ elle-même — sans enfants (c'est une feuille) — et walk() ne remontait
-  // jamais le reste de la carte (stade, équipes, pronostic, résultat) : 0 pronos extraits sans
-  // la moindre erreur. Le childElementCount<=1 force à sortir de la chaîne de wrappers à enfant
-  // unique jusqu'à un vrai nœud « carte » (qui contient aussi le stade/les équipes en frères de
-  // la date) — sans effet sur le cas multi-matchs, déjà forcé à grimper par !contains(toutes).
+  // Remonte jusqu'au conteneur commun à TOUTES les dates (plusieurs matchs sur la page) ET qui
+  // contient le reste de la carte (stade/équipes/pronostic/résultat). Piège vérifié en pratique
+  // sur RTS : la date vit dans un petit en-tête (".scoreBet__header", date + "Points totaux"),
+  // FRÈRE du corps de la carte (".scoreBet", qui a le stade/les équipes) — pas un ancêtre de
+  // celui-ci. Avec plusieurs matchs sur la page, l'ancien critère (grimper jusqu'à contenir
+  // TOUTES les dates) suffisait car il fallait de toute façon remonter au-delà d'une seule carte
+  // pour atteindre les autres. Mais avec UN SEUL match sur la page (Finale 3e place, Finale — un
+  // seul match par tour), ce critère était déjà satisfait par l'en-tête lui-même (une seule date
+  // à contenir), qui s'arrêtait donc AVANT le corps de la carte : 0 pronos extraits sans la
+  // moindre erreur. Le mot « Stade » est un ancrage fiable (toujours affiché, match joué ou pas)
+  // pour vérifier qu'on a bien atteint un conteneur qui inclut le corps de la carte.
   let list = dateLeaves[0];
-  while (list && (list.childElementCount <= 1 || !dateLeaves.every((s) => list.contains(s)))) list = list.parentElement;
+  while (list && (!dateLeaves.every((s) => list.contains(s)) || !/Stade/.test(list.textContent))) list = list.parentElement;
   const leaves = [];
   const walk = (n) => { for (const c of n.children) { if (c.childElementCount === 0) { const t = c.textContent.trim(); if (t) leaves.push(t); } else walk(c); } };
   walk(list);

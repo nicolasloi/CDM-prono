@@ -6,54 +6,42 @@
       "name": "Nicolas L",
       "rank": 1,
       "totalPoints": 764,
-      "isAdmin": false,
-      "pointsDelta": 86,
-      "rankDelta": 0
+      "isAdmin": false
     },
     {
       "id": "7GjW",
       "name": "Mehdi M",
       "rank": 2,
       "totalPoints": 700,
-      "isAdmin": true,
-      "pointsDelta": 70,
-      "rankDelta": 0
+      "isAdmin": true
     },
     {
       "id": "8Yak",
       "name": "Cayan F",
       "rank": 3,
       "totalPoints": 692,
-      "isAdmin": false,
-      "pointsDelta": 86,
-      "rankDelta": 1
+      "isAdmin": false
     },
     {
       "id": "G3EG",
       "name": "Thomas M",
       "rank": 4,
       "totalPoints": 657,
-      "isAdmin": false,
-      "pointsDelta": 86,
-      "rankDelta": 2
+      "isAdmin": false
     },
     {
       "id": "O52a",
       "name": "Joao M",
       "rank": 5,
       "totalPoints": 646,
-      "isAdmin": false,
-      "pointsDelta": 66,
-      "rankDelta": 0
+      "isAdmin": false
     },
     {
       "id": "9Nz1",
       "name": "Vitor Pinto",
       "rank": 6,
       "totalPoints": 611,
-      "isAdmin": false,
-      "pointsDelta": 2,
-      "rankDelta": -3
+      "isAdmin": false
     }
   ],
   "experts": []

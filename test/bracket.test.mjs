@@ -77,3 +77,26 @@ test('un match de POULE entre 2 équipes qualifiées n’est pas pris pour la fi
   assert.equal(r[4].ties[0].actualHome ?? null, null);
   assert.equal(r[4].ties[0].home ?? null, null);
 });
+
+test('Finale vs match pour la 3e place : ne se confondent pas au même slot, quel que soit l’ordre dans matches', () => {
+  // France/Espagne sont dans la même moitié de tableau (R32), Angleterre/Argentine dans
+  // l'autre → Espagne et Argentine se qualifient pour la finale, France et Angleterre (les 2
+  // perdants de demies, un par moitié) se retrouvent pour la 3e place. th>>4 et ta>>4 valent
+  // toujours 0 pour un indice R32 0..15 : placeOf ne peut PAS distinguer structurellement les
+  // deux affiches (mêmes moitiés opposées) — sans le filtre "vrais finalistes", le dernier
+  // match du tableau `matches` écrase l'autre au même slot.
+  const demies = [
+    { date: '14 juil. | 21:00', home: 'France', away: 'Espagne', actualHome: 0, actualAway: 2, picks: [] },
+    { date: '15 juil. | 21:00', home: 'Angleterre', away: 'Argentine', actualHome: 1, actualAway: 2, picks: [] },
+  ];
+  const thirdPlace = { date: '18 juil. | 23:00', home: 'France', away: 'Angleterre', actualHome: 4, actualAway: 6, picks: [] };
+  const finale = { date: '19 juil. | 21:00', home: 'Espagne', away: 'Argentine', actualHome: 1, actualAway: 0, picks: [] };
+
+  for (const matches of [[...demies, finale, thirdPlace], [...demies, thirdPlace, finale]]) {
+    const r = buildBracket(matches, []);
+    assert.equal(r[4].ties[0].home, 'Espagne');
+    assert.equal(r[4].ties[0].away, 'Argentine');
+    assert.equal(r[4].ties[0].actualHome, 1);
+    assert.equal(r[4].ties[0].actualAway, 0);
+  }
+});

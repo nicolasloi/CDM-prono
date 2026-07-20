@@ -88,16 +88,24 @@ export function buildBracket(matches = [], fixtures = []) {
   // 16es : affiches officielles (à venir par défaut)
   R32.forEach((pair, i) => { rounds[0].ties[i] = { home: pair[0], away: pair[1], upcoming: true, picks: [] }; });
 
-  // Affiches à venir (RTS) → leur slot (équipes connues = tour suivant qui se précise)
+  // Affiches à venir (RTS) → leur slot (équipes connues = tour suivant qui se précise). La
+  // Finale (r=4) est reportée : cf. commentaire plus bas, placeOf ne peut pas la distinguer
+  // structurellement du match pour la 3e place à ce niveau de l'arbre.
+  const finaleFixtures = [];
   for (const f of fixtures) {
     const p = placeOf(f.home, f.away, teamTie);
-    if (p) rounds[p.r].ties[p.slot] = { home: f.home, away: f.away, homeFlag: f.homeFlag, awayFlag: f.awayFlag, stadium: f.stadium, upcoming: true, when: whenLabel(f), picks: [] };
+    if (!p) continue;
+    if (p.r === 4) { finaleFixtures.push(f); continue; }
+    rounds[p.r].ties[p.slot] = { home: f.home, away: f.away, homeFlag: f.homeFlag, awayFlag: f.awayFlag, stadium: f.stadium, upcoming: true, when: whenLabel(f), picks: [] };
   }
-  // Matchs joués / en cours (priment) — uniquement la phase finale (exclut les poules)
+  // Matchs joués / en cours (priment) — uniquement la phase finale (exclut les poules). Idem,
+  // la Finale est reportée.
+  const finaleMatches = [];
   for (const m of matches) {
     if (sortKey(m.date) < KO_START) continue;
     const p = placeOf(m.home, m.away, teamTie);
     if (!p) continue;
+    if (p.r === 4) { finaleMatches.push(m); continue; }
     const sh = shootoutFor(m.home, m.away);
     rounds[p.r].ties[p.slot] = { ...m, picks: m.picks || [], penHome: sh?.home ?? null, penAway: sh?.away ?? null };
   }
@@ -122,6 +130,36 @@ export function buildBracket(matches = [], fixtures = []) {
         parent[side + 'Flag'] = w === 'home' ? t.homeFlag : t.awayFlag;
       }
     });
+  }
+
+  // Finale (r=4) : n'accepte un candidat matches/fixtures que s'il correspond aux VRAIS
+  // finalistes déterminés ci-dessus par la propagation des Demies (rounds[4].ties[0].home/away).
+  // th>>4 et ta>>4 valent toujours 0 pour un indice R32 0..15, donc placeOf ne peut PAS
+  // distinguer structurellement « ces 2 équipes se rencontrent en finale » de « ces 2 équipes
+  // se rencontrent pour la 3e place » (les 2 perdants de demies, un par moitié de tableau,
+  // résolvent exactement au même slot) — sans ce filtre, le match pour la 3e place écrase
+  // silencieusement la Finale dès qu'il est joué (ou l'inverse, selon l'ordre dans `matches`).
+  const finalTie = rounds[4].ties[0];
+  const isFinalists = (a, b) => {
+    const A = norm(a), B = norm(b);
+    const fh = norm(finalTie.home || ''), fa = norm(finalTie.away || '');
+    if (!fh || !fa) return false; // finalistes pas encore connus (demies pas terminées)
+    return (A === fh && B === fa) || (A === fa && B === fh);
+  };
+  if (finalTie.actualHome == null) {
+    for (const f of finaleFixtures) {
+      if (isFinalists(f.home, f.away)) {
+        rounds[4].ties[0] = { ...finalTie, home: f.home, away: f.away, homeFlag: f.homeFlag, awayFlag: f.awayFlag, stadium: f.stadium, upcoming: true, when: whenLabel(f) };
+        break;
+      }
+    }
+  }
+  for (const m of finaleMatches) {
+    if (isFinalists(m.home, m.away)) {
+      const sh = shootoutFor(m.home, m.away);
+      rounds[4].ties[0] = { ...m, picks: m.picks || [], penHome: sh?.home ?? null, penAway: sh?.away ?? null };
+      break;
+    }
   }
 
   // Équipes définitivement éliminées (ont perdu n'importe quel match de la phase finale) : sert à

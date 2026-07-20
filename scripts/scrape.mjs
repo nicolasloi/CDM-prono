@@ -71,8 +71,6 @@ async function main() {
   const byId = freshCount ? mergePredictions(prevPreds?.byId, fresh) : (prevPreds?.byId || {});
   const totalPreds = Object.values(byId).reduce((s, p) => s + p.matches.length, 0);
   const predsChanged = JSON.stringify(byId) !== JSON.stringify(prevPreds?.byId);
-  console.log(`DEBUG freshCount=${freshCount} totalPreds=${totalPreds} predsChanged=${predsChanged}`);
-  console.log('DEBUG fresh sample:', JSON.stringify(Object.values(fresh)[0]?.matches?.slice(0, 6)));
 
   // Calendrier des matchs à venir (pour le bandeau « prochain match »). Si le scrape échoue, on garde l'existant.
   const prevFix = readJSON(fileUrl('fixtures.json'));

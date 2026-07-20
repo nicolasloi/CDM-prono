@@ -69,11 +69,18 @@ const ROUND_WINDOWS = [
 export function roundsToRecheck(now = new Date()) {
   const DAY = 86400000;
   const t = now.getTime();
-  return ROUND_WINDOWS.filter((w) => {
+  const windowed = ROUND_WINDOWS.filter((w) => {
     const s = Date.parse(`${w.start}T00:00:00Z`) - DAY;
     const e = Date.parse(`${w.end}T23:59:59Z`) + DAY;
     return t >= s && t <= e;
   }).map((w) => w.round);
+  // Demies/3e place/finale : toujours revérifiées, même hors fenêtre — la page par défaut de RTS
+  // ne montre que le tour qu'elle juge "actuel" (la finale, une fois le tournoi fini), donc un
+  // tour dont la fenêtre est passée devient sinon irrécupérable si son scrape avait raté pendant
+  // sa fenêtre (ex. le bug d'extraction corrigé le 19 juillet, qui a fait manquer les demies et
+  // la 3e place). Coût négligeable : 3 pages en plus, seulement pour la fin du tournoi.
+  const ALWAYS_RECHECK = [28, 29, 30];
+  return [...new Set([...windowed, ...ALWAYS_RECHECK])].sort((a, b) => a - b);
 }
 
 // Fusionne l'historique stocké avec le scrape courant (le profil RTS ne montre qu'une fenêtre glissante).

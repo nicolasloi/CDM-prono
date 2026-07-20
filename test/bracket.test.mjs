@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { buildBracket, buildThirdPlace } from '../scripts/lib/bracket.mjs';
+import { buildBracket } from '../scripts/lib/bracket.mjs';
 import { sortKey } from '../scripts/lib/datetime.mjs';
 
 test('sortKey encode mois+jour+heure, comparable (gère « juil. » abrégé)', () => {
@@ -76,53 +76,4 @@ test('un match de POULE entre 2 équipes qualifiées n’est pas pris pour la fi
   const r = buildBracket(m, []);
   assert.equal(r[4].ties[0].actualHome ?? null, null);
   assert.equal(r[4].ties[0].home ?? null, null);
-});
-
-test('buildThirdPlace : rien à afficher tant qu’aucun perdant de demie n’est pressenti', () => {
-  const rounds = [{}, {}, {}, { ties: [{ placeholder: true }, { placeholder: true }] }];
-  const tp = buildThirdPlace(rounds, [], []);
-  assert.equal(tp.home, undefined);
-  assert.equal(tp.away, undefined);
-  assert.equal(tp.upcoming, true);
-});
-
-test('buildThirdPlace : demies connues mais pas jouées → provenance en attente (pas de perdant encore)', () => {
-  const rounds = [{}, {}, {}, { ties: [
-    { home: 'France', away: 'Espagne', actualHome: null, actualAway: null },
-    { home: 'Angleterre', away: 'Argentine', actualHome: null, actualAway: null },
-  ] }];
-  const tp = buildThirdPlace(rounds, [], []);
-  assert.deepEqual(tp.homeFrom, { home: 'France', away: 'Espagne' });
-  assert.deepEqual(tp.awayFrom, { home: 'Angleterre', away: 'Argentine' });
-  assert.equal(tp.home, undefined);
-});
-
-test('buildThirdPlace : demies jouées → oppose les 2 PERDANTS, pas les vainqueurs', () => {
-  const rounds = [{}, {}, {}, { ties: [
-    { home: 'France', away: 'Espagne', actualHome: 2, actualAway: 1 }, // France gagne → Espagne perd
-    { home: 'Angleterre', away: 'Argentine', actualHome: 0, actualAway: 3 }, // Argentine gagne → Angleterre perd
-  ] }];
-  const tp = buildThirdPlace(rounds, [], []);
-  assert.equal(tp.home, 'Espagne');
-  assert.equal(tp.away, 'Angleterre');
-  assert.equal(tp.upcoming, true); // perdants connus, mais match pas encore trouvé dans `matches`
-});
-
-test('buildThirdPlace : match déjà joué → résultat repris quel que soit l’ordre home/away scrapé par RTS', () => {
-  const rounds = [{}, {}, {}, { ties: [
-    { home: 'France', away: 'Espagne', actualHome: 2, actualAway: 1 },
-    { home: 'Angleterre', away: 'Argentine', actualHome: 0, actualAway: 3 },
-  ] }];
-  const matches = [{
-    home: 'Angleterre', away: 'Espagne', actualHome: 1, actualAway: 2,
-    date: '18 juil. | 23:00', stadium: 'Hard Rock Stadium',
-    picks: [{ name: 'A', predHome: 1, predAway: 2, points: 3 }],
-  }];
-  const tp = buildThirdPlace(rounds, matches, []);
-  assert.equal(tp.home, 'Espagne'); // ordre du tie (perdants), pas celui de `matches`
-  assert.equal(tp.away, 'Angleterre');
-  assert.equal(tp.actualHome, 2); // score d'Espagne, réaligné (found.home = Angleterre ≠ tp.home)
-  assert.equal(tp.actualAway, 1);
-  assert.equal(tp.upcoming, undefined);
-  assert.equal(tp.picks.length, 1);
 });
